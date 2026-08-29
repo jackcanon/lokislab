@@ -34,6 +34,9 @@ const methods = [
   ['Public evidence', 'Privacy-safe raw JSON, runner scripts, scoring rules, and moderation history stay inspectable.'],
 ];
 
+const submissionUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSecRejUJw49OsKEBOmMKkr2ns4TKZwdeY5Jj3rVSKlU0Hq_3Q/viewform?usp=publish-editor';
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#ece5d8] text-[#17201f]">
@@ -52,7 +55,7 @@ export default function Home() {
             <a href="#method" className="hover:text-[#b74627]">Method</a>
             <a href="#learn" className="hover:text-[#b74627]">101</a>
           </nav>
-          <a href="#submit" className="hidden rounded-full bg-[#17201f] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#b74627] sm:block">
+          <a href={submissionUrl} target="_blank" rel="noreferrer" className="hidden rounded-full bg-[#17201f] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#b74627] sm:block">
             Submit a result
           </a>
           <Menu className="md:hidden" aria-label="Menu" />
@@ -140,9 +143,10 @@ export default function Home() {
                 <p key={item} className="flex items-center gap-3"><Check className="h-4 w-4 text-[#e2734c]" /> {item}</p>
               ))}
             </div>
-            <button disabled className="mt-8 w-fit cursor-not-allowed rounded-full border border-[#66716c] px-6 py-3 text-sm font-bold text-[#aeb6b2]">
-              Submission form opens in public beta
-            </button>
+            <a href={submissionUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-[#e2734c] px-6 py-3 text-sm font-black text-[#17201f] transition hover:bg-[#f08a65]">
+              Submit a benchmark result <ArrowUpRight className="h-4 w-4" />
+            </a>
+            <p className="mt-3 text-xs text-[#8f9a95]">Google sign-in is required for verified email and secure JSON upload.</p>
           </div>
         </div>
       </section>
