@@ -36,7 +36,7 @@ Target: morning of August 29, 2026.
 ## First 48 hours
 
 1. Review and approve the visual direction, naming, and launch copy.
-2. Create the Google Form and linked private Sheet for verified-email + JSON submissions.
+2. ~~Create the Google Form and linked private Sheet for verified-email + JSON submissions.~~ Completed August 29, 2026.
 3. Create Discord server and permanent invite.
 4. Choose newsletter and donation providers within the annual budget.
 5. Replace placeholder controls with real destinations.
@@ -51,7 +51,7 @@ Target: morning of August 29, 2026.
 - Publish the full v2 methodology, test list, scoring formula, and known limitations.
 - Publish privacy, terms, affiliate disclosure, sponsorship policy, correction policy, and benchmark disclaimer pages.
 - Package the existing Fleet Eval process as the starting runner with a README and license.
-- Define the canonical submission JSON schema and validation fixtures.
+- ~~Define the canonical submission JSON schema and validation fixtures.~~ Completed August 29, 2026; Google Apps Script installation remains.
 - Draft the first three Loki’s Lab 101 lessons.
 
 ## Weeks 2–4: target platform and submissions
@@ -184,4 +184,3 @@ Only one input should be requested at a time during setup. The current sequence 
 3. Newsletter signup URL
 4. Donation URL
 5. Approval to point `lokislab.org` at the public deployment
-
