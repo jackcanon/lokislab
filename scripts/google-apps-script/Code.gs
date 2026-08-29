@@ -38,7 +38,7 @@ function installOrRepairTrigger() {
     .onFormSubmit()
     .create();
 
-  SpreadsheetApp.getUi().alert('The benchmark form trigger is installed.');
+  console.log('The benchmark form trigger is installed.');
 }
 
 function onBenchmarkFormSubmit(event) {
