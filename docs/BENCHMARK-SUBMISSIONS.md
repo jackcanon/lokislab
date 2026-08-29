@@ -8,14 +8,14 @@ The Google Form writes to the private [Loki's Lab Benchmark Review Queue](https:
 
 ## Status model
 
-| Status | Meaning |
-|---|---|
-| New | Received but not yet checked |
-| Validating | JSON/schema checks are running or being reproduced |
-| Under review | Visible transparency state when a decision or evidence is pending |
-| Unverified | Schema-valid and privacy-safe, but not independently reproduced or submitted by a trusted tester |
-| Verified | Manually approved after evidence review or reproduction |
-| Rejected | Malformed, unsafe, duplicate, ineligible, or withdrawn |
+| Status       | Meaning                                                                                          |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| New          | Received but not yet checked                                                                     |
+| Validating   | JSON/schema checks are running or being reproduced                                               |
+| Under review | Visible transparency state when a decision or evidence is pending                                |
+| Unverified   | Schema-valid and privacy-safe, but not independently reproduced or submitted by a trusted tester |
+| Verified     | Manually approved after evidence review or reproduction                                          |
+| Rejected     | Malformed, unsafe, duplicate, ineligible, or withdrawn                                           |
 
 `Verified` is always a manual decision. Invitation-only trusted contributors may have a lighter evidence workflow, but their contributor status does not make a result verified automatically.
 
@@ -33,6 +33,12 @@ The Google Form writes to the private [Loki's Lab Benchmark Review Queue](https:
 8. Any requested evidence has been received or the reviewer has documented why it is not required.
 
 The public result must never expose the response timestamp, email address, internal review notes, or a private evidence URL.
+
+### Website publication feed
+
+The website reads a sanitized JSON projection from the bound Apps Script web app. The private Sheet is never shared publicly. The feed repeats the full publication gate and re-validates the uploaded JSON before constructing an entry.
+
+The website applies a second status allowlist and discards any feed entry that is not explicitly `Unverified` or `Verified`. `New`, `Validating`, `Under review`, `Rejected`, malformed, or unknown statuses fail closed. Leaderboards are separated by suite ID and version so unlike benchmark versions are never ranked together.
 
 ## JSON contract
 
@@ -80,4 +86,4 @@ The privacy scan is a safety net, not a guarantee. A human privacy review remain
 
 ## Automation boundary
 
-The free automation source is maintained in [`scripts/google-apps-script`](../scripts/google-apps-script). Once installed in the response Sheet, it sets new rows to `Validating`, fetches the uploaded JSON, checks the v1 structure, detects duplicate submission IDs, flags probable private data, and assigns either `Unverified` or `Under review`. It cannot grant `Verified` status, check `Leaderboard Ready`, or publish a privacy-flagged file automatically.
+The free automation source is maintained in [`scripts/google-apps-script`](../scripts/google-apps-script). Once installed in the response Sheet, it sets new rows to `Validating`, fetches the uploaded JSON, checks the v1 structure, detects duplicate submission IDs, flags probable private data, and assigns either `Unverified` or `Under review`. It cannot grant `Verified` status, check `Leaderboard Ready`, or publish a privacy-flagged file automatically. Its public endpoint remains read-only and cannot change moderation state.

@@ -21,3 +21,16 @@ This free Apps Script turns the linked Google Form response Sheet into an automa
 - `Verified`, the reviewer identity, and publication remain manual.
 
 Use **Loki's Lab → Validate selected submission** to recheck an existing row after replacing or correcting its JSON file.
+
+## Public leaderboard feed
+
+The same script can expose a read-only JSON feed for the website without making the response Sheet public.
+
+1. Run `previewPublicLeaderboardFeed` and confirm the log contains only rows intended for publication.
+2. Choose **Deploy → New deployment → Web app**.
+3. Set **Execute as** to the project owner and **Who has access** to anyone.
+4. Copy the `/exec` URL into the hosted site's `LOKISLAB_LEADERBOARD_FEED_URL` setting.
+
+The feed uses an allowlist, not a blocklist. A row appears only when `Review Status` is `Unverified` or `Verified`, JSON is `Valid`, privacy is `Clear`, evidence is `Not requested` or `Accepted`, and `Leaderboard Ready` is checked. The uploaded file is parsed and validated again at request time.
+
+The response excludes the submitter's email, response timestamp, internal review notes, private evidence URLs, consent text, and raw benchmark output. It publishes only the fields needed to render and compare a leaderboard entry.

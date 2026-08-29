@@ -32,6 +32,7 @@ This launch shell is an intentional schedule decision, not the final editorial s
 - The benchmark runner remains a separate permissively licensed repository and produces a versioned standard JSON envelope.
 - Trusted news is ingested from an editorial allowlist of RSS/Atom and official project feeds. Open-net discovery is processed separately and always displayed as a different stream.
 - A Google Form is the first public submission doorway. It collects verified email and a JSON file or payload, then feeds a private review queue. Direct site uploads replace it only when justified by volume.
+- A bound Google Apps Script web app exposes a sanitized, read-only leaderboard projection from that private queue. Publication requires an explicit `Leaderboard Ready` approval plus status, schema, privacy, and evidence gates; the website repeats the public-status allowlist.
 - Discord is the community venue, not the system of record. The website remains authoritative for results, status, audit history, methodology, and editorial content.
 
 ## Data flow
@@ -99,4 +100,3 @@ Begin the target-platform migration when the public brand and information archit
 - Donation provider and URL
 - Affiliate disclosure language and initial merchants
 - Cloudflare nameserver change and EmDash project connection
-
