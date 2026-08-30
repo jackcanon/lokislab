@@ -6,6 +6,12 @@ Loki's Lab accepts community benchmark evidence without treating every upload as
 
 The Google Form writes to the private [Loki's Lab Benchmark Review Queue](https://docs.google.com/spreadsheets/d/1z-4dsjSnQcXDymM8Aso2JtPQ3DgCG97CW8n9qAGhtzU/edit). Form-owned columns must not be renamed or removed. Moderation columns begin at `Review Status`.
 
+The canonical working checkout is `/Volumes/10TB JBOD/Agents/Claude/Projects/Websites/lokislab/`; the repository handoff is recorded in [`WORKSPACE.md`](WORKSPACE.md).
+
+## Test catalog status
+
+Fleet Skill Matrix v2 remains the immutable launch baseline. The repository currently contains its envelope, validator, and examples, but the original 19 prompts, fixtures, validators, and rubrics still need to be imported from the Fleet Eval source. The recommended real-work additions are defined separately in [`tests/agent-work-v1.yml`](../tests/agent-work-v1.yml). They must be published as a new suite and must not be retroactively applied to v2 scores.
+
 ## Status model
 
 | Status       | Meaning                                                                                          |
@@ -53,6 +59,8 @@ The v1 envelope records:
 - publisher, Loki-tuned, or custom configuration labels;
 - three numbered runs per applicable test;
 - scores, timing, raw output, notes, and timestamps.
+
+The current v1 envelope does not yet require expected artifacts, tool traces, failure reasons, memory, energy, or p95 timing. These are planned extensions for the agent-work and performance tracks; adding them requires a schema version or an explicitly backward-compatible schema revision.
 
 Old Fleet Skill Matrix single-result JSON remains readable as transition evidence, but the validator marks it `under_review`. It must be wrapped with the rest of the run set before leaderboard publication.
 

@@ -11,6 +11,8 @@ Loki’s Lab is an independent publication and testing community for local AI an
 
 The project is operated initially by one person for roughly 5–10 hours per week. The infrastructure target is no more than $150 annually, preferably paid up front. The first recognizable site is needed by the morning after this decision. The domain `lokislab.org` is registered through Vercel. Existing Fleet Eval work provides the initial benchmark methodology and result data.
 
+The canonical working checkout is `/Volumes/10TB JBOD/Agents/Claude/Projects/Websites/lokislab/`; the GitHub remote remains `https://github.com/jackcanon/lokislab.git`.
+
 ## Decision
 
 We will use a phased architecture.
@@ -30,6 +32,7 @@ This launch shell is an intentional schedule decision, not the final editorial s
 - Cloudflare D1 stores normalized benchmark, submission, moderation, account-linking, and feed metadata.
 - Cloudflare R2 stores privacy-reviewed raw JSON and other larger public artifacts.
 - The benchmark runner remains a separate permissively licensed repository and produces a versioned standard JSON envelope.
+- Benchmark suites are separated by purpose: Fleet Skill Matrix v2 for the launch baseline, agent-work for end-to-end Hermes tasks, model-quality for model-only tasks, safety-control for trust boundaries, and system-performance for timing and resource measurements.
 - Trusted news is ingested from an editorial allowlist of RSS/Atom and official project feeds. Open-net discovery is processed separately and always displayed as a different stream.
 - A Google Form is the first public submission doorway. It collects verified email and a JSON file or payload, then feeds a private review queue. Direct site uploads replace it only when justified by volume.
 - A bound Google Apps Script web app exposes a sanitized, read-only leaderboard projection from that private queue. Publication requires an explicit `Leaderboard Ready` approval plus status, schema, privacy, and evidence gates; the website repeats the public-status allowlist.
@@ -56,6 +59,7 @@ This launch shell is an intentional schedule decision, not the final editorial s
 - Mark platform-inapplicable tasks `N/A` and exclude them from score denominators.
 - Display normalized score and coverage count together.
 - Allow filtering by every meaningful leaderboard column, including suite, OS, hardware, GPU, model/version, configuration, verification status, and budget tier.
+- Publish coverage, completion, quality, speed, and failure reasons as separate dimensions; an overall score must not conceal a safety or verification failure.
 
 Initial budget tiers are entry at $1,500 or less, midrange from $1,501–$3,000, and high-end at $3,001 or more. Tiers are approximate configuration bands; the product will use current affiliate links rather than maintain a precise historical price database.
 

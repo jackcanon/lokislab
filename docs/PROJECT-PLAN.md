@@ -6,6 +6,10 @@ Build Loki’s Lab into the trusted starting point for people choosing, running,
 
 The initial operator budget is 5–10 hours per week and no more than $150 per year in website infrastructure. Content and operations may be AI-assisted, but benchmark interpretation, editorial judgment, sponsorship disclosure, trust decisions, and final publication remain human-controlled.
 
+## Repository location
+
+The canonical working checkout is `/Volumes/10TB JBOD/Agents/Claude/Projects/Websites/lokislab/`. The GitHub remote is `https://github.com/jackcanon/lokislab.git`; see [`WORKSPACE.md`](WORKSPACE.md) for agent handoff and verification commands.
+
 ## Release 0: barebones launch
 
 Target: morning of August 29, 2026.
@@ -49,6 +53,8 @@ Target: morning of August 29, 2026.
 - Add an editor-controlled hide toggle and keep a private ingestion log.
 - Create Lab Notes content types for reactions, field reports, reviews, and tutorials.
 - Publish the full v2 methodology, test list, scoring formula, and known limitations.
+- Commit the exact Fleet Skill Matrix v2 manifest, then review the proposed [`agent-work-v1`](../tests/agent-work-v1.yml) tasks without changing historical v2 results.
+- Run the first article-specific Gemma comparison using the reproducible [`Gemma story battery`](GEMMA-STORY-BATTERY.md) and publish screenshots plus data, not only narrative reaction.
 - Publish privacy, terms, affiliate disclosure, sponsorship policy, correction policy, and benchmark disclaimer pages.
 - Package the existing Fleet Eval process as the starting runner with a README and license.
 - ~~Define the canonical submission JSON schema and validation fixtures.~~ Completed August 29, 2026; Google Apps Script installation remains.
@@ -103,6 +109,7 @@ Target: morning of August 29, 2026.
 - Publisher-recommended model configuration by default
 - Three runs per applicable task
 - Privacy scan/warnings and standard JSON output
+- Separate model-quality, agent-work, safety, and system-performance tracks; do not combine unlike harnesses in one ranking.
 - Permissive open-source license and commercial dataset reuse with attribution
 
 ### v0.2
@@ -111,6 +118,7 @@ Target: morning of August 29, 2026.
 - Cryptographic artifact hashes
 - Better hardware detection and normalization
 - Optional Loki-tuned configurations as separately labeled entries
+- Artifact hashes, tool-call outcomes, and optional resource telemetry
 - Contributor-friendly packaging and signed releases
 
 ### Later

@@ -51,7 +51,7 @@ const methods = [
 ];
 
 const submissionUrl =
-  'https://docs.google.com/forms/d/e/1FAIpQLSecRejUJw49OsKEBOmMKkr2ns4TKZwdeY5Jj3rVSKlU0Hq_3Q/viewform?usp=publish-editor';
+  'https://docs.google.com/forms/d/e/1FAIpQLSecRejUJw49OsKEBOmMKkr2ns4TKZwdeY5Jj3rVSKlU0Hq_3Q/viewform?usp=sharing&ouid=100725185419145806700';
 
 export default async function Home() {
   const leaderboard = await getLeaderboardData();
