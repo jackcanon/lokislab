@@ -2,17 +2,16 @@ import Link from "next/link";
 import { summary, runs } from "@/lib/skillMatrix";
 
 export const metadata = {
-  title: "Test results — Lokis Lab,
-  description: Real fleet skill-matrix eval runs: models x machines, quality, accuracy, speed.,
+  title: "Test results - Lokis Lab",
+  description: "Real fleet skill-matrix eval runs: models x machines, quality, accuracy, speed.",
 };
 
 function fmt(n: number | null, d = 1) {
-  return n === null ? — : n.toFixed(d);
+  return n === null ? "—" : n.toFixed(d);
 }
 function bar(v: number | null, max = 5) {
-  if (v === null) return null;
-  const pct = Math.max(0, Math.min(100, (v / max) * 100));
-  return pct;
+  if (v === null) return 0;
+  return Math.max(0, Math.min(100, (v / max) * 100));
 }
 
 export default function ResultsPage() {
@@ -21,15 +20,15 @@ export default function ResultsPage() {
   const machines = Array.from(new Set(summary.map((s) => s.machine))).filter(Boolean).sort();
 
   return (
-    <main className=min-h-screen bg-[#ece5d8] text-[#17201f]>
-      <header className=sticky top-0 z-50 border-b border-[#aaa194] bg-[#ece5d8]/95 backdrop-blur>
-        <div className=mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-14>
-          <a href=#top className=flex items-center gap-3 aria-label=Lokis Lab home">
+    <main className="min-h-screen bg-[#ece5d8] text-[#17201f]">
+      <header className="sticky top-0 z-50 border-b border-[#aaa194] bg-[#ece5d8]/95 backdrop-blur">
+        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-14">
+          <a href="#top" className="flex items-center gap-3" aria-label="Loki's Lab home">
             <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-sm bg-[#17201f] text-[#ece5d8]">
               <span className="absolute left-[8px] top-[2px] -rotate-12 font-serif text-2xl font-black">L</span>
               <span className="absolute bottom-[1px] right-[7px] rotate-[168deg] font-serif text-2xl font-black text-[#d26743]">L</span>
             </span>
-            <span className="display-serif text-xl font-bold tracking-tight">Loki’s Lab</span>
+            <span className="display-serif text-xl font-bold tracking-tight">Loki's Lab</span>
           </a>
           <Link href="/test" className="text-sm font-semibold hover:text-[#b74627]">← Run the benchmark</Link>
         </div>
@@ -38,7 +37,7 @@ export default function ResultsPage() {
       <section id="top" className="mx-auto max-w-[1440px] px-5 py-12 md:px-10 lg:px-14">
         <h1 className="display-serif text-4xl font-black tracking-tight md:text-5xl">Test results</h1>
         <p className="mt-3 max-w-2xl text-[#3a423f]">
-          Real fleet eval runs from the <strong>skill-matrix</strong> suite — {totalRuns} tasks across{" "}
+          Real fleet eval runs from the <strong>skill-matrix</strong> suite - {totalRuns} tasks across{" "}
           {models.length} models and {machines.length} machines. Each task runs under a fixed Hermes harness;
           we report median speed and averaged quality/accuracy.
         </p>
@@ -50,7 +49,7 @@ export default function ResultsPage() {
           <Stat label="Categories" value={Array.from(new Set(runs.map((r) => r.category))).filter(Boolean).length.toString()} />
         </div>
 
-        <h2 className="display-serif mt-12 mb-4 text-2xl font-bold">Per model × machine</h2>
+        <h2 className="display-serif mt-12 mb-4 text-2xl font-bold">Per model x machine</h2>
         <div className="overflow-x-auto rounded-lg border border-[#aaa194]">
           <table className="w-full border-collapse text-sm">
             <thead className="bg-[#17201f] text-[#e9e4db]">
@@ -68,12 +67,8 @@ export default function ResultsPage() {
                   <Td>{s.machine || <span className="text-[#9a9384]">—</span>}</Td>
                   <Td align="right">{s.tests}</Td>
                   <Td align="right">{s.capable}/{s.tests}</Td>
-                  <Td align="right">
-                    <Score v={s.avgQuality} />
-                  </Td>
-                  <Td align="right">
-                    <Score v={s.avgAccuracy} />
-                  </Td>
+                  <Td align="right"><Score v={s.avgQuality} /></Td>
+                  <Td align="right"><Score v={s.avgAccuracy} /></Td>
                   <Td align="right">{fmt(s.medianSpeedS)}</Td>
                   <Td className="text-[#6e7773]">{s.lastTested ? s.lastTested.slice(0, 10) : "—"}</Td>
                 </tr>
@@ -113,7 +108,7 @@ export default function ResultsPage() {
         </div>
 
         <p className="mt-10 text-xs text-[#9a9384]">
-          Source: <code>fleet_eval/skill-matrix-authoritative</code> · snapshot {new Date().toISOString().slice(0, 10)}.
+          Source: <code>fleet_eval/skill-matrix-authoritative</code> - snapshot {new Date().toISOString().slice(0, 10)}.
           Regenerate from source before each publish.
         </p>
       </section>
@@ -137,7 +132,7 @@ function Td({ children, align, className = "" }: { children: React.ReactNode; al
 }
 function Score({ v }: { v: number | null }) {
   if (v === null) return <span className="text-[#9a9384]">—</span>;
-  const pct = bar(v) as number;
+  const pct = bar(v);
   return (
     <span className="inline-flex items-center gap-2">
       <span className="relative inline-block h-1.5 w-12 overflow-hidden rounded bg-[#cfc7b6]">
