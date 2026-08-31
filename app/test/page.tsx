@@ -73,6 +73,9 @@ export default function TestPage() {
       </p>
 
       <p style={{ marginTop: 32 }}>
+        <a href="/test/results" className="cta">View aggregated test results →</a>
+      </p>
+      <p style={{ marginTop: 16 }}>
         <Link href="/">← Back home</Link>
       </p>
     </main>

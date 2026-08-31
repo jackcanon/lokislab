@@ -90,6 +90,9 @@ export default async function Home() {
             <a href="#learn" className="hover:text-[#b74627]">
               101
             </a>
+            <a href="/test/results" className="hover:text-[#b74627]">
+              Results
+            </a>
           </nav>
           <a
             href={submissionUrl}
