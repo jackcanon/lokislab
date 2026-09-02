@@ -1,0 +1,132 @@
+---
+title: "Best Bang for the Buck Right Now: One Gaming PC, One Mac"
+slug: best-bang-for-buck-computers-2026
+date: 2026-08-30
+updated: 2026-08-30
+status: draft
+section: Lab Notes
+author: "Loki’s Lab"
+dek: "Our evidence-backed picks are a $1,599 RTX 5070 gaming desktop and the 36GB M4 Max Mac Studio tested in our own fleet."
+hero: "./Article 1 - 2026-08-30.png"
+hero_alt: "A black mesh-front gaming desktop with warm copper lighting on a computer test bench."
+tags:
+  - buying guide
+  - gaming PC
+  - RTX 5070
+  - Mac Studio
+  - M4 Max
+  - local AI
+price_checked: 2026-08-30
+---
+
+# Best Bang for the Buck Right Now: One Gaming PC, One Mac
+
+![A black mesh-front gaming desktop with warm copper lighting on a computer test bench.](./Article%201%20-%202026-08-30.png)
+
+The best-value computer is not the cheapest box with a long specification list. It is the least expensive machine that clears the work you actually want to do without hiding an immediate upgrade bill.
+
+After checking current Amazon listings and comparing the Macs in the [Loki’s Lab test results](https://lokislab.org/test/results), these are the two configurations we would buy today:
+
+- **PC value pick:** Skytech Rampage with a Core i5-14400F, GeForce RTX 5070 12GB, 24GB DDR5-6000, 1TB NVMe SSD, and an 850W Gold power supply — **$1,599.99 when checked**.
+- **Mac value pick:** Mac Studio with an M4 Max, 36GB unified memory, and a 512GB SSD — the same hardware class as our best-performing M4 test machine.
+
+The PC is the broader bargain. It is the better gaming machine, its storage and memory can be upgraded, and its NVIDIA GPU opens the door to CUDA software and local models that fit inside 12GB of VRAM. The Mac Studio costs more, but it is quiet, compact, efficient, and its 36GB unified-memory pool can run local models that simply do not fit on a 12GB graphics card.
+
+> **Affiliate disclosure:** Loki’s Lab may earn a commission if you buy through a highlighted product link. It does not change your price. Affiliate revenue does not change our benchmark scores, ordering, or conclusions.
+
+## The quick recommendation
+
+| Pick | Configuration | Price when checked | Best for | Main compromise |
+|---|---|---:|---|---|
+| **Best overall value** | Skytech Rampage: Core i5-14400F, RTX 5070 12GB, 24GB DDR5, 1TB NVMe | **$1,599.99** | 1440p gaming, CUDA apps, entry local AI | Only 12GB of GPU memory; Wi-Fi 5 |
+| **Best tested Mac value** | Mac Studio: M4 Max, 36GB unified memory, 512GB SSD | **$2,399 offer observed** | Larger local models, quiet always-on work, creative apps | Limited internal storage; memory and storage are not upgradeable |
+
+Prices and availability were checked on August 30, 2026. Computer listings can change by the hour, so confirm the exact CPU, GPU, memory, seller, shipping date, and return policy before purchasing.
+
+## PC pick: Skytech Rampage with RTX 5070 for $1,599.99
+
+Our target was $1,500. The configuration we would actually recommend landed $99.99 above it:
+
+- Intel Core i5-14400F
+- NVIDIA GeForce RTX 5070 with 12GB GDDR7
+- 24GB DDR5-6000 memory
+- 1TB Gen4 NVMe SSD
+- 850W 80 Plus Gold, ATX 3 power supply
+- Air cooling and a mesh-front case
+- Windows 11 Home
+
+When we checked, the system was in stock at $1,599.99 and shipped from and was sold by Amazon. [Check the current Skytech Rampage price on Amazon](https://amzn.to/3Us6Vaf).
+
+This is the sensible stopping point because the money is concentrated in the part that matters most for gaming: the graphics card. NVIDIA specifies the RTX 5070 with 12GB of GDDR7, while the independent [Tom’s Hardware 2026 GPU hierarchy](https://www.tomshardware.com/reviews/gpu-hierarchy%2C4388.html) places the RTX 5070 in the 1440p class. That is where this machine makes the most sense: high-quality 1440p gaming, with selective 4K use when upscaling is appropriate.
+
+The rest of the build is balanced rather than luxurious. The i5-14400F is enough CPU for an RTX 5070 in the intended resolution range. Twenty-four gigabytes of DDR5 is a healthier starting point than the 16GB still common in this price band. The 850W Gold power supply also leaves more breathing room than a bargain-basement unit sized only for today’s parts.
+
+There are compromises. A 1TB drive fills quickly once modern games, AI models, and creative caches share it. Wi-Fi 5 is dated. The listing also says the exact graphics-card brand may vary. We would plan on adding a second SSD later and use Ethernet when possible, but neither issue spoils the initial value.
+
+### Why we did not choose the absolute cheapest qualifying PC
+
+We found an MXZ desktop at **$1,449** with a Core i7-12700F, RTX 4070, 16GB DDR4, 1TB SSD, and 700W power supply. It technically meets the brief and stays under $1,500.
+
+We would still spend the extra $150.99 on the Skytech. That buys a current RTX 5070, 50 percent more system memory, faster DDR5, and a stronger ATX 3 power supply. The Skytech listing was also sold by Amazon when checked, while the lower-priced MXZ was sold by a third party and fulfilled by Amazon. The $1,449 machine is the price floor; the $1,599.99 machine is the better value.
+
+## Mac pick: the 36GB M4 Max Mac Studio
+
+This is where our own testing matters.
+
+The Loki’s Lab fleet includes two 24GB M4 Pro systems and a 36GB M4 Max Mac Studio named **Overgaard**. Across comparable local-model runs, the extra GPU capacity and unified-memory headroom repeatedly mattered:
+
+| Model | M4 Max, 36GB — Overgaard | M4 Pro, 24GB — best comparable result | What happened |
+|---|---:|---:|---|
+| Gemma 4 12B | 17/19 capable, **32.0s** median | 18/19 capable, **45.7s** median | M4 Max was materially faster; coverage was close |
+| Gemma 4 12B IT QAT | 12/13 capable, **34.4s** median | 13/13 capable, **40.7s** median | M4 Pro completed one more task; M4 Max was faster and scored 4.7 quality / 4.8 accuracy |
+| Qwen 3.5 9B | **11/13 capable, 65.0s** median | 9/13 capable, 80.2s median | M4 Max improved both coverage and speed |
+| Qwen 3.6 latest | **13/13 capable, 39.4s** median | 0/11 capable on the 24GB M4 Pro run | The larger configuration crossed a practical fit-and-finish line |
+
+The Qwen 3.6 result is the clearest signal: Overgaard averaged **5.0 quality and 4.8 accuracy** while completing all 13 tasks. The 24GB M4 Pro run completed none of its 11 tasks. That does not prove every M4 Max beats every M4 Pro in every application; model build, quantization, runtime state, and task coverage all matter. It does show why we would not underspecify memory for a Mac intended to run local AI.
+
+Our recommended configuration is therefore:
+
+- Apple M4 Max with 14-core CPU and 32-core GPU
+- 36GB unified memory
+- 512GB SSD
+
+At research time, Amazon showed one new offer at $2,399 for the exact configuration. [Check availability for the 36GB M4 Max Mac Studio on Amazon](https://amzn.to/3T4CEOf).
+
+Thirty-six gigabytes is the important number. Apple’s unified-memory design lets the GPU work inside a much larger shared pool than the RTX 5070’s 12GB VRAM. That makes the Mac Studio the more flexible local-model appliance even though the PC is the faster and more compatible gaming system.
+
+The 512GB SSD is the weak point. Apple’s storage upgrades are expensive, so we would keep the internal drive for macOS and applications, then add a fast external Thunderbolt SSD for model files and project media. Buy the memory you need up front; neither memory nor internal storage is designed as an ordinary user upgrade.
+
+### A timing warning for Mac buyers
+
+Apple announced a new Mac mini with M6 and M5 Pro on August 25, but says customer deliveries begin **September 22, 2026**. The M5 Pro model starts at $1,699, supports up to 64GB of unified memory, and is not yet a currently shipping alternative as of this article’s price check. Apple also claims large gains over the older M2 Pro in LM Studio, but those are vendor results—not Loki’s Lab findings. See [Apple’s announcement and shipping dates](https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/).
+
+If you are reading this after September 22, pause before buying the M4 Max. We need a like-for-like Loki’s Lab run and current street prices before declaring the M5 Pro the new value winner.
+
+## What about a used graphics card?
+
+Local used markets can beat a prebuilt—but only when the right card actually appears.
+
+Look for an RTX 4070, 4070 Super, or 5070 from a seller who will show it running under load. Ask for a current photo, GPU information, temperatures, and a short stress-test or game session. Check the power connector and fans, confirm the serial label has not been removed, and avoid any seller who will not let you verify the card before handing over money.
+
+Be realistic about availability. RTX 4070-class cards are desirable, compact, and efficient; good local listings can be sparse, and RTX 5070 cards are newer still. We would want a meaningful discount—roughly 20 to 25 percent below the price of a comparable new card—to give up a straightforward return window and warranty. Saving $40 is not worth becoming your own returns department.
+
+A used GPU also does not create a complete computer. Once you add a modern CPU, motherboard, memory, SSD, case, cooling, Windows license, and a trustworthy power supply, the $1,599.99 prebuilt may remain competitive. The used route is most compelling if you already own a suitable system and are upgrading only the graphics card.
+
+## The bottom line
+
+For most readers, buy the **Skytech Rampage RTX 5070 configuration**. It misses the $1,500 goal by less than $100, avoids the most obvious cut corners of the cheaper RTX 4070 listing, and lands in the right performance class for high-quality 1440p gaming.
+
+For a quiet Mac workstation and local-model host, buy the **36GB M4 Max Mac Studio configuration**—the M4 class that performed best in Loki’s Lab testing. Its price is higher and its storage is stingy, but its unified memory changes what can run locally.
+
+Those are today’s picks, not permanent titles. We will change them when shipping prices or our own test results change. That is the point of a lab.
+
+## Sources and test notes
+
+- [Loki’s Lab test results](https://lokislab.org/test/results) — Fleet Skill Matrix snapshot used for the Mac comparison.
+- [Skytech Rampage RTX 5070 Amazon listing](https://amzn.to/3Us6Vaf) — price and shipping configuration checked August 30, 2026.
+- [M4 Max Mac Studio Amazon listing](https://amzn.to/3T4CEOf) — exact 36GB/512GB configuration and observed offer checked August 30, 2026.
+- [NVIDIA RTX 50-series announcement](https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/) — RTX 5070 memory specification and feature context.
+- [Tom’s Hardware 2026 GPU hierarchy](https://www.tomshardware.com/reviews/gpu-hierarchy%2C4388.html) — independent gaming-performance context.
+- [Apple’s August 2026 Mac mini announcement](https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/) — new-model pricing, memory limits, and September 22 shipping date.
+
+**Method note:** Amazon availability and seller details are a point-in-time retail snapshot, not a laboratory benchmark. Loki’s Lab has tested the cited M4 systems but has not yet tested the two retail PC listings in this article. Capability counts should be compared alongside model, task coverage, quality, accuracy, and speed; no single median is a universal computer score.

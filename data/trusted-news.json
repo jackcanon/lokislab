@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-09-01T18:54:58.184265+00:00",
+  "sources": [
+    "Qwen",
+    "Zai",
+    "Hermes Agent"
+  ],
+  "items": [
+    {
+      "source": "Loki's Lab",
+      "title": "Apple's New Mac mini and Mac Studio Put Local AI Front and Center",
+      "date": "2026-09-01",
+      "href": "https://lokislab.org/articles/apple-new-mac-mini-mac-studio-local-ai-2026",
+      "excerpt": "Apple refreshed both ends of its desktop lineup with M6 and M5 Pro Mac minis and M5 Max and M5 Ultra Mac Studios. The new machines emphasize faster AI processing, Neural Accelerators, and higher memory bandwidth \u2014 exactly the direction Loki's Lab has been hoping to see.",
+      "article": true
+    },
+    {
+      "source": "NousResearch",
+      "title": "Hermes Agent v0.21.0 (v2026.8.31)",
+      "date": "2026-08-31",
+      "href": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31",
+      "excerpt": "NousResearch/hermes-agent release"
+    },
+    {
+      "title": "Qwen3.8 Flash Next: Faster, Smarter, Smaller",
+      "date": "2026-08-28",
+      "href": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+      "excerpt": "Qwen's latest flash model \u2014 smaller footprint, faster inference, stronger reasoning. The Qwen team announced Qwen3.8 as a new family of efficient models built for both cloud and on-device deployment.",
+      "source": "Qwen",
+      "reachability": 200
+    },
+    {
+      "source": "NousResearch",
+      "title": "Hermes Agent v0.20.6 (v2026.8.27)",
+      "date": "2026-08-27",
+      "href": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.27",
+      "excerpt": "NousResearch/hermes-agent release"
+    },
+    {
+      "title": "GLM-5.3-Flash: Frontier Intelligence, Flash Cost",
+      "date": "2026-08-26",
+      "href": "https://z.ai/blog/glm-5.3-flash",
+      "excerpt": "GLM-5.3-Flash packs 320B total / 18B active parameters with hybrid sparse+linear attention \u2014 the first natively multimodal model in the GLM-5 series. Released anonymously as ox-alpha on OpenRouter and OpenCode, it became the most popular model of the week before the official reveal.",
+      "source": "Zai",
+      "reachability": 200
+    },
+    {
+      "source": "NousResearch",
+      "title": "Hermes Agent v0.20.5 (v2026.8.19)",
+      "date": "2026-08-21",
+      "href": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19",
+      "excerpt": "NousResearch/hermes-agent release"
+    }
+  ]
+}

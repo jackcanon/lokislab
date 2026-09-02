@@ -1,0 +1,317 @@
+{
+  "feed_version": "1.0",
+  "entries": [
+    {
+      "schema_version": "1.0",
+      "submission_id": "LL-GEMMA3-MIDGAARD-SAMPLE",
+      "created_at": "2026-08-30T03:37:09.436025+00:00",
+      "suite": {
+        "id": "fleet-skill-matrix",
+        "version": "2"
+      },
+      "harness": {
+        "name": "Hermes",
+        "version": "1.0.0",
+        "profile": "lokislab-fixed-v1"
+      },
+      "system": {
+        "computer_description": "Mac (Midgaard) \u2014 M4 Pro 24GB",
+        "os": "macOS",
+        "os_version": "15.6",
+        "architecture": "arm64",
+        "cpu": "Apple M4 Pro",
+        "gpu": "Apple M4 Pro integrated GPU",
+        "memory_gb": 24
+      },
+      "model": {
+        "runtime": "ollama",
+        "name": "gemma3",
+        "version": "4b"
+      },
+      "configuration": {
+        "type": "publisher_recommended",
+        "settings": {},
+        "notes": "sample",
+        "label": "Publisher recommended"
+      },
+      "verification_status": "Unverified",
+      "score": 93,
+      "passed": 3,
+      "total": 3,
+      "median_seconds": 14.0,
+      "public_result_url": null,
+      "runs": [
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 1,
+          "capable": true,
+          "skipped": false,
+          "quality": 5,
+          "accuracy": 5,
+          "speed_seconds": 13.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 2,
+          "capable": true,
+          "skipped": false,
+          "quality": 5,
+          "accuracy": 5,
+          "speed_seconds": 14.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 3,
+          "capable": true,
+          "skipped": false,
+          "quality": 4,
+          "accuracy": 4,
+          "speed_seconds": 15.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "submission_id": "LL-QWEN3.5-ODIN-SAMPLE",
+      "created_at": "2026-08-30T03:37:09.436025+00:00",
+      "suite": {
+        "id": "fleet-skill-matrix",
+        "version": "2"
+      },
+      "harness": {
+        "name": "Hermes",
+        "version": "1.0.0",
+        "profile": "lokislab-fixed-v1"
+      },
+      "system": {
+        "computer_description": "Mac (Odin) \u2014 24GB",
+        "os": "macOS",
+        "os_version": "15.6",
+        "architecture": "arm64",
+        "cpu": "Apple Silicon",
+        "gpu": null,
+        "memory_gb": 24
+      },
+      "model": {
+        "runtime": "ollama",
+        "name": "qwen3.5",
+        "version": "4b"
+      },
+      "configuration": {
+        "type": "publisher_recommended",
+        "settings": {},
+        "notes": "sample",
+        "label": "Publisher recommended"
+      },
+      "verification_status": "Unverified",
+      "score": 93,
+      "passed": 3,
+      "total": 3,
+      "median_seconds": 14.0,
+      "public_result_url": null,
+      "runs": [
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 1,
+          "capable": true,
+          "skipped": false,
+          "quality": 4,
+          "accuracy": 4,
+          "speed_seconds": 13.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 2,
+          "capable": true,
+          "skipped": false,
+          "quality": 5,
+          "accuracy": 5,
+          "speed_seconds": 14.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 3,
+          "capable": true,
+          "skipped": false,
+          "quality": 5,
+          "accuracy": 5,
+          "speed_seconds": 15.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "submission_id": "LL-GEMMA4-OVERGAARD-SAMPLE",
+      "created_at": "2026-08-30T03:37:09.436025+00:00",
+      "suite": {
+        "id": "fleet-skill-matrix",
+        "version": "2"
+      },
+      "harness": {
+        "name": "Hermes",
+        "version": "1.0.0",
+        "profile": "lokislab-fixed-v1"
+      },
+      "system": {
+        "computer_description": "Mac (Overgaard) \u2014 M4 Max 36GB",
+        "os": "macOS",
+        "os_version": "15.6",
+        "architecture": "arm64",
+        "cpu": "Apple M4 Max",
+        "gpu": "Apple M4 Max integrated GPU",
+        "memory_gb": 36
+      },
+      "model": {
+        "runtime": "ollama",
+        "name": "gemma4",
+        "version": "12b-it-qat"
+      },
+      "configuration": {
+        "type": "publisher_recommended",
+        "settings": {},
+        "notes": "sample",
+        "label": "Publisher recommended"
+      },
+      "verification_status": "Unverified",
+      "score": 100,
+      "passed": 3,
+      "total": 3,
+      "median_seconds": 14.0,
+      "public_result_url": null,
+      "runs": [
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 1,
+          "capable": true,
+          "skipped": false,
+          "quality": 5,
+          "accuracy": 5,
+          "speed_seconds": 13.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 2,
+          "capable": true,
+          "skipped": false,
+          "quality": 5,
+          "accuracy": 5,
+          "speed_seconds": 14.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 3,
+          "capable": true,
+          "skipped": false,
+          "quality": 5,
+          "accuracy": 5,
+          "speed_seconds": 15.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "submission_id": "LL-LLAMA3.1-HEIMDALL-SAMPLE",
+      "created_at": "2026-08-30T03:37:09.436025+00:00",
+      "suite": {
+        "id": "fleet-skill-matrix",
+        "version": "2"
+      },
+      "harness": {
+        "name": "Hermes",
+        "version": "1.0.0",
+        "profile": "lokislab-fixed-v1"
+      },
+      "system": {
+        "computer_description": "RackPC (Heimdall) \u2014 Linux x64 64GB + RTX 4070",
+        "os": "Linux",
+        "os_version": "Ubuntu 24.04",
+        "architecture": "x86_64",
+        "cpu": "AMD Ryzen",
+        "gpu": "NVIDIA RTX 4070 (12GB VRAM)",
+        "memory_gb": 64
+      },
+      "model": {
+        "runtime": "ollama",
+        "name": "llama3.1",
+        "version": "8b"
+      },
+      "configuration": {
+        "type": "publisher_recommended",
+        "settings": {},
+        "notes": "sample",
+        "label": "Publisher recommended"
+      },
+      "verification_status": "Unverified",
+      "score": 73,
+      "passed": 3,
+      "total": 3,
+      "median_seconds": 14.0,
+      "public_result_url": null,
+      "runs": [
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 1,
+          "capable": true,
+          "skipped": false,
+          "quality": 3,
+          "accuracy": 3,
+          "speed_seconds": 13.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 2,
+          "capable": true,
+          "skipped": false,
+          "quality": 4,
+          "accuracy": 4,
+          "speed_seconds": 14.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        },
+        {
+          "test_id": "1a",
+          "category": "coding_web_design",
+          "run_number": 3,
+          "capable": true,
+          "skipped": false,
+          "quality": 4,
+          "accuracy": 4,
+          "speed_seconds": 15.0,
+          "auto_scored": true,
+          "tested_at": "2026-08-30T03:37:09.436025+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+order_id,region,units,revenue,discount,notes
+A101,North,120,2400,0,ok
+A102,South,80,1600,0,ok
+A103,West,0,0,0,missing units
+A104,North,95,1900,0,ok
+A105,East,,990,0,blank units
+A106,South,60,1200,0,ok
+A107,West,140,2800,0,ok
+A108,North,75,1500,0,ok
+A109,East,55,1100,0,anomaly: revenue mismatch (units 55 * 20 = 1100 ok)
+A110,South,0,0,0,missing units
+A111,West,130,2600,0,ok
+A112,North,,1450,0,blank units
+A113,East,88,1760,0,ok
+A114,South,42,840,0,ok
+A115,West,160,3200,0,ok

@@ -1,0 +1,25 @@
+{
+  "task_id": "SB-001",
+  "fixture_version": "1",
+  "hash": "sb001-v1",
+  "required_facts": [
+    "Hibernate Blend",
+    "Sumatra",
+    "$18.00",
+    "12oz",
+    "November 1",
+    "422 SE Belmont",
+    "Portland OR",
+    "free local delivery",
+    "$35"
+  ],
+  "forbidden_claims": ["cures", "treats", "prevents", "sleep", "medical", "healthy", "health benefit"],
+  "disclaimer_exact": "Hibernate Blend is a coffee product. It is not intended to diagnose, treat, or prevent any medical condition, including sleep disorders.",
+  "constraints": {
+    "blog_words_min": 150,
+    "blog_words_max": 300,
+    "email_words_max": 160,
+    "social_chars_max": 280,
+    "social_count": 3
+  }
+}

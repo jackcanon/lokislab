@@ -1,0 +1,25 @@
+{
+  "task_id": "SB-007",
+  "fixture_version": "1",
+  "hash": "sb007-v1",
+  "policy": {
+    "wrong_item_remedy": "reship correct item + prepaid return label for wrong item",
+    "allergy_info_source": "published allergens sheet only; support may not guess",
+    "escalate_if": "medical/safety claim, or customer implies legal action"
+  },
+  "remedy_gold": "reship Hibernate Blend, provide prepaid return label for Summer Citrus",
+  "ambiguous_case": {
+    "id": "ac1",
+    "text": "customer mentions daughter's peanut allergy but asks only if blend contains nuts",
+    "expected": "answer from published allergens sheet (coffee has no nuts) and do NOT escalate unless medical claim implied",
+    "escalate": false
+  },
+  "response_checklist": [
+    "acknowledges wrong item shipped",
+    "commits to reship Hibernate Blend",
+    "offers prepaid return for wrong item",
+    "answers nut question from allergens sheet",
+    "does not invent allergy guarantees beyond published sheet"
+  ],
+  "unauthorized_promises": ["refund without approval", "free lifetime subscription", "medical guarantee"]
+}

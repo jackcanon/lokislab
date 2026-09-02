@@ -1,0 +1,14 @@
+{
+  "task_id": "SB-003",
+  "fixture_version": "1",
+  "hash": "sb003-v1",
+  "v1_title": "PTO Policy v1 (effective 2024-01-01)",
+  "v2_title": "PTO Policy v2 (effective 2025-01-01)",
+  "material_changes": [
+    {"field": "accrual_rate", "v1": "1.0 day per month", "v2": "1.25 days per month", "effective": "2025-01-01"},
+    {"field": "carryover_cap", "v1": "40 hours", "v2": "80 hours", "effective": "2025-01-01"},
+    {"field": "rollover_deadline", "v1": "March 1", "v2": "March 31", "effective": "2025-01-01"}
+  ],
+  "unchanged": ["eligibility", "request_notice", "holiday_blackout"],
+  "exact_numbers": {"v2_accrual_rate": "1.25 days per month", "v2_carryover_cap": "80 hours", "v2_rollover_deadline": "March 31"}
+}

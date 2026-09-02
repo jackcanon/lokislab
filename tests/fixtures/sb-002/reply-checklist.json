@@ -1,0 +1,19 @@
+{
+  "task_id": "SB-002",
+  "fixture_version": "1",
+  "hash": "sb002-v1",
+  "gold": {
+    "intent": "refund duplicate charge + apply travel pause + resend calendar invite",
+    "deadline": "Aug 22",
+    "customer": "Dana Whitfield",
+    "requested_actions": ["refund duplicate order", "pause recurring delivery", "resend tour invite"]
+  },
+  "reply_checklist": [
+    "acknowledges the duplicate charge",
+    "commits to refund",
+    "confirms travel pause applied",
+    "offers to resend the Sept 9 invite",
+    "notes the Friday Aug 22 deadline"
+  ],
+  "must_not": ["send the message", "promise a specific dollar amount not in policy", "contact the customer's employer"]
+}

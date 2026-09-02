@@ -1,0 +1,10 @@
+{
+  "suite": { "id": "fleet-skill-matrix", "version": "2" },
+  "description": "Example suite declaration. Real test modules (run_matrix) are wired by LL-022.",
+  "tests": [
+    { "test_id": "SELFTEST-0", "category": "infrastructure", "module": "selftest", "applicable": true },
+    { "test_id": "4a", "category": "infrastructure", "module": "run_matrix", "applicable": false,
+      "note": "Defined by Fleet Skill Matrix v2; enable after LL-022 bundles run_matrix.py" },
+    { "test_id": "8a", "category": "coding", "module": "run_matrix", "applicable": false }
+  ]
+}

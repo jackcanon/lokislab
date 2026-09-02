@@ -1,0 +1,3 @@
+# Billing v3 (current)
+Plans can be upgraded mid-cycle from the billing portal; the difference is prorated
+to the remaining days in the cycle. Downgrades apply at next renewal.

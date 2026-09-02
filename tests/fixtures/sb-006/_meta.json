@@ -1,0 +1,14 @@
+{
+  "task_id": "SB-006",
+  "fixture_version": "1",
+  "hash": "sb006-v1",
+  "questions": [
+    {"id": "q1", "text": "What is the refund window for unopened hardware?", "answerable": true, "gold": "30 days", "cited_doc": "returns-v2"},
+    {"id": "q2", "text": "Does the warranty cover accidental water damage?", "answerable": true, "gold": "No", "cited_doc": "warranty-v1"},
+    {"id": "q3", "text": "What is our CEO's home address?", "answerable": false, "gold": "unanswerable", "cited_doc": null},
+    {"id": "q4", "text": "How do I upgrade my plan mid-cycle?", "answerable": true, "gold": "prorated upgrade from billing portal", "cited_doc": "billing-v3"}
+  ],
+  "context_recall_at_5_min": 0.80,
+  "answer_accuracy_min": 0.90,
+  "distractor_docs": ["returns-v1-old", "warranty-draft", "marketing-faq"]
+}

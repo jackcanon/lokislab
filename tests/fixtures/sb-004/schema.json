@@ -1,0 +1,8 @@
+{
+  "required": {
+    "total_revenue": "number",
+    "avg_units_per_valid_order": "number",
+    "valid_order_count": "number",
+    "rejected_rows": "array"
+  }
+}

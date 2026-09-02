@@ -1,0 +1,12 @@
+{
+  "task_id": "SB-003",
+  "gold_change_register": [
+    {"field": "accrual_rate", "v1": "1.0 day per month", "v2": "1.25 days per month", "changed": true},
+    {"field": "carryover_cap", "v1": "40 hours", "v2": "80 hours", "changed": true},
+    {"field": "rollover_deadline", "v1": "March 1", "v2": "March 31", "changed": true},
+    {"field": "eligibility", "changed": false},
+    {"field": "request_notice", "changed": false},
+    {"field": "holiday_blackout", "changed": false}
+  ],
+  "material_change_count": 3
+}

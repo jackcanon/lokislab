@@ -1,0 +1,2 @@
+# Returns policy v1 (OLD — do not use)
+Unopened hardware may be returned within 14 days. [superseded by returns-v2]

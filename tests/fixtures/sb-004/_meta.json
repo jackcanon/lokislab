@@ -1,0 +1,21 @@
+{
+  "task_id": "SB-004",
+  "fixture_version": "1",
+  "hash": "sb004-v1",
+  "kpis": {
+    "total_revenue": "sum(revenue) where revenue not blank",
+    "avg_units_per_valid_order": "mean(units) where units not blank",
+    "valid_order_count": "count rows with units>0 and revenue>0",
+    "rejected_row_count": "count rows with blank or zero units"
+  },
+  "tolerances": {"numeric_error_max": 0.001},
+  "anomaly_rules": ["revenue != units*20 (when both present)", "units blank or 0"],
+  "output_schema": {
+    "required": {
+      "total_revenue": "number",
+      "avg_units_per_valid_order": "number",
+      "valid_order_count": "number",
+      "rejected_rows": "array"
+    }
+  }
+}

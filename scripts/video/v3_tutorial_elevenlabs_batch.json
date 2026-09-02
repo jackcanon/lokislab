@@ -1,0 +1,94 @@
+{
+  "tasks": [
+    {
+      "text": "Hey! Welcome to Loki's Lab. I'm here to show you how to run the V3 test harness \u2014 it's a simple way to benchmark your local AI model and see how it stacks up on the leaderboard.\n\nThe whole process takes just a few minutes to set up, and then you kick off the tests and grab a coffee while they run. Let's get started!",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "Here's what you'll need:\n\nFirst, a machine with at least 16 gigabytes of RAM. The bigger models we test need a little breathing room, so 16 is the minimum, but 32 or more is even better.\n\nSecond, Ollama \u2014 that's the app that runs local AI models. It's totally free and works on Mac, Linux, and Windows with WSL2.\n\nYou'll also need Python 3.8 or newer \u2014 most of you probably already have this, but we'll show you how to check.\n\nAnd finally, about 50 gigabytes of free disk space. That's mostly for the model itself, which is around 22 gigs.\n\nIf you're not sure about any of this, don't worry \u2014 the how-to guide has step-by-step instructions for everything.",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "Let's start by installing Ollama. Head over to ollama.ai and click the Download button.\n\nPick your operating system \u2014 we've got macOS, Linux, and Windows with WSL2.\n\nDownload the installer, double-click it, and let it do its thing. On Mac, you'll drag Ollama into your Applications folder. On Linux, it's a one-command install.\n\nGive it a minute to finish, and then launch Ollama. You'll see it pop up in your menu bar on Mac, or as a background service on Linux.\n\nThat's it! Ollama is now running and ready to download models.",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "Alright, now let's get the test harness. Open up your Terminal \u2014 that's the command-line app on your machine.\n\nFirst, we'll create a folder to work in. Type this:\n\nmkdir -p ~/loki-v3-test\n\nThen change into that folder:\n\ncd ~/loki-v3-test\n\nNow, download the test harness:\n\ncurl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o v3_test_harness.sh\n\nAnd make it executable:\n\nchmod +x v3_test_harness.sh\n\nDone! You now have the test harness ready to go.",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "Before we run the tests, let's pre-download the model. This usually takes 10 to 30 minutes on first run, depending on your internet speed.\n\nIn the same Terminal, type:\n\nollama pull qwen3.6:latest\n\nYou'll see a progress bar as it downloads the 22-gigabyte model. Go grab a coffee, check your email \u2014 whatever you need to do while this downloads.\n\nIf your download is slow, the how-to guide has some tips for troubleshooting. But for most people, this just works.",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "Once the model finishes downloading, you're ready to run the tests. Just type:\n\n./v3_test_harness.sh\n\nAnd hit Enter. The script will do a quick check to make sure everything is set up correctly, then start running through the 18 tests.\n\nYou'll see output like this as each test completes \u2014 it shows the test name, how long it took, and quality scores from 1 to 5.\n\nThese tests cover everything: web design, writing, graphics, coding, math, vision, and more. Each one usually takes 30 seconds to a few minutes depending on your hardware.\n\nThe whole suite typically takes 2 to 4 hours. So yeah, this is a good time to take a break! The tests run in the background, so you can close your Terminal and come back later.",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "When the tests finish, all your results get saved to a results folder. You can check them anytime by typing:\n\nls -la results/\n\nEach test gets its own JSON file with all the details \u2014 whether it passed, the quality score, how fast it ran, and the model's actual response.\n\nYou can peek at any result file to see exactly what your model did. But you don't need to understand the JSON \u2014 that's just so we can aggregate everything for the leaderboard.",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "Now for the fun part: submitting your results to the Loki's Lab leaderboard!\n\nHead over to lokislab.org/test/results. You'll see other people's results, ranked by hardware and model.\n\nClick the 'Submit a benchmark result' button, upload your JSON files, and boom \u2014 your machine is on the leaderboard!\n\nYou can see how your hardware compares to others. Did your MacBook M1 beat a fancy Linux box? Did that old laptop surprise everyone? The leaderboard shows it all.\n\nYour results are public, but completely anonymous unless you add your name. So submit with confidence!",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    },
+    {
+      "text": "That's it! You've just benchmarked your local AI model and joined the Loki's Lab community.\n\nIf you run into any issues, the full how-to guide is at lokislab.org/docs/V3-TEST-HOWTO.md \u2014 it's got detailed troubleshooting for everything.\n\nThanks for testing with us, and we can't wait to see what your machine can do. Happy benchmarking!",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "model_id": "eleven_monolingual_v1",
+      "output_format": "mp3_22050_32",
+      "speed": 0.9,
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "speaker_boost": true
+    }
+  ]
+}

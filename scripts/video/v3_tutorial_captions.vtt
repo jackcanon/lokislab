@@ -1,0 +1,385 @@
+WEBVTT
+
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:02.000
+<v Narrator> 1: Introduction
+
+00:00:00.000 --> 00:00:05.000
+Hey! Welcome to Loki's Lab. I'm here to show you how to run the V3 test harness
+
+00:00:05.000 --> 00:00:10.000
+— it's a simple way to benchmark your local AI model and see how it stacks up on
+
+00:00:10.000 --> 00:00:15.000
+the leaderboard.
+
+00:00:15.000 --> 00:00:20.000
+
+
+00:00:20.000 --> 00:00:25.000
+The whole process takes just a few minutes to set up, and then you kick off the
+
+00:00:25.000 --> 00:00:30.000
+tests and grab a coffee while they run. Let's get started!
+
+00:00:30.000 --> 00:00:32.000
+<v Narrator> 2: What You Need
+
+00:00:30.000 --> 00:00:33.529
+Here's what you'll need:
+
+00:00:33.529 --> 00:00:37.058
+
+
+00:00:37.058 --> 00:00:40.588
+First, a machine with at least 16 gigabytes of RAM. The bigger models we test
+
+00:00:40.588 --> 00:00:44.117
+need a little breathing room, so 16 is the minimum, but 32 or more is even
+
+00:00:44.117 --> 00:00:47.647
+better.
+
+00:00:47.647 --> 00:00:51.176
+
+
+00:00:51.176 --> 00:00:54.705
+Second, Ollama — that's the app that runs local AI models. It's totally free and
+
+00:00:54.705 --> 00:00:58.235
+works on Mac, Linux, and Windows with WSL2.
+
+00:00:58.235 --> 00:01:01.764
+
+
+00:01:01.764 --> 00:01:05.294
+You'll also need Python 3.8 or newer — most of you probably already have this,
+
+00:01:05.294 --> 00:01:08.823
+but we'll show you how to check.
+
+00:01:08.823 --> 00:01:12.352
+
+
+00:01:12.352 --> 00:01:15.882
+And finally, about 50 gigabytes of free disk space. That's mostly for the model
+
+00:01:15.882 --> 00:01:19.411
+itself, which is around 22 gigs.
+
+00:01:19.411 --> 00:01:22.941
+
+
+00:01:22.941 --> 00:01:26.470
+If you're not sure about any of this, don't worry — the how-to guide has
+
+00:01:26.470 --> 00:01:30.000
+step-by-step instructions for everything.
+
+00:01:30.000 --> 00:01:32.000
+<v Narrator> 3: Install Ollama
+
+00:01:30.000 --> 00:01:37.500
+Let's start by installing Ollama. Head over to ollama.ai and click the Download
+
+00:01:37.500 --> 00:01:45.000
+button.
+
+00:01:45.000 --> 00:01:52.500
+
+
+00:01:52.500 --> 00:02:00.000
+Pick your operating system — we've got macOS, Linux, and Windows with WSL2.
+
+00:02:00.000 --> 00:02:07.500
+
+
+00:02:07.500 --> 00:02:15.000
+Download the installer, double-click it, and let it do its thing. On Mac, you'll
+
+00:02:15.000 --> 00:02:22.500
+drag Ollama into your Applications folder. On Linux, it's a one-command install.
+
+00:02:22.500 --> 00:02:30.000
+
+
+00:02:30.000 --> 00:02:37.500
+Give it a minute to finish, and then launch Ollama. You'll see it pop up in your
+
+00:02:37.500 --> 00:02:45.000
+menu bar on Mac, or as a background service on Linux.
+
+00:02:45.000 --> 00:02:52.500
+
+
+00:02:52.500 --> 00:03:00.000
+That's it! Ollama is now running and ready to download models.
+
+00:03:00.000 --> 00:03:02.000
+<v Narrator> 4: Download the Test Harness
+
+00:03:00.000 --> 00:03:03.000
+Alright, now let's get the test harness. Open up your Terminal — that's the
+
+00:03:03.000 --> 00:03:06.000
+command-line app on your machine.
+
+00:03:06.000 --> 00:03:09.000
+
+
+00:03:09.000 --> 00:03:12.000
+First, we'll create a folder to work in. Type this:
+
+00:03:12.000 --> 00:03:15.000
+
+
+00:03:15.000 --> 00:03:18.000
+mkdir -p ~/loki-v3-test
+
+00:03:18.000 --> 00:03:21.000
+
+
+00:03:21.000 --> 00:03:24.000
+Then change into that folder:
+
+00:03:24.000 --> 00:03:27.000
+
+
+00:03:27.000 --> 00:03:30.000
+cd ~/loki-v3-test
+
+00:03:30.000 --> 00:03:33.000
+
+
+00:03:33.000 --> 00:03:36.000
+Now, download the test harness:
+
+00:03:36.000 --> 00:03:39.000
+
+
+00:03:39.000 --> 00:03:42.000
+curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o v3_test_harness.sh
+
+00:03:42.000 --> 00:03:45.000
+
+
+00:03:45.000 --> 00:03:48.000
+And make it executable:
+
+00:03:48.000 --> 00:03:51.000
+
+
+00:03:51.000 --> 00:03:54.000
+chmod +x v3_test_harness.sh
+
+00:03:54.000 --> 00:03:57.000
+
+
+00:03:57.000 --> 00:04:00.000
+Done! You now have the test harness ready to go.
+
+00:04:00.000 --> 00:04:02.000
+<v Narrator> 5: Pre-Cache the Model
+
+00:04:00.000 --> 00:04:05.000
+Before we run the tests, let's pre-download the model. This usually takes 10 to
+
+00:04:05.000 --> 00:04:10.000
+30 minutes on first run, depending on your internet speed.
+
+00:04:10.000 --> 00:04:15.000
+
+
+00:04:15.000 --> 00:04:20.000
+In the same Terminal, type:
+
+00:04:20.000 --> 00:04:25.000
+
+
+00:04:25.000 --> 00:04:30.000
+ollama pull qwen3.6:latest
+
+00:04:30.000 --> 00:04:35.000
+
+
+00:04:35.000 --> 00:04:40.000
+You'll see a progress bar as it downloads the 22-gigabyte model. Go grab a
+
+00:04:40.000 --> 00:04:45.000
+coffee, check your email — whatever you need to do while this downloads.
+
+00:04:45.000 --> 00:04:50.000
+
+
+00:04:50.000 --> 00:04:55.000
+If your download is slow, the how-to guide has some tips for troubleshooting.
+
+00:04:55.000 --> 00:05:00.000
+But for most people, this just works.
+
+00:05:00.000 --> 00:05:02.000
+<v Narrator> 6: Run the Tests
+
+00:05:00.000 --> 00:05:07.058
+Once the model finishes downloading, you're ready to run the tests. Just type:
+
+00:05:07.058 --> 00:05:14.117
+
+
+00:05:14.117 --> 00:05:21.176
+./v3_test_harness.sh
+
+00:05:21.176 --> 00:05:28.235
+
+
+00:05:28.235 --> 00:05:35.294
+And hit Enter. The script will do a quick check to make sure everything is set
+
+00:05:35.294 --> 00:05:42.352
+up correctly, then start running through the 18 tests.
+
+00:05:42.352 --> 00:05:49.411
+
+
+00:05:49.411 --> 00:05:56.470
+You'll see output like this as each test completes — it shows the test name, how
+
+00:05:56.470 --> 00:06:03.529
+long it took, and quality scores from 1 to 5.
+
+00:06:03.529 --> 00:06:10.588
+
+
+00:06:10.588 --> 00:06:17.647
+These tests cover everything: web design, writing, graphics, coding, math,
+
+00:06:17.647 --> 00:06:24.705
+vision, and more. Each one usually takes 30 seconds to a few minutes depending
+
+00:06:24.705 --> 00:06:31.764
+on your hardware.
+
+00:06:31.764 --> 00:06:38.823
+
+
+00:06:38.823 --> 00:06:45.882
+The whole suite typically takes 2 to 4 hours. So yeah, this is a good time to
+
+00:06:45.882 --> 00:06:52.941
+take a break! The tests run in the background, so you can close your Terminal
+
+00:06:52.941 --> 00:07:00.000
+and come back later.
+
+00:07:00.000 --> 00:07:02.000
+<v Narrator> 7: Check Your Results
+
+00:07:00.000 --> 00:07:05.454
+When the tests finish, all your results get saved to a results folder. You can
+
+00:07:05.454 --> 00:07:10.909
+check them anytime by typing:
+
+00:07:10.909 --> 00:07:16.363
+
+
+00:07:16.363 --> 00:07:21.818
+ls -la results/
+
+00:07:21.818 --> 00:07:27.272
+
+
+00:07:27.272 --> 00:07:32.727
+Each test gets its own JSON file with all the details — whether it passed, the
+
+00:07:32.727 --> 00:07:38.181
+quality score, how fast it ran, and the model's actual response.
+
+00:07:38.181 --> 00:07:43.636
+
+
+00:07:43.636 --> 00:07:49.090
+You can peek at any result file to see exactly what your model did. But you
+
+00:07:49.090 --> 00:07:54.545
+don't need to understand the JSON — that's just so we can aggregate everything
+
+00:07:54.545 --> 00:08:00.000
+for the leaderboard.
+
+00:08:00.000 --> 00:08:02.000
+<v Narrator> 8: Submit Your Results
+
+00:08:00.000 --> 00:08:04.285
+Now for the fun part: submitting your results to the Loki's Lab leaderboard!
+
+00:08:04.285 --> 00:08:08.571
+
+
+00:08:08.571 --> 00:08:12.857
+Head over to lokislab.org/test/results. You'll see other people's results,
+
+00:08:12.857 --> 00:08:17.142
+ranked by hardware and model.
+
+00:08:17.142 --> 00:08:21.428
+
+
+00:08:21.428 --> 00:08:25.714
+Click the 'Submit a benchmark result' button, upload your JSON files, and boom —
+
+00:08:25.714 --> 00:08:30.000
+your machine is on the leaderboard!
+
+00:08:30.000 --> 00:08:34.285
+
+
+00:08:34.285 --> 00:08:38.571
+You can see how your hardware compares to others. Did your MacBook M1 beat a
+
+00:08:38.571 --> 00:08:42.857
+fancy Linux box? Did that old laptop surprise everyone? The leaderboard shows it
+
+00:08:42.857 --> 00:08:47.142
+all.
+
+00:08:47.142 --> 00:08:51.428
+
+
+00:08:51.428 --> 00:08:55.714
+Your results are public, but completely anonymous unless you add your name. So
+
+00:08:55.714 --> 00:09:00.000
+submit with confidence!
+
+00:09:00.000 --> 00:09:02.000
+<v Narrator> 9: Outro
+
+00:09:00.000 --> 00:09:03.333
+That's it! You've just benchmarked your local AI model and joined the Loki's Lab
+
+00:09:03.333 --> 00:09:06.666
+community.
+
+00:09:06.666 --> 00:09:10.000
+
+
+00:09:10.000 --> 00:09:13.333
+If you run into any issues, the full how-to guide is at
+
+00:09:13.333 --> 00:09:16.666
+lokislab.org/docs/V3-TEST-HOWTO.md — it's got detailed troubleshooting for
+
+00:09:16.666 --> 00:09:20.000
+everything.
+
+00:09:20.000 --> 00:09:23.333
+
+
+00:09:23.333 --> 00:09:26.666
+Thanks for testing with us, and we can't wait to see what your machine can do.
+
+00:09:26.666 --> 00:09:30.000
+Happy benchmarking!

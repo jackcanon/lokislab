@@ -1,0 +1,57 @@
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling d372de8e9348: 100% ▕██████████████████▏  21 GB                         [K
+pulling a62390d25b4b: 100% ▕██████████████████▏ 902 MB                         [K
+pulling 5f3a3c817e78: 100% ▕██████████████████▏  11 KB                         [K
+pulling ce44c0f3ca1f: 100% ▕██████████████████▏  116 B                         [K
+pulling 99afa5bbf1e7: 100% ▕██████████████████▏  220 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+[qwen3.6:latest on heimdall] running V3 (long_context)...
+
+=== SUMMARY ===
+  V3: OK (45.9s) q=5 a=5
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling d372de8e9348: 100% ▕██████████████████▏  21 GB                         [K
+pulling a62390d25b4b: 100% ▕██████████████████▏ 902 MB                         [K
+pulling 5f3a3c817e78: 100% ▕██████████████████▏  11 KB                         [K
+pulling ce44c0f3ca1f: 100% ▕██████████████████▏  116 B                         [K
+pulling 99afa5bbf1e7: 100% ▕██████████████████▏  220 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+[qwen3.6:latest on heimdall] running V3 (long_context)...
+
+=== SUMMARY ===
+  V3: OK (40.7s) q=5 a=5
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling d372de8e9348: 100% ▕██████████████████▏  21 GB                         [K
+pulling a62390d25b4b: 100% ▕██████████████████▏ 902 MB                         [K
+pulling 5f3a3c817e78: 100% ▕██████████████████▏  11 KB                         [K
+pulling ce44c0f3ca1f: 100% ▕██████████████████▏  116 B                         [K
+pulling 99afa5bbf1e7: 100% ▕██████████████████▏  220 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+[qwen3.6:latest on heimdall] running V3 (long_context)...
+
+=== SUMMARY ===
+  V3: OK (16.9s) q=5 a=5
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout
+zsh:1: command not found: timeout

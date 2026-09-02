@@ -1,0 +1,16 @@
+{
+  "task_id": "SB-005",
+  "fixture_version": "1",
+  "hash": "sb005-v1",
+  "decision_question": "Which of the three evaluated espresso machines is best for a low-volume cafe that wants the lowest 3-year total cost of ownership, and what is its stated boiler capacity?",
+  "required_questions": [
+    "recommend a machine for low-volume cafe by lowest 3-year TCO",
+    "state that machine's boiler capacity",
+    "name the two alternatives considered"
+  ],
+  "claims_gold": {
+    "barista-pro": {"price_usd": 699, "boiler_l": 1.0, "yearly_service_usd": 60},
+    "cafe-king": {"price_usd": 1290, "boiler_l": 1.8, "yearly_service_usd": 120},
+    "pro-line": {"price_usd": 2100, "boiler_l": 2.4, "yearly_service_usd": 200}
+  }
+}

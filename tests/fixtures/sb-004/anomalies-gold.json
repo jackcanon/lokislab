@@ -1,0 +1,15 @@
+{
+  "task_id": "SB-004",
+  "anomalies_gold": [
+    {"order_id": "A103", "reason": "units=0 but row present"},
+    {"order_id": "A105", "reason": "units blank"},
+    {"order_id": "A110", "reason": "units=0"},
+    {"order_id": "A112", "reason": "units blank"}
+  ],
+  "anomaly_count": 4,
+  "expected_totals": {
+    "total_revenue": 23250,
+    "valid_order_count": 11,
+    "avg_units_per_valid_order": 101.18
+  }
+}

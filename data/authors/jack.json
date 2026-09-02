@@ -1,0 +1,9 @@
+{
+  "name": "Jack Blair",
+  "slug": "jack",
+  "email": "jack@happyjack.media",
+  "bio": "Jack runs Loki's Lab from a homelab on Asgard. He tests local AI models on his own hardware so others don't have to trust vendor demos filmed on someone else's rig. When he's not benchmarking, he's building tools for the fleet or shooting documentary footage.",
+  "role": "Founder, tester, and occasional filmmaker",
+  "avatar": "/authors/jack.jpg",
+  "ogImage": "https://og-image.vercel.app/Jack%20Canon.png"
+}
