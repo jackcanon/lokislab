@@ -1,39 +1,124 @@
-import { Leaderboard } from '@/components/leaderboard';
-import { getLeaderboardData } from '@/lib/leaderboard';
+import { SkillMatrixLeaderboard } from '@/components/skillMatrixLeaderboard';
 import {
   ArrowUpRight,
   Check,
   FlaskConical,
-  Menu,
   ShieldCheck,
 } from 'lucide-react';
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
+import { NewsTicker, type TickerStory } from '@/components/NewsTicker';
+import {
+  summary,
+  top5,
+  feedMeta,
+} from '@/lib/skillMatrix';
 
-const trustedNews = [
-  {
-    source: 'LM Studio',
-    date: 'Aug 27',
-    title: 'How Auto Review works in Bionic',
-    href: 'https://lmstudio.ai/blog/how-auto-review-works',
-  },
-  {
-    source: 'LM Studio',
-    date: 'Aug 17',
-    title: 'Bionic now supports skills',
-    href: 'https://lmstudio.ai/blog/skills',
-  },
-  {
-    source: 'llama.cpp',
-    date: 'Aug 20',
-    title: 'Release b10516 lands for local inference',
-    href: 'https://github.com/ggml-org/llama.cpp/releases/tag/b10516',
-  },
-  {
-    source: 'Hermes Agent',
-    date: 'Jul 8',
-    title: 'Version 0.18.2 is now available',
-    href: 'https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.7.2',
-  },
-];
+// --- Trusted Sources: mixed feed of Loki's Lab articles + scraped external news ---
+
+function scanLokiArticles(): {
+  slug: string;
+  title: string;
+  date: string;
+  href: string;
+  pinned: boolean;
+}[] {
+  const draftsDir = path.join(process.cwd(), 'content', 'drafts');
+  const parsed = fs
+    .readdirSync(draftsDir)
+    .filter((f) => f.endsWith('.md'))
+    .map((file) => {
+      const raw = fs.readFileSync(path.join(draftsDir, file), 'utf-8');
+      const fm = raw.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '';
+
+      const shortTitle =
+        fm.match(/^short_title:\s*"([^"]+)"/m)?.[1] ??
+        fm.match(/^short_title:\s*(.+)$/m)?.[1]?.trim() ??
+        null;
+
+      const title =
+        shortTitle ??
+        fm.match(/^title:\s*"([^"]+)"/m)?.[1] ??
+        fm.match(/^title:\s*(.+)$/m)?.[1]?.trim() ??
+        file.replace(/\.md$/, '').replace(/^LL-\d+-/, '').replace(/-/g, ' ');
+
+      const date =
+        fm.match(/^date:\s*"([^"]+)"/m)?.[1] ??
+        fm.match(/^date:\s*(.+)$/m)?.[1]?.trim() ??
+        '';
+
+      const pinMatch = fm.match(/^pin:\s*(true|"true"|"1"|1)/m);
+      const pinned = pinMatch ? true : false;
+
+      const slug = 'll-' + file.replace(/\.md$/, '').replace(/^LL-(\d+)-.*/, '$1');
+
+      return {
+        slug,
+        title,
+        date,
+        href: `/articles/${file.replace(/\.md$/, '')}`,
+        pinned,
+      };
+    });
+
+  return parsed.sort((a, b) => {
+    if (a.pinned && !b.pinned) return -1;
+    if (!a.pinned && b.pinned) return 1;
+    if (a.date && b.date) return b.date.localeCompare(a.date);
+    if (a.date) return -1;
+    if (b.date) return 1;
+    return b.title.localeCompare(a.title);
+  });
+}
+
+interface ScrapedNewsItem {
+  source: string;
+  title: string;
+  href: string;
+  date: string;
+  excerpt?: string;
+}
+
+function loadScrapedNews(): ScrapedNewsItem[] {
+  try {
+    const raw = fs.readFileSync(
+      path.join(process.cwd(), 'data', 'trusted-news.json'),
+      'utf-8',
+    );
+    const parsed = JSON.parse(raw) as { items?: ScrapedNewsItem[] };
+    return parsed.items ?? [];
+  } catch {
+    return [];
+  }
+}
+
+const lokisArticles = scanLokiArticles();
+const scrapedNews = loadScrapedNews();
+
+// --- Build the cycling ticker story list: Loki articles + external trusted news ---
+
+function buildTickerStories(): TickerStory[] {
+  const out: TickerStory[] = [];
+
+  // Loki's Lab articles first (most recent first)
+  for (const a of lokisArticles) {
+    out.push({ title: a.title, href: a.href, source: "Loki's Lab" });
+  }
+
+  // External trusted news, de-duplicated against Loki titles
+  const lokiTitles = new Set(lokisArticles.map((a) => a.title.toLowerCase()));
+  for (const n of scrapedNews) {
+    if (!n.title || n.title.toLowerCase() in lokiTitles) continue;
+    out.push({ title: n.title, href: n.href, source: n.source || 'Trusted wire' });
+  }
+
+  return out;
+}
+
+const tickerStories = buildTickerStories();
+
+// --- Methods strip ---
 
 const methods = [
   [
@@ -53,136 +138,185 @@ const methods = [
 const submissionUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSecRejUJw49OsKEBOmMKkr2ns4TKZwdeY5Jj3rVSKlU0Hq_3Q/viewform?usp=sharing&ouid=100725185419145806700';
 
-export default async function Home() {
-  const leaderboard = await getLeaderboardData();
+// --- Best-right-now picks derived from the live skill-matrix feed ---
 
+type BestPick = {
+  label: string;
+  model: string;
+  machine: string;
+  why: string;
+  href: string;
+};
+
+function bestOverall(): BestPick | null {
+  const candidates = summary
+    .filter((s) => s.capable > 0 && s.avgQuality != null)
+    .sort((a, b) => {
+      if (b.avgQuality !== a.avgQuality) return (b.avgQuality ?? 0) - (a.avgQuality ?? 0);
+      return (b.capableRate ?? 0) - (a.capableRate ?? 0);
+    });
+  const top = candidates[0];
+  if (!top) return null;
+  return {
+    label: 'Best overall',
+    model: top.model,
+    machine: top.machine,
+    why: `${top.capable}/${top.tests} capable tasks · avg quality ${top.avgQuality?.toFixed(1)}/`,
+    href: '/test/results',
+  };
+}
+
+function bestMac(): BestPick | null {
+  const mac = summary.filter(
+    (s) => s.machine && /mac|apple|m1|m2|m3|m4|m5|m6/i.test(s.machine),
+  );
+  const candidates = mac
+    .filter((s) => s.capable > 0 && s.avgQuality != null)
+    .sort((a, b) => {
+      if (b.avgQuality !== a.avgQuality) return (b.avgQuality ?? 0) - (a.avgQuality ?? 0);
+      return (b.capableRate ?? 0) - (a.capableRate ?? 0);
+    });
+  const top = candidates[0];
+  if (!top) return null;
+  return {
+    label: 'Best Mac model',
+    model: top.model,
+    machine: top.machine,
+    why: `Local AI on Apple Silicon · ${top.capable}/${top.tests} capable tasks`,
+    href: '/test/results',
+  };
+}
+
+function fastestUseful(): BestPick | null {
+  const candidates = summary
+    .filter((s) => s.capable > 0 && s.medianSpeedS != null && s.avgQuality != null)
+    .sort((a, b) => {
+      if (a.avgQuality !== b.avgQuality) return (b.avgQuality ?? 0) - (a.avgQuality ?? 0);
+      return (a.medianSpeedS ?? Infinity) - (b.medianSpeedS ?? Infinity);
+    });
+  const top = candidates[0];
+  if (!top) return null;
+  return {
+    label: 'Fastest useful',
+    model: top.model,
+    machine: top.machine,
+    why: `${top.medianSpeedS?.toFixed(1)}s median · quality ${top.avgQuality?.toFixed(1)}/`,
+    href: '/test/results',
+  };
+}
+
+const homepagePicks = [bestOverall(), bestMac(), fastestUseful()].filter(
+  (p): p is BestPick => p !== null,
+);
+
+export default async function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#ece5d8] text-[#17201f]">
-      <header className="sticky top-0 z-50 border-b border-[#aaa194] bg-[#ece5d8]/95 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-14">
-          <a
-            href="#top"
-            className="flex items-center gap-3"
-            aria-label="Loki's Lab home"
-          >
-            <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-sm bg-[#17201f] text-[#ece5d8]">
-              <span className="absolute left-[8px] top-[2px] -rotate-12 font-serif text-2xl font-black">
-                L
-              </span>
-              <span className="absolute bottom-[1px] right-[7px] rotate-[168deg] font-serif text-2xl font-black text-[#d26743]">
-                L
-              </span>
-            </span>
-            <span className="display-serif text-xl font-bold tracking-tight">
-              Loki’s Lab
-            </span>
-          </a>
-          <nav className="hidden items-center gap-7 text-sm font-semibold md:flex">
-            <a href="#leaderboard" className="hover:text-[#b74627]">
-              Leaderboard
-            </a>
-            <a href="#news" className="hover:text-[#b74627]">
-              News
-            </a>
-            <a href="#method" className="hover:text-[#b74627]">
-              Method
-            </a>
-            <a href="#learn" className="hover:text-[#b74627]">
-              101
-            </a>
-          </nav>
-          <a
-            href={submissionUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden rounded-full bg-[#17201f] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#b74627] sm:block"
-          >
-            Submit a result
-          </a>
-          <Menu className="md:hidden" aria-label="Menu" />
-        </div>
-      </header>
-
+      {/* Top wire — cycling ticker: one story at a time */}
       <div
         id="top"
         className="border-b border-[#aaa194] bg-[#17201f] text-[#e9e4db]"
       >
-        <div className="mx-auto flex max-w-[1440px] items-center gap-5 overflow-hidden px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] md:px-10 lg:px-14">
-          <span className="shrink-0 text-[#e2734c]">Trusted wire</span>
-          <span className="truncate">
-            LM Studio explains Bionic Auto Review
+        <div className="mx-auto flex w-full max-w-[1440px] items-center px-5 py-2.5 md:px-10 lg:px-14">
+          <span className="shrink-0 text-[#e2734c] font-semibold uppercase tracking-[0.16em] text-[11px] md:hidden">
+            News
           </span>
-          <span className="text-[#6e7773]">◆</span>
-          <span className="hidden truncate md:inline">
-            New llama.cpp release
-          </span>
-          <span className="ml-auto shrink-0 text-[#aeb6b2]">
+          <div className="flex-1 overflow-hidden">
+            <NewsTicker stories={tickerStories} />
+          </div>
+          <span className="ml-auto shrink-0 text-[#aeb6b2] text-[11px] font-semibold uppercase tracking-[0.16em] hidden sm:block">
             Signal, not noise
           </span>
         </div>
       </div>
 
-      <section className="mx-auto grid max-w-[1440px] gap-10 px-5 py-14 md:px-10 lg:grid-cols-[minmax(0,1.55fr)_420px] lg:px-14 lg:py-20">
-        <div className="flex min-h-[480px] flex-col justify-between border-l-4 border-[#b74627] pl-6 md:pl-10">
+      {/* Results lead — headline + best picks strip */}
+      <section
+        id="leaderboard"
+        className="mx-auto max-w-[1440px] px-5 py-12 md:px-10 lg:py-18"
+      >
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="mb-6 text-xs font-bold uppercase tracking-[0.22em] text-[#8e4d31]">
-              Independent local AI fieldwork
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#b74627]">
+              The Agent Leaderboard
             </p>
-            <h1 className="display-serif max-w-5xl text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.86] tracking-[-0.065em]">
-              Which local model earns a place on your machine?
+            <h1 className="display-serif max-w-3xl text-[clamp(3rem,7vw,6rem)] leading-[1] tracking-[-0.05em]">
+              What can your machine run?
             </h1>
-          </div>
-          <div className="mt-10 flex flex-col items-start justify-between gap-6 border-t border-[#aaa194] pt-6 md:flex-row md:items-end">
-            <p className="max-w-2xl text-lg leading-7 text-[#4c5652]">
-              Reproducible agent benchmarks, useful setup guides, and AI news
-              for builders who would rather test the claim than repeat it.
+            <p className="mt-4 max-w-xl text-lg leading-7 text-[#4c5652]">
+              Reproducible agent benchmarks, useful setup guides, and AI news for builders who
+              would rather test the claim than repeat it.
             </p>
-            <a
-              href="#leaderboard"
-              className="group flex shrink-0 items-center gap-2 font-bold text-[#b74627]"
-            >
-              See the results{' '}
-              <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link
+                href="/test/results"
+                className="rounded-full border border-[#aca396] px-5 py-2.5 text-sm font-semibold transition hover:border-[#17201f]"
+              >
+                See all results →
+              </Link>
+              <Link
+                href="/news"
+                className="rounded-full border border-[#aaa194] px-5 py-2.5 text-sm font-semibold text-[#5b6560] transition hover:border-[#17201f] hover:text-[#17201f]"
+              >
+                See all news
+              </Link>
+              <Link
+                href="/test"
+                className="rounded-full bg-[#b74627] px-5 py-2.5 text-sm font-bold text-[#ece5d8] transition hover:bg-[#a5341a]"
+              >
+                Run the test yourself
+              </Link>
+            </div>
+          </div>
+          <div className="shrink-0 text-right text-sm text-[#6e7773]">
+            <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#2d6953]">
+              Live · {feedMeta.totalRuns} eval runs
+            </p>
+            <p className="mt-1 text-xs text-[#8f9a95]">
+              Updated from the fleet skill-matrix feed.
+            </p>
           </div>
         </div>
 
-        <aside id="news" className="border-t-4 border-[#17201f]">
-          <div className="flex items-center justify-between py-4">
-            <h2 className="text-xs font-black uppercase tracking-[0.18em]">
-              Trusted sources
-            </h2>
-            <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-[#2d6953]">
-              <ShieldCheck className="h-3.5 w-3.5" /> Curated feed
-            </span>
+        {/* Best right now strip */}
+        {homepagePicks.length > 0 && (
+          <div className="mt-10 rounded-xl border border-[#b74627] bg-[#f7f3eb] px-5 py-6 md:px-8">
+            <div className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-[#b74627]">
+              Best right now
+              <span className="text-[#8a6a1f]">·</span>
+              <span className="text-[#5b4a1f]">from the latest runs</span>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {homepagePicks.map((pick) => (
+                <Link
+                  key={pick.label + pick.model}
+                  href={pick.href}
+                  className="group flex flex-col gap-2 rounded-lg bg-white/50 p-4 transition hover:bg-white/80"
+                >
+                  <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#b74627]">
+                    {pick.label}
+                  </span>
+                  <span className="font-mono text-base font-bold text-[#17201f]">
+                    {pick.model}
+                  </span>
+                  <span className="text-xs text-[#6e7773]">{pick.machine}</span>
+                  {pick.why && (
+                    <span className="text-xs text-[#6e7773] leading-relaxed">{pick.why}</span>
+                  )}
+                  <span className="text-xs text-[#8f9a95]">
+                    See the result →
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
-          {trustedNews.map((story) => (
-            <a
-              key={story.href}
-              href={story.href}
-              target="_blank"
-              rel="noreferrer"
-              className="group grid grid-cols-[92px_1fr_20px] gap-3 border-t border-[#aaa194] py-5"
-            >
-              <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#707873]">
-                <p className="text-[#b74627]">{story.source}</p>
-                <p className="mt-1">{story.date}</p>
-              </div>
-              <h3 className="display-serif text-xl leading-6 group-hover:text-[#b74627]">
-                {story.title}
-              </h3>
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          ))}
-          <p className="border-t border-[#aaa194] pt-4 text-xs leading-5 text-[#69706c]">
-            Official project feeds and sources selected by the editor. Open-net
-            discovery will remain a separate, clearly labeled stream.
-          </p>
-        </aside>
+        )}
       </section>
 
-      <Leaderboard {...leaderboard} />
+      {/* Leaderboard — the full ranked table */}
+      <SkillMatrixLeaderboard />
 
+      {/* Methodology */}
       <section
         id="method"
         className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-14 lg:py-24"
@@ -196,8 +330,8 @@ export default async function Home() {
               The test is the test.
             </h2>
             <p className="mt-6 max-w-sm leading-7 text-[#53605b]">
-              Sponsors can fund hardware or segments. They cannot purchase a
-              score, placement, or conclusion.
+              Sponsors can fund hardware or segments. They cannot purchase a score, placement, or
+              conclusion.
             </p>
           </div>
           <div className="grid gap-px overflow-hidden rounded-xl border border-[#aaa194] bg-[#aaa194] md:grid-cols-3">
@@ -214,7 +348,11 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="submit" className="bg-[#17201f] text-[#e9e4db]">
+      {/* Community testing */}
+      <section
+        id="submit"
+        className="bg-[#17201f] text-[#e9e4db]"
+      >
         <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-16 md:px-10 lg:grid-cols-[1.2fr_0.8fr] lg:px-14 lg:py-20">
           <div>
             <FlaskConical className="mb-8 h-10 w-10 text-[#e2734c]" />
@@ -227,9 +365,8 @@ export default async function Home() {
           </div>
           <div className="flex flex-col justify-end">
             <p className="mb-7 text-lg leading-7 text-[#bac1bd]">
-              The public runner will support macOS, Linux, Windows PowerShell,
-              and WSL. Every submission receives a unique ID and a visible
-              verification status.
+              The public runner will support macOS, Linux, Windows PowerShell, and WSL. Every
+              submission receives a unique ID and a visible verification status.
             </p>
             <div className="space-y-3 text-sm">
               {[
@@ -248,16 +385,17 @@ export default async function Home() {
               rel="noreferrer"
               className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-[#e2734c] px-6 py-3 text-sm font-black text-[#17201f] transition hover:bg-[#f08a65]"
             >
-              Submit a benchmark result <ArrowUpRight className="h-4 w-4" />
+              Submit a benchmark result{' '}
+              <ArrowUpRight className="h-4 w-4" />
             </a>
             <p className="mt-3 text-xs text-[#8f9a95]">
-              Google sign-in is required for verified email and secure JSON
-              upload.
+              Google sign-in is required for verified email and secure JSON upload.
             </p>
           </div>
         </div>
       </section>
 
+      {/* 101 */}
       <section
         id="learn"
         className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-14 lg:py-24"
@@ -265,34 +403,21 @@ export default async function Home() {
         <div className="mb-10 flex flex-col justify-between gap-4 border-b-2 border-[#17201f] pb-5 md:flex-row md:items-end">
           <div>
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-[#b74627]">
-              Loki’s Lab 101
+              Loki&apos;s Lab 101
             </p>
             <h2 className="display-serif text-5xl tracking-[-0.04em]">
               Useful from the first command.
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-[#59645f]">
-            Free, practical courses for local models and agents—without a
-            paywall.
+            Free, practical courses for local models and agents—without a paywall.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {[
-            [
-              '01',
-              'Choose the right local model',
-              'Match memory, hardware, context, and workload before downloading.',
-            ],
-            [
-              '02',
-              'Set up Ollama + Hermes',
-              'Build a clean, repeatable first local agent environment.',
-            ],
-            [
-              '03',
-              'Read a benchmark honestly',
-              'Understand coverage, speed, failures, and what one score leaves out.',
-            ],
+            ['01', 'Choose the right local model', 'Match memory, hardware, context, and workload before downloading.'],
+            ['02', 'Set up Ollama + Hermes', 'Build a clean, repeatable first local agent environment.'],
+            ['03', 'Read a benchmark honestly', 'Understand coverage, speed, failures, and what one score leaves out.'],
           ].map(([number, title, copy]) => (
             <article
               key={number}
@@ -301,51 +426,13 @@ export default async function Home() {
               <span className="font-mono text-xs font-bold text-[#b74627]">
                 {number} / COMING NEXT
               </span>
-              <h3 className="display-serif mt-14 text-3xl leading-8">
-                {title}
-              </h3>
+              <h3 className="display-serif mt-14 text-3xl leading-8">{title}</h3>
               <p className="mt-4 text-sm leading-6 text-[#5d6762]">{copy}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="border-y border-[#aaa194] bg-[#dcd6cb]">
-        <div className="mx-auto grid max-w-[1440px] gap-8 px-5 py-12 md:grid-cols-[1fr_2fr] md:px-10 lg:px-14">
-          <div>
-            <p className="text-xs font-black uppercase tracking-[0.18em]">
-              Open Net
-            </p>
-            <p className="mt-2 text-sm text-[#616965]">
-              Broader discovery, kept separate from trusted sources.
-            </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-lg border border-dashed border-[#9f968a] p-5 text-sm text-[#626a66]">
-              Discovery feed and source filters are coming after launch.
-            </div>
-            <div className="rounded-lg border border-dashed border-[#9f968a] p-5 text-sm text-[#626a66]">
-              Lab Notes will add original reactions, tests, and field reports.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="bg-[#ece5d8]">
-        <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-6 px-5 py-10 text-sm md:flex-row md:items-end md:px-10 lg:px-14">
-          <div>
-            <p className="display-serif text-2xl font-bold">Loki’s Lab</p>
-            <p className="mt-2 text-[#626a66]">Gain meaning, not AI noise.</p>
-          </div>
-          <div className="text-right text-xs leading-5 text-[#626a66]">
-            <p>Independent testing · Public methodology · Community evidence</p>
-            <p>
-              Discord, newsletter, and support links are coming with public
-              beta.
-            </p>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
