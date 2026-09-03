@@ -5,6 +5,21 @@ backend:
   auth_endpoint: api/auth
   cms_label_prefix: 'cms/'
 
+# Google OAuth Configuration
+auth:
+  enable_identity_widget: true
+  identity:
+    url: https://identity.netlify.com
+
+# Alternative: Direct Google OAuth (simpler for Decap)
+oauth:
+  provider: google
+  client_id: YOUR_GOOGLE_CLIENT_ID
+  redirect_uri: https://lokislab.org/admin/
+  scopes:
+    - email
+    - profile
+
 media_folder: public/images
 public_folder: /images
 
