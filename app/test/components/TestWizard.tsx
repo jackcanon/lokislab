@@ -47,6 +47,15 @@ export default function TestWizard() {
 
   return (
     <div className="test-wizard">
+      {/* Navigation Header - Show current step with back option */}
+      {step !== 'platform' && (
+        <div className="wizard-nav-header">
+          <button onClick={() => setStep('platform')} className="btn-back-header">
+            ← Back to Platform Selection
+          </button>
+        </div>
+      )}
+
       {/* STEP 1: Platform Selection */}
       {step === 'platform' && (
         <div className="wizard-section">
@@ -111,10 +120,6 @@ export default function TestWizard() {
               <p>⚠️ CPU-only • Very slow (15-30 min)</p>
             </button>
           </div>
-
-          <button onClick={() => setStep('platform')} className="btn-back">
-            ← Back to Platform Selection
-          </button>
         </div>
       )}
 
@@ -143,10 +148,6 @@ export default function TestWizard() {
               <p>Standard Linux GPU setup</p>
             </button>
           </div>
-
-          <button onClick={() => setStep('platform')} className="btn-back">
-            ← Back to Platform Selection
-          </button>
         </div>
       )}
 
