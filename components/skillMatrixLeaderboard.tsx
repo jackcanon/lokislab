@@ -89,9 +89,21 @@ function machineDisplayName(machine: string | null | undefined): string {
 }
 
 function scoreOf(row: (typeof top5)[number]): number {
+  // Score breakdown:
+  // - Quality: 0-5 scale, worth 60% of score
+  // - Capability: 0-1 (rate), worth 25% of score  
+  // - Speed: lower is better; we'll convert to a 0-1 scale where 1 = very fast
+  //   Assuming 10s = perfect speed (arbitrary baseline), scale inversely
   const q = row.avgQuality ?? 0; // 0..5
   const cap = row.capableRate ?? 0; // 0..1
-  return Math.round((q / 5) * 60 + cap * 40);
+  const speedS = row.medianSpeedS ?? 999; // seconds, lower is better
+  
+  // Speed scoring: use 15s as "baseline" (0.5 score)
+  // Faster than 15s gets high score, slower gets penalized
+  // Formula: cap at 30s (score=0), scale linearly to 5s (score=1)
+  const speedScore = Math.max(0, Math.min(1, (30 - speedS) / 25)); // 0..1
+  
+  return Math.round((q / 5) * 60 + cap * 25 + speedScore * 15);
 }
 
 export function SkillMatrixLeaderboard() {
@@ -219,7 +231,7 @@ export function SkillMatrixLeaderboard() {
         </div>
         <p className="mt-4 max-w-3xl text-xs leading-5 text-[#636a66]">
           Ranked by averaged quality (1–5) then capability rate across the skill-matrix suite. Score
-          blends quality (60%) and capability (40%). Tiers are a rough practical-memory grouping for
+          blends quality (60%), capability rate (25%), and inference speed (15%). Lower median time = higher speed score. Tiers are a rough practical-memory grouping for
           orientation; they are not a model benchmark.
           <br />
           Full per-task data and all {top5.length > 0 ? 'the fleet eval runs' : 'runs'} live on the{' '}
