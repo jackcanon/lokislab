@@ -94,12 +94,20 @@ detect_gpu_and_vram() {
     
     # Check for NVIDIA GPU
     if command -v nvidia-smi &> /dev/null; then
-        GPU_TYPE="nvidia"
         GPU_NAME=$(nvidia-smi --query-gpu=gpu_name --format=csv,noheader 2>/dev/null | head -1)
         local vram_mb=$(nvidia-smi --query-gpu=memory.total --format=csv,nounits,noheader 2>/dev/null | head -1)
         VRAM_GB=$((vram_mb / 1024))
         CUDA_VERSION=$(nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1)
-        status_success "GPU: NVIDIA $GPU_NAME ($VRAM_GB GB VRAM)"
+        
+        # Check if this is a DGX Spark (unified memory architecture)
+        if [[ "$GPU_NAME" =~ "Grace" ]] || [[ "$GPU_NAME" =~ "H100" ]]; then
+            GPU_TYPE="nvidia_dgx_unified"
+            status_success "GPU: NVIDIA $GPU_NAME (DGX - Unified Memory, ${VRAM_GB}GB)"
+            status_info "Note: This system has unified memory. Treating as single pool like Apple Silicon."
+        else
+            GPU_TYPE="nvidia"
+            status_success "GPU: NVIDIA $GPU_NAME ($VRAM_GB GB VRAM - discrete)"
+        fi
     
     # Check for AMD GPU
     elif command -v rocm-smi &> /dev/null; then
@@ -144,9 +152,17 @@ select_best_model() {
     
     # Auto-select based on VRAM (for GPU) or RAM (for CPU)
     local available_resource_gb=$VRAM_GB
+    local memory_source="GPU VRAM"
+    
     if [[ $GPU_TYPE == "none" ]]; then
         available_resource_gb=$SYSTEM_RAM_GB
+        memory_source="system RAM"
         status_warning "Using system RAM for model selection (CPU inference will be slow)"
+    elif [[ $GPU_TYPE == "nvidia_dgx_unified" ]]; then
+        # DGX Spark has unified memory, treat like Apple Silicon
+        available_resource_gb=$VRAM_GB
+        memory_source="GPU unified memory"
+        status_info "DGX Spark unified memory detected. Treating as single pool (like Apple Silicon)."
     fi
     
     # Model sizing reference
