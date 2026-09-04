@@ -7,6 +7,8 @@ status: draft
 section: Lab Notes
 author: "Loki’s Lab"
 author_slug: jack
+image: /images/products/Apple-Mac-mini-hero-260825.jpg
+image_alt: "Apple's new M6 Mac mini on a desk with display, keyboard, and mouse"
 dek: "The M6 and M5 Pro Mac mini and the M5 Max and M5 Ultra Mac Studio promise major gains for local models. We are eager to find out what those gains look like outside Apple’s demos."
 tags:
   - Apple
@@ -19,6 +21,8 @@ tags:
   - local AI
   - local models
 ---
+
+![Apple's New Mac mini and Mac Studio Put Local AI Front and Center](/images/products/Apple-Mac-mini-hero-260825.jpg)
 
 # Apple’s New Mac mini and Mac Studio Put Local AI Front and Center
 
