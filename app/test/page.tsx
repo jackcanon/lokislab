@@ -32,7 +32,7 @@ export default function TestPage() {
 
       <h2>What you need</h2>
       <ul>
-        <li><strong>macOS:</strong> M1+ Mac with 16GB+ RAM, Ollama installed</li>
+        <li><strong>macOS:</strong> M1+ Mac with 16GB+ RAM, Ollama installed (Intel Macs supported but very slow — CPU-only)</li>
         <li><strong>Linux:</strong> 16GB+ RAM, NVIDIA GPU recommended, Ollama installed</li>
         <li><strong>Windows:</strong> Native Windows 10+ OR WSL2 (Ubuntu), Ollama for Windows</li>
       </ul>
