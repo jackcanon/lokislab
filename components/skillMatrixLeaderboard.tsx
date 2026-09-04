@@ -57,7 +57,7 @@ function machineDisplayName(machine: string | null | undefined): string {
   const machineMap: { [key: string]: string } = {
     // Macs
     'overgaard': 'Mac Studio M4 Max',
-    'midgaard': 'Intel iMac',
+    'midgaard': 'Mac mini M4 Pro (24GB)',
     'm2pro': 'Mac mini M2 Pro',
     'odin': 'Mac mini M2 Pro',
     'asgard': 'Mac mini M2 Pro',
@@ -76,7 +76,7 @@ function machineDisplayName(machine: string | null | undefined): string {
   
   // Pattern matching for other machines
   if (/overgaard/i.test(m)) return 'Mac Studio M4 Max';
-  if (/midgaard/i.test(m)) return 'Intel iMac';
+  if (/midgaard/i.test(m)) return 'Mac mini M4 Pro (24GB)';
   if (/m2pro/i.test(m)) return 'Mac mini M2 Pro';
   if (/odin/i.test(m)) return 'Mac mini M2 Pro';
   if (/asgard/i.test(m)) return 'Mac mini M2 Pro';
