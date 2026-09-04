@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import CopyButton from './CopyButton';
 
 type Platform = 'macos' | 'linux' | 'windows' | null;
 type MacVariant = 'apple-silicon' | 'intel' | null;
@@ -169,25 +170,37 @@ export default function TestWizard() {
 
               <h3>Step 1: Pre-flight Check</h3>
               <p>Verify your system is ready:</p>
-              <pre>
-                <code>
-                  {`# Download pre-flight checker
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`# Download pre-flight checker
 curl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh
 bash ~/setup-check.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`# Download pre-flight checker\ncurl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh\nbash ~/setup-check.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 This checks: Ollama installation, disk space (30GB+), network access, and system RAM (16GB+).
               </p>
 
               <h3>Step 2: Run the V3 Test</h3>
               <p>Download and run the harness:</p>
-              <pre>
-                <code>
-                  {`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh
 bash ~/v3_test_harness_macos.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh\nbash ~/v3_test_harness_macos.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 <strong>Typical runtime:</strong> 3–5 minutes for inference + test execution.<br/>
                 <strong>Model auto-selected:</strong> qwen3.6:latest (22B) for 36GB M4 Max down to qwen3.5:4b (4B) for 16GB M1.
@@ -211,25 +224,37 @@ bash ~/v3_test_harness_macos.sh`}
 
               <h3>Step 1: Pre-flight Check</h3>
               <p>Verify your system is ready:</p>
-              <pre>
-                <code>
-                  {`# Download pre-flight checker
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`# Download pre-flight checker
 curl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh
 bash ~/setup-check.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`# Download pre-flight checker\ncurl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh\nbash ~/setup-check.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 This checks: Ollama installation, disk space (30GB+), network access, and system RAM (16GB+).
               </p>
 
               <h3>Step 2: Run the V3 Test</h3>
               <p>Download and run the harness:</p>
-              <pre>
-                <code>
-                  {`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh
 bash ~/v3_test_harness_macos.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh\nbash ~/v3_test_harness_macos.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 <strong>Typical runtime:</strong> 15–30 minutes (CPU-only inference is slow).<br/>
                 <strong>Model auto-selected:</strong> qwen3.6:latest (slow) or qwen3.5:4b (slower) based on available RAM.
@@ -250,25 +275,37 @@ bash ~/v3_test_harness_macos.sh`}
 
               <h3>Step 1: Pre-flight Check</h3>
               <p>Verify your system is ready:</p>
-              <pre>
-                <code>
-                  {`# Download pre-flight checker
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`# Download pre-flight checker
 curl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh
 bash ~/setup-check.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`# Download pre-flight checker\ncurl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh\nbash ~/setup-check.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 This checks: Ollama installation, disk space (100GB+ for large models), NVIDIA drivers, and unified memory detection.
               </p>
 
               <h3>Step 2: Run the V3 Test</h3>
               <p>Download and run the harness:</p>
-              <pre>
-                <code>
-                  {`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh
 bash ~/v3_test_harness.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh\nbash ~/v3_test_harness.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 <strong>Typical runtime:</strong> 2–5 minutes (unified memory + high-end GPU).<br/>
                 <strong>Model auto-selected:</strong> qwen3.8-flash-next (125B) if 75GB+, else qwen3.8:27b, down to qwen3.5:4b.
@@ -289,25 +326,37 @@ bash ~/v3_test_harness.sh`}
 
               <h3>Step 1: Pre-flight Check</h3>
               <p>Verify your system is ready:</p>
-              <pre>
-                <code>
-                  {`# Download pre-flight checker
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`# Download pre-flight checker
 curl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh
 bash ~/setup-check.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`# Download pre-flight checker\ncurl -fsSL https://lokislab.org/eval/setup-check.sh -o ~/setup-check.sh\nbash ~/setup-check.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 This checks: Ollama installation, disk space (30GB+), GPU VRAM detection (nvidia-smi or rocm-smi), and system RAM.
               </p>
 
               <h3>Step 2: Run the V3 Test</h3>
               <p>Download and run the harness:</p>
-              <pre>
-                <code>
-                  {`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh
 bash ~/v3_test_harness.sh`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh\nbash ~/v3_test_harness.sh`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 <strong>Typical runtime:</strong> 5–15 minutes depending on GPU VRAM.<br/>
                 <strong>Model auto-selected:</strong> Based on GPU VRAM (qwen3.8:27b for 35GB+, qwen3.6:latest for 25GB+, qwen3.5:4b for 8GB+).<br/>
@@ -329,24 +378,36 @@ bash ~/v3_test_harness.sh`}
 
               <h3>Step 1: Pre-flight Check</h3>
               <p>Verify your system is ready:</p>
-              <pre>
-                <code>
-                  {`# Open PowerShell and run:
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`# Open PowerShell and run:
 powershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/setup-check.ps1" -UseBasicParsing).Content`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`# Open PowerShell and run:\npowershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/setup-check.ps1" -UseBasicParsing).Content`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 This checks: Ollama installation, disk space (30GB+), GPU VRAM (nvidia-smi), and system RAM.
               </p>
 
               <h3>Step 2: Run the V3 Test</h3>
               <p>Download and run the harness in PowerShell:</p>
-              <pre>
-                <code>
-                  {`# Open PowerShell and run:
+              <div className="code-block-wrapper">
+                <pre>
+                  <code>
+                    {`# Open PowerShell and run:
 powershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/v3_test_harness.ps1" -UseBasicParsing).Content`}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+                <CopyButton 
+                  text={`# Open PowerShell and run:\npowershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/v3_test_harness.ps1" -UseBasicParsing).Content`}
+                  label="Copy Command"
+                />
+              </div>
               <p className="instruction-note">
                 <strong>Typical runtime:</strong> 5–15 minutes depending on GPU VRAM.<br/>
                 <strong>Model auto-selected:</strong> Based on GPU VRAM (qwen3.8:27b for 35GB+, qwen3.6:latest for 25GB+, qwen3.5:4b for 8GB+).
