@@ -48,6 +48,46 @@ function tierClass(tier: Tier): string {
   }[tier];
 }
 
+function machineDisplayName(machine: string | null | undefined): string {
+  if (!machine) return '—';
+  
+  const m = machine.toLowerCase();
+  
+  // Map internal machine names to user-friendly hardware descriptions
+  const machineMap: { [key: string]: string } = {
+    // Macs
+    'overgaard': 'Mac Studio M4 Max',
+    'midgaard': 'Intel iMac',
+    'm2pro': 'Mac mini M2 Pro',
+    'odin': 'Mac mini M2 Pro',
+    'asgard': 'Mac mini M2 Pro',
+    'm1pro': 'MacBook Pro M1',
+    'vanaheim': 'Mac mini M1',
+    // Linux
+    'heimdall': 'Linux RTX 4070',
+    // Windows
+    'windows': 'Windows GPU',
+  };
+  
+  // Direct lookup
+  if (machineMap[m]) {
+    return machineMap[m];
+  }
+  
+  // Pattern matching for other machines
+  if (/overgaard/i.test(m)) return 'Mac Studio M4 Max';
+  if (/midgaard/i.test(m)) return 'Intel iMac';
+  if (/m2pro/i.test(m)) return 'Mac mini M2 Pro';
+  if (/odin/i.test(m)) return 'Mac mini M2 Pro';
+  if (/asgard/i.test(m)) return 'Mac mini M2 Pro';
+  if (/m1pro/i.test(m)) return 'MacBook Pro M1';
+  if (/vanaheim/i.test(m)) return 'Mac mini M1';
+  if (/heimdall/i.test(m)) return 'Linux RTX 4070';
+  
+  // Fallback: capitalize first letter
+  return machine.charAt(0).toUpperCase() + machine.slice(1);
+}
+
 function scoreOf(row: (typeof top5)[number]): number {
   const q = row.avgQuality ?? 0; // 0..5
   const cap = row.capableRate ?? 0; // 0..1
@@ -149,7 +189,7 @@ export function SkillMatrixLeaderboard() {
                   </p>
                 </div>
                 <div className="text-sm">
-                  <p className="font-semibold capitalize">{row.machine || '—'}</p>
+                  <p className="font-semibold">{machineDisplayName(row.machine)}</p>
                   <p className="text-xs text-[#68706c]">local inference</p>
                   {isMac && (
                     <span className="mt-1 inline-block rounded-full bg-[#b74627]/20 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#b74627]">
