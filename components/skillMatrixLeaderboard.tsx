@@ -107,7 +107,9 @@ function scoreOf(row: (typeof top5)[number]): number {
 }
 
 export function SkillMatrixLeaderboard() {
-  const rows = top5.slice(0, 5);
+  // Re-sort the top5 using the new scoring logic (includes speed)
+  const sortedTop5 = [...top5].sort((a, b) => scoreOf(b) - scoreOf(a));
+  const rows = sortedTop5.slice(0, 5);
   const macRows = rows.filter(
     (row) => row.machine && /mac|apple|m1|m2|m3|m4|m5|m6/i.test(row.machine),
   );
