@@ -137,6 +137,9 @@ A separate 14B run using the larger Q8_0 version also passed over RPC at 12.4 to
 
 ## The larger model is still an open question
 
+> **Update, later on September 10:** this turned out not to be a Qwen3-32B or RPC bug. The host was still memory-mapping the whole model despite the split; running `llama-bench` with `-lm none` fixed it, and both the 32B and a 70B then ran across the lab. The full story is in [Project HALO: The Day the 70B Ran](https://lokislab.org/articles/project-halo-70b-first-shared-run). The paragraphs below are left as we wrote them that morning.
+
+
 Qwen3-32B has been less cooperative.
 
 Our shared attempts with its Q4_K_M and Q8_0 versions failed across the configurations we tried. Correcting the allocation order fixed one mistake, but it didn’t resolve the larger-model failures.
