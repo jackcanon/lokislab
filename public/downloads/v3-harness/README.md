@@ -1,70 +1,109 @@
-# V3 Test Harness Downloads
+# V3 Test Harness - Download & Setup
 
-## Windows - EASIEST METHOD
-
-**Download this file and double-click it:**
-
-👉 **[V3_TEST_HARNESS.bat](V3_TEST_HARNESS.bat)**
-
-Right-click it, select Run as Administrator, and it handles everything automatically.
-
-### Manual PowerShell Method (if batch doesn't work)
-
-Open PowerShell as Administrator and run:
-
-```powershell
-cd :USERPROFILE
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/jackcanon/lokislab/main/public/downloads/v3-harness/v3_test_harness_windows.ps1 -OutFile v3_test_harness_windows.ps1
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
-.\v3_test_harness_windows.ps1
-```
-
-## Linux
-
-Open Terminal and run:
-
-```bash
-curl -O https://lokislab.org/downloads/v3-harness/v3_test_harness_linux.sh
-chmod +x v3_test_harness_linux.sh
-./v3_test_harness_linux.sh
-```
-
-## macOS
-
-Open Terminal and run:
-
-```bash
-curl -O https://lokislab.org/downloads/v3-harness/v3_test_harness_macos.sh
-chmod +x v3_test_harness_macos.sh
-./v3_test_harness_macos.sh
-```
-
-## What Happens
-
-The script will automatically:
-1. Check/install Ollama
-2. Start Ollama service
-3. Detect your GPU and RAM
-4. Select the best model for your hardware
-5. Download the model (5-30 minutes)
-6. Show your system configuration
-
-## Troubleshooting
-
-**Windows: Still getting execution policy errors?**
-- Make sure you ran all 4 PowerShell commands in order
-- Make sure PowerShell is running as Administrator
-
-**The script appears frozen**
-- This is normal during model download (5-30 minutes)
-- Do NOT close the window
-- Wait for it to complete
-
-## Support
-
-- Issues: https://github.com/jackcanon/lokislab/issues
-- Docs: https://lokislab.org/docs/v3-testing
+Download the setup script for your operating system, then **double-click to run**. Everything else happens automatically.
 
 ---
 
-*v3.4.0 — Loki's Lab V3 Harness*
+## 🪟 Windows
+
+**Download:** [`v3_setup.ps1`](v3_setup.ps1)
+
+1. Right-click the file
+2. Select "Run with PowerShell"
+3. When prompted, click "Run"
+4. Watch as each milestone completes:
+   - ✓ Check Administrator
+   - ✓ Detect Hardware
+   - ✓ Select Model
+   - ✓ Install Ollama
+   - ✓ Start Ollama Service
+   - ✓ Download Model
+   - ✓ Run Test
+
+When it says "SETUP COMPLETE", visit https://lokislab.org/test to run the benchmark.
+
+---
+
+## 🐧 Linux
+
+**Download:** [`v3_setup.sh`](v3_setup.sh)
+
+```bash
+chmod +x v3_setup.sh
+./v3_setup.sh
+```
+
+Or double-click the file in your file manager.
+
+Watch as each milestone completes automatically. When it says "SETUP COMPLETE", visit https://lokislab.org/test to run the benchmark.
+
+---
+
+## 🍎 macOS
+
+**Download:** [`v3_setup.sh`](v3_setup.sh)
+
+```bash
+chmod +x v3_setup.sh
+./v3_setup.sh
+```
+
+Or double-click the file in Finder.
+
+Watch as each milestone completes automatically. When it says "SETUP COMPLETE", visit https://lokislab.org/test to run the benchmark.
+
+---
+
+## What The Setup Does
+
+Each setup script:
+1. **Detects your hardware** (GPU, VRAM, system RAM)
+2. **Selects the best model** for your system
+   - 75GB+ VRAM → qwen3.8-flash-next (125B)
+   - 35GB+ VRAM → qwen3.8:27b (27B)
+   - 25GB+ VRAM → qwen3.6:latest (12B)
+   - 8GB+ VRAM → qwen3.5:4b (4B)
+3. **Installs Ollama** (if not present)
+4. **Starts Ollama service**
+5. **Downloads your model** (5-30 minutes)
+6. **Shows you a summary** and next steps
+
+All progress is displayed with real-time milestones so you know exactly what's happening.
+
+---
+
+## Troubleshooting
+
+**Windows: "Administrator required" error**
+- Right-click PowerShell → "Run as Administrator"
+- Then run the script again
+
+**Linux/macOS: "command not found" error**
+- Open Terminal and run: `chmod +x v3_setup.sh && ./v3_setup.sh`
+
+**Ollama install fails**
+- Visit https://ollama.ai manually and install
+- Then re-run the setup script
+
+**Model download appears frozen**
+- This is normal! Large models take 5-30 minutes to download
+- Do NOT close the window
+- Watch the log for progress
+
+**Still stuck?**
+- Check the log file in `~/loki-v3-test/harness-TIMESTAMP.log`
+- Report the error at https://github.com/jackcanon/lokislab/issues
+
+---
+
+## After Setup
+
+Once setup is complete:
+1. Visit https://lokislab.org/test
+2. Choose your platform (Windows/Linux/macOS)
+3. Follow the benchmark instructions
+4. Submit your result to the leaderboard
+
+---
+
+**Questions?** Email jack@lokislab.org or open an issue on GitHub.
