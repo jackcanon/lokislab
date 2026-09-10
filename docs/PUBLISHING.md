@@ -73,3 +73,25 @@ tags: [ … ]
 | `LOKISLAB_GITHUB_TOKEN` | GitHub fine-grained personal access token: repository `jackcanon/lokislab`, permission **Contents: Read and write** |
 
 Redeploy once after adding them. `GET /api/publish` reports whether both are set.
+
+## Article packages (Codex / any agent that writes a folder)
+
+`/publish` can ingest a whole folder — drop it on the page or pick it. The
+convention it expects, which is what Codex already produces:
+
+```
+My Article Package/
+  Some Title.md          ← the article: frontmatter (title, slug, date, dek, tags, image) + body
+  hero.png               ← images referenced from the body as ![alt](hero.png)
+  chart.png
+  Image Notes.md         ← ignored (any "notes"/"readme" markdown is ignored)
+  chart.svg, data.csv    ← ignored (only referenced raster images are uploaded)
+```
+
+Rules: the article is the markdown file with frontmatter (largest wins if
+several). Only images the body references — plus a frontmatter `image:` naming
+a file in the folder — are uploaded, to `public/images/articles/<slug>/`. The
+frontmatter `image:` (or the Featured dropdown) is the News-card/hero image; if
+the body also places that image inline it is shown once, where the body puts
+it. Per-image limit 3.5 MB, whole package ≈4.2 MB per request. Review the
+preview, then press Publish.

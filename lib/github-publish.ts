@@ -84,6 +84,22 @@ function yamlString(s: string): string {
   return `"${v}"`;
 }
 
+/**
+ * Featured image: an explicit `hero` wins; otherwise a frontmatter `image:`
+ * that names one of the uploaded files (bare name or relative path) resolves
+ * to its served URL; otherwise any absolute `image:` path is kept as-is.
+ */
+function resolveHero(hero: string | undefined, fm: string[], imageUrls: Record<string, string>): string | undefined {
+  if (hero && imageUrls[safeFileName(hero)]) return imageUrls[safeFileName(hero)];
+  const line = fm.find((l) => /^image:/.test(l));
+  if (!line) return undefined;
+  let v = line.replace(/^image:\s*/, '').trim();
+  if (v.length >= 2 && v.startsWith('"') && v.endsWith('"')) v = v.slice(1, -1);
+  if (!v) return undefined;
+  if (imageUrls[safeFileName(v)]) return imageUrls[safeFileName(v)];
+  return v.startsWith('/') || /^https?:/.test(v) ? v : undefined;
+}
+
 /** Split an incoming markdown document into (frontmatter lines, body). */
 function splitFrontmatter(raw: string): { fm: string[]; body: string } {
   const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
@@ -120,7 +136,7 @@ export function buildArticleMarkdown(input: PublishArticleInput, slug: string, i
     author: yamlString(input.author || 'Jack Blair'),
     author_slug: 'jack',
     dek: input.dek ? yamlString(input.dek) : undefined,
-    image: input.hero && imageUrls[safeFileName(input.hero)] ? imageUrls[safeFileName(input.hero)] : undefined,
+    image: resolveHero(input.hero, incomingFm, imageUrls),
   };
 
   const lines: string[] = [];
@@ -130,6 +146,7 @@ export function buildArticleMarkdown(input: PublishArticleInput, slug: string, i
     lines.push(`${k}: ${v}`);
     written.add(k);
   }
+  written.add('image'); // resolved above; never copy a relative image: line through
   if (input.tags && input.tags.length) {
     lines.push('tags:');
     for (const t of input.tags) lines.push(`  - ${t}`);

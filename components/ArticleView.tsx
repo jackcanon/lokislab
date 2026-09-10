@@ -36,6 +36,8 @@ export function ArticleView({
 }: ArticleViewProps) {
   const content = renderMarkdown(body);
   const formattedDate = formatArticleDate(date);
+  // If the author placed the featured image inline as well, show it once (where they put it).
+  const heroInBody = Boolean(image && body.includes(`](${image})`));
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 text-[#17201f] md:px-10 lg:px-14">
@@ -53,7 +55,7 @@ export function ArticleView({
         </h1>
         {dek && <p className="mt-4 text-lg leading-8 text-[#4c5652]">{dek}</p>}
       </header>
-      {image && (
+      {image && !heroInBody && (
         <figure className="mb-10 overflow-hidden rounded-lg">
           <img src={image} alt={imageAlt || title} className="h-auto w-full object-cover" />
         </figure>

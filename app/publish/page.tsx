@@ -36,11 +36,18 @@ function splitFrontmatter(raw: string): { fm: Record<string, string>; body: stri
   const m = raw.match(/^\uFEFF?---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   if (!m) return { fm: {}, body: raw };
   const fm: Record<string, string> = {};
+  let listKey = '';
   for (const line of m[1].split(/\r?\n/)) {
+    const item = line.match(/^\s+-\s+(.+)$/);
+    if (item && listKey) {
+      fm[listKey] = fm[listKey] ? `${fm[listKey]}, ${item[1].trim()}` : item[1].trim();
+      continue;
+    }
     const kv = line.match(/^([A-Za-z_][\w-]*):\s*(.*)$/);
     if (!kv) continue;
     let v = kv[2].trim();
     if (v.length >= 2 && v.startsWith('"') && v.endsWith('"')) v = v.slice(1, -1);
+    listKey = v === '' ? kv[1] : '';
     fm[kv[1]] = v;
   }
   return { fm, body: raw.slice(m[0].length) };
@@ -56,6 +63,110 @@ function excerpt(body: string, maxLen = 180): string {
   return text.length <= maxLen ? text : text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
 }
 
+const IMAGE_EXT = /\.(png|jpe?g|gif|webp|avif|svg)$/i;
+const MAX_IMAGE_BYTES = 3_500_000;
+const MAX_REQUEST_BYTES = 4_200_000;
+
+/** Image file names referenced by the markdown (bare names, ./, assets/, images/ prefixes). */
+function referencedImages(markdown: string): Set<string> {
+  const names = new Set<string>();
+  const re = /!\[[^\]]*\]\(\s*(?:\.\/)?(?:assets\/|images\/)?([^)\s"']+)/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(markdown))) {
+    const name = m[1].split('/').pop();
+    if (name && !/^https?:/.test(m[1]) && !m[1].startsWith('/')) names.add(name);
+  }
+  return names;
+}
+
+/** Walk a dropped directory tree (DataTransfer) into flat Files. */
+async function filesFromDataTransfer(dt: DataTransfer): Promise<File[]> {
+  const out: File[] = [];
+  const entries: FileSystemEntry[] = [];
+  for (const item of Array.from(dt.items)) {
+    const entry = (item as DataTransferItem & { webkitGetAsEntry?: () => FileSystemEntry | null }).webkitGetAsEntry?.();
+    if (entry) entries.push(entry);
+    else {
+      const f = item.getAsFile();
+      if (f) out.push(f);
+    }
+  }
+  const readDir = (dir: FileSystemDirectoryEntry) =>
+    new Promise<FileSystemEntry[]>((resolve) => {
+      const reader = dir.createReader();
+      const all: FileSystemEntry[] = [];
+      const step = () =>
+        reader.readEntries((batch) => {
+          if (!batch.length) resolve(all);
+          else {
+            all.push(...batch);
+            step();
+          }
+        }, () => resolve(all));
+      step();
+    });
+  const walk = async (entry: FileSystemEntry) => {
+    if (entry.name.startsWith('.')) return;
+    if (entry.isFile) {
+      const f = await new Promise<File | null>((resolve) => (entry as FileSystemFileEntry).file(resolve, () => resolve(null)));
+      if (f) out.push(f);
+    } else if (entry.isDirectory) {
+      for (const child of await readDir(entry as FileSystemDirectoryEntry)) await walk(child);
+    }
+  };
+  for (const e of entries) await walk(e);
+  return out;
+}
+
+type Ingest = { article: File | null; images: File[]; skipped: string[]; notes: string[] };
+
+/**
+ * Pick the article out of a Codex-style package: the .md with frontmatter
+ * (largest if several), never "Image Notes"/"README"/"notes". Only images the
+ * markdown actually references (plus a frontmatter image:) are uploaded.
+ */
+async function ingestPackage(files: File[]): Promise<Ingest & { text: string }> {
+  const mds = files.filter((f) => /\.(md|markdown)$/i.test(f.name) && !f.name.startsWith('.'));
+  const candidates: { file: File; text: string; hasFm: boolean }[] = [];
+  for (const f of mds) {
+    const text = await f.text();
+    const isNotes = /(^|\b)(image notes|readme|notes|changelog)\b/i.test(f.name.replace(/\.(md|markdown)$/i, ''));
+    candidates.push({ file: f, text, hasFm: /^\uFEFF?---\r?\n/.test(text) && !isNotes });
+  }
+  const pick =
+    candidates.filter((c) => c.hasFm).sort((a, b) => b.text.length - a.text.length)[0] ||
+    candidates.filter((c) => !/(image notes|readme)/i.test(c.file.name)).sort((a, b) => b.text.length - a.text.length)[0] ||
+    null;
+  const text = pick?.text || '';
+  const wanted = referencedImages(text);
+  const { fm } = splitFrontmatter(text);
+  if (fm.image && !fm.image.startsWith('/') && !/^https?:/.test(fm.image)) wanted.add(fm.image.split('/').pop() || '');
+
+  const images: File[] = [];
+  const skipped: string[] = [];
+  const notes: string[] = [];
+  const seen = new Set<string>();
+  for (const f of files) {
+    if (f === pick?.file) continue;
+    if (!IMAGE_EXT.test(f.name)) {
+      skipped.push(f.name);
+      continue;
+    }
+    if (!wanted.has(f.name)) {
+      skipped.push(`${f.name} (not referenced in the article)`);
+      continue;
+    }
+    if (seen.has(f.name)) continue;
+    seen.add(f.name);
+    if (f.size > MAX_IMAGE_BYTES) notes.push(`${f.name} is ${(f.size / 1e6).toFixed(1)} MB — over the ${MAX_IMAGE_BYTES / 1e6} MB per-image limit; resize it.`);
+    images.push(f);
+  }
+  for (const name of wanted) if (!seen.has(name)) notes.push(`Article references ${name} but the folder has no such file.`);
+  const total = images.reduce((n, f) => n + f.size, 0) + text.length;
+  if (total > MAX_REQUEST_BYTES) notes.push(`Package is ${(total / 1e6).toFixed(1)} MB; one publish request is capped around 4.2 MB. Resize the larger images.`);
+  return { article: pick?.file || null, images, skipped, notes, text };
+}
+
 export default function PublishPage() {
   const [token, setToken] = useState('');
   const [title, setTitle] = useState('');
@@ -69,6 +180,8 @@ export default function PublishPage() {
   const [mode, setMode] = useState<'write' | 'preview' | 'split'>('split');
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
+  const [ingest, setIngest] = useState<{ folder: string; article: string; skipped: string[]; notes: string[] } | null>(null);
+  const [dragging, setDragging] = useState(false);
   const imagesInput = useRef<HTMLInputElement>(null);
 
   // Remember the token and an unsent draft in this browser.
@@ -106,17 +219,46 @@ export default function PublishPage() {
   }, [images]);
   useEffect(() => () => Object.values(imageUrls).forEach((u) => URL.revokeObjectURL(u)), [imageUrls]);
 
-  // When a pasted document carries frontmatter, offer its fields once.
-  function adoptFrontmatter(raw: string) {
+  // When a pasted document carries frontmatter, fill the fields (force = replace what's there).
+  function adoptFrontmatter(raw: string, force = false, imageNames: string[] = []) {
     const { fm } = splitFrontmatter(raw);
-    if (fm.title && !title) setTitle(fm.title);
-    if (fm.dek && !dek) setDek(fm.dek);
-    if (fm.date && !date && /^\d{4}-\d{2}-\d{2}$/.test(fm.date)) setDate(fm.date);
-    if (fm.slug && !slug) setSlug(fm.slug);
-    if (!fm.title && !title) {
-      const h1 = raw.match(/^#\s+(.+)$/m);
-      if (h1) setTitle(h1[1].trim());
+    const h1 = raw.match(/^#\s+(.+)$/m)?.[1]?.trim();
+    if (force || !title) setTitle(fm.title || h1 || (force ? '' : title));
+    if (force || !dek) setDek(fm.dek || (force ? '' : dek));
+    if (force || !date) setDate(/^\d{4}-\d{2}-\d{2}$/.test(fm.date || '') ? fm.date : force ? '' : date);
+    if (force || !slug) setSlug(fm.slug || (force ? '' : slug));
+    if (force && fm.tags !== undefined) setTags(fm.tags);
+    if (force) {
+      const heroName = fm.image ? fm.image.split('/').pop() || '' : '';
+      setHero(imageNames.includes(heroName) ? heroName : '');
     }
+  }
+
+  async function loadPackage(files: File[], folderName: string) {
+    const r = await ingestPackage(files);
+    if (!r.article) {
+      setIngest({ folder: folderName, article: '', skipped: r.skipped, notes: ['No markdown article found in that folder.'] });
+      return;
+    }
+    setImages(r.images);
+    setBody(r.text);
+    adoptFrontmatter(r.text, true, r.images.map((f) => f.name));
+    setResult(null);
+    setIngest({ folder: folderName, article: r.article.name, skipped: r.skipped, notes: r.notes });
+  }
+
+  async function onFolder(e: ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(e.target.files || []).filter((f) => !f.name.startsWith('.'));
+    const folder = (files[0] as File & { webkitRelativePath?: string })?.webkitRelativePath?.split('/')[0] || 'folder';
+    await loadPackage(files, folder);
+    e.target.value = '';
+  }
+
+  async function onDrop(e: React.DragEvent<HTMLDivElement>) {
+    e.preventDefault();
+    setDragging(false);
+    const files = await filesFromDataTransfer(e.dataTransfer);
+    if (files.length) await loadPackage(files, 'dropped folder');
   }
 
   async function onBodyFile(e: ChangeEvent<HTMLInputElement>) {
@@ -143,7 +285,10 @@ export default function PublishPage() {
       const esc = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       text = text.replace(new RegExp(`\\]\\((?:\\./)?(?:assets/|images/)?${esc}\\)`, 'g'), `](${url})`);
     }
-    const heroUrl = hero ? imageUrls[hero] : fm.image || undefined;
+    const fmImageName = fm.image ? fm.image.split('/').pop() || '' : '';
+    const heroUrl = hero
+      ? imageUrls[hero]
+      : imageUrls[fmImageName] || (fm.image && fm.image.startsWith('/') ? fm.image : undefined);
     return {
       slug: effectiveSlug,
       title: title || fm.title || 'Untitled',
@@ -228,6 +373,44 @@ export default function PublishPage() {
         <div className={`grid gap-8 ${mode === 'split' ? 'lg:grid-cols-2' : ''}`}>
           {showWrite && (
             <form onSubmit={onSubmit} className="space-y-5">
+              <div
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  setDragging(true);
+                }}
+                onDragLeave={() => setDragging(false)}
+                onDrop={onDrop}
+                className={`rounded-lg border-2 border-dashed p-5 transition ${
+                  dragging ? 'border-[#b74627] bg-[#f0e5d8]' : 'border-[#aaa194] bg-[#f5f0ea]'
+                }`}
+              >
+                <p className={label}>Load an article package</p>
+                <p className="mb-3 text-sm leading-6 text-[#4c5652]">
+                  Drop the folder Codex produced here, or pick it. The article markdown, its frontmatter, and every
+                  image it references are loaded into the form and previewed on the right. Nothing is published
+                  until you press the button at the bottom.
+                </p>
+                <input
+                  type="file"
+                  className="text-sm"
+                  onChange={onFolder}
+                  {...({ webkitdirectory: '', directory: '' } as Record<string, string>)}
+                  multiple
+                />
+                {ingest && (
+                  <div className="mt-3 text-xs leading-5 text-[#5b6560]">
+                    <p>
+                      <span className="font-semibold text-[#17201f]">{ingest.folder}</span>
+                      {ingest.article && <> → article <span className="font-mono">{ingest.article}</span>, {images.length} image{images.length === 1 ? '' : 's'}</>}
+                    </p>
+                    {ingest.notes.map((n) => (
+                      <p key={n} className="text-[#b74627]">⚠ {n}</p>
+                    ))}
+                    {ingest.skipped.length > 0 && <p>Not uploaded: {ingest.skipped.join(', ')}</p>}
+                  </div>
+                )}
+              </div>
+
               <div>
                 <label className={label} htmlFor="token">Publish token</label>
                 <input id="token" type="password" className={input} value={token} onChange={(e) => setToken(e.target.value)} required autoComplete="off" />
