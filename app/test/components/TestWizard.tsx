@@ -382,11 +382,15 @@ bash ~/v3_test_harness.sh`}
                 <pre>
                   <code>
                     {`# Open PowerShell and run:
-powershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/setup-check.ps1" -UseBasicParsing).Content`}
+Invoke-WebRequest -Uri "https://lokislab.org/eval/setup-check.ps1" -OutFile setup-check.ps1
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+.\setup-check.ps1`}
                   </code>
                 </pre>
                 <CopyButton 
-                  text={`# Open PowerShell and run:\npowershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/setup-check.ps1" -UseBasicParsing).Content`}
+                  text={`# Open PowerShell and run:\nInvoke-WebRequest -Uri "https://lokislab.org/eval/setup-check.ps1" -OutFile setup-check.ps1
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+.\setup-check.ps1`}
                   label="Copy Command"
                 />
               </div>
@@ -400,11 +404,15 @@ powershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokis
                 <pre>
                   <code>
                     {`# Open PowerShell and run:
-powershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/v3_test_harness.ps1" -UseBasicParsing).Content`}
+Invoke-WebRequest -Uri "https://lokislab.org/downloads/v3-harness/v3_test_harness_windows.ps1" -OutFile v3_test_harness_windows.ps1
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+.\v3_test_harness_windows.ps1`}
                   </code>
                 </pre>
                 <CopyButton 
-                  text={`# Open PowerShell and run:\npowershell -ExecutionPolicy Bypass -File <(Invoke-WebRequest -Uri "https://lokislab.org/eval/v3_test_harness.ps1" -UseBasicParsing).Content`}
+                  text={`# Open PowerShell and run:\nInvoke-WebRequest -Uri "https://lokislab.org/downloads/v3-harness/v3_test_harness_windows.ps1" -OutFile v3_test_harness_windows.ps1
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+.\v3_test_harness_windows.ps1`}
                   label="Copy Command"
                 />
               </div>
