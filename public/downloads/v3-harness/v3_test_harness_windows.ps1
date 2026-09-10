@@ -136,7 +136,7 @@ function Write-Success {
         [string]$Message,
         [switch]$NoLog
     )
-    Write-Host "$($colors.Green)✓$($colors.Reset) $Message" -ForegroundColor Green
+    Write-Host "$($colors.Green)[OK]$($colors.Reset) $Message" -ForegroundColor Green
     if (-not $NoLog) { Log-Message "SUCCESS" $Message }
 }
 
@@ -145,7 +145,7 @@ function Write-Warning-Custom {
         [string]$Message,
         [switch]$NoLog
     )
-    Write-Host "$($colors.Yellow)⚠$($colors.Reset) $Message" -ForegroundColor Yellow
+    Write-Host "$($colors.Yellow)[WARN]$($colors.Reset) $Message" -ForegroundColor Yellow
     if (-not $NoLog) { Log-Message "WARNING" $Message }
 }
 
@@ -154,7 +154,7 @@ function Write-Error-Custom {
         [string]$Message,
         [switch]$NoLog
     )
-    Write-Host "$($colors.Red)✗$($colors.Reset) $Message" -ForegroundColor Red
+    Write-Host "$($colors.Red)[FAIL]$($colors.Reset) $Message" -ForegroundColor Red
     if (-not $NoLog) { Log-Message "ERROR" $Message }
 }
 
@@ -170,9 +170,9 @@ function Write-Info {
 function Write-Section-Header {
     param([string]$Title)
     Write-Host ""
-    Write-Host "╔════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║  $Title" -ForegroundColor Cyan
-    Write-Host "╚════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+" -ForegroundColor Cyan
+    Write-Host "|  $Title" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+" -ForegroundColor Cyan
     Write-Host ""
 }
 
@@ -574,13 +574,13 @@ MODEL SELECTION LOGIC:
     < 8GB     → Error (insufficient resources)
 
 FEATURES:
-    ✓ Smart VRAM detection for NVIDIA GPUs
-    ✓ Automatic model selection based on hardware
-    ✓ Model download via Ollama
-    ✓ Test execution via run_matrix.py
-    ✓ Windows-native path handling (%APPDATA%, backslashes)
-    ✓ Progress bars (Write-Progress)
-    ✓ Comprehensive logging to $LOG_FILE
+    [OK] Smart VRAM detection for NVIDIA GPUs
+    [OK] Automatic model selection based on hardware
+    [OK] Model download via Ollama
+    [OK] Test execution via run_matrix.py
+    [OK] Windows-native path handling (%APPDATA%, backslashes)
+    [OK] Progress bars (Write-Progress)
+    [OK] Comprehensive logging to $LOG_FILE
 
 REQUIREMENTS:
     Windows 10+, PowerShell 5.0+, Ollama, Python 3.8+
@@ -597,39 +597,39 @@ function Show-Summary {
     
     Write-Section-Header "EXECUTION SUMMARY"
     
-    Write-Host "╔════════════════════════════════════════════════════════════╗"
-    Write-Host "║ HARDWARE CONFIGURATION" -ForegroundColor Cyan
-    Write-Host "╠════════════════════════════════════════════════════════════╣"
-    Write-Host "║ GPU Type:         $($script:GPU_TYPE)" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+"
+    Write-Host "| HARDWARE CONFIGURATION" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+"
+    Write-Host "| GPU Type:         $($script:GPU_TYPE)" -ForegroundColor Cyan
     if ($script:GPU_NAME) {
-        Write-Host "║ GPU Model:        $($script:GPU_NAME)" -ForegroundColor Cyan
+        Write-Host "| GPU Model:        $($script:GPU_NAME)" -ForegroundColor Cyan
     }
     if ($script:GPU_TYPE -ne "none") {
-        Write-Host "║ VRAM:             $($script:VRAM_GB)GB" -ForegroundColor Cyan
+        Write-Host "| VRAM:             $($script:VRAM_GB)GB" -ForegroundColor Cyan
     }
-    Write-Host "║ System RAM:       $($script:SYSTEM_RAM_GB)GB" -ForegroundColor Cyan
-    Write-Host "║ Endpoint:         $Endpoint" -ForegroundColor Cyan
-    Write-Host "║" -ForegroundColor Cyan
-    Write-Host "║ EXECUTION DETAILS" -ForegroundColor Cyan
-    Write-Host "╠════════════════════════════════════════════════════════════╣"
-    Write-Host "║ Selected Model:   $($script:SELECTED_MODEL)" -ForegroundColor Cyan
+    Write-Host "| System RAM:       $($script:SYSTEM_RAM_GB)GB" -ForegroundColor Cyan
+    Write-Host "| Endpoint:         $Endpoint" -ForegroundColor Cyan
+    Write-Host "|" -ForegroundColor Cyan
+    Write-Host "| EXECUTION DETAILS" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+"
+    Write-Host "| Selected Model:   $($script:SELECTED_MODEL)" -ForegroundColor Cyan
     if ($script:AUTO_SELECTED) {
-        Write-Host "║ Selection:        Auto-detected ✓" -ForegroundColor Cyan
+        Write-Host "| Selection:        Auto-detected [OK]" -ForegroundColor Cyan
     } else {
-        Write-Host "║ Selection:        User-specified" -ForegroundColor Cyan
+        Write-Host "| Selection:        User-specified" -ForegroundColor Cyan
     }
-    Write-Host "║ Test Passes:      $NumPasses" -ForegroundColor Cyan
-    Write-Host "║ Start Time:       $($Results.StartTime)" -ForegroundColor Cyan
-    Write-Host "║ End Time:         $($Results.EndTime)" -ForegroundColor Cyan
-    Write-Host "║ Duration:         $($Results.Duration)" -ForegroundColor Cyan
-    Write-Host "║ Status:           $($Results.Status)" -ForegroundColor Cyan
-    Write-Host "║" -ForegroundColor Cyan
-    Write-Host "║ OUTPUT LOCATIONS" -ForegroundColor Cyan
-    Write-Host "╠════════════════════════════════════════════════════════════╣"
-    Write-Host "║ Results:          $RESULTS_DIR" -ForegroundColor Cyan
-    Write-Host "║ Logs:             $LOG_FILE" -ForegroundColor Cyan
-    Write-Host "║ Cache:            $CACHE_DIR" -ForegroundColor Cyan
-    Write-Host "╚════════════════════════════════════════════════════════════╝"
+    Write-Host "| Test Passes:      $NumPasses" -ForegroundColor Cyan
+    Write-Host "| Start Time:       $($Results.StartTime)" -ForegroundColor Cyan
+    Write-Host "| End Time:         $($Results.EndTime)" -ForegroundColor Cyan
+    Write-Host "| Duration:         $($Results.Duration)" -ForegroundColor Cyan
+    Write-Host "| Status:           $($Results.Status)" -ForegroundColor Cyan
+    Write-Host "|" -ForegroundColor Cyan
+    Write-Host "| OUTPUT LOCATIONS" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+"
+    Write-Host "| Results:          $RESULTS_DIR" -ForegroundColor Cyan
+    Write-Host "| Logs:             $LOG_FILE" -ForegroundColor Cyan
+    Write-Host "| Cache:            $CACHE_DIR" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+"
     Write-Host ""
 }
 
@@ -645,11 +645,11 @@ function Main {
     
     # Show header
     Write-Host ""
-    Write-Host "╔════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║  Loki's Lab V3 Test Harness v$SCRIPT_VERSION" -ForegroundColor Cyan
-    Write-Host "║  Windows PowerShell Edition" -ForegroundColor Cyan
-    Write-Host "║  Smart Model Selection | GPU Auto-Detection | Full Automation" -ForegroundColor Cyan
-    Write-Host "╚════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+" -ForegroundColor Cyan
+    Write-Host "|  Loki's Lab V3 Test Harness v$SCRIPT_VERSION" -ForegroundColor Cyan
+    Write-Host "|  Windows PowerShell Edition" -ForegroundColor Cyan
+    Write-Host "|  Smart Model Selection | GPU Auto-Detection | Full Automation" -ForegroundColor Cyan
+    Write-Host "+════════════════════════════════════════════════════════════+" -ForegroundColor Cyan
     Write-Host ""
     
     Log-Message "INFO" "Script started with parameters:"
@@ -718,7 +718,7 @@ function Main {
         StartTime = $startTime.ToString("yyyy-MM-dd HH:mm:ss")
         EndTime   = $endTime.ToString("yyyy-MM-dd HH:mm:ss")
         Duration  = "{0:hh\:mm\:ss}" -f $duration
-        Status    = if ($testResult) { "✓ Completed" } else { "✗ Failed" }
+        Status    = if ($testResult) { "[OK] Completed" } else { "[FAIL] Failed" }
     }
     
     Show-Summary $results
