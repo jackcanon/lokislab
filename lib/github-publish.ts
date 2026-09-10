@@ -71,8 +71,17 @@ function safeFileName(name: string): string {
   return base.replace(/[^A-Za-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || 'image';
 }
 
+/**
+ * Quote a scalar for the site's deliberately tiny frontmatter parser, which
+ * understands `key: "..."` but not backslash escapes. Inner straight quotes
+ * become typographic quotes; a pasted value that is already wrapped in quotes
+ * is unwrapped first so it does not render with literal quote marks.
+ */
 function yamlString(s: string): string {
-  return `"${s.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+  let v = s.trim().replace(/\s+/g, ' ');
+  if (v.length >= 2 && v.startsWith('"') && v.endsWith('"')) v = v.slice(1, -1).trim();
+  v = v.replace(/(^|[\s(\[{])"/g, '$1\u201c').replace(/"/g, '\u201d');
+  return `"${v}"`;
 }
 
 /** Split an incoming markdown document into (frontmatter lines, body). */
@@ -97,9 +106,9 @@ export function buildArticleMarkdown(input: PublishArticleInput, slug: string, i
     body = body.replace(new RegExp(`\\]\\((?:\\./)?(?:assets/|images/)?${esc}\\)`, 'g'), `](${url})`);
   }
 
-  // Drop a leading H1 that duplicates the title — the page renders the title itself.
-  const titleRe = new RegExp(`^#\\s+${input.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*\\n+`);
-  body = body.replace(titleRe, '');
+  // Drop a leading H1 — the page renders the Title field as the headline, so a
+  // body H1 would appear as a second, competing headline.
+  body = body.replace(/^\s*#\s+[^\n]+\n+/, '');
 
   const ours: Record<string, string | undefined> = {
     title: yamlString(input.title),

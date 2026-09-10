@@ -125,7 +125,7 @@ export default function PublishPage() {
               className={`${input} min-h-[360px] font-mono text-xs leading-5`}
               value={body}
               onChange={(e) => setBody(e.target.value)}
-              placeholder={'# Title\n\nYour article…  (frontmatter is fine too; it will be merged)'}
+              placeholder={'Your article in markdown. The Title field above is the headline; a leading # H1 here is dropped. Frontmatter is fine too; it is merged.'}
             />
             <p className="mt-2 text-xs text-[#8f9a95]">
               …or upload a .md file instead:{' '}

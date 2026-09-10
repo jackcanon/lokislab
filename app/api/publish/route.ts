@@ -85,7 +85,11 @@ async function parseMultipart(form: FormData): Promise<PublishArticleInput> {
     dek: str('dek'),
     author: str('author'),
     hero: str('hero'),
-    tags: str('tags')?.split(',').map((t) => t.trim()).filter(Boolean),
+    // Accept "a, b, c", one per line, or a pasted "- a\n- b" list.
+    tags: str('tags')
+      ?.split(/[,\n]|\s+-\s+/)
+      .map((t) => t.replace(/^[\s-]+|[\s-]+$/g, ''))
+      .filter(Boolean),
     images,
   };
 }

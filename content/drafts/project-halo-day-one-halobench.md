@@ -1,5 +1,5 @@
 ---
-title: "Project Halo, Day One: Can Six Macs and a Linux Box Run One Model Together?"
+title: "Project Halo, Day One: What If Our Computers Could Do This Together?"
 slug: project-halo-day-one-halobench
 date: 2026-09-10
 updated: 2026-09-10
@@ -7,13 +7,16 @@ status: published
 section: Lab Notes
 author: "Jack Blair"
 author_slug: jack
-dek: "\"We’re connecting the computers we already have to find out whether they can run larger AI models together. The first runs worked. The bigger model didn’t. Both belong in the story.\""
+dek: "We’re connecting the computers we already have to find out whether they can run larger AI models together. The first runs worked. The bigger model didn’t. Both belong in the story."
 image: /images/articles/project-halo-day-one-halobench/halobench-dashboard-2026-09-10.jpg
 tags:
-  - - Project Halo   - HaloBench   - local AI   - distributed inference   - Apple Silicon   - home lab
+  - Project Halo
+  - HaloBench
+  - local AI
+  - distributed inference
+  - Apple Silicon
+  - home lab
 ---
-
-# Project Halo, Day One: What If Our Computers Could Do This Together?
 
 ![Concept illustration of the six fleet computers together in a rack with Ubiquiti networking](/images/articles/project-halo-day-one-halobench/project-halo-fleet-rack-ubiquiti.png)
 
