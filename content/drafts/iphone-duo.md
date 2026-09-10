@@ -1,13 +1,13 @@
 ---
 title: "iPhone Duo: The Best Screen Might Be the One You Always Have"
 slug: iphone-duo
-date: 2026-09-10
-updated: 2026-09-10
+date: 2026-09-09
+updated: 2026-09-09
 status: published
 section: Lab Notes
 author: "Jack Blair"
 author_slug: jack
-published_at: 2026-09-10T17:06:08Z
+published_at: 2026-09-09T18:30:00Z
 dek: "More room to see, more possibilities for AI—and something we’re looking forward to."
 image: /images/articles/iphone-duo/Apple-iPhone-Duo-display-sizes-260909.jpg
 image_alt: "Apple iPhone Duo outer and inner display sizes"
