@@ -13,13 +13,22 @@ export type ArticleListItem = {
   source: string;
   isLocal: boolean;
   image?: string; // Optional featured image URL
+  author?: string;
+  publishedAt?: string; // ISO timestamp written by /api/publish; orders same-day articles
+  pinned?: boolean; // manual override: `pin: true` in frontmatter keeps this as the hero
 };
 
-function parseFrontmatter(raw: string): { title: string; date: string; body: string; image: string; dek: string } {
+function parseFrontmatter(raw: string): {
+  title: string; date: string; body: string; image: string; dek: string;
+  author: string; publishedAt: string; pinned: boolean;
+} {
   let title = '';
   let date = '';
   let image = '';
   let dek = '';
+  let author = '';
+  let publishedAt = '';
+  let pinned = false;
   let body = raw;
 
   const fmStart = raw.indexOf('---\n');
@@ -41,6 +50,14 @@ function parseFrontmatter(raw: string): { title: string; date: string; body: str
 
         const dk = line.match(/^dek:\s*(?:"([^"]+)"|([^"\n]+))/);
         if (dk) dek = dk[1] || dk[2]?.trim() || dek;
+
+        const au = line.match(/^author:\s*(?:"([^"]+)"|([^"\n]+))/);
+        if (au) author = au[1] || au[2]?.trim() || author;
+
+        const pa = line.match(/^published_at:\s*"?([^"\n]+)"?/);
+        if (pa) publishedAt = pa[1].trim();
+
+        if (/^(pin|featured):\s*(true|"true"|1)\s*$/.test(line)) pinned = true;
       }
     }
   }
@@ -50,7 +67,7 @@ function parseFrontmatter(raw: string): { title: string; date: string; body: str
     if (h1) title = h1[1].trim();
   }
 
-  return { title, date, body, image, dek };
+  return { title, date, body, image, dek, author, publishedAt, pinned };
 }
 
 function excerptFromBody(body: string, maxLen = 180): string {
@@ -90,7 +107,7 @@ export function articleList(): ArticleListItem[] {
 
   const items: ArticleListItem[] = files.map((file) => {
     const raw = fs.readFileSync(path.join(draftsDir, file), 'utf-8');
-    const { title, date, body, image, dek } = parseFrontmatter(raw);
+    const { title, date, body, image, dek, author, publishedAt, pinned } = parseFrontmatter(raw);
     const slug = buildSlug(file);
     // Everything under content/drafts is an original Loki's Lab article.
     const isLocal = true;
@@ -104,15 +121,42 @@ export function articleList(): ArticleListItem[] {
       source: 'Loki\'s Lab',
       isLocal,
       image: image || IMAGE_MAP[slug], // frontmatter `image:` wins; legacy map as fallback
+      author: author || 'Jack Blair',
+      publishedAt,
+      pinned,
     };
   });
 
-  return items.sort((a, b) => {
-    if (a.date && b.date) return b.date.localeCompare(a.date);
-    if (a.date) return -1;
-    if (b.date) return 1;
-    return a.slug.localeCompare(b.slug);
-  });
+  return items.sort(compareNewest);
+}
+
+/** Newest first: pinned, then publish timestamp, then date, then slug. */
+function compareNewest(a: ArticleListItem, b: ArticleListItem): number {
+  if (a.pinned !== b.pinned) return a.pinned ? -1 : 1;
+  const ta = a.publishedAt || (a.date ? `${a.date}T00:00:00Z` : '');
+  const tb = b.publishedAt || (b.date ? `${b.date}T00:00:00Z` : '');
+  if (ta && tb && ta !== tb) return tb.localeCompare(ta);
+  if (ta && !tb) return -1;
+  if (!ta && tb) return 1;
+  return a.slug.localeCompare(b.slug);
+}
+
+const HOUSE_AUTHOR = /jack blair/i;
+
+/**
+ * The hero on /news. Unless an article is pinned (`pin: true`), it is the
+ * most recently published Loki's Lab article written by Jack. Contributing
+ * authors' pieces still list normally; they become hero only when pinned.
+ */
+export function featuredArticle(items: ArticleListItem[]): ArticleListItem | null {
+  const local = items.filter((i) => i.isLocal);
+  return (
+    local.find((i) => i.pinned) ||
+    local.find((i) => HOUSE_AUTHOR.test(i.author || '')) ||
+    local[0] ||
+    items[0] ||
+    null
+  );
 }
 
 // Parse the real shape of data/trusted-news.json.

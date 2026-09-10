@@ -7,6 +7,7 @@ status: published
 section: Lab Notes
 author: "Jack Blair"
 author_slug: jack
+published_at: 2026-09-10T18:07:33Z
 dek: "We’re connecting the computers we already have to find out whether they can run larger AI models together. The first runs worked. The bigger model didn’t. Both belong in the story."
 image: /images/articles/project-halo-day-one-halobench/halobench-dashboard-2026-09-10.jpg
 tags:
@@ -137,7 +138,7 @@ A separate 14B run using the larger Q8_0 version also passed over RPC at 12.4 to
 
 ## The larger model is still an open question
 
-**Update, later on September 10:** this turned out not to be a Qwen3-32B or RPC bug. The host was still memory-mapping the whole model despite the split; running `llama-bench` with `-lm none` fixed it, and both the 32B and a 70B then ran across the lab. The full story is in [Project HALO: The Day the 70B Ran](https://lokislab.org/articles/project-halo-70b-first-shared-run). The paragraphs below are left as we wrote them that morning.
+> **Update, later on September 10:** this turned out not to be a Qwen3-32B or RPC bug. The host was still memory-mapping the whole model despite the split; running `llama-bench` with `-lm none` fixed it, and both the 32B and a 70B then ran across the lab. The full story is in [Project HALO: The Day the 70B Ran](https://lokislab.org/articles/project-halo-70b-first-shared-run). The paragraphs below are left as we wrote them that morning.
 
 
 Qwen3-32B has been less cooperative.

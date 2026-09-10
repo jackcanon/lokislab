@@ -1,4 +1,4 @@
-import { articleList, allTrustedItems } from '@/lib/articleList';
+import { allTrustedItems, featuredArticle } from '@/lib/articleList';
 import Link from 'next/link';
 
 type Filter = 'Lab Notes' | 'External news' | 'All';
@@ -24,8 +24,8 @@ export default function NewsPage() {
   const items = allTrustedItemsResult;
   const sections: Filter[] = [SECTION_LAB_NOTES, SECTION_EXTERNAL, SECTION_ALL];
   const selected: Filter = SECTION_ALL;
-  const featuredItem = items.length > 0 ? items[0] : null;
-  const otherItems = items.length > 1 ? items.slice(1) : [];
+  const featuredItem = featuredArticle(items);
+  const otherItems = featuredItem ? items.filter((i) => i !== featuredItem) : items;
 
   return (
     <main className="min-h-screen bg-[#ece5d8] text-[#17201f]">

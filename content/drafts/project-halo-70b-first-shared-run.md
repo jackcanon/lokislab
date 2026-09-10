@@ -7,6 +7,7 @@ status: published
 section: Lab Notes
 author: "Jack Blair"
 author_slug: jack
+published_at: 2026-09-10T19:50:24Z
 dek: "Four computers shared a model too large for any one of their GPUs to hold. Then three computers did it faster. A good day for finding out what our existing machines can do together."
 image: /images/articles/project-halo-70b-first-shared-run/halo-with-without-jotunheim.png
 tags:

@@ -85,6 +85,7 @@ async function parseMultipart(form: FormData): Promise<PublishArticleInput> {
     dek: str('dek'),
     author: str('author'),
     hero: str('hero'),
+    pin: /^(true|on|1|yes)$/i.test(str('pin') || ''),
     // Accept "a, b, c", one per line, or a pasted "- a\n- b" list.
     tags: str('tags')
       ?.split(/[,\n]|\s+-\s+/)

@@ -36,6 +36,8 @@ export interface PublishArticleInput {
   /** Name of one of `images` to use as the featured/hero image. */
   hero?: string;
   images?: PublishImage[];
+  /** Keep this article as the /news hero until unpinned (manual override). */
+  pin?: boolean;
   /** Commit message override. */
   message?: string;
 }
@@ -135,6 +137,8 @@ export function buildArticleMarkdown(input: PublishArticleInput, slug: string, i
     section: 'Lab Notes',
     author: yamlString(input.author || 'Jack Blair'),
     author_slug: 'jack',
+    published_at: new Date().toISOString(),
+    pin: input.pin ? 'true' : undefined,
     dek: input.dek ? yamlString(input.dek) : undefined,
     image: resolveHero(input.hero, incomingFm, imageUrls),
   };
@@ -147,6 +151,8 @@ export function buildArticleMarkdown(input: PublishArticleInput, slug: string, i
     written.add(k);
   }
   written.add('image'); // resolved above; never copy a relative image: line through
+  written.add('pin');
+  written.add('published_at');
   if (input.tags && input.tags.length) {
     lines.push('tags:');
     for (const t of input.tags) lines.push(`  - ${t}`);

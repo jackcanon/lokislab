@@ -176,6 +176,7 @@ export default function PublishPage() {
   const [tags, setTags] = useState('');
   const [body, setBody] = useState('');
   const [hero, setHero] = useState('');
+  const [pin, setPin] = useState(false);
   const [images, setImages] = useState<File[]>([]);
   const [mode, setMode] = useState<'write' | 'preview' | 'split'>('split');
   const [busy, setBusy] = useState(false);
@@ -317,6 +318,7 @@ export default function PublishPage() {
     if (dek) form.set('dek', dek);
     if (tags) form.set('tags', tags);
     if (hero) form.set('hero', hero);
+    if (pin) form.set('pin', 'true');
     for (const f of images) form.append('images', f, f.name);
     try {
       const res = await fetch('/api/publish', {
@@ -479,6 +481,14 @@ export default function PublishPage() {
                   </div>
                 )}
               </div>
+
+              <label className="flex items-start gap-3 text-sm text-[#4c5652]">
+                <input type="checkbox" className="mt-1" checked={pin} onChange={(e) => setPin(e.target.checked)} />
+                <span>
+                  <span className="font-semibold text-[#17201f]">Pin as the News hero.</span> By default the hero is your most
+                  recently published article. Tick this to hold this one at the top until you republish it unpinned.
+                </span>
+              </label>
 
               <button
                 type="submit"

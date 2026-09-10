@@ -7,6 +7,7 @@ status: published
 section: Lab Notes
 author: "Jack Blair"
 author_slug: jack
+published_at: 2026-09-10T17:06:08Z
 dek: "More room to see, more possibilities for AI—and something we’re looking forward to."
 image: /images/articles/iphone-duo/Apple-iPhone-Duo-display-sizes-260909.jpg
 image_alt: "Apple iPhone Duo outer and inner display sizes"

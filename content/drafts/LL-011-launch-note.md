@@ -2,7 +2,7 @@
 title: "What Loki's Lab Is For"
 short_title: "What Loki's Lab Is For"
 date: "2026-08-31"
-pin: true
+pin: false
 ---
 
 
