@@ -39,6 +39,9 @@ type Frontmatter = {
   date: string;
   authorName: string;
   authorLabel: string;
+  image: string;
+  imageAlt: string;
+  dek: string;
 };
 
 function parseFrontmatter(raw: string): { body: string; fm: Frontmatter } {
@@ -47,6 +50,9 @@ function parseFrontmatter(raw: string): { body: string; fm: Frontmatter } {
     date: '',
     authorName: 'Jack Blair',
     authorLabel: 'Writer & tester',
+    image: '',
+    imageAlt: '',
+    dek: '',
   };
 
   let body = raw;
@@ -65,6 +71,13 @@ function parseFrontmatter(raw: string): { body: string; fm: Frontmatter } {
         // date: "..." or date: ...
         const d = line.match(/^date:\s*(?:"([^"]+)"|([^"\n]+))/);
         if (d) fm.date = d[1] || d[2]?.trim() || fm.date;
+
+        const im = line.match(/^image:\s*(?:"([^"]+)"|([^"\n]+))/);
+        if (im) fm.image = im[1] || im[2]?.trim() || fm.image;
+        const ia = line.match(/^image_alt:\s*(?:"([^"]+)"|([^"\n]+))/);
+        if (ia) fm.imageAlt = ia[1] || ia[2]?.trim() || fm.imageAlt;
+        const dk = line.match(/^dek:\s*(?:"([^"]+)"|([^"\n]+))/);
+        if (dk) fm.dek = dk[1] || dk[2]?.trim() || fm.dek;
 
         // author_slug: "jack" is our canonical mapping to Jack Blair.
         // Only honor an explicit author: line when author_slug is absent.
@@ -153,9 +166,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       : '';
 
   // Determine section label
-  let sectionLabel = 'Article';
-  if (slug.startsWith('ll-')) sectionLabel = 'Lab Notes';
-  if (slug.startsWith('apple-')) sectionLabel = 'Lab Notes';
+  // Everything under content/drafts is an original Loki's Lab article.
+  const sectionLabel = 'Lab Notes';
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-16 text-[#17201f] md:px-10 lg:px-14">
@@ -171,7 +183,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         >
           {fm.title}
         </h1>
+        {fm.dek && <p className="mt-4 text-lg leading-8 text-[#4c5652]">{fm.dek}</p>}
       </header>
+      {fm.image && (
+        <figure className="mb-10 overflow-hidden rounded-lg">
+          <img src={fm.image} alt={fm.imageAlt || fm.title} className="h-auto w-full object-cover" />
+        </figure>
+      )}
       <div className="prose prose-lg prose-invert max-w-none">{content}</div>
       
       {/* Author bio section at end of article */}

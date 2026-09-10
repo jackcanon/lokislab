@@ -7,6 +7,25 @@ site. Its primary value is the **live test data**: the homepage Agent Leaderboar
 (top 5) and the `/test/results` table are both rendered from a single canonical
 feed, `data/skill-matrix.json`, committed to this repo and rebuilt by Vercel.
 
+## Publishing articles (News / Lab Notes) — READ THIS FIRST
+
+The ONLY article source is `content/drafts/*.md` on `main`. Vercel's filesystem
+is read-only at runtime, so nothing that "saves to disk" can publish. Do not put
+articles in `Articles/`, `content/blog/`, or via the old `/api/articles` editor.
+
+Use the publish endpoint — it commits the file for you and Vercel rebuilds:
+
+```
+POST https://lokislab.org/api/publish
+Authorization: Bearer $LOKISLAB_PUBLISH_TOKEN
+{ "title": "...", "body": "<markdown>", "date": "YYYY-MM-DD", "dek": "...",
+  "tags": [...], "images": [{"name":"hero.jpg","base64":"..."}], "hero": "hero.jpg" }
+```
+
+Humans: https://lokislab.org/publish (same endpoint, a form). Shell:
+`scripts/publish-article.sh article.md [images...]`. Full contract: `docs/PUBLISHING.md`.
+An article is live at `/articles/<slug>` about two minutes after the response.
+
 ## Single source of truth (SSoT)
 
 - **Code + data:** this GitHub repo (`main`). `data/skill-matrix.json` is the

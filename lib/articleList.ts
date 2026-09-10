@@ -15,9 +15,11 @@ export type ArticleListItem = {
   image?: string; // Optional featured image URL
 };
 
-function parseFrontmatter(raw: string): { title: string; date: string; body: string } {
+function parseFrontmatter(raw: string): { title: string; date: string; body: string; image: string; dek: string } {
   let title = '';
   let date = '';
+  let image = '';
+  let dek = '';
   let body = raw;
 
   const fmStart = raw.indexOf('---\n');
@@ -33,6 +35,12 @@ function parseFrontmatter(raw: string): { title: string; date: string; body: str
 
         const d = line.match(/^date:\s*(?:"([^"]+)"|([^"\n]+))/);
         if (d) date = d[1] || d[2]?.trim() || date;
+
+        const im = line.match(/^image:\s*(?:"([^"]+)"|([^"\n]+))/);
+        if (im) image = im[1] || im[2]?.trim() || image;
+
+        const dk = line.match(/^dek:\s*(?:"([^"]+)"|([^"\n]+))/);
+        if (dk) dek = dk[1] || dk[2]?.trim() || dek;
       }
     }
   }
@@ -42,7 +50,7 @@ function parseFrontmatter(raw: string): { title: string; date: string; body: str
     if (h1) title = h1[1].trim();
   }
 
-  return { title, date, body };
+  return { title, date, body, image, dek };
 }
 
 function excerptFromBody(body: string, maxLen = 180): string {
@@ -82,19 +90,20 @@ export function articleList(): ArticleListItem[] {
 
   const items: ArticleListItem[] = files.map((file) => {
     const raw = fs.readFileSync(path.join(draftsDir, file), 'utf-8');
-    const { title, date, body } = parseFrontmatter(raw);
+    const { title, date, body, image, dek } = parseFrontmatter(raw);
     const slug = buildSlug(file);
-    const isLocal = slug.startsWith('ll-') || slug.startsWith('apple-');
+    // Everything under content/drafts is an original Loki's Lab article.
+    const isLocal = true;
 
     return {
       slug,
       title: title || file.replace(/\.md$/, '').replace(/-/g, ' '),
       date,
       href: `/articles/${slug}`,
-      excerpt: excerptFromBody(body),
+      excerpt: dek || excerptFromBody(body),
       source: 'Loki\'s Lab',
       isLocal,
-      image: IMAGE_MAP[slug], // Add optional featured image
+      image: image || IMAGE_MAP[slug], // frontmatter `image:` wins; legacy map as fallback
     };
   });
 

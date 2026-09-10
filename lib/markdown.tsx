@@ -112,6 +112,25 @@ export function renderMarkdown(markdown: string): React.ReactNode[] {
       continue;
     }
 
+    // Block-level image: ![alt](src)
+    const imgMatch = line.match(/^\s*!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)\s*$/);
+    if (imgMatch) {
+      flushParagraph(paragraphBuffer);
+      paragraphBuffer = [];
+      flushList(listBuffer, listType!);
+      listBuffer = [];
+      listType = null;
+      nodes.push(
+        <figure key={`img-${nodes.length}`} className="my-8">
+          <img src={imgMatch[2]} alt={imgMatch[1]} className="h-auto w-full rounded-lg" loading="lazy" />
+          {(imgMatch[3] || imgMatch[1]) && (
+            <figcaption className="mt-2 text-center text-xs text-[#8f9a95]">{imgMatch[3] || imgMatch[1]}</figcaption>
+          )}
+        </figure>
+      );
+      continue;
+    }
+
     // Horizontal rule
     if (/^[\s]*[-*_]{3,}/.test(line)) {
       flushParagraph(paragraphBuffer);
