@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link';
-import { renderMarkdown } from '@/lib/markdown';
+import { ArticleView } from '@/components/ArticleView';
 import { notFound } from 'next/navigation';
 
 // Build-time list of all article pages we can render.
@@ -155,69 +154,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const raw = fs.readFileSync(path.join(draftsDir, matchingFile), 'utf-8');
   const { body, fm } = parseFrontmatter(raw);
 
-  const content = renderMarkdown(body);
-  const formattedDate =
-    fm.date && !isNaN(new Date(fm.date).getTime())
-      ? new Date(fm.date).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        })
-      : '';
-
-  // Determine section label
-  // Everything under content/drafts is an original Loki's Lab article.
-  const sectionLabel = 'Lab Notes';
-
   return (
-    <article className="mx-auto max-w-3xl px-5 py-16 text-[#17201f] md:px-10 lg:px-14">
-      <header className="mb-12 border-b border-[#aaa194] pb-6">
-        <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-[#b74627]">
-          <span>{sectionLabel}</span>
-          <span>·</span>
-          <span>{formattedDate}</span>
-        </div>
-        <h1
-          className="display-serif mt-4 text-[clamp(2.5rem,5vw,4rem)] leading-[0.9] tracking-[-0.04em] font-bold"
-          style={{ fontFamily: 'var(--font-geist-sans)' }}
-        >
-          {fm.title}
-        </h1>
-        {fm.dek && <p className="mt-4 text-lg leading-8 text-[#4c5652]">{fm.dek}</p>}
-      </header>
-      {fm.image && (
-        <figure className="mb-10 overflow-hidden rounded-lg">
-          <img src={fm.image} alt={fm.imageAlt || fm.title} className="h-auto w-full object-cover" />
-        </figure>
-      )}
-      <div className="prose prose-lg prose-invert max-w-none">{content}</div>
-      
-      {/* Author bio section at end of article */}
-      <div className="mt-16 border-t border-[#aaa194] pt-8">
-        <div className="flex items-start gap-4">
-          <Link href="/authors/jack" className="group">
-            <span className="relative h-48 w-48 min-h-48 min-w-48 max-h-48 max-w-48 flex-shrink-0 overflow-hidden rounded-full ring-2 ring-[#ece5d8] group-hover:ring-[#b74627] transition block">
-              <img
-                src="/authors/jack.jpg"
-                alt={`${fm.authorName} — author photo`}
-                className="h-full w-full object-cover block"
-              />
-            </span>
-          </Link>
-          <div className="flex-1">
-            <div className="mb-2">
-              <h3 className="text-xs font-bold text-[#17201f]">{fm.authorName}</h3>
-              <p className="text-xs text-[#b74627] font-semibold">{fm.authorLabel}</p>
-            </div>
-            <p className="text-xs leading-6 text-[#4c5652] mb-3">
-              Jack Blair is an independent documentary filmmaker, storyteller, and lifelong technology obsessive. Through Happy Jack Media, he explores overlooked human stories and experiments with new ways to create and connect. He founded Loki's Lab as a community where curious people can test local AI models, share what they learn, and discover what today's technology can do on the computers they already own.
-            </p>
-            <Link href="/authors/jack" className="inline-flex text-xs font-semibold text-[#b74627] hover:text-[#9a3a20] transition">
-              View author profile →
-            </Link>
-          </div>
-        </div>
-      </div>
-    </article>
+    <ArticleView
+      title={fm.title}
+      date={fm.date}
+      dek={fm.dek}
+      image={fm.image}
+      imageAlt={fm.imageAlt}
+      body={body}
+      authorName={fm.authorName}
+      authorLabel={fm.authorLabel}
+    />
   );
 }
