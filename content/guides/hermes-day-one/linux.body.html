@@ -1,0 +1,332 @@
+<h1 id="hermes-day-one-for-linux">Hermes Day One for Linux</h1>
+<p>Four guided tracks for Linux: Nous, ChatGPT/Codex, Anthropic, and local Ollama.</p>
+<p><a href="/guides/hermes-day-one">Choose a different operating system</a>.</p>
+<p><strong>Loki’s Lab</strong></p>
+<p>We’re going to install Hermes, connect one model provider, and make a small file we can open ourselves. Choose one track today. We can explore the others later.</p>
+<p>Hermes is the assistant that organizes the work and uses tools. The model is the AI it asks for help. Installing Hermes on our computer does not automatically put the model there: tracks 1–3 use hosted services; track 4 runs a downloaded model through Ollama.</p>
+<h2 id="choose-your-track">Choose your track</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Track</th>
+<th>What we need</th>
+<th>Where the model runs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#track-1-nous-account">1. Nous account</a></td>
+<td>Nous Portal account with model access</td>
+<td>Hosted through Nous Portal</td>
+</tr>
+<tr>
+<td><a href="#track-2-chatgpt-or-codex-login">2. ChatGPT or Codex login</a></td>
+<td>OpenAI account accepted by the Codex login flow</td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="#track-3-anthropic">3. Anthropic</a></td>
+<td>Claude Console API key and API billing</td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="#track-4-local-model-through-ollama">4. Local model through Ollama</a></td>
+<td>Ollama, a downloaded model, and enough memory</td>
+<td>Our computer</td>
+</tr>
+</tbody></table></div>
+<p><strong>Start here:</strong> <a href="#install-once">Install once</a> → choose a track above → <a href="#first-working-task">First working task</a>.</p>
+<p>Already installed? Go straight to your track. Stuck? Jump to <a href="#troubleshooting">Troubleshooting</a>. Returning tomorrow? Use the <a href="#command-cheat-sheet">Command cheat sheet</a>.</p>
+<h2 id="before-we-begin">Before we begin</h2>
+<ul>
+<li>Have a browser, an internet connection for downloads/sign-in, and permission to install software on this computer.</li>
+<li>Open your Linux terminal. This lane uses Ubuntu/Debian package commands where distribution-specific preparation is needed; other distributions should use their own package manager. A desktop is optional, but browser sign-in requires a browser on this or another device. Commands below go in Terminal, not into an AI chat.</li>
+<li>Have the account for your chosen track ready. Pause screen sharing while entering passwords, login codes, payment details, or API keys.</li>
+<li>For Ollama, finish the model download before the live session if possible. Model memory needs include more than the download’s file size.</li>
+</ul>
+<p>We’ll use a fresh practice folder and a harmless packing list. That folder is a convenient place to work, not a sandbox that prevents access elsewhere. Read any proposed actions before approving them.</p>
+<h2 id="install-once">Install once</h2>
+<p>All four provider tracks use this installation. Run the installer as your normal user.</p>
+<h3 id="1-prepare-linux">1. Prepare Linux</h3>
+<p>For Ubuntu or Debian:</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install -y git curl xz-utils
+</code></pre>
+<p>Other distributions: install Git, curl, and the xz tools with your distribution’s package manager. Check Git:</p>
+<pre><code class="language-bash">git --version
+</code></pre>
+<h3 id="2-install-hermes">2. Install Hermes</h3>
+<pre><code class="language-bash">curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+</code></pre>
+<p>This downloads and runs the official installer. Follow its prompts, then open a fresh terminal. The installer supplies its other application dependencies. <a href="https://hermes-agent.nousresearch.com/docs/getting-started/installation">Linux installation reference</a>.</p>
+<h3 id="confirm-installation">Confirm installation</h3>
+<pre><code class="language-text">hermes --help
+</code></pre>
+<p><strong>Checkpoint:</strong> Hermes prints command help. If the command is missing, reopen the terminal once more and check the installer’s final messages.</p>
+<p>If onboarding opens automatically, use your chosen track below. On versions where <strong>Quick Setup</strong> is specifically Nous Portal, choose <strong>Full Setup</strong> for another provider. We can defer messaging and optional integrations. The wizard can be reopened with <code>hermes setup</code>; model configuration is available through <code>hermes model</code>. <a href="https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/">Setup modes</a>.</p>
+<h2 id="track-1-nous-account">Track 1: Nous account</h2>
+<p><strong>Our route:</strong> install → sign into Nous Portal → select a model → try a task.</p>
+<ol>
+<li>Complete <a href="#install-once">Install once</a>.</li>
+<li>Open <a href="https://portal.nousresearch.com/">Nous Portal</a> and create an account or sign in. Check <a href="https://portal.nousresearch.com/manage-subscription">subscription access and current terms</a> before committing to a plan. Creating a login alone does not establish paid model access.</li>
+<li>For a fresh setup, run:</li>
+</ol>
+<pre><code class="language-text">hermes setup --portal
+</code></pre>
+<ol start="4">
+<li>Follow the browser authorization instructions. Return to the terminal when sign-in finishes.</li>
+<li>Pick an available model suited to tool use from the current list. We do not need to choose a model called “Hermes” just because the app is called Hermes.</li>
+</ol>
+<p>This setup also enables the Nous Tool Gateway. Its hosted tools and model access use the Portal service; available features depend on the subscription. The Portal documentation specifically distinguishes Hermes 4 chat models from models recommended for agent work. <a href="https://hermes-agent.nousresearch.com/docs/integrations/nous-portal">Nous Portal setup and model guidance</a>.</p>
+<p><strong>Already configured?</strong> Use <code>hermes model</code> to select Nous rather than repeat fresh onboarding.</p>
+<p><strong>Checkpoint:</strong> open <code>hermes</code> and check that its displayed provider/model matches your selection. Then complete <a href="#first-working-task">First working task</a>.</p>
+<h2 id="track-2-chatgpt-or-codex-login">Track 2: ChatGPT or Codex login</h2>
+<p><strong>Our route:</strong> install → authorize with OpenAI → select an available Codex model → try a task.</p>
+<ol>
+<li>Complete <a href="#install-once">Install once</a>.</li>
+<li>Run:</li>
+</ol>
+<pre><code class="language-text">hermes model
+</code></pre>
+<ol start="3">
+<li>Choose <strong>ChatGPT or Codex Subscription</strong>; some versions label this <strong>OpenAI Codex</strong>.</li>
+<li>Open the URL Hermes provides, enter its device code when requested, and sign into the intended OpenAI account.</li>
+<li>Return to Hermes, choose an available model, and save the selection.</li>
+</ol>
+<p>A separate Codex CLI installation is unnecessary. <strong>OpenAI API</strong> is a different credential route; choose the subscription entry for this walkthrough. Hermes documents this login, but its provider page does not fully specify eligible plans or how every plan’s quota is consumed. Check access in the actual login flow; we do not promise that every ChatGPT account works. <a href="https://hermes-agent.nousresearch.com/docs/integrations/providers/">Hermes Codex authentication notes</a>.</p>
+<p><strong>Checkpoint:</strong> the startup display shows the intended provider/model and a short prompt gets a reply. Continue to <a href="#first-working-task">First working task</a>.</p>
+<h2 id="track-3-anthropic">Track 3: Anthropic</h2>
+<p><strong>Our main route:</strong> install → create a Claude Console API key → connect Anthropic → try a task.</p>
+<ol>
+<li>Complete <a href="#install-once">Install once</a>.</li>
+<li>Open the <a href="https://platform.claude.com/">Claude Console</a> and complete account/workspace setup. Check API billing and set an appropriate spending limit before the exercise.</li>
+<li>In <strong>Settings → API keys</strong>, create a key for this experiment. If workspace scoping is offered, scope it to the intended workspace. Copy it privately. <a href="https://platform.claude.com/docs/en/manage-claude/authentication">Anthropic key instructions</a>.</li>
+<li>Run:</li>
+</ol>
+<pre><code class="language-text">hermes model
+</code></pre>
+<ol start="5">
+<li>Select <strong>Anthropic</strong>, choose the <strong>API key</strong> authentication option, and paste the key only into the credential prompt.</li>
+<li>Choose a Claude model available to that API account and save.</li>
+</ol>
+<p>API requests are metered separately from a Claude chat subscription. <a href="https://platform.claude.com/docs/en/get-started">Claude API getting started</a>.</p>
+<h3 id="if-we-want-a-claude-login-instead">If we want a Claude login instead</h3>
+<p>Hermes also lists Anthropic OAuth in <code>hermes model</code>. Its documentation currently describes <strong>Max plus purchased extra usage</strong>. Anthropic’s separate Agent SDK notice describes a paused billing change and different subscription behavior. These pages do not establish the same entitlement for this Hermes connection. Treat account-login eligibility and billing as <strong>requiring verification</strong>, and use the API-key route for this lesson. <a href="https://hermes-agent.nousresearch.com/docs/integrations/providers/#anthropic-native">Hermes Anthropic notes</a>, <a href="https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan">Anthropic’s SDK notice</a>.</p>
+<p><strong>Checkpoint:</strong> Hermes replies using the chosen Anthropic model. Check the Console’s usage view after the exercise; reporting may lag. Complete <a href="#first-working-task">First working task</a>.</p>
+<h2 id="track-4-local-model-through-ollama">Track 4: Local model through Ollama</h2>
+<p><strong>Our route:</strong> install Hermes → install Ollama → download a model → connect the local endpoint → try a task.</p>
+<h3 id="1-install-ollama-and-choose-a-model">1. Install Ollama and choose a model</h3>
+<p>Complete <a href="#install-once">Install once</a>. In your Linux terminal, install Ollama:</p>
+<pre><code class="language-bash">curl -fsSL https://ollama.com/install.sh | sh
+</code></pre>
+<p>On a systemd machine, check its service:</p>
+<pre><code class="language-bash">systemctl status ollama --no-pager
+</code></pre>
+<p>If it is installed but stopped, run <code>sudo systemctl start ollama</code>. Without a managed service, run <code>ollama serve</code> and leave that terminal open. Do not start a second server when one is already running. <a href="https://docs.ollama.com/linux">Ollama Linux instructions</a>.</p>
+<p>In a fresh terminal:</p>
+<pre><code class="language-text">ollama --version
+</code></pre>
+<p>We use <code>qwen3.5:9b</code> as a concrete example, not a guarantee of fit on every computer. Its current Ollama listing advertises tool support and a roughly 6.6 GB download; runtime memory and long context require additional headroom. If uncertain, check your computer’s available memory before downloading. <a href="https://ollama.com/library/qwen3.5:9b">Model listing</a>.</p>
+<pre><code class="language-text">ollama pull qwen3.5:9b
+</code></pre>
+<h3 id="2-give-the-model-enough-working-space">2. Give the model enough working space</h3>
+<p>Hermes currently specifies a minimum context of 64,000 tokens. Context is the information a model can work with at once. We use 65,536 below. A larger context uses more memory; a model that fits for a short Ollama chat may still be too large for this exercise. <a href="https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/">Hermes requirement</a>, <a href="https://docs.ollama.com/context-length">Ollama context guidance</a>.</p>
+<p>Run this block in Terminal to create the model configuration in its own folder. It writes a file named <code>Modelfile</code>:</p>
+<pre><code class="language-bash">mkdir -p ~/hermes-day-one-model
+cd ~/hermes-day-one-model
+cat &gt; Modelfile &lt;&lt;&#39;EOF&#39;
+FROM qwen3.5:9b
+PARAMETER num_ctx 65536
+EOF
+</code></pre>
+<p>Then run:</p>
+<pre><code class="language-text">ollama create loki-hermes-local -f Modelfile
+ollama run loki-hermes-local
+</code></pre>
+<p>Ask it to say hello. Type <code>/bye</code> to leave the Ollama conversation. This named configuration keeps the chosen context setting with the model. <a href="https://docs.ollama.com/modelfile">Ollama Modelfile reference</a>.</p>
+<h3 id="3-connect-hermes">3. Connect Hermes</h3>
+<p>Run:</p>
+<pre><code class="language-text">hermes model
+</code></pre>
+<p>Choose <strong>Custom Endpoint</strong>, sometimes under <strong>More providers</strong>, and enter:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>API base URL</td>
+<td><code>http://127.0.0.1:11434/v1</code></td>
+</tr>
+<tr>
+<td>API key</td>
+<td>Leave blank for local Ollama</td>
+</tr>
+<tr>
+<td>Model</td>
+<td><code>loki-hermes-local</code></td>
+</tr>
+<tr>
+<td>Context length, if requested</td>
+<td><code>65536</code></td>
+</tr>
+</tbody></table></div>
+<p>The Hermes field must reflect the context Ollama actually serves; setting only the Hermes field does not enlarge Ollama’s context. If asked for an API format, use OpenAI-compatible chat completions. <a href="https://docs.ollama.com/integrations/hermes">Ollama’s Hermes integration</a>, <a href="https://docs.ollama.com/api/openai-compatibility">OpenAI-compatible context setup</a>.</p>
+<p><strong>Alternative shortcut:</strong> recent Ollama versions offer <code>ollama launch hermes</code>. It can handle installation and provider selection. Choose a downloaded local model, such as the configured <code>loki-hermes-local</code>, and skip optional messaging. The selector also offers cloud models, so the word “Ollama” alone does not mean local. <a href="https://docs.ollama.com/integrations/hermes">Launcher instructions</a>.</p>
+<h3 id="4-verify-local-inference">4. Verify local inference</h3>
+<p>Start Hermes and send a short prompt. While it is responding, run this in a second terminal:</p>
+<pre><code class="language-text">ollama ps
+</code></pre>
+<p>Look for the model loaded locally and a context of at least 64,000. Check the processor column for CPU/GPU placement. <a href="https://docs.ollama.com/context-length">Ollama runtime checks</a>.</p>
+<p><strong>Checkpoint:</strong> Hermes responds, its selected endpoint/model is local, and Ollama shows the running model. Proceed to <a href="#first-working-task">First working task</a>.</p>
+<p>Local inference avoids a hosted-model API bill for those calls. Online search, connected services, auxiliary models, and fallback providers can still use the network or hosted services. Keep those out of our first task; a local main model alone is not an offline guarantee.</p>
+<h2 id="first-working-task">First working task</h2>
+<p>Every track finishes with the same small exercise. We check the actual file, not just the assistant’s claim that it created one.</p>
+<h3 id="1-open-a-practice-folder">1. Open a practice folder</h3>
+<p>In Terminal, make and enter a new practice folder:</p>
+<pre><code class="language-bash">mkdir ~/hermes-day-one-practice
+cd ~/hermes-day-one-practice
+</code></pre>
+<p>If that folder already exists, use a new folder name for this exercise. We can inspect the result with a file manager, or on a server use <code>cat packing-checklist.md</code> from a second terminal in this folder.</p>
+<p>Start the assistant:</p>
+<pre><code class="language-text">hermes
+</code></pre>
+<p>Confirm the displayed provider and model. Ask:</p>
+<pre><code class="language-text">Explain what you can help me do in three short sentences. Use everyday language. Do not use tools for this answer.
+</code></pre>
+<h3 id="2-create-one-file">2. Create one file</h3>
+<p>Paste this into the Hermes conversation:</p>
+<pre><code class="language-text">Create packing-checklist.md in the current practice folder with exactly these items: charge the laptop, pack the charger, bring headphones. Use Markdown checkboxes. Do not read other folders, use the internet, install anything, or change existing files. Show me the saved path.
+</code></pre>
+<p>Review any tool approval. Open the saved file in your file manager and check all three items.</p>
+<h3 id="3-make-one-revision">3. Make one revision</h3>
+<pre><code class="language-text">Change the heading to “Ready for Loki’s Lab.” Keep the three checklist items exactly as they are. Show me the saved path.
+</code></pre>
+<p>Reopen the file and confirm the heading changed. If Hermes only prints text without saving it, ask what blocked the write and check its file-tool access.</p>
+<h3 id="our-day-one-finish-line">Our day-one finish line</h3>
+<ul>
+<li>Hermes opens successfully.</li>
+<li>We know which provider and model we selected.</li>
+<li>We understand whether the connection uses hosted billing or local inference.</li>
+<li>A prompt gets an answer, and a follow-up works.</li>
+<li>The packing file exists and its revision is correct.</li>
+<li>We know how to reopen Hermes and where to find this guide.</li>
+</ul>
+<h2 id="command-cheat-sheet">Command cheat sheet</h2>
+<p><strong>In Terminal, outside a Hermes conversation:</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hermes</code></td>
+<td>Start a conversation</td>
+</tr>
+<tr>
+<td><code>hermes model</code></td>
+<td>Configure a provider, login, or model</td>
+</tr>
+<tr>
+<td><code>hermes setup</code></td>
+<td>Reopen setup</td>
+</tr>
+<tr>
+<td><code>hermes tools</code></td>
+<td>Adjust available tools</td>
+</tr>
+<tr>
+<td><code>hermes doctor</code></td>
+<td>Diagnose the setup</td>
+</tr>
+<tr>
+<td><code>hermes --continue</code></td>
+<td>Return to the latest session</td>
+</tr>
+<tr>
+<td><code>hermes update</code></td>
+<td>Update Hermes</td>
+</tr>
+</tbody></table></div>
+<p><strong>Inside the Hermes conversation:</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Command or key</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/help</code></td>
+<td>See available commands</td>
+</tr>
+<tr>
+<td><code>/model</code></td>
+<td>Switch among configured models/providers</td>
+</tr>
+<tr>
+<td><code>/tools</code></td>
+<td>Inspect available tools</td>
+</tr>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td>Interrupt the current work</td>
+</tr>
+<tr>
+<td><code>Ctrl+D</code></td>
+<td>Exit the terminal chat</td>
+</tr>
+</tbody></table></div>
+<p>The terminal’s <code>hermes model</code> configures connections; the chat’s <code>/model</code> is for switching configured choices. <a href="https://hermes-agent.nousresearch.com/docs/user-guide/cli/">CLI reference</a>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>What we see</th>
+<th>Our next check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hermes</code> is not found</td>
+<td>Open a fresh terminal; inspect the installer’s final instructions and any error.</td>
+</tr>
+<tr>
+<td>Sign-in succeeded but chat fails</td>
+<td>Recheck the selected provider/model and account access with <code>hermes model</code>. A login is not proof of model entitlement.</td>
+</tr>
+<tr>
+<td>An expired login or invalid credential</td>
+<td>Repeat the provider’s login/key setup; do not post the credential in chat or a screenshot.</td>
+</tr>
+<tr>
+<td>A quota or billing error</td>
+<td>Check the account’s usage/billing page and the route chosen. Reinstalling does not restore quota.</td>
+</tr>
+<tr>
+<td>Ollama connection refused</td>
+<td>Check the Ollama service; without a service, start <code>ollama serve</code> in another terminal. Check that both programs are in the same OS environment.</td>
+</tr>
+<tr>
+<td>Ollama model not found</td>
+<td>Use <code>ollama list</code> and copy the exact name into Hermes.</td>
+</tr>
+<tr>
+<td>Context too small</td>
+<td>Verify both the Modelfile setting and Hermes context setting; check the loaded model with <code>ollama ps</code>.</td>
+</tr>
+<tr>
+<td>Local response is very slow</td>
+<td>Allow for first-load delay, check available memory and processor placement, and close heavy apps. Ask for help selecting a smaller tool-capable model that still meets the context requirement.</td>
+</tr>
+<tr>
+<td>Text appears but no file exists</td>
+<td>Check the returned path and file tools. Repeat the tiny file exercise before adding more integrations.</td>
+</tr>
+</tbody></table></div>
+<p>If unresolved, run <code>hermes doctor</code> and include the <strong>error text, operating system, provider, model, and failed step</strong> when asking for help. Remove keys and login codes. <a href="https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/">Hermes troubleshooting</a>, <a href="https://hermes-agent.nousresearch.com/docs/guides/local-ollama-setup/">Local Ollama guide</a>.</p>
+<h2 id="keep-this-guide-current">Keep this guide current</h2>
+<p>Bookmark this page. Model catalogs, menu labels, installer support, and account policies change. Use the linked official instructions when a screen differs; do not substitute an unfamiliar credential route just to get past a prompt.</p>
+<p>Before updating Hermes, preserve your settings and work using the current backup instructions. Update between sessions, then repeat the short reply and packing-file exercise. <a href="https://hermes-agent.nousresearch.com/docs/getting-started/updating">Updating and backup guidance</a>.</p>

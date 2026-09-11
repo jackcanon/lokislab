@@ -35,7 +35,7 @@ export default function RootLayout({
           <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-14">
             <Link
               href="/"
-              className="flex items-center gap-3 group"
+              className="flex shrink-0 items-center gap-3 group"
               aria-label="Loki's Lab home"
             >
               <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-sm bg-[#17201f] text-[#ece5d8]">
@@ -50,7 +50,7 @@ export default function RootLayout({
                 Loki&apos;s Lab
               </span>
             </Link>
-            <nav className="flex items-center gap-6 text-sm font-semibold uppercase tracking-[0.12em] text-[#5b6560]">
+            <nav className="flex min-w-0 items-center gap-4 overflow-x-auto whitespace-nowrap text-xs font-semibold uppercase tracking-[0.12em] text-[#5b6560] md:gap-6 md:text-sm">
               <Link href="/" className="hover:text-[#b74627] transition-colors">
                 Home
               </Link>
@@ -62,6 +62,9 @@ export default function RootLayout({
               </Link>
               <Link href="/test" className="hover:text-[#b74627] transition-colors">
                 Test
+              </Link>
+              <Link href="/guides/hermes-day-one" className="hover:text-[#b74627] transition-colors">
+                Guides
               </Link>
             </nav>
           </div>

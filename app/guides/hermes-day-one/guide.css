@@ -1,0 +1,73 @@
+html{scroll-padding-top:130px}
+/* GENERATED from content/guides/hermes-day-one/source/guide-theme.css — edit that file and re-run scripts/guides/scope-css.py */
+.hermes-guide{--paper:#ece5d8;--ink:#17201f;--accent:#b74627;--line:#c8c0b3;--muted:#5b6560;--card:#f8f5ef;color:var(--ink);font-size:16px;line-height:1.7}
+.hermes-guide code,.hermes-guide pre{font-family:var(--font-geist-mono),'Geist Mono',ui-monospace,monospace}
+.hermes-guide *{box-sizing:border-box}
+.hermes-guide ::selection{background:var(--accent);color:#fff}
+.hermes-guide main a{color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:#aaa194}
+.hermes-guide a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.hermes-guide a:focus-visible,.hermes-guide button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.hermes-guide nav.platforms{background:var(--ink);color:var(--paper);display:flex;align-items:center;gap:10px;padding:11px max(4vw,20px);position:sticky;top:64px;z-index:20;flex-wrap:wrap;border-bottom:1px solid #45504b}
+.hermes-guide nav.platforms a{color:var(--paper);text-decoration:none;padding:5px 16px;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid transparent;border-radius:100px}
+.hermes-guide nav.platforms a:hover{border-color:#aaa194}
+.hermes-guide nav.platforms a[aria-current=page]{color:#fff;background:var(--accent);border-color:var(--accent)}
+.hermes-guide .layout{max-width:1440px;margin:auto;display:grid;grid-template-columns:230px minmax(0,1fr);gap:64px;padding:65px 4vw}
+.hermes-guide aside{position:sticky;top:130px;align-self:start;font-size:13px;line-height:1.5}
+.hermes-guide aside strong{display:block;color:var(--accent);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+.hermes-guide aside a{display:block;padding:9px 0;border-bottom:1px solid #d1cbc1;text-decoration:none;color:var(--muted)}
+.hermes-guide aside a:hover{color:var(--accent)}
+.hermes-guide main{min-width:0;max-width:890px}
+.hermes-guide h1,.hermes-guide h2{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--ink)}
+.hermes-guide h1{font-size:clamp(40px,5.2vw,72px);line-height:1.04;letter-spacing:-.045em;margin:0 0 25px;text-wrap:balance}
+.hermes-guide h2{font-size:clamp(29px,3vw,42px);line-height:1.15;letter-spacing:-.035em;margin:60px 0 22px;padding-top:32px;border-top:1px solid var(--line)}
+.hermes-guide h3{font-size:19px;line-height:1.4;letter-spacing:-.025em;margin:34px 0 12px}
+.hermes-guide p{margin:17px 0}
+.hermes-guide li{margin:9px 0}
+.hermes-guide main>h1+p{font-size:18px;line-height:1.6;color:var(--muted);max-width:730px}
+.hermes-guide code{font-family:'Geist Mono',monospace;font-size:.85em;background:#e1dacd;border-radius:4px;padding:2px 5px;overflow-wrap:anywhere}
+.hermes-guide pre{position:relative;background:var(--ink);color:#f8f5ef;padding:45px 22px 22px;border-radius:10px;overflow:auto;font-size:15px;line-height:1.65;border:1px solid #3c4641}
+.hermes-guide pre code{background:transparent;padding:0;color:inherit;overflow-wrap:normal}
+.hermes-guide pre button{position:absolute;right:10px;top:9px;border:1px solid #70776f;background:#303b35;color:#fff;border-radius:100px;padding:4px 13px;font:11px Geist,Arial,sans-serif;cursor:pointer}
+.hermes-guide pre button:hover{background:var(--accent);border-color:var(--accent)}
+.hermes-guide .table-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.hermes-guide table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6}
+.hermes-guide td,.hermes-guide th{padding:15px 16px;text-align:left;vertical-align:top;border-bottom:1px solid #d1cbc1}
+.hermes-guide th{background:#e8e4dc;color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.hermes-guide td:first-child{font-weight:600}
+.hermes-guide tr:last-child td{border-bottom:0}
+.hermes-guide .home{max-width:1440px;margin:0 auto;padding:65px 4vw}
+.hermes-guide .home main{max-width:none}
+.hermes-guide .home h1{font-size:clamp(50px,7vw,90px);max-width:870px;line-height:1;letter-spacing:-.055em}
+.hermes-guide .home main>p:not(.eyebrow){max-width:780px;font-size:18px;color:var(--muted)}
+.hermes-guide .eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 22px}
+.hermes-guide .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:38px 0}
+.hermes-guide .card{display:block;background:var(--card);padding:28px;border:1px solid var(--line);border-radius:12px;text-decoration:none;transition:border-color .15s,background .15s}
+.hermes-guide .card:hover{color:var(--ink);border-color:var(--accent);background:#fcfaf6}
+.hermes-guide .card h2{border:0;padding:0;margin:0 0 16px;font-size:38px}
+.hermes-guide .card p{color:var(--muted);font-size:16px}
+.hermes-guide .card strong{display:inline-block;font-size:13px;color:var(--accent);margin-top:8px}
+.hermes-guide .note{padding:24px 28px;background:#f5f1e8;border:1px solid #b58e7c;border-radius:12px}
+.hermes-guide .note>strong{color:var(--accent);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.hermes-guide .note p{margin:10px 0 0}
+@media(max-width:850px){
+.hermes-guide .layout{display:block;padding:35px 6vw}
+.hermes-guide aside{position:static;display:flex;flex-wrap:wrap;gap:0 16px;margin-bottom:40px}
+.hermes-guide aside strong{width:100%;margin-bottom:10px}
+.hermes-guide aside a{padding:7px 0}
+.hermes-guide h1{font-size:44px}
+.hermes-guide .cards{grid-template-columns:1fr}
+.hermes-guide .home{padding:40px 6vw}
+.hermes-guide nav.platforms{gap:4px;padding:10px 5vw}
+.hermes-guide nav.platforms a{padding:5px 10px;font-size:10px}
+.hermes-guide .home h1{font-size:58px}
+}
+@media(max-width:520px){
+.hermes-guide .layout h1{font-size:40px}
+.hermes-guide .home h1{font-size:52px}
+.hermes-guide .card{padding:24px}
+.hermes-guide td,.hermes-guide th{padding:12px}
+.hermes-guide pre{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+.hermes-guide .card{transition:none}
+}
