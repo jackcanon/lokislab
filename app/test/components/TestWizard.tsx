@@ -192,8 +192,8 @@ bash ~/setup-check.sh`}
               <div className="code-block-wrapper">
                 <pre>
                   <code>
-                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh
-bash ~/v3_test_harness_macos.sh`}
+                    {`curl -fsSL https://lokislab.org/downloads/v3-harness/v3_setup.sh -o ~/v3_setup.sh
+bash ~/v3_setup.sh`}
                   </code>
                 </pre>
                 <CopyButton 
@@ -246,8 +246,8 @@ bash ~/setup-check.sh`}
               <div className="code-block-wrapper">
                 <pre>
                   <code>
-                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness_macos.sh -o ~/v3_test_harness_macos.sh
-bash ~/v3_test_harness_macos.sh`}
+                    {`curl -fsSL https://lokislab.org/downloads/v3-harness/v3_setup.sh -o ~/v3_setup.sh
+bash ~/v3_setup.sh`}
                   </code>
                 </pre>
                 <CopyButton 
@@ -297,8 +297,8 @@ bash ~/setup-check.sh`}
               <div className="code-block-wrapper">
                 <pre>
                   <code>
-                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh
-bash ~/v3_test_harness.sh`}
+                    {`curl -fsSL https://lokislab.org/downloads/v3-harness/v3_setup.sh -o ~/v3_setup.sh
+bash ~/v3_setup.sh`}
                   </code>
                 </pre>
                 <CopyButton 
@@ -348,8 +348,8 @@ bash ~/setup-check.sh`}
               <div className="code-block-wrapper">
                 <pre>
                   <code>
-                    {`curl -fsSL https://lokislab.org/eval/v3_test_harness.sh -o ~/v3_test_harness.sh
-bash ~/v3_test_harness.sh`}
+                    {`curl -fsSL https://lokislab.org/downloads/v3-harness/v3_setup.sh -o ~/v3_setup.sh
+bash ~/v3_setup.sh`}
                   </code>
                 </pre>
                 <CopyButton 
