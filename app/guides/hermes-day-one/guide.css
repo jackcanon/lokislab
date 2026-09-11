@@ -49,6 +49,9 @@ html{scroll-padding-top:130px}
 .hermes-guide .note{padding:24px 28px;background:#f5f1e8;border:1px solid #b58e7c;border-radius:12px}
 .hermes-guide .note>strong{color:var(--accent);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
 .hermes-guide .note p{margin:10px 0 0}
+.hermes-guide .shot{margin:22px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.hermes-guide .shot img{display:block;width:100%;height:auto}
+.hermes-guide .shot figcaption{padding:10px 16px;font-size:12px;line-height:1.5;color:var(--muted);border-top:1px solid var(--line)}
 @media(max-width:850px){
 .hermes-guide .layout{display:block;padding:35px 6vw}
 .hermes-guide aside{position:static;display:flex;flex-wrap:wrap;gap:0 16px;margin-bottom:40px}

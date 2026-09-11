@@ -98,6 +98,8 @@
 <ol>
 <li>Complete <a href="#install-once">Install once</a>.</li>
 <li>Open the <a href="https://platform.claude.com/">Claude Console</a> and complete account/workspace setup. Check API billing and set an appropriate spending limit before the exercise.</li>
+</ol>
+<figure class="shot"><img src="/images/guides/hermes-day-one/claude-console-signin.png" alt="The Claude Console sign-in screen at platform.claude.com, with Continue with Google and Continue with email options."><figcaption>platform.claude.com — sign in or create a workspace here before making an API key.</figcaption></figure><ol start="3">
 <li>In <strong>Settings → API keys</strong>, create a key for this experiment. If workspace scoping is offered, scope it to the intended workspace. Copy it privately. <a href="https://platform.claude.com/docs/en/manage-claude/authentication">Anthropic key instructions</a>.</li>
 <li>Run:</li>
 </ol>
@@ -119,7 +121,7 @@
 <pre><code class="language-text">ollama --version
 </code></pre>
 <p>We use <code>qwen3.5:9b</code> as a concrete example, not a guarantee of fit on every computer. Its current Ollama listing advertises tool support and a roughly 6.6 GB download; runtime memory and long context require additional headroom. If uncertain, check your computer’s available memory before downloading. <a href="https://ollama.com/library/qwen3.5:9b">Model listing</a>.</p>
-<pre><code class="language-text">ollama pull qwen3.5:9b
+<figure class="shot"><img src="/images/guides/hermes-day-one/ollama-model-qwen.png" alt="The qwen3.5:9b listing on ollama.com, showing 9.65B parameters, Q4_K_M quantization, and a 6.6GB download size."><figcaption>ollama.com/library/qwen3.5:9b — confirm the parameter count and download size before pulling.</figcaption></figure><pre><code class="language-text">ollama pull qwen3.5:9b
 </code></pre>
 <h3 id="2-give-the-model-enough-working-space">2. Give the model enough working space</h3>
 <p>Hermes currently specifies a minimum context of 64,000 tokens. Context is the information a model can work with at once. We use 65,536 below. A larger context uses more memory; a model that fits for a short Ollama chat may still be too large for this exercise. <a href="https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/">Hermes requirement</a>, <a href="https://docs.ollama.com/context-length">Ollama context guidance</a>.</p>

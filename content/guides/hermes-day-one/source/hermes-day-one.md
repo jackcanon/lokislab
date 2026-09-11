@@ -122,6 +122,9 @@ A separate Codex CLI installation is unnecessary. **OpenAI API** is a different 
 
 1. Complete [Install once](#install-once).
 2. Open the [Claude Console](https://platform.claude.com/) and complete account/workspace setup. Check API billing and set an appropriate spending limit before the exercise.
+
+<figure class="shot"><img src="/images/guides/hermes-day-one/claude-console-signin.png" alt="The Claude Console sign-in screen at platform.claude.com, with Continue with Google and Continue with email options."><figcaption>platform.claude.com — sign in or create a workspace here before making an API key.</figcaption></figure>
+
 3. In **Settings → API keys**, create a key for this experiment. If workspace scoping is offered, scope it to the intended workspace. Copy it privately. [Anthropic key instructions](https://platform.claude.com/docs/en/manage-claude/authentication).
 4. Run:
 
@@ -155,6 +158,8 @@ ollama --version
 ```
 
 We use `qwen3.5:9b` as a concrete example, not a guarantee of fit on every computer. Its current Ollama listing advertises tool support and a roughly 6.6 GB download; runtime memory and long context require additional headroom. If uncertain, check your computer’s available memory before downloading. [Model listing](https://ollama.com/library/qwen3.5:9b).
+
+<figure class="shot"><img src="/images/guides/hermes-day-one/ollama-model-qwen.png" alt="The qwen3.5:9b listing on ollama.com, showing 9.65B parameters, Q4_K_M quantization, and a 6.6GB download size."><figcaption>ollama.com/library/qwen3.5:9b — confirm the parameter count and download size before pulling.</figcaption></figure>
 
 ```text
 ollama pull qwen3.5:9b
