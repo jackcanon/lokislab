@@ -1,10 +1,13 @@
-const assert = require('node:assert/strict');
-const fs = require('node:fs');
-const ts = require('typescript');
-const compiled = ts.transpileModule(fs.readFileSync('lib/radarProjectActivity.ts', 'utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;
-const moduleValue = {exports:{}};
-new Function('exports', 'module', compiled)(moduleValue.exports, moduleValue);
-const {matchesProject} = moduleValue.exports;
+import assert from 'node:assert/strict';
+import {mkdtempSync, rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {execFileSync} from 'node:child_process';
+const output = mkdtempSync(join(tmpdir(), 'lokislab-check-'));
+try {
+execFileSync(process.execPath, ['node_modules/typescript/bin/tsc', 'lib/radarProjectActivity.ts', '--outDir', output, '--target', 'es2020', '--module', 'commonjs', '--skipLibCheck']);
+const {matchesProject} = (await import(pathToFileURL(join(output,'radarProjectActivity.js')).href)).default;
 const core = [{url:'https://github.com/iamfatness/CoreVideo'}];
 assert(matchesProject('https://github.com/iamfatness/CoreVideo/commit/123', core));
 assert(!matchesProject('https://github.com/iamfatness/CoreVideoPro/commit/123', core));
@@ -14,3 +17,5 @@ assert(!matchesProject('https://github.com/iamfatness/CoreVideo/commit/123', [{u
 assert(matchesProject('https://stadiumsound.chrissabato.com/changelog', [{url:'https://stadiumsound.chrissabato.com/'}]));
 assert(!matchesProject('https://chrissabato.com/post', [{url:'https://stadiumsound.chrissabato.com/'}]));
 console.log('Project activity boundaries passed');
+
+} finally { rmSync(output, {recursive:true,force:true}); }

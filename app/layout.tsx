@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Link from 'next/link';
+import StructuredData from '@/components/seo/StructuredData';
+import { siteURL, siteName } from '@/lib/seo';
 import './globals.css';
 
 const geistSans = Geist({
@@ -14,6 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteURL),
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
   title: "Loki's Lab — Local AI, tested",
   description:
     'Independent local AI benchmarks, practical guides, and signal-rich news for builders.',
@@ -30,6 +34,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData data={{'@context': 'https://schema.org', '@graph': [
+          {'@type': 'Organization', '@id': `${siteURL}/#organization`, name: siteName, url: siteURL, logo: `${siteURL}/favicon.svg`, sameAs: ['https://github.com/jackcanon/lokislab']},
+          {'@type': 'WebSite', '@id': `${siteURL}/#website`, name: siteName, url: siteURL, inLanguage: 'en', publisher: {'@id': `${siteURL}/#organization`}},
+        ]}} />
         {/* Site-wide header — visible on every page */}
         <header className="sticky top-0 z-50 border-b border-[#aaa194] bg-[#ece5d8]/95 backdrop-blur">
           <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-4 px-5 md:px-10 lg:px-14">
@@ -85,6 +93,7 @@ export default function RootLayout({
             <div className="flex items-center justify-between gap-4 text-xs leading-5 text-[#626a66]">
               <div className="flex flex-col gap-1">
                 <p>Independent testing · Public methodology</p>
+                <p><Link href="/about" className="hover:text-[#b74627]">About Loki’s Lab</Link> · <Link href="/radar/projects" className="hover:text-[#b74627]">Projects to follow</Link></p>
                 <p>Built on Asgard · Deployed on Vercel</p>
               </div>
               <Link

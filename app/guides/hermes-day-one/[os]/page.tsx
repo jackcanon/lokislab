@@ -1,3 +1,4 @@
+import { pageMetadata } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import '../guide.css';
 import { CopyButtons } from '@/components/guides/CopyButtons';
@@ -11,12 +12,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ os: string }> }) {
   const { os } = await params;
   const lane = HERMES_OS.find((o) => o.slug === os);
-  return {
-    title: lane ? `Hermes Day One for ${lane.label} — Loki's Lab` : "Hermes Day One — Loki's Lab",
-    description: lane
-      ? `Four guided tracks for ${lane.label}: Nous, ChatGPT/Codex, Anthropic, and local Ollama.`
-      : undefined,
-  };
+  if (!lane) notFound();
+  return pageMetadata(`/guides/hermes-day-one/${lane.slug}`, `Hermes Day One for ${lane.label} — Loki's Lab`, `Four guided tracks for ${lane.label}: Nous, ChatGPT/Codex, Anthropic, and local Ollama.`);
 }
 
 export default async function HermesLanePage({ params }: { params: Promise<{ os: string }> }) {

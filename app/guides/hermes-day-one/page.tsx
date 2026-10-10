@@ -1,13 +1,15 @@
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import './guide.css';
 import { HermesOsBar } from '@/components/guides/HermesOsBar';
 import { HERMES_GUIDE_BASE, HERMES_OS } from '@/lib/guides';
 
-export const metadata = {
+const pageInfo = {
   title: "Hermes Day One — Loki's Lab",
   description:
     'Install Hermes, connect one model provider (Nous, ChatGPT/Codex, Anthropic, or a local Ollama model), and make a file you can open yourself. Linux, Mac, and Windows lanes.',
 };
+export const metadata = pageMetadata('/guides/hermes-day-one', pageInfo.title, pageInfo.description);
 
 export default function HermesDayOnePage() {
   return (

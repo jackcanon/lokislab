@@ -52,4 +52,4 @@ ignoring script/whitespace noise in product page changes.
 Rollback: revert the integration commit. Pause the heartbeat separately to stop
 scanning; reverting code alone does not change its schedule.
 
-Projects use `data/radar/projects.json`, with exact repository and website matching rather than creator-wide activity. Explicit project repositories are included in scheduled scans. People and creator filters are alphabetical with equal styling. LinkedIn remains a reading link. Verify boundaries with `node tests/radar/project-activity.cjs`.
+Projects use `data/radar/projects.json`, with exact repository and website matching rather than creator-wide activity. Explicit project repositories are included in scheduled scans. People and creator filters are alphabetical with equal styling. LinkedIn remains a reading link. Verify boundaries with `node tests/radar/project-activity.mjs`.

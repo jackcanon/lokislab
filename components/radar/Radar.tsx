@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import "./radar.css";
 import Projects, { type Project } from "./Projects";
@@ -404,7 +405,7 @@ export default function Radar({
                     {watching(p) ? "★" : "☆"}
                   </button>
                 </div>
-                <h2>{p.name}</h2>
+                <h2>{catalog.people.some(x => x.id === p.id) ? <Link href={`/radar/people/${p.id}`}>{p.name}</Link> : p.name}</h2>
                 <p className="radar-topic">{p.topic}</p>
                 <p>{p.why}</p>
                 <div className="radar-card-bottom">

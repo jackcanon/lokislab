@@ -1,12 +1,14 @@
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import TestWizard from './components/TestWizard';
 import './components/test-wizard.css';
 
-export const metadata = {
+const pageInfo = {
   title: "Run the benchmark — Loki's Lab",
   description:
     "Run the V3 long-context benchmark on your own hardware and submit the result to the community leaderboard.",
 };
+export const metadata = pageMetadata('/test', pageInfo.title, pageInfo.description);
 
 export default function TestPage() {
   return (

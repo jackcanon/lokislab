@@ -1,13 +1,15 @@
+import { pageMetadata } from '@/lib/seo';
 import { allTrustedItems, featuredArticle } from '@/lib/articleList';
 import Link from 'next/link';
 
 type Filter = 'Lab Notes' | 'External news' | 'All';
 
-export const metadata = {
+const pageInfo = {
   title: 'News & articles — Loki\'s Lab',
   description:
     'Every Loki\'s Lab article and trusted-wire item we have published or curated, in one place.',
 };
+export const metadata = pageMetadata('/news', pageInfo.title, pageInfo.description);
 
 const SECTION_LAB_NOTES: Filter = 'Lab Notes';
 const SECTION_EXTERNAL: Filter = 'External news';

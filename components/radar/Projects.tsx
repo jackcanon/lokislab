@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { matchesProject } from "@/lib/radarProjectActivity";
 export type Project = { id: string; name: string; person_id: string; summary: string; kind: string; spaces: {name: string; url: string}[]; context: string };
@@ -20,7 +21,7 @@ export default function Projects({projects, people, updates}: {projects: Project
       const activity = updates.filter(u => matchesProject(u.url, p.spaces)).sort((a,b)=>(b.event_date || b.observed_at).localeCompare(a.event_date || a.observed_at));
       return <article key={p.id} className="radar-card radar-project-card">
         <span className="radar-eyebrow">{p.kind} · {people.find(x=>x.id===p.person_id)?.name}</span>
-        <h3>{p.name}</h3><p>{p.summary}</p>
+        <h3><Link href={`/radar/projects/${p.id}`}>{p.name}</Link></h3><p>{p.summary}</p>
         <div className="radar-project-links">{p.spaces.map(s=><a key={s.url} href={s.url} target="_blank" rel="noreferrer">{s.name} ↗</a>)}</div>
         <p className="radar-project-context">{p.context}</p>
         <h4>Recent project activity</h4>

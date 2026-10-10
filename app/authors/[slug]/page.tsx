@@ -1,31 +1,18 @@
+import { notFound } from 'next/navigation';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
-import type { Metadata } from 'next';
 
-export const metadata: Metadata = {
+const pageInfo = {
   title: "Jack Blair — Loki's Lab",
   description: 'Jack Blair is the writer and tester behind Loki\'s Lab, conducting independent benchmarks of local AI models on real hardware.',
 };
+export const metadata = pageMetadata('/authors/jack', pageInfo.title, pageInfo.description);
 
 export default async function AuthorPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
   // Currently only support jack
-  if (slug !== 'jack') {
-    return (
-      <main className="min-h-screen bg-[#ece5d8] text-[#17201f]">
-        <section className="mx-auto max-w-3xl px-5 py-16 md:px-10 lg:px-14">
-          <h1 className="text-4xl font-bold">Author not found</h1>
-          <p className="mt-4 text-base text-[#4c5652]">
-            This author page does not exist.{' '}
-            <Link href="/news" className="text-[#b74627] hover:underline">
-              Return to news
-            </Link>
-            .
-          </p>
-        </section>
-      </main>
-    );
-  }
+  if (slug !== 'jack') notFound();
 
   return (
     <main className="min-h-screen bg-[#ece5d8] text-[#17201f]">

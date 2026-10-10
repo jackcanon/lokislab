@@ -1,3 +1,5 @@
+import { pageMetadata } from '@/lib/seo';
+export const metadata = pageMetadata('/', "Loki's Lab — Local artificial intelligence, tested", 'Independent local model benchmarks, practical setup guides, source-linked news and projects to follow. Explore published results and their limitations.');
 import { SkillMatrixLeaderboard } from '@/components/skillMatrixLeaderboard';
 import {
   ArrowUpRight,
