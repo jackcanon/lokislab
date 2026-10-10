@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StructuredData data={{'@context': 'https://schema.org', '@graph': [
-          {'@type': 'Organization', '@id': `${siteURL}/#organization`, name: siteName, url: siteURL, logo: `${siteURL}/favicon.svg`, sameAs: ['https://github.com/jackcanon/lokislab']},
+          {'@type': 'Organization', '@id': `${siteURL}/#organization`, name: siteName, description: 'Independent local artificial intelligence benchmarks, practical guides and source-linked reporting.', url: siteURL, logo: `${siteURL}/favicon.svg`, sameAs: ['https://github.com/jackcanon/lokislab']},
           {'@type': 'WebSite', '@id': `${siteURL}/#website`, name: siteName, url: siteURL, inLanguage: 'en', publisher: {'@id': `${siteURL}/#organization`}},
         ]}} />
         {/* Site-wide header — visible on every page */}
