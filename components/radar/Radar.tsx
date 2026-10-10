@@ -268,7 +268,7 @@ export default function Radar({
           </div>
           <div>
             <strong>{catalog.people.filter((p) => p.priority).length}</strong>
-            <span>Jack’s priority follows</span>
+            <span>Featured people</span>
           </div>
           <div>
             <strong>{feed.updates.length}</strong>
@@ -389,7 +389,7 @@ export default function Radar({
                       .join("")}
                   </span>
                   {p.priority && (
-                    <span className="radar-badge">Jack’s pick</span>
+                    <span className="radar-badge">Featured</span>
                   )}
                   <button
                     disabled={!ready}
@@ -465,7 +465,7 @@ export default function Radar({
                   value={feedPerson}
                   onChange={(e) => setFeedPerson(e.target.value)}
                 >
-                  <option value="priority">Jack’s priority follows</option>
+                  <option value="priority">Featured people</option>
                   <option value="">All monitored people</option>
                   {catalog.people.map((p) => (
                     <option key={p.id} value={p.id}>
@@ -617,7 +617,7 @@ export default function Radar({
                 </li>
               ))}
             </ul>
-            <h3>Evidence & context</h3>
+            <h3>Sources & context</h3>
             {selected.evidence.map((e, i) => (
               <p key={i}>
                 {e.summary} <SourceLink url={e.url}>Source</SourceLink> ·

@@ -14,7 +14,7 @@
           "url": "https://cloudflexbroadcast.com/"
         }
       ],
-      "why": "Cloud production tools designed around production operators. Jack\u2019s requested follow; useful for tracking the infrastructure behind future media workflows.",
+      "why": "Cloud production tools designed around production operators, with infrastructure for live media workflows.",
       "links": [
         {
           "label": "GitHub profile",
@@ -45,11 +45,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "AI-specific capability not established by the sources reviewed. Track as an adjacent production platform.",
+      "caveat": "A broadcast production platform; artificial intelligence features are not documented in the linked product sources.",
       "priority": true,
       "default_watch": true,
       "identity_status": "identified",
-      "capability_status": "AI role needs verification"
+      "capability_status": "Broadcast & production tools"
     },
     {
       "id": "guy-cochran",
@@ -78,11 +78,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Repository claims reviewed; tools were not installed or tested in this research.",
+      "caveat": "Published automation tools. Compatibility and performance require testing in the intended production setup.",
       "priority": true,
       "default_watch": true,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "john-wallace",
@@ -95,7 +95,7 @@
           "url": "https://github.com/iamfatness/CoreVideo"
         }
       ],
-      "why": "Production tools for bringing Zoom participants into live video workflows. Jack supplied the exact GitHub identity.",
+      "why": "Production tools for bringing Zoom participants into live video workflows.",
       "links": [
         {
           "label": "GitHub profile",
@@ -111,11 +111,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Production-tool functionality is documented. AI-specific features need closer verification; active-speaker switching alone does not establish AI use.",
+      "caveat": "Documented production tools. Active-speaker switching alone does not establish artificial intelligence capabilities.",
       "priority": true,
       "default_watch": true,
       "identity_status": "identified",
-      "capability_status": "AI role needs verification"
+      "capability_status": "Broadcast & production tools"
     },
     {
       "id": "simon-willison",
@@ -148,7 +148,7 @@
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "mario-zechner",
@@ -177,11 +177,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Repository location checked against the current profile; project popularity is not a quality benchmark.",
+      "caveat": "Project popularity is not a quality benchmark.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "andrej-karpathy",
@@ -210,11 +210,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Results depend on hardware and evaluation setup; no experiments were run here.",
+      "caveat": "Results depend on hardware and evaluation setup.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "awni-hannun",
@@ -243,11 +243,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Do not present him as a current Apple employee or infer a current maintainer role from prior work.",
+      "caveat": "Past affiliations do not establish current project ownership or maintenance responsibilities.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "ikawrakow",
@@ -276,11 +276,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Performance claims need workload-specific tests. Public handle preserved without inferring a full personal name.",
+      "caveat": "Performance varies with the model, hardware and workload.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "ostris",
@@ -313,7 +313,7 @@
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "lvmin-zhang",
@@ -342,11 +342,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "A research/tooling follow; this catalog does not validate output quality or hardware claims.",
+      "caveat": "Output quality and hardware requirements depend on the model and workflow.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "comfyanonymous",
@@ -375,11 +375,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Follow the person and the project separately; community extensions have separate maintainers.",
+      "caveat": "Community extensions have separate maintainers and compatibility requirements.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "arben-apura",
@@ -412,7 +412,7 @@
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "carlos-antelo",
@@ -445,7 +445,7 @@
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "sebastian-raschka",
@@ -478,7 +478,7 @@
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "ethan-mollick",
@@ -507,11 +507,11 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Keep commentary and forecasts distinct from demonstrated product capabilities.",
+      "caveat": "Commentary and forecasts are distinct from demonstrated product capabilities.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     },
     {
       "id": "sam-rose",
@@ -544,7 +544,7 @@
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
-      "capability_status": "Published work reviewed"
+      "capability_status": "Published work"
     }
   ],
   "communities": [
