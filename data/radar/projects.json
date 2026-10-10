@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "projects": [
+    {
+      "id": "sebastian-raschka-0",
+      "name": "Ahead of AI",
+      "person_id": "sebastian-raschka",
+      "summary": "Useful explanations of model architecture, training and the mechanics behind coding agents.",
+      "kind": "Publication",
+      "spaces": [
+        {
+          "name": "Website",
+          "url": "https://magazine.sebastianraschka.com/"
+        }
+      ],
+      "context": "Research interpretation and educational writing, not a substitute for independently reproduced results."
+    },
+    {
+      "id": "ostris-0",
+      "name": "AI Toolkit",
+      "person_id": "ostris",
+      "summary": "Useful for training and adapting creative models, rather than only consuming finished generators.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/ostris/ai-toolkit"
+        }
+      ],
+      "context": "Open-source tooling and the creator’s paid cloud product are distinct options."
+    },
+    {
+      "id": "andrej-karpathy-0",
+      "name": "Autoresearch",
+      "person_id": "andrej-karpathy",
+      "summary": "Makes model-training experiments concrete and accessible through compact public implementations.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/karpathy/autoresearch"
+        }
+      ],
+      "context": "Results depend on hardware and evaluation setup."
+    },
+    {
+      "id": "jonas-dautel-0",
+      "name": "CLOUDflex Broadcast",
+      "person_id": "jonas-dautel",
+      "summary": "Cloud production tools designed around production operators, with infrastructure for live media workflows.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "Website",
+          "url": "https://cloudflexbroadcast.com/"
+        }
+      ],
+      "context": "A broadcast production platform; artificial intelligence features are not documented in the linked product sources."
+    },
+    {
+      "id": "comfyanonymous-0",
+      "name": "ComfyUI",
+      "person_id": "comfyanonymous",
+      "summary": "A useful anchor for visual model workflows, reusable examples and ecosystem developments.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/Comfy-Org/ComfyUI"
+        }
+      ],
+      "context": "Community extensions have separate maintainers and compatibility requirements."
+    },
+    {
+      "id": "john-wallace-0",
+      "name": "CoreVideo",
+      "person_id": "john-wallace",
+      "summary": "Production tools for bringing Zoom participants into live video workflows.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/iamfatness/CoreVideo"
+        }
+      ],
+      "context": "Documented production tools. Active-speaker switching alone does not establish artificial intelligence capabilities."
+    },
+    {
+      "id": "john-wallace-1",
+      "name": "CoreVideoPro",
+      "person_id": "john-wallace",
+      "summary": "Production tools for bringing Zoom participants into live video workflows.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/iamfatness/CoreVideoPro"
+        }
+      ],
+      "context": "Documented production tools. Active-speaker switching alone does not establish artificial intelligence capabilities."
+    },
+    {
+      "id": "lvmin-zhang-0",
+      "name": "FramePack and creative tools",
+      "person_id": "lvmin-zhang",
+      "summary": "Research-backed experiments in making visual generation more controllable and practical.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/lllyasviel/FramePack"
+        }
+      ],
+      "context": "Output quality and hardware requirements depend on the model and workflow."
+    },
+    {
+      "id": "ikawrakow-0",
+      "name": "ik_llama.cpp",
+      "person_id": "ikawrakow",
+      "summary": "A specialized follow for model compression and local inference improvements.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/ikawrakow/ik_llama.cpp"
+        }
+      ],
+      "context": "Performance varies with the model, hardware and workload."
+    },
+    {
+      "id": "sam-rose-0",
+      "name": "Interactive visual essays",
+      "person_id": "sam-rose",
+      "summary": "An especially useful follow for visual explanations that make technical model behavior understandable.",
+      "kind": "Collection",
+      "spaces": [
+        {
+          "name": "Website",
+          "url": "https://samwho.dev/"
+        }
+      ],
+      "context": "An education follow rather than a frontier-model developer."
+    },
+    {
+      "id": "carlos-antelo-0",
+      "name": "LDraw Nova",
+      "person_id": "carlos-antelo",
+      "summary": "An emerging creative follow for agents that generate and iteratively inspect digital LEGO designs.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/anteloc/ldraw-nova"
+        }
+      ],
+      "context": "Digital designs and renderings do not establish physical buildability."
+    },
+    {
+      "id": "ethan-mollick-0",
+      "name": "One Useful Thing",
+      "person_id": "ethan-mollick",
+      "summary": "Useful for tracking how model capabilities translate into work, interfaces and organizational choices.",
+      "kind": "Publication",
+      "spaces": [
+        {
+          "name": "Website",
+          "url": "https://www.oneusefulthing.org/"
+        }
+      ],
+      "context": "Commentary and forecasts are distinct from demonstrated product capabilities."
+    },
+    {
+      "id": "mario-zechner-0",
+      "name": "Pi agent toolkit",
+      "person_id": "mario-zechner",
+      "summary": "Worth following for agent architecture, coding tools and extensibility.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/earendil-works/pi"
+        }
+      ],
+      "context": "Project popularity is not a quality benchmark."
+    },
+    {
+      "id": "guy-cochran-0",
+      "name": "Resolve automation",
+      "person_id": "guy-cochran",
+      "summary": "Connects AI assistants to practical editing and live production tools. Especially relevant to production workflows and Office Hours Global.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/guycochran/resolve-mcp-server"
+        }
+      ],
+      "context": "Published automation tools. Compatibility and performance require testing in the intended production setup."
+    },
+    {
+      "id": "stadium-sound",
+      "name": "Stadium Sound",
+      "person_id": "chris-sabato",
+      "summary": "A soundboard for sporting events, with banks of tracks, playlists, instant playback and separate monitoring audio.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "Website",
+          "url": "https://stadiumsound.chrissabato.com/"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/chrissabato/stadium-sound"
+        }
+      ],
+      "context": "Public project documentation; capabilities have not been independently tested."
+    },
+    {
+      "id": "guy-cochran-1",
+      "name": "Switcher automation",
+      "person_id": "guy-cochran",
+      "summary": "Connects AI assistants to practical editing and live production tools. Especially relevant to production workflows and Office Hours Global.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/guycochran/atem-mcp-server"
+        }
+      ],
+      "context": "Published automation tools. Compatibility and performance require testing in the intended production setup."
+    },
+    {
+      "id": "simon-willison-0",
+      "name": "Tools and transparent experiments",
+      "person_id": "simon-willison",
+      "summary": "A strong source of hands-on experiments, inspectable tools, and practical analysis of language models.",
+      "kind": "Collection",
+      "spaces": [
+        {
+          "name": "Website",
+          "url": "https://tools.simonwillison.net/"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/simonw/tools"
+        }
+      ],
+      "context": "An experiment collection, with its own low-stakes framing."
+    },
+    {
+      "id": "arben-apura-0",
+      "name": "XianScan",
+      "person_id": "arben-apura",
+      "summary": "An emerging builder combining visual understanding, dialogue context and comic translation in a local application.",
+      "kind": "Tool",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/ArbenApura/xianscan-rust"
+        }
+      ],
+      "context": "Creator-described beta. Local and cloud translation options exist; it is not an unconditional offline guarantee."
+    }
+  ]
+}

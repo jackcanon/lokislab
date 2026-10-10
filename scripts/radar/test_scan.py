@@ -38,6 +38,14 @@ class ScannerTests(unittest.TestCase):
             scan.scan()
         return scan.load('feed.json', {}), output.getvalue()
 
+    def test_project_spaces_are_checked_without_owner_profile(self):
+        scan.write('projects.json', {'projects': [{'person_id': 'person', 'spaces': [{'url': 'https://github.com/person/tool'}]}]})
+        with patch.object(scan, 'fetch', return_value=self.repo) as fetch:
+            _, repos, failures = scan.person_repos(self.person)
+        fetch.assert_called_once_with('https://api.github.com/repos/person/tool')
+        self.assertIn('person/tool', repos)
+        self.assertEqual(failures, 0)
+
     def test_baseline_is_labeled_and_repeat_deduplicates(self):
         feed, _ = self.run_scan()
         self.assertEqual(feed['updates'][0]['source'], 'GitHub · baseline')

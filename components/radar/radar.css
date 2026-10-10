@@ -432,3 +432,13 @@
 }
 
 .radar-results button{display:inline-flex;align-items:center;min-height:44px}.radar-results>div{flex-wrap:wrap}
+
+.radar-projects > h2 { font: 2.5rem Georgia, serif; margin-top: 2rem; }
+.radar-project-card h3 { font: 1.9rem Georgia, serif; margin: .7rem 0; }
+.radar-project-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+.radar-project-links a, .radar-project-activity a { color: var(--radar-accent, #b74627); overflow-wrap: anywhere; }
+.radar-project-context { font-size: .85rem; opacity: .8; }
+.radar-project-activity { list-style: none; margin: 0; padding: 0; }
+.radar-project-activity li { border-top: 1px solid #17201f22; padding: 1rem 0; }
+.radar-project-activity span { display: block; font-size: .75rem; margin-bottom: .5rem; }
+.radar-project-activity p { font-size: .85rem; }

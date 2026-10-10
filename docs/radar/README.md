@@ -18,7 +18,7 @@ variables. Credentials never enter the public data.
   (14 days) and recent releases are surfaced. First scan is labeled baseline.
   Later head changes link to the exact previous/current commit comparison.
 - Creator feeds: Simon Willison, Sebastian Raschka, Ethan Mollick and Sam Rose.
-- CLOUDflex Broadcast: public website text changes, excluding scripts and styles.
+- Configured public websites (CLOUDflex Broadcast, Stadium Sound and Craig MacFarlane’s company biography): text changes, excluding scripts and styles.
   This flags a page edit for inspection; it does not infer a new release.
 - Discovery: recent GitHub repositories tagged artificial intelligence with at
   least three stars, keyword-matched Hacker News creator submissions, and creator
@@ -51,3 +51,5 @@ releases with unchanged push timestamps, retry after a failed request, and
 ignoring script/whitespace noise in product page changes.
 Rollback: revert the integration commit. Pause the heartbeat separately to stop
 scanning; reverting code alone does not change its schedule.
+
+Projects use `data/radar/projects.json`, with exact repository and website matching rather than creator-wide activity. Explicit project repositories are included in scheduled scans. People and creator filters are alphabetical with equal styling. LinkedIn remains a reading link. Verify boundaries with `node tests/radar/project-activity.cjs`.

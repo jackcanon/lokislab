@@ -106,7 +106,9 @@ def error_text(error):
 def person_repos(person):
     owners = set()
     projects = set()
-    for link in person['links'] + person['projects'] + person['evidence']:
+    spaces = [space for project in load('projects.json', {'projects': []})['projects']
+              if project['person_id'] == person['id'] for space in project['spaces']]
+    for link in person['links'] + person['projects'] + person['evidence'] + spaces:
         parsed = urllib.parse.urlparse(link['url'])
         if parsed.hostname != 'github.com':
             continue

@@ -1,0 +1,16 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const ts = require('typescript');
+const compiled = ts.transpileModule(fs.readFileSync('lib/radarProjectActivity.ts', 'utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;
+const moduleValue = {exports:{}};
+new Function('exports', 'module', compiled)(moduleValue.exports, moduleValue);
+const {matchesProject} = moduleValue.exports;
+const core = [{url:'https://github.com/iamfatness/CoreVideo'}];
+assert(matchesProject('https://github.com/iamfatness/CoreVideo/commit/123', core));
+assert(!matchesProject('https://github.com/iamfatness/CoreVideoPro/commit/123', core));
+assert(!matchesProject('https://github.com/iamfatness/Other/commit/123', core));
+assert(!matchesProject('javascript:alert(1)', core));
+assert(!matchesProject('https://github.com/iamfatness/CoreVideo/commit/123', [{url:'https://github.com/iamfatness'}]));
+assert(matchesProject('https://stadiumsound.chrissabato.com/changelog', [{url:'https://stadiumsound.chrissabato.com/'}]));
+assert(!matchesProject('https://chrissabato.com/post', [{url:'https://stadiumsound.chrissabato.com/'}]));
+console.log('Project activity boundaries passed');

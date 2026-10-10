@@ -1,12 +1,45 @@
 {
   "watched_pages": [
-    {"person_id":"jonas-dautel","name":"CLOUDflex Broadcast","url":"https://cloudflexbroadcast.com/"}
+    {
+      "person_id": "jonas-dautel",
+      "name": "CLOUDflex Broadcast",
+      "url": "https://cloudflexbroadcast.com/"
+    },
+    {
+      "person_id": "chris-sabato",
+      "name": "Stadium Sound",
+      "url": "https://stadiumsound.chrissabato.com/"
+    },
+    {
+      "person_id": "craig-macfarlane",
+      "name": "Craig MacFarlane \u00b7 company biography",
+      "url": "https://www.transitionaldata.com/team/craig-macfarlane/"
+    }
   ],
   "creator_feeds": [
-    {"person_id":"simon-willison","name":"Simon Willison","url":"https://simonwillison.net/atom/everything/"},
-    {"person_id":"sebastian-raschka","name":"Sebastian Raschka","url":"https://magazine.sebastianraschka.com/feed"},
-    {"person_id":"ethan-mollick","name":"Ethan Mollick","url":"https://www.oneusefulthing.org/feed"},
-    {"person_id":"sam-rose","name":"Sam Rose","url":"https://samwho.dev/rss.xml"}
+    {
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/"
+    },
+    {
+      "person_id": "sebastian-raschka",
+      "name": "Sebastian Raschka",
+      "url": "https://magazine.sebastianraschka.com/feed"
+    },
+    {
+      "person_id": "ethan-mollick",
+      "name": "Ethan Mollick",
+      "url": "https://www.oneusefulthing.org/feed"
+    },
+    {
+      "person_id": "sam-rose",
+      "name": "Sam Rose",
+      "url": "https://samwho.dev/rss.xml"
+    }
   ],
-  "reddit_communities": ["LocalLLaMA", "LocalLLM"]
+  "reddit_communities": [
+    "LocalLLaMA",
+    "LocalLLM"
+  ]
 }

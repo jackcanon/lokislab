@@ -166,16 +166,16 @@
       "sha": "54b915230dce591b9e547281c53d30d4560d6748"
     },
     "simonw/scrape-florida-outages": {
-      "pushed_at": "2026-10-10T18:15:00Z",
+      "pushed_at": "2026-10-10T18:50:02Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-florida-outages",
-      "sha": "68b5671df75d08f4bf578f34897091d34b7bcb92"
+      "sha": "e8931056520f5ee1ad5b3f90fb80d8b38d703cc5"
     },
     "simonw/scrape-fema-shelters": {
-      "pushed_at": "2026-10-10T18:22:59Z",
+      "pushed_at": "2026-10-10T18:45:40Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-fema-shelters",
-      "sha": "7ea30918d8a0dcfd898bc5374658639759ced0b4"
+      "sha": "9ea7cd6825b3dfaeee1a1fade5d01f39f15be110"
     },
     "simonw/simonw": {
       "pushed_at": "2026-10-10T17:19:45Z",
@@ -292,10 +292,10 @@
       "sha": "cf113a59850862125b86ce1a58c117aa21341e07"
     },
     "simonw/inaturalist-clumps": {
-      "pushed_at": "2026-10-08T21:23:50Z",
+      "pushed_at": "2026-10-10T18:27:58Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/inaturalist-clumps",
-      "sha": "35fa0db3cf6bb90f58a7a5244a010760cc6b2652"
+      "sha": "2e9f792a2ccca8cfe04c6983971e39e542e3c22f"
     },
     "simonw/claude-system-prompts": {
       "pushed_at": "2026-10-08T06:46:41Z",
@@ -316,10 +316,10 @@
       "sha": "bdef8bf83f2d005d7c2d8d6003d92bfdca196418"
     },
     "simonw/free-threaded-wheels-results": {
-      "pushed_at": "2026-10-07T18:31:09Z",
+      "pushed_at": "2026-10-10T18:28:16Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/free-threaded-wheels-results",
-      "sha": "d51ae3e5f5c357f3357f488a7d83224c37e1073e"
+      "sha": "369cf719c2d9af76df70a71e9b2b816060548820"
     },
     "simonw/scrape-github-actions-package-versions": {
       "pushed_at": "2026-10-07T17:23:11Z",
@@ -1343,6 +1343,154 @@
       "pushed_at": "2024-09-03T21:34:11Z",
       "person_id": "sam-rose",
       "url": "https://github.com/samwho/hmm"
+    },
+    "chrissabato/college-athletics-directory": {
+      "pushed_at": "2026-10-09T20:33:59Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/college-athletics-directory",
+      "sha": "4ff1b52044f375ad6746817e776a0c0ea191a03c"
+    },
+    "chrissabato/simple-srt-encoder": {
+      "pushed_at": "2026-10-09T17:21:00Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/simple-srt-encoder",
+      "sha": "e1ee94f3df0928c9956ebb48abec3b24b122367c"
+    },
+    "chrissabato/stadium-sound": {
+      "pushed_at": "2026-09-28T19:58:34Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/stadium-sound",
+      "sha": "859ac41ae0d491e64e67d02f66b0df452195243f"
+    },
+    "chrissabato/bookmarks": {
+      "pushed_at": "2026-09-23T18:16:26Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/bookmarks"
+    },
+    "chrissabato/dakbot": {
+      "pushed_at": "2026-09-17T17:04:31Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/dakbot"
+    },
+    "chrissabato/response-time-test": {
+      "pushed_at": "2026-09-09T23:23:06Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/response-time-test"
+    },
+    "chrissabato/livecut": {
+      "pushed_at": "2026-09-01T21:44:03Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/livecut"
+    },
+    "chrissabato/yt-music-playlist": {
+      "pushed_at": "2026-08-29T23:29:25Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/yt-music-playlist"
+    },
+    "chrissabato/vmix-ad-manager": {
+      "pushed_at": "2026-08-28T22:38:23Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/vmix-ad-manager"
+    },
+    "chrissabato/tvtrkr": {
+      "pushed_at": "2026-08-19T02:05:06Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/tvtrkr"
+    },
+    "chrissabato/tagmyphoto-express": {
+      "pushed_at": "2026-08-10T14:54:08Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/tagmyphoto-express"
+    },
+    "chrissabato/portfolio": {
+      "pushed_at": "2026-08-09T00:47:13Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/portfolio"
+    },
+    "chrissabato/dinner-order": {
+      "pushed_at": "2026-08-08T18:42:15Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/dinner-order"
+    },
+    "chrissabato/vmix-playlist": {
+      "pushed_at": "2026-08-08T18:21:43Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/vmix-playlist"
+    },
+    "chrissabato/vmix-replay": {
+      "pushed_at": "2026-08-08T14:56:10Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/vmix-replay"
+    },
+    "chrissabato/chrissabato.com": {
+      "pushed_at": "2026-07-13T01:12:27Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/chrissabato.com"
+    },
+    "chrissabato/puppeteer-proxy": {
+      "pushed_at": "2026-06-27T15:32:19Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/puppeteer-proxy"
+    },
+    "chrissabato/recteq-dashboard": {
+      "pushed_at": "2026-06-23T18:34:50Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/recteq-dashboard"
+    },
+    "chrissabato/rematrix-filter": {
+      "pushed_at": "2026-06-12T21:31:15Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/rematrix-filter"
+    },
+    "chrissabato/livestream-multiview": {
+      "pushed_at": "2026-05-29T17:37:12Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/livestream-multiview"
+    },
+    "chrissabato/hls-official-review": {
+      "pushed_at": "2026-05-29T17:30:00Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/hls-official-review"
+    },
+    "chrissabato/audiometer": {
+      "pushed_at": "2026-05-07T19:38:22Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/audiometer"
+    },
+    "chrissabato/xml2vmix": {
+      "pushed_at": "2026-05-02T16:35:16Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/xml2vmix"
+    },
+    "chrissabato/bolin-control": {
+      "pushed_at": "2026-04-08T22:37:29Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/bolin-control"
+    },
+    "chrissabato/aida-srt": {
+      "pushed_at": "2026-04-07T23:28:43Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/aida-srt"
+    },
+    "chrissabato/ndi-comms-router": {
+      "pushed_at": "2026-04-06T15:12:50Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/ndi-comms-router"
+    },
+    "chrissabato/photo-id": {
+      "pushed_at": "2026-03-27T18:47:32Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/photo-id"
+    },
+    "chrissabato/ncaa-rpi-xml": {
+      "pushed_at": "2026-03-27T17:06:48Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/ncaa-rpi-xml"
+    },
+    "chrissabato/Tennis-SRT-Scorebug-Gateway": {
+      "pushed_at": "2026-03-18T01:56:52Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/Tennis-SRT-Scorebug-Gateway"
     }
   },
   "feeds": {},
@@ -1402,11 +1550,15 @@
     "69caad82a8e4ba7f214fe5b5",
     "6c17a5265af8bc3f964318f2",
     "6ca68ed1a8ec34dacda30ee1",
+    "6e0a9c4d2fffd2185afffcc1",
+    "6e8428adeefbfede336bf598",
     "6ed31193369338d1442f5b5c",
     "7041a29e9b5a667bd52aa3ff",
+    "728813ce0a3f15cd58b1c297",
     "74c0c749a12871f56e07f48b",
     "75aaf2723a7385d249be5891",
     "78e197fe5b9e7464a9b072db",
+    "7b2041c6842ed567890880f9",
     "7e267cf186eda9c3854e805c",
     "7ebd384d5059cc3528da0cdc",
     "8022573a35e44aec5a3cc845",
@@ -1420,6 +1572,7 @@
     "89b9e7b64836708c0c118456",
     "902f0fa1569defff4df91e67",
     "9311a88ac6f9bfee80a5f3b7",
+    "9488089552b68a65ba8bdb1e",
     "98e29353b8155159ee08e74a",
     "99959fdd2d9086bc7ab74c2c",
     "9bed23375ebce3d0a9ca729a",
@@ -1442,9 +1595,12 @@
     "c36bd5c8020b061432190a63",
     "c43876c01f8c68fa81952259",
     "c6859fb22bf787c733166e5b",
+    "cb0e19d6e3076f0a6615f9cb",
+    "ccd0aa5843859eefda8976be",
     "cd625be02c7a69b879b50d50",
     "cd6ffe99a59b356a76685ca1",
     "cd7eb39e1fdba9da0c361bca",
+    "d06ccf002f3026461cabd5d5",
     "d2b69d602d600cc239bfc391",
     "d47b8b320e5cf0309be179e2",
     "df00edcc1414682f613268ca",
@@ -1452,10 +1608,12 @@
     "e119507e3180db4ad94ea76d",
     "e30dffac6a747e034de264b6",
     "e3bbf5c4212e7c6ba2e1756d",
+    "e3bf1474d1278d2204256c4a",
     "e4f08aae6dfa95962bfb3ef9",
     "e75459044b7abb444daf555b",
     "e8b98136f34eb6e9f9be91c5",
     "e9d4b9c37964e39454c05421",
+    "eaf32b9f4a1f6c7d0b439f4c",
     "ebe74c0a998663109e8a8a84",
     "ee385ffcb7f74bd1ee9fef01",
     "ee8258042b9aba7df4f8557b",
@@ -1466,6 +1624,7 @@
     "f1ee3a7157390bd91ea08105",
     "f3d5d615a107270e573fdfa8",
     "f4f904c4d0b56848334e1fa3",
+    "f5ba9c25f2a7a4959dbe18e5",
     "f62d80c76f55f3138b3aca7c",
     "f8280ff3cd8dffbc3ed2c896",
     "f87e853752542b6e976da16b",
@@ -1477,7 +1636,15 @@
   "pages": {
     "https://cloudflexbroadcast.com/": {
       "digest": "dd0e428080b4d4d3c357211943deb2daadde999a9ab044c9a1e58886c5447db3",
-      "checked_at": "2026-10-10T18:25:35.362123+00:00"
+      "checked_at": "2026-10-10T18:56:00.358663+00:00"
+    },
+    "https://stadiumsound.chrissabato.com/": {
+      "digest": "f937ceccef6188e74e44ae7876cf9e9d8f08b2e5e53bdb6e92c3db3a2fbc2db8",
+      "checked_at": "2026-10-10T18:56:00.358663+00:00"
+    },
+    "https://www.transitionaldata.com/team/craig-macfarlane/": {
+      "digest": "6fbaa412c0ea2932c733fa32284580270695151b43abc1c4d1d9934326df56f2",
+      "checked_at": "2026-10-10T18:56:00.358663+00:00"
     }
   }
 }

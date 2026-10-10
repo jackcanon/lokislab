@@ -1,14 +1,24 @@
 {
   "schema_version": 1,
-  "scanned_at": "2026-10-10T18:25:35.362123+00:00",
+  "scanned_at": "2026-10-10T18:56:00.358663+00:00",
   "sources": [
     {
       "name": "GitHub · catalog",
       "status": "ok",
-      "detail": "257 repository checks across 16 profiles; 0 requests unavailable. Public repositories only; recent owner repositories plus explicitly linked projects."
+      "detail": "286 repository checks across 18 profiles; 0 requests unavailable. Public repositories only; recent owner repositories plus explicitly linked projects."
     },
     {
       "name": "CLOUDflex Broadcast",
+      "status": "ok",
+      "detail": "Public page text checked for changes; first check establishes a baseline. Client-rendered or signed-in content is outside this check."
+    },
+    {
+      "name": "Stadium Sound",
+      "status": "ok",
+      "detail": "Public page text checked for changes; first check establishes a baseline. Client-rendered or signed-in content is outside this check."
+    },
+    {
+      "name": "Craig MacFarlane · company biography",
       "status": "ok",
       "detail": "Public page text checked for changes; first check establishes a baseline. Client-rendered or signed-in content is outside this check."
     },
@@ -54,6 +64,50 @@
     }
   ],
   "updates": [
+    {
+      "id": "e3bf1474d1278d2204256c4a",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/scrape-florida-outages: repository changed",
+      "url": "https://github.com/simonw/scrape-florida-outages/compare/68b5671df75d08f4bf578f34897091d34b7bcb92...e8931056520f5ee1ad5b3f90fb80d8b38d703cc5",
+      "source": "GitHub",
+      "event_date": "2026-10-10T18:50:01Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "f5ba9c25f2a7a4959dbe18e5",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/scrape-fema-shelters: repository changed",
+      "url": "https://github.com/simonw/scrape-fema-shelters/compare/7ea30918d8a0dcfd898bc5374658639759ced0b4...9ea7cd6825b3dfaeee1a1fade5d01f39f15be110",
+      "source": "GitHub",
+      "event_date": "2026-10-10T18:45:39Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "7b2041c6842ed567890880f9",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/free-threaded-wheels-results: repository changed",
+      "url": "https://github.com/simonw/free-threaded-wheels-results/compare/d51ae3e5f5c357f3357f488a7d83224c37e1073e...369cf719c2d9af76df70a71e9b2b816060548820",
+      "source": "GitHub",
+      "event_date": "2026-10-10T18:28:15Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "ccd0aa5843859eefda8976be",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/inaturalist-clumps: repository changed",
+      "url": "https://github.com/simonw/inaturalist-clumps/compare/35fa0db3cf6bb90f58a7a5244a010760cc6b2652...2e9f792a2ccca8cfe04c6983971e39e542e3c22f",
+      "source": "GitHub",
+      "event_date": "2026-10-10T18:27:57Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
     {
       "id": "84deaa472e030d4b572b72d3",
       "person_id": "simon-willison",
@@ -374,6 +428,28 @@
       "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
     },
     {
+      "id": "6e8428adeefbfede336bf598",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/college-athletics-directory: recent activity at first scan",
+      "url": "https://github.com/chrissabato/college-athletics-directory/commit/4ff1b52044f375ad6746817e776a0c0ea191a03c",
+      "source": "GitHub · baseline",
+      "event_date": "2026-10-09T20:33:57Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
+    },
+    {
+      "id": "d06ccf002f3026461cabd5d5",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/simple-srt-encoder: recent activity at first scan",
+      "url": "https://github.com/chrissabato/simple-srt-encoder/commit/e1ee94f3df0928c9956ebb48abec3b24b122367c",
+      "source": "GitHub · baseline",
+      "event_date": "2026-10-09T17:20:54Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
+    },
+    {
       "id": "cd625be02c7a69b879b50d50",
       "person_id": "simon-willison",
       "name": "Simon Willison",
@@ -550,6 +626,28 @@
       "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
     },
     {
+      "id": "6e0a9c4d2fffd2185afffcc1",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/simple-srt-encoder: v1.0.6",
+      "url": "https://github.com/chrissabato/simple-srt-encoder/releases/tag/v1.0.6",
+      "source": "GitHub · release",
+      "event_date": "2026-10-08T17:09:08Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "Published release from the project owner. Release notes describe the changes; capabilities have not been independently tested."
+    },
+    {
+      "id": "eaf32b9f4a1f6c7d0b439f4c",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/simple-srt-encoder: v1.0.5",
+      "url": "https://github.com/chrissabato/simple-srt-encoder/releases/tag/v1.0.5",
+      "source": "GitHub · release",
+      "event_date": "2026-10-08T15:52:12Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "Published release from the project owner. Release notes describe the changes; capabilities have not been independently tested."
+    },
+    {
       "id": "b1c908ed0577de190d61f1ab",
       "person_id": "carlos-antelo",
       "name": "Carlos Antelo",
@@ -570,6 +668,17 @@
       "event_date": "2026-10-08T06:46:40Z",
       "observed_at": "2026-10-10T18:13:23.929379+00:00",
       "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
+    },
+    {
+      "id": "728813ce0a3f15cd58b1c297",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/simple-srt-encoder: v1.0.4",
+      "url": "https://github.com/chrissabato/simple-srt-encoder/releases/tag/v1.0.4",
+      "source": "GitHub · release",
+      "event_date": "2026-10-08T03:25:57Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "Published release from the project owner. Release notes describe the changes; capabilities have not been independently tested."
     },
     {
       "id": "6ed31193369338d1442f5b5c",
@@ -1001,6 +1110,28 @@
       "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
     },
     {
+      "id": "9488089552b68a65ba8bdb1e",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/stadium-sound: recent activity at first scan",
+      "url": "https://github.com/chrissabato/stadium-sound/commit/859ac41ae0d491e64e67d02f66b0df452195243f",
+      "source": "GitHub · baseline",
+      "event_date": "2026-09-28T19:58:33Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
+    },
+    {
+      "id": "cb0e19d6e3076f0a6615f9cb",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/stadium-sound: v0.11.0",
+      "url": "https://github.com/chrissabato/stadium-sound/releases/tag/v0.11.0",
+      "source": "GitHub · release",
+      "event_date": "2026-09-28T19:58:20Z",
+      "observed_at": "2026-10-10T18:56:00.358663+00:00",
+      "summary": "Published release from the project owner. Release notes describe the changes; capabilities have not been independently tested."
+    },
+    {
       "id": "5e645a1a3bc5cc130afe967c",
       "person_id": "sam-rose",
       "name": "Sam Rose",
@@ -1032,28 +1163,6 @@
       "event_date": "2026-09-27T20:16:10Z",
       "observed_at": "2026-10-10T18:13:23.929379+00:00",
       "summary": "Published release from the project owner. Release notes describe the changes; capabilities have not been independently tested."
-    },
-    {
-      "id": "0e90f52a72aa354cffafeec1",
-      "person_id": "sam-rose",
-      "name": "Sam Rose",
-      "title": "samwho/helm-charts: paperless-ng-0.6.4",
-      "url": "https://github.com/samwho/helm-charts/releases/tag/paperless-ng-0.6.4",
-      "source": "GitHub · release",
-      "event_date": "2026-09-27T17:03:36Z",
-      "observed_at": "2026-10-10T18:13:23.929379+00:00",
-      "summary": "Published release from the project owner. Release notes describe the changes; capabilities have not been independently tested."
-    },
-    {
-      "id": "fe2db979deb85ce567a45b8f",
-      "person_id": "simon-willison",
-      "name": "Simon Willison",
-      "title": "simonw/sqlite-utils: recent activity at first scan",
-      "url": "https://github.com/simonw/sqlite-utils/commit/6bc1d33d583c54bd69fbdd2071117e2d38c354a1",
-      "source": "GitHub · baseline",
-      "event_date": "2026-09-22T18:35:41Z",
-      "observed_at": "2026-10-10T18:13:23.929379+00:00",
-      "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
     }
   ],
   "candidates": [

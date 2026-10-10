@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import "./radar.css";
+import Projects, { type Project } from "./Projects";
 
 type Person = {
   id: string;
@@ -84,9 +85,11 @@ function date(value: string | null) {
 export default function Radar({
   catalog,
   feed,
+  projects,
 }: {
   catalog: Catalog;
   feed: Feed;
+  projects: Project[];
 }) {
   const [personal, setPersonal] = useState<Personal>(empty);
   const [ready, setReady] = useState(false);
@@ -95,7 +98,7 @@ export default function Radar({
   const [category, setCategory] = useState("");
   const [savedOnly, setSavedOnly] = useState(false);
   const [section, setSection] = useState("people");
-  const [feedPerson, setFeedPerson] = useState("priority");
+  const [feedPerson, setFeedPerson] = useState("");
   const [signalQuery, setSignalQuery] = useState("");
   const [selected, setSelected] = useState<Person | null>(null);
   const [adding, setAdding] = useState(false);
@@ -138,7 +141,7 @@ export default function Radar({
       );
     }
   }
-  const people = [...catalog.people, ...personal.added];
+  const people = [...catalog.people, ...personal.added].sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
   const watching = (p: Person) => personal.watch[p.id] ?? p.default_watch;
   const filtered = people.filter(
     (p) =>
@@ -155,9 +158,7 @@ export default function Radar({
     (item) =>
       (section !== "updates" ||
         !feedPerson ||
-        (feedPerson === "priority"
-          ? catalog.people.some((p) => p.priority && p.id === item.person_id)
-          : item.person_id === feedPerson)) &&
+        item.person_id === feedPerson) &&
       [item.title, item.name, item.source, item.summary]
         .join(" ")
         .toLowerCase()
@@ -264,11 +265,11 @@ export default function Radar({
         <div className="radar-stats">
           <div>
             <strong>{catalog.people.length}</strong>
-            <span>People monitored</span>
+            <span>People to follow</span>
           </div>
           <div>
-            <strong>{catalog.people.filter((p) => p.priority).length}</strong>
-            <span>Featured people</span>
+            <strong>{projects.length}</strong>
+            <span>Projects to follow</span>
           </div>
           <div>
             <strong>{feed.updates.length}</strong>
@@ -287,8 +288,8 @@ export default function Radar({
           <details>
             <summary>What gets scanned?</summary>
             <p>
-              Public GitHub repositories, selected creator feeds and CLOUDflex’s
-              product page. GitHub, Hacker News and Reddit supply discovery leads
+              Public GitHub repositories, selected creator feeds and watched
+              project websites. GitHub, Hacker News and Reddit supply discovery leads
               when available. Repository activity is a signal to investigate,
               not proof of a notable release or tested capability.
             </p>
@@ -307,6 +308,7 @@ export default function Radar({
       <nav className="radar-tabs" aria-label="Radar sections">
         {[
           ["people", "People"],
+          ["projects", "Projects"],
           ["updates", "Latest signals"],
           ["discoveries", "Discovery queue"],
         ].map(([value, label]) => (
@@ -378,7 +380,7 @@ export default function Radar({
             {filtered.map((p) => (
               <article
                 key={p.id}
-                className={`radar-card ${p.priority ? "radar-priority" : ""}`}
+                className="radar-card"
               >
                 <div className="radar-card-top">
                   <span className="radar-initials">
@@ -388,9 +390,6 @@ export default function Radar({
                       .slice(0, 2)
                       .join("")}
                   </span>
-                  {p.priority && (
-                    <span className="radar-badge">Featured</span>
-                  )}
                   <button
                     disabled={!ready}
                     aria-label={`${watching(p) ? "Remove" : "Save"} ${p.name} bookmark`}
@@ -436,7 +435,8 @@ export default function Radar({
           </aside>
         </>
       )}
-      {section !== "people" && (
+      {section === "projects" && <Projects projects={projects} people={catalog.people} updates={feed.updates} />}
+      {(section === "updates" || section === "discoveries") && (
         <section className="radar-feed">
           <h2>
             {section === "updates"
@@ -465,9 +465,8 @@ export default function Radar({
                   value={feedPerson}
                   onChange={(e) => setFeedPerson(e.target.value)}
                 >
-                  <option value="priority">Featured people</option>
                   <option value="">All monitored people</option>
-                  {catalog.people.map((p) => (
+                  {[...catalog.people].sort((a, b) => a.name.localeCompare(b.name)).map((p) => (
                     <option key={p.id} value={p.id}>
                       {p.name}
                     </option>

@@ -1,8 +1,375 @@
 {
   "schema_version": 1,
-  "title": "Loki\u2019s Lab \u2014 AI Radar",
+  "title": "Loki’s Lab — AI Radar",
   "researched_at": "2026-10-10",
   "people": [
+    {
+      "id": "andrej-karpathy",
+      "name": "Andrej Karpathy",
+      "category": "Research & perspectives",
+      "topic": "Training & research",
+      "projects": [
+        {
+          "name": "Autoresearch",
+          "url": "https://github.com/karpathy/autoresearch"
+        }
+      ],
+      "why": "Makes model-training experiments concrete and accessible through compact public implementations.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/karpathy"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/karpathy/autoresearch",
+          "summary": "Autoresearch describes a constrained loop that edits a training script, runs five-minute experiments and retains improvements.",
+          "event_date": "2026-03",
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Results depend on hardware and evaluation setup.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "arben-apura",
+      "name": "Arben Apura",
+      "category": "Creative & media",
+      "topic": "Translation & storytelling",
+      "projects": [
+        {
+          "name": "XianScan",
+          "url": "https://github.com/ArbenApura/xianscan-rust"
+        }
+      ],
+      "why": "An emerging builder combining visual understanding, dialogue context and comic translation in a local application.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/ArbenApura"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.reddit.com/r/LocalLLM/comments/1w56ru4/i_built_a_100_local_comic_translation_engine_in/",
+          "summary": "The creator’s September 2, 2026 Reddit demo links the repository and explains context-aware translation.",
+          "event_date": "2026-09-02",
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Creator-described beta. Local and cloud translation options exist; it is not an unconditional offline guarantee.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "awni-hannun",
+      "name": "Awni Hannun",
+      "category": "Research & perspectives",
+      "topic": "Local models",
+      "projects": [
+        {
+          "name": "Research and local-model work",
+          "url": "https://awnihannun.com/"
+        }
+      ],
+      "why": "Useful perspective on efficient models, speech and machine learning on personal hardware.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/awni"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/awni",
+          "summary": "His current profile identifies him as a co-creator of Apple’s MLX framework and now a researcher at Anthropic.",
+          "event_date": null,
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Past affiliations do not establish current project ownership or maintenance responsibilities.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "carlos-antelo",
+      "name": "Carlos Antelo",
+      "category": "Creative & media",
+      "topic": "Experimental creativity",
+      "projects": [
+        {
+          "name": "LDraw Nova",
+          "url": "https://github.com/anteloc/ldraw-nova"
+        }
+      ],
+      "why": "An emerging creative follow for agents that generate and iteratively inspect digital LEGO designs.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/anteloc"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://anteloc.github.io/index-samples.html",
+          "summary": "The profile links LDraw Nova; its gallery explicitly labels outputs as experiments and work in progress.",
+          "event_date": null,
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Digital designs and renderings do not establish physical buildability.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "chris-sabato",
+      "name": "Chris Sabato",
+      "category": "Builders",
+      "topic": "Sports audio & production tools",
+      "projects": [
+        {
+          "name": "Stadium Sound",
+          "url": "https://stadiumsound.chrissabato.com/"
+        }
+      ],
+      "why": "Builds practical tools for athletics and live production, including Stadium Sound, a soundboard for sporting events.",
+      "links": [
+        {
+          "label": "Creator website",
+          "url": "https://chrissabato.com/"
+        },
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/chrissabato"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://stadiumsound.chrissabato.com/",
+          "summary": "Project website links Chris Sabato and the public Stadium Sound repository.",
+          "checked_at": "2026-10-10"
+        }
+      ],
+      "caveat": "Production software; artificial intelligence features are not documented for Stadium Sound. Public capabilities have not been independently tested.",
+      "priority": false,
+      "default_watch": true,
+      "identity_status": "identified",
+      "capability_status": "Production tools"
+    },
+    {
+      "id": "comfyanonymous",
+      "name": "comfyanonymous",
+      "category": "Creative & media",
+      "topic": "Image, video & audio",
+      "projects": [
+        {
+          "name": "ComfyUI",
+          "url": "https://github.com/Comfy-Org/ComfyUI"
+        }
+      ],
+      "why": "A useful anchor for visual model workflows, reusable examples and ecosystem developments.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/comfyanonymous"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/comfyanonymous",
+          "summary": "The profile pins ComfyUI at its current Comfy-Org home and a workflow examples repository.",
+          "event_date": null,
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Community extensions have separate maintainers and compatibility requirements.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "craig-macfarlane",
+      "name": "Craig MacFarlane",
+      "category": "Builders",
+      "topic": "Enterprise agents & workflow orchestration",
+      "projects": [],
+      "why": "Shares work on TransitionManager and coordinating agents in enterprise workflows at Transitional Data Services.",
+      "links": [
+        {
+          "label": "LinkedIn profile",
+          "url": "https://www.linkedin.com/in/craigmacfarlane1"
+        },
+        {
+          "label": "Company biography",
+          "url": "https://www.transitionaldata.com/team/craig-macfarlane/"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.linkedin.com/in/craigmacfarlane1",
+          "summary": "Public profile names Transitional Data Services and discusses TransitionManager for the agentic enterprise.",
+          "checked_at": "2026-10-10"
+        },
+        {
+          "url": "https://www.transitionaldata.com/team/craig-macfarlane/",
+          "summary": "Company biography identifies Craig as co-founder and describes his work developing TransitionManager.",
+          "checked_at": "2026-10-10"
+        }
+      ],
+      "caveat": "Monitoring covers the public company biography. LinkedIn posts are linked for reading but are not automatically scanned.",
+      "priority": false,
+      "default_watch": true,
+      "identity_status": "identified",
+      "capability_status": "Enterprise workflows"
+    },
+    {
+      "id": "ethan-mollick",
+      "name": "Ethan Mollick",
+      "category": "Research & perspectives",
+      "topic": "Work & adoption",
+      "projects": [
+        {
+          "name": "One Useful Thing",
+          "url": "https://www.oneusefulthing.org/"
+        }
+      ],
+      "why": "Useful for tracking how model capabilities translate into work, interfaces and organizational choices.",
+      "links": [
+        {
+          "label": "Creator profile",
+          "url": "https://www.oneusefulthing.org/"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.oneusefulthing.org/archive",
+          "summary": "The October 1, 2026 archive entry discusses agents and capability adoption.",
+          "event_date": "2026-10-01",
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Commentary and forecasts are distinct from demonstrated product capabilities.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "guy-cochran",
+      "name": "Guy Cochran",
+      "category": "Creative & media",
+      "topic": "Broadcast & live production",
+      "projects": [
+        {
+          "name": "Resolve and switcher automation",
+          "url": "https://github.com/guycochran/resolve-mcp-server"
+        }
+      ],
+      "why": "Connects AI assistants to practical editing and live production tools. Especially relevant to production workflows and Office Hours Global.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/guycochran"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/guycochran/atem-mcp-server",
+          "summary": "Published repositories describe DaVinci Resolve editing and natural-language control of Blackmagic video switchers through the Model Context Protocol (MCP).",
+          "event_date": null,
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Published automation tools. Compatibility and performance require testing in the intended production setup.",
+      "priority": false,
+      "default_watch": true,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "ikawrakow",
+      "name": "ikawrakow",
+      "category": "Builders",
+      "topic": "Local models",
+      "projects": [
+        {
+          "name": "ik_llama.cpp",
+          "url": "https://github.com/ikawrakow/ik_llama.cpp"
+        }
+      ],
+      "why": "A specialized follow for model compression and local inference improvements.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/ikawrakow"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/ikawrakow/ik_llama.cpp",
+          "summary": "The public project is a llama.cpp fork focused on quantization and performance.",
+          "event_date": null,
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Performance varies with the model, hardware and workload.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "john-wallace",
+      "name": "John Wallace",
+      "category": "Creative & media",
+      "topic": "Broadcast & live production",
+      "projects": [
+        {
+          "name": "CoreVideo / CoreVideoPro",
+          "url": "https://github.com/iamfatness/CoreVideo"
+        }
+      ],
+      "why": "Production tools for bringing Zoom participants into live video workflows.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/iamfatness"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/iamfatness/CoreVideoPro",
+          "summary": "CoreVideo describes native participant video, isolated audio, active-speaker follow and screen sharing in Open Broadcaster Software (OBS) Studio.",
+          "event_date": null,
+          "checked_at": "2026-10-10",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Documented production tools. Active-speaker switching alone does not establish artificial intelligence capabilities.",
+      "priority": false,
+      "default_watch": true,
+      "identity_status": "identified",
+      "capability_status": "Broadcast & production tools"
+    },
     {
       "id": "jonas-dautel",
       "name": "Jonas Dautel",
@@ -46,105 +413,39 @@
         }
       ],
       "caveat": "A broadcast production platform; artificial intelligence features are not documented in the linked product sources.",
-      "priority": true,
+      "priority": false,
       "default_watch": true,
       "identity_status": "identified",
       "capability_status": "Broadcast & production tools"
     },
     {
-      "id": "guy-cochran",
-      "name": "Guy Cochran",
+      "id": "lvmin-zhang",
+      "name": "Lvmin Zhang / lllyasviel",
       "category": "Creative & media",
-      "topic": "Broadcast & live production",
+      "topic": "Image, video & audio",
       "projects": [
         {
-          "name": "Resolve and switcher automation",
-          "url": "https://github.com/guycochran/resolve-mcp-server"
+          "name": "FramePack and creative tools",
+          "url": "https://github.com/lllyasviel/FramePack"
         }
       ],
-      "why": "Connects AI assistants to practical editing and live production tools. Especially relevant to production workflows and Office Hours Global.",
+      "why": "Research-backed experiments in making visual generation more controllable and practical.",
       "links": [
         {
           "label": "GitHub profile",
-          "url": "https://github.com/guycochran"
+          "url": "https://github.com/lllyasviel"
         }
       ],
       "evidence": [
         {
-          "url": "https://github.com/guycochran/atem-mcp-server",
-          "summary": "Published repositories describe DaVinci Resolve editing and natural-language control of Blackmagic video switchers through the Model Context Protocol (MCP).",
+          "url": "https://github.com/lllyasviel",
+          "summary": "His profile links FramePack, relighting, layered imagery and other creative projects.",
           "event_date": null,
           "checked_at": "2026-10-10",
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Published automation tools. Compatibility and performance require testing in the intended production setup.",
-      "priority": true,
-      "default_watch": true,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
-      "id": "john-wallace",
-      "name": "John Wallace",
-      "category": "Creative & media",
-      "topic": "Broadcast & live production",
-      "projects": [
-        {
-          "name": "CoreVideo / CoreVideoPro",
-          "url": "https://github.com/iamfatness/CoreVideo"
-        }
-      ],
-      "why": "Production tools for bringing Zoom participants into live video workflows.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/iamfatness"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://github.com/iamfatness/CoreVideoPro",
-          "summary": "CoreVideo describes native participant video, isolated audio, active-speaker follow and screen sharing in Open Broadcaster Software (OBS) Studio.",
-          "event_date": null,
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Documented production tools. Active-speaker switching alone does not establish artificial intelligence capabilities.",
-      "priority": true,
-      "default_watch": true,
-      "identity_status": "identified",
-      "capability_status": "Broadcast & production tools"
-    },
-    {
-      "id": "simon-willison",
-      "name": "Simon Willison",
-      "category": "Research & perspectives",
-      "topic": "Practical AI",
-      "projects": [
-        {
-          "name": "Tools and transparent experiments",
-          "url": "https://tools.simonwillison.net/"
-        }
-      ],
-      "why": "A strong source of hands-on experiments, inspectable tools, and practical analysis of language models.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/simonw"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://tools.simonwillison.net/",
-          "summary": "The tools collection publishes commit messages and transcripts; its recent additions include a jukebox tool dated October 6, 2026.",
-          "event_date": "2026-10-06",
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "An experiment collection, with its own low-stakes framing.",
+      "caveat": "Output quality and hardware requirements depend on the model and workflow.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
@@ -184,105 +485,6 @@
       "capability_status": "Published work"
     },
     {
-      "id": "andrej-karpathy",
-      "name": "Andrej Karpathy",
-      "category": "Research & perspectives",
-      "topic": "Training & research",
-      "projects": [
-        {
-          "name": "Autoresearch",
-          "url": "https://github.com/karpathy/autoresearch"
-        }
-      ],
-      "why": "Makes model-training experiments concrete and accessible through compact public implementations.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/karpathy"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://github.com/karpathy/autoresearch",
-          "summary": "Autoresearch describes a constrained loop that edits a training script, runs five-minute experiments and retains improvements.",
-          "event_date": "2026-03",
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Results depend on hardware and evaluation setup.",
-      "priority": false,
-      "default_watch": false,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
-      "id": "awni-hannun",
-      "name": "Awni Hannun",
-      "category": "Research & perspectives",
-      "topic": "Local models",
-      "projects": [
-        {
-          "name": "Research and local-model work",
-          "url": "https://awnihannun.com/"
-        }
-      ],
-      "why": "Useful perspective on efficient models, speech and machine learning on personal hardware.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/awni"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://github.com/awni",
-          "summary": "His current profile identifies him as a co-creator of Apple\u2019s MLX framework and now a researcher at Anthropic.",
-          "event_date": null,
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Past affiliations do not establish current project ownership or maintenance responsibilities.",
-      "priority": false,
-      "default_watch": false,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
-      "id": "ikawrakow",
-      "name": "ikawrakow",
-      "category": "Builders",
-      "topic": "Local models",
-      "projects": [
-        {
-          "name": "ik_llama.cpp",
-          "url": "https://github.com/ikawrakow/ik_llama.cpp"
-        }
-      ],
-      "why": "A specialized follow for model compression and local inference improvements.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/ikawrakow"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://github.com/ikawrakow/ik_llama.cpp",
-          "summary": "The public project is a llama.cpp fork focused on quantization and performance.",
-          "event_date": null,
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Performance varies with the model, hardware and workload.",
-      "priority": false,
-      "default_watch": false,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
       "id": "ostris",
       "name": "Ostris",
       "category": "Creative & media",
@@ -309,139 +511,40 @@
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Open-source tooling and the creator\u2019s paid cloud product are distinct options.",
+      "caveat": "Open-source tooling and the creator’s paid cloud product are distinct options.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
       "capability_status": "Published work"
     },
     {
-      "id": "lvmin-zhang",
-      "name": "Lvmin Zhang / lllyasviel",
-      "category": "Creative & media",
-      "topic": "Image, video & audio",
+      "id": "sam-rose",
+      "name": "Sam Rose",
+      "category": "Research & perspectives",
+      "topic": "AI education",
       "projects": [
         {
-          "name": "FramePack and creative tools",
-          "url": "https://github.com/lllyasviel/FramePack"
+          "name": "Interactive visual essays",
+          "url": "https://samwho.dev/"
         }
       ],
-      "why": "Research-backed experiments in making visual generation more controllable and practical.",
+      "why": "An especially useful follow for visual explanations that make technical model behavior understandable.",
       "links": [
         {
           "label": "GitHub profile",
-          "url": "https://github.com/lllyasviel"
+          "url": "https://github.com/samwho"
         }
       ],
       "evidence": [
         {
-          "url": "https://github.com/lllyasviel",
-          "summary": "His profile links FramePack, relighting, layered imagery and other creative projects.",
+          "url": "https://ngrok.com/blog/quantization",
+          "summary": "His site links interactive essays on prompt caching and model quantization.",
           "event_date": null,
           "checked_at": "2026-10-10",
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "Output quality and hardware requirements depend on the model and workflow.",
-      "priority": false,
-      "default_watch": false,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
-      "id": "comfyanonymous",
-      "name": "comfyanonymous",
-      "category": "Creative & media",
-      "topic": "Image, video & audio",
-      "projects": [
-        {
-          "name": "ComfyUI",
-          "url": "https://github.com/Comfy-Org/ComfyUI"
-        }
-      ],
-      "why": "A useful anchor for visual model workflows, reusable examples and ecosystem developments.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/comfyanonymous"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://github.com/comfyanonymous",
-          "summary": "The profile pins ComfyUI at its current Comfy-Org home and a workflow examples repository.",
-          "event_date": null,
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Community extensions have separate maintainers and compatibility requirements.",
-      "priority": false,
-      "default_watch": false,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
-      "id": "arben-apura",
-      "name": "Arben Apura",
-      "category": "Creative & media",
-      "topic": "Translation & storytelling",
-      "projects": [
-        {
-          "name": "XianScan",
-          "url": "https://github.com/ArbenApura/xianscan-rust"
-        }
-      ],
-      "why": "An emerging builder combining visual understanding, dialogue context and comic translation in a local application.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/ArbenApura"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://www.reddit.com/r/LocalLLM/comments/1w56ru4/i_built_a_100_local_comic_translation_engine_in/",
-          "summary": "The creator\u2019s September 2, 2026 Reddit demo links the repository and explains context-aware translation.",
-          "event_date": "2026-09-02",
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Creator-described beta. Local and cloud translation options exist; it is not an unconditional offline guarantee.",
-      "priority": false,
-      "default_watch": false,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
-      "id": "carlos-antelo",
-      "name": "Carlos Antelo",
-      "category": "Creative & media",
-      "topic": "Experimental creativity",
-      "projects": [
-        {
-          "name": "LDraw Nova",
-          "url": "https://github.com/anteloc/ldraw-nova"
-        }
-      ],
-      "why": "An emerging creative follow for agents that generate and iteratively inspect digital LEGO designs.",
-      "links": [
-        {
-          "label": "GitHub profile",
-          "url": "https://github.com/anteloc"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://anteloc.github.io/index-samples.html",
-          "summary": "The profile links LDraw Nova; its gallery explicitly labels outputs as experiments and work in progress.",
-          "event_date": null,
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Digital designs and renderings do not establish physical buildability.",
+      "caveat": "An education follow rather than a frontier-model developer.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
@@ -481,66 +584,33 @@
       "capability_status": "Published work"
     },
     {
-      "id": "ethan-mollick",
-      "name": "Ethan Mollick",
+      "id": "simon-willison",
+      "name": "Simon Willison",
       "category": "Research & perspectives",
-      "topic": "Work & adoption",
+      "topic": "Practical AI",
       "projects": [
         {
-          "name": "One Useful Thing",
-          "url": "https://www.oneusefulthing.org/"
+          "name": "Tools and transparent experiments",
+          "url": "https://tools.simonwillison.net/"
         }
       ],
-      "why": "Useful for tracking how model capabilities translate into work, interfaces and organizational choices.",
-      "links": [
-        {
-          "label": "Creator profile",
-          "url": "https://www.oneusefulthing.org/"
-        }
-      ],
-      "evidence": [
-        {
-          "url": "https://www.oneusefulthing.org/archive",
-          "summary": "The October 1, 2026 archive entry discusses agents and capability adoption.",
-          "event_date": "2026-10-01",
-          "checked_at": "2026-10-10",
-          "kind": "primary_source_review"
-        }
-      ],
-      "caveat": "Commentary and forecasts are distinct from demonstrated product capabilities.",
-      "priority": false,
-      "default_watch": false,
-      "identity_status": "identified",
-      "capability_status": "Published work"
-    },
-    {
-      "id": "sam-rose",
-      "name": "Sam Rose",
-      "category": "Research & perspectives",
-      "topic": "AI education",
-      "projects": [
-        {
-          "name": "Interactive visual essays",
-          "url": "https://samwho.dev/"
-        }
-      ],
-      "why": "An especially useful follow for visual explanations that make technical model behavior understandable.",
+      "why": "A strong source of hands-on experiments, inspectable tools, and practical analysis of language models.",
       "links": [
         {
           "label": "GitHub profile",
-          "url": "https://github.com/samwho"
+          "url": "https://github.com/simonw"
         }
       ],
       "evidence": [
         {
-          "url": "https://ngrok.com/blog/quantization",
-          "summary": "His site links interactive essays on prompt caching and model quantization.",
-          "event_date": null,
+          "url": "https://tools.simonwillison.net/",
+          "summary": "The tools collection publishes commit messages and transcripts; its recent additions include a jukebox tool dated October 6, 2026.",
+          "event_date": "2026-10-06",
           "checked_at": "2026-10-10",
           "kind": "primary_source_review"
         }
       ],
-      "caveat": "An education follow rather than a frontier-model developer.",
+      "caveat": "An experiment collection, with its own low-stakes framing.",
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
@@ -549,17 +619,17 @@
   ],
   "communities": [
     {
-      "name": "Reddit \u00b7 LocalLLaMA",
+      "name": "Reddit · LocalLLaMA",
       "url": "https://www.reddit.com/r/LocalLLaMA/",
       "focus": "Local models, hardware experiments, compression and creator demos."
     },
     {
-      "name": "Reddit \u00b7 LocalLLM",
+      "name": "Reddit · LocalLLM",
       "url": "https://www.reddit.com/r/LocalLLM/",
       "focus": "Local large language model (LLM) projects and workflow discussions."
     },
     {
-      "name": "Hacker News \u00b7 Show",
+      "name": "Hacker News · Show",
       "url": "https://news.ycombinator.com/show",
       "focus": "New projects with creator discussions and technical critique."
     },
@@ -569,7 +639,7 @@
       "focus": "Media production, practical demonstrations and shared learning."
     },
     {
-      "name": "Hugging Face \u00b7 Community",
+      "name": "Hugging Face · Community",
       "url": "https://huggingface.co/blog",
       "focus": "Model releases, research explanations and community experiments."
     }
