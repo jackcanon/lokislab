@@ -1,0 +1,1483 @@
+{
+  "repositories": {
+    "CLOUDflex-broadcast/gst-alphapack": {
+      "pushed_at": "2026-09-06T22:13:29Z",
+      "person_id": "jonas-dautel",
+      "url": "https://github.com/CLOUDflex-broadcast/gst-alphapack"
+    },
+    "CLOUDflex-broadcast/easy-mxl": {
+      "pushed_at": "2026-09-06T21:32:31Z",
+      "person_id": "jonas-dautel",
+      "url": "https://github.com/CLOUDflex-broadcast/easy-mxl"
+    },
+    "SNRSE/FotoBee": {
+      "pushed_at": "2026-10-09T21:51:31Z",
+      "person_id": "jonas-dautel",
+      "url": "https://github.com/SNRSE/FotoBee",
+      "sha": "04646065bc4a21d2c856586922e85d090d1be20e"
+    },
+    "SNRSE/Test": {
+      "pushed_at": "2026-03-05T01:27:00Z",
+      "person_id": "jonas-dautel",
+      "url": "https://github.com/SNRSE/Test"
+    },
+    "SNRSE/awesomeWHIP": {
+      "pushed_at": "2024-06-29T23:57:46Z",
+      "person_id": "jonas-dautel",
+      "url": "https://github.com/SNRSE/awesomeWHIP"
+    },
+    "SNRSE/Keystroke-to-OSC": {
+      "pushed_at": "2022-10-02T20:41:49Z",
+      "person_id": "jonas-dautel",
+      "url": "https://github.com/SNRSE/Keystroke-to-OSC"
+    },
+    "guycochran/mxl-switcher": {
+      "pushed_at": "2026-10-10T13:12:33Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/mxl-switcher",
+      "sha": "f2c45f6fe439eebecb59882ad8f7d7364634b0b8"
+    },
+    "guycochran/batch-transcriber-spec": {
+      "pushed_at": "2026-10-02T18:25:28Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/batch-transcriber-spec",
+      "sha": "c2ac8feb4e9abf753b99170f93c3280f61a4f283"
+    },
+    "guycochran/resolve-mcp-server": {
+      "pushed_at": "2026-09-16T23:33:31Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/resolve-mcp-server"
+    },
+    "guycochran/atem-mcp-server": {
+      "pushed_at": "2026-09-07T14:59:08Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/atem-mcp-server"
+    },
+    "guycochran/atem-multiview-webrtc": {
+      "pushed_at": "2026-09-07T05:54:24Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/atem-multiview-webrtc"
+    },
+    "guycochran/AVSyncMeter": {
+      "pushed_at": "2026-08-27T20:01:53Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/AVSyncMeter"
+    },
+    "guycochran/ohg-studio-builder": {
+      "pushed_at": "2026-06-26T13:57:51Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/ohg-studio-builder"
+    },
+    "guycochran/kickathon": {
+      "pushed_at": "2026-03-18T21:00:09Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/kickathon"
+    },
+    "guycochran/X32-MCP": {
+      "pushed_at": "2026-03-02T03:54:41Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/X32-MCP"
+    },
+    "guycochran/zoomiso-mcp-server": {
+      "pushed_at": "2026-03-01T02:25:20Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/zoomiso-mcp-server"
+    },
+    "guycochran/vmixinthecloud": {
+      "pushed_at": "2026-01-26T06:07:16Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/vmixinthecloud"
+    },
+    "guycochran/ohstats": {
+      "pushed_at": "2026-01-17T17:08:17Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/ohstats"
+    },
+    "guycochran/ohg-seo-tools": {
+      "pushed_at": "2026-01-09T02:19:55Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/ohg-seo-tools"
+    },
+    "guycochran/dve": {
+      "pushed_at": "2023-05-01T17:52:05Z",
+      "person_id": "guy-cochran",
+      "url": "https://github.com/guycochran/dve"
+    },
+    "iamfatness/CoreVideoPro": {
+      "pushed_at": "2026-10-10T15:38:36Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/CoreVideoPro",
+      "sha": "04dc017377819f32c786af42991d6ea182ee2abf"
+    },
+    "iamfatness/CoreVideo-Volt": {
+      "pushed_at": "2026-10-10T15:24:40Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/CoreVideo-Volt",
+      "sha": "56fff0f664dc8876c4cd8114531fab96e206ae2e"
+    },
+    "iamfatness/ZComms": {
+      "pushed_at": "2026-10-08T20:59:05Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/ZComms",
+      "sha": "168a572d0f537a01a762ba97c8004ca7d7d0ff39"
+    },
+    "iamfatness/SwarmScribe": {
+      "pushed_at": "2026-10-06T22:16:35Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/SwarmScribe",
+      "sha": "6f117a61d296a58e202a177aee43f1f32c705d6b"
+    },
+    "iamfatness/IamfatnessWebsite": {
+      "pushed_at": "2026-10-05T23:46:53Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/IamfatnessWebsite",
+      "sha": "d69db28a78b152978cf72f9d3d888dc4b28a4d94"
+    },
+    "iamfatness/CoreVideo": {
+      "pushed_at": "2026-10-03T15:59:18Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/CoreVideo",
+      "sha": "ce3427f6c717d77f268e51a8fdf2d6b2fd9b30bb"
+    },
+    "iamfatness/PalPanel": {
+      "pushed_at": "2026-07-28T02:21:56Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/PalPanel"
+    },
+    "iamfatness/resonance": {
+      "pushed_at": "2026-06-17T08:01:38Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/resonance"
+    },
+    "iamfatness/Coordinator3000": {
+      "pushed_at": "2026-06-16T10:30:10Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/Coordinator3000"
+    },
+    "iamfatness/UKG-Clock-In": {
+      "pushed_at": "2026-05-13T17:39:55Z",
+      "person_id": "john-wallace",
+      "url": "https://github.com/iamfatness/UKG-Clock-In"
+    },
+    "simonw/usgs-scraper": {
+      "pushed_at": "2026-10-10T18:01:28Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/usgs-scraper",
+      "sha": "54b915230dce591b9e547281c53d30d4560d6748"
+    },
+    "simonw/scrape-florida-outages": {
+      "pushed_at": "2026-10-10T18:15:00Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/scrape-florida-outages",
+      "sha": "68b5671df75d08f4bf578f34897091d34b7bcb92"
+    },
+    "simonw/scrape-fema-shelters": {
+      "pushed_at": "2026-10-10T18:22:59Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/scrape-fema-shelters",
+      "sha": "7ea30918d8a0dcfd898bc5374658639759ced0b4"
+    },
+    "simonw/simonw": {
+      "pushed_at": "2026-10-10T17:19:45Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/simonw",
+      "sha": "21f6525cb227416d8e9ac80a22df043553fe3cea"
+    },
+    "simonw/pge-outages": {
+      "pushed_at": "2026-10-10T16:52:56Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/pge-outages",
+      "sha": "893b23d57b40154cfca7bff80b237a8ca2a0ece1"
+    },
+    "simonw/scrape-hacker-news-by-domain": {
+      "pushed_at": "2026-10-10T16:31:28Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/scrape-hacker-news-by-domain",
+      "sha": "c8ea687c5e5e8ebc9d0e12b2d3271f0aa8063275"
+    },
+    "simonw/package-stats": {
+      "pushed_at": "2026-10-10T13:44:41Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/package-stats",
+      "sha": "47d0fd95b4157a88629070d2a06bf42ffba97ead"
+    },
+    "simonw/scrape-fediverse": {
+      "pushed_at": "2026-10-10T09:22:10Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/scrape-fediverse",
+      "sha": "4e5dc981cbaf99a6248f519c610bfe6166587b9e"
+    },
+    "simonw/ollama-models-atom-feed": {
+      "pushed_at": "2026-10-10T06:49:01Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/ollama-models-atom-feed",
+      "sha": "5b1e3f71725f90efa744c74a325ceb09fc9fd23d"
+    },
+    "simonw/usgs-demo": {
+      "pushed_at": "2026-10-10T06:47:54Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/usgs-demo",
+      "sha": "4098149f2762a86aa99463eee224c5a0402976bf"
+    },
+    "simonw/scrape-faa-releasable-aircraft": {
+      "pushed_at": "2026-10-10T06:21:31Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/scrape-faa-releasable-aircraft",
+      "sha": "dea51fe8cbe3f5df1b26f94b231bf900bb12b102"
+    },
+    "simonw/scrape-roads-dot-ca-gov": {
+      "pushed_at": "2026-10-10T05:16:26Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/scrape-roads-dot-ca-gov",
+      "sha": "541547af0ae3e51639121443c8a18ea88f9bf7db"
+    },
+    "simonw/uv-init-demos": {
+      "pushed_at": "2026-10-10T04:00:51Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/uv-init-demos",
+      "sha": "18194bccf81d89a20ebdbe55306ace993db2e2bc"
+    },
+    "simonw/tools": {
+      "pushed_at": "2026-10-10T03:38:34Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/tools",
+      "sha": "980c7418dd8dd79a84b667e60416afdd78d70913"
+    },
+    "simonw/simonwillisonblog-backup": {
+      "pushed_at": "2026-10-10T02:49:12Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/simonwillisonblog-backup",
+      "sha": "d22538de45e670097199eeb948a5e9af8579eae0"
+    },
+    "simonw/simonwillisonblog": {
+      "pushed_at": "2026-10-09T15:46:06Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/simonwillisonblog",
+      "sha": "e86bdf2ce6f75b3305c6cc3e2119a3b58c265cf5"
+    },
+    "simonw/sqlite-utils": {
+      "pushed_at": "2026-10-09T15:13:42Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/sqlite-utils",
+      "sha": "6bc1d33d583c54bd69fbdd2071117e2d38c354a1"
+    },
+    "simonw/llm": {
+      "pushed_at": "2026-10-09T06:59:28Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/llm",
+      "sha": "05d7ae7dedc524b024ab463b063854e7c43fee01"
+    },
+    "simonw/pypi-datasette-packages": {
+      "pushed_at": "2026-10-09T04:04:48Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/pypi-datasette-packages",
+      "sha": "7bdbe8c39cc16ffa1940c304350071da531bc755"
+    },
+    "simonw/monthly-newsletter-archive": {
+      "pushed_at": "2026-10-09T03:29:54Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/monthly-newsletter-archive",
+      "sha": "dcfb4cabdde97b5899f3586be7d6a13efd32a947"
+    },
+    "simonw/ttok": {
+      "pushed_at": "2026-10-09T00:34:42Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/ttok",
+      "sha": "df24f500721ce5f2a75d9ecfbd4fdc58a896c1e0"
+    },
+    "simonw/datasette": {
+      "pushed_at": "2026-10-08T23:18:34Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/datasette",
+      "sha": "cf113a59850862125b86ce1a58c117aa21341e07"
+    },
+    "simonw/inaturalist-clumps": {
+      "pushed_at": "2026-10-08T21:23:50Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/inaturalist-clumps",
+      "sha": "35fa0db3cf6bb90f58a7a5244a010760cc6b2652"
+    },
+    "simonw/claude-system-prompts": {
+      "pushed_at": "2026-10-08T06:46:41Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/claude-system-prompts",
+      "sha": "fda18b55ddac409384fe7a9a42adbe9d93747de0"
+    },
+    "simonw/recent-california-brown-pelicans": {
+      "pushed_at": "2026-10-08T01:11:11Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/recent-california-brown-pelicans",
+      "sha": "61160f2cbd6cec4cbe477582e3cf7a01f3735173"
+    },
+    "simonw/llm-prices": {
+      "pushed_at": "2026-10-07T19:26:39Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/llm-prices",
+      "sha": "bdef8bf83f2d005d7c2d8d6003d92bfdca196418"
+    },
+    "simonw/free-threaded-wheels-results": {
+      "pushed_at": "2026-10-07T18:31:09Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/free-threaded-wheels-results",
+      "sha": "d51ae3e5f5c357f3357f488a7d83224c37e1073e"
+    },
+    "simonw/scrape-github-actions-package-versions": {
+      "pushed_at": "2026-10-07T17:23:11Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/scrape-github-actions-package-versions",
+      "sha": "6da72cbcfb72be248ab9445a01b34eadf0fd8917"
+    },
+    "simonw/actions-latest": {
+      "pushed_at": "2026-10-07T04:56:57Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/actions-latest",
+      "sha": "2fbe85e15464b4495026f14cd34de212a7860d09"
+    },
+    "simonw/llm-openai-decisions": {
+      "pushed_at": "2026-10-06T23:04:13Z",
+      "person_id": "simon-willison",
+      "url": "https://github.com/simonw/llm-openai-decisions",
+      "sha": "4827324f5b55a5a4e8626b81518d48706d790a08"
+    },
+    "badlogic/pi-subagent": {
+      "pushed_at": "2026-09-30T11:06:45Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/pi-subagent",
+      "sha": "4fc1fe5178d1a2b474794a5ee39e7295844e9d3c"
+    },
+    "badlogic/jglfw": {
+      "pushed_at": "2026-09-25T03:55:04Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/jglfw"
+    },
+    "badlogic/pibot": {
+      "pushed_at": "2026-06-07T21:34:12Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/pibot"
+    },
+    "badlogic/pi-skills": {
+      "pushed_at": "2026-06-06T20:27:56Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/pi-skills"
+    },
+    "badlogic/proxy": {
+      "pushed_at": "2026-05-31T15:47:30Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/proxy"
+    },
+    "badlogic/mlx-qmm-repro": {
+      "pushed_at": "2026-05-31T08:33:09Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/mlx-qmm-repro"
+    },
+    "badlogic/mariozechner.at": {
+      "pushed_at": "2026-05-31T08:14:17Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/mariozechner.at"
+    },
+    "badlogic/pi-diff-review": {
+      "pushed_at": "2026-05-23T08:52:25Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/pi-diff-review"
+    },
+    "badlogic/gpt-2-ts": {
+      "pushed_at": "2026-05-01T01:50:28Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/gpt-2-ts"
+    },
+    "badlogic/atcli": {
+      "pushed_at": "2026-04-27T12:23:32Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/atcli"
+    },
+    "badlogic/pi-share-hf": {
+      "pushed_at": "2026-04-13T18:03:26Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/pi-share-hf"
+    },
+    "badlogic/pi-telegram": {
+      "pushed_at": "2026-04-04T02:13:08Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/pi-telegram"
+    },
+    "badlogic/jot": {
+      "pushed_at": "2026-04-03T18:51:35Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/jot"
+    },
+    "badlogic/mdocs": {
+      "pushed_at": "2026-03-31T22:49:43Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/mdocs"
+    },
+    "badlogic/twitter-broadcast-chat": {
+      "pushed_at": "2026-03-25T00:49:33Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/twitter-broadcast-chat"
+    },
+    "badlogic/sitegeist": {
+      "pushed_at": "2026-03-18T16:22:46Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/sitegeist"
+    },
+    "badlogic/heissepreise": {
+      "pushed_at": "2026-02-17T16:03:43Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/heissepreise"
+    },
+    "badlogic/doppelgangers": {
+      "pushed_at": "2026-02-12T22:16:49Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/doppelgangers"
+    },
+    "badlogic/rsync-win": {
+      "pushed_at": "2026-02-12T16:19:30Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/badlogic/rsync-win"
+    },
+    "earendil-works/pi": {
+      "pushed_at": "2026-10-10T17:40:35Z",
+      "person_id": "mario-zechner",
+      "url": "https://github.com/earendil-works/pi",
+      "sha": "e37cdc420669e48b4df4bbce0fb2617fc3c71328"
+    },
+    "karpathy/nanochat": {
+      "pushed_at": "2026-09-07T20:06:43Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/nanochat"
+    },
+    "karpathy/micrograd": {
+      "pushed_at": "2026-08-03T04:04:05Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/micrograd"
+    },
+    "karpathy/karpathy.github.io": {
+      "pushed_at": "2026-04-10T23:50:09Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/karpathy.github.io"
+    },
+    "karpathy/autoresearch": {
+      "pushed_at": "2026-03-26T00:07:37Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/autoresearch"
+    },
+    "karpathy/jobs": {
+      "pushed_at": "2026-03-16T04:05:24Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/jobs"
+    },
+    "karpathy/rustbpe": {
+      "pushed_at": "2026-01-03T22:24:54Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/rustbpe"
+    },
+    "karpathy/hn-time-capsule": {
+      "pushed_at": "2025-12-10T16:59:29Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/hn-time-capsule"
+    },
+    "karpathy/llm-council": {
+      "pushed_at": "2025-11-22T23:35:21Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/llm-council"
+    },
+    "karpathy/reader3": {
+      "pushed_at": "2025-11-18T02:37:51Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/reader3"
+    },
+    "karpathy/nanoGPT": {
+      "pushed_at": "2025-11-12T19:52:34Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/nanoGPT"
+    },
+    "karpathy/rendergit": {
+      "pushed_at": "2025-08-21T19:12:34Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/rendergit"
+    },
+    "karpathy/llm.c": {
+      "pushed_at": "2025-06-26T17:03:40Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/llm.c"
+    },
+    "karpathy/nn-zero-to-hero": {
+      "pushed_at": "2024-08-18T12:16:26Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/nn-zero-to-hero"
+    },
+    "karpathy/minGPT": {
+      "pushed_at": "2024-08-15T04:09:40Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/minGPT"
+    },
+    "karpathy/build-nanogpt": {
+      "pushed_at": "2024-08-13T12:28:52Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/build-nanogpt"
+    },
+    "karpathy/llama2.c": {
+      "pushed_at": "2024-08-06T09:44:40Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/llama2.c"
+    },
+    "karpathy/LLM101n": {
+      "pushed_at": "2024-08-01T01:20:33Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/LLM101n"
+    },
+    "karpathy/minbpe": {
+      "pushed_at": "2024-07-01T14:20:22Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/minbpe"
+    },
+    "karpathy/makemore": {
+      "pushed_at": "2024-06-04T19:32:27Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/makemore"
+    },
+    "karpathy/calorie": {
+      "pushed_at": "2024-05-30T18:08:16Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/calorie"
+    },
+    "karpathy/lecun1989-repro": {
+      "pushed_at": "2024-02-03T23:42:16Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/lecun1989-repro"
+    },
+    "karpathy/ng-video-lecture": {
+      "pushed_at": "2024-01-31T13:43:36Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/ng-video-lecture"
+    },
+    "karpathy/char-rnn": {
+      "pushed_at": "2023-10-24T17:15:27Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/char-rnn"
+    },
+    "karpathy/notpygamejs": {
+      "pushed_at": "2023-10-17T14:11:25Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/notpygamejs"
+    },
+    "karpathy/researchpooler": {
+      "pushed_at": "2023-09-01T20:21:55Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/researchpooler"
+    },
+    "karpathy/karpathy": {
+      "pushed_at": "2023-07-25T02:26:54Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/karpathy"
+    },
+    "karpathy/arxiv-sanity-lite": {
+      "pushed_at": "2023-06-19T16:23:02Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/arxiv-sanity-lite"
+    },
+    "karpathy/randomfun": {
+      "pushed_at": "2023-04-18T17:49:08Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/randomfun"
+    },
+    "karpathy/convnetjs": {
+      "pushed_at": "2023-01-07T21:33:23Z",
+      "person_id": "andrej-karpathy",
+      "url": "https://github.com/karpathy/convnetjs"
+    },
+    "awni/awni.github.io": {
+      "pushed_at": "2026-03-15T22:19:35Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/awni.github.io"
+    },
+    "awni/academic_website": {
+      "pushed_at": "2026-03-14T23:33:50Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/academic_website"
+    },
+    "awni/k_sparse_attention": {
+      "pushed_at": "2026-03-09T01:46:56Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/k_sparse_attention"
+    },
+    "awni/picochat": {
+      "pushed_at": "2026-03-06T14:14:57Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/picochat"
+    },
+    "awni/mylm": {
+      "pushed_at": "2026-03-06T04:10:13Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/mylm"
+    },
+    "awni/voxmlx": {
+      "pushed_at": "2026-02-08T15:07:45Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/voxmlx"
+    },
+    "awni/mlx-skills": {
+      "pushed_at": "2026-01-25T20:31:23Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/mlx-skills"
+    },
+    "awni/speech": {
+      "pushed_at": "2023-07-06T21:09:27Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/speech"
+    },
+    "awni/ecg": {
+      "pushed_at": "2023-03-24T23:57:31Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/ecg"
+    },
+    "awni/transducer": {
+      "pushed_at": "2022-09-20T16:15:37Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/transducer"
+    },
+    "awni/automata_ml": {
+      "pushed_at": "2022-09-03T21:20:58Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/automata_ml"
+    },
+    "awni/future_speech": {
+      "pushed_at": "2021-08-14T05:16:45Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/future_speech"
+    },
+    "awni/hic": {
+      "pushed_at": "2021-07-11T22:35:26Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/hic"
+    },
+    "awni/label_bias": {
+      "pushed_at": "2020-01-21T19:29:29Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/label_bias"
+    },
+    "awni/cuthon": {
+      "pushed_at": "2018-06-19T15:26:51Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/cuthon"
+    },
+    "awni/cinc17": {
+      "pushed_at": "2018-05-31T14:29:06Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/cinc17"
+    },
+    "awni/thesis": {
+      "pushed_at": "2018-04-30T21:14:34Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/thesis"
+    },
+    "awni/misc_visualizations": {
+      "pushed_at": "2018-01-12T03:45:30Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/misc_visualizations"
+    },
+    "awni/jiro": {
+      "pushed_at": "2017-12-18T17:16:56Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/jiro"
+    },
+    "awni/backgammon": {
+      "pushed_at": "2017-08-29T14:47:08Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/backgammon"
+    },
+    "awni/semantic-rntn": {
+      "pushed_at": "2015-05-23T02:13:49Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/semantic-rntn"
+    },
+    "awni/editdistance": {
+      "pushed_at": "2015-02-24T05:47:54Z",
+      "person_id": "awni-hannun",
+      "url": "https://github.com/awni/editdistance"
+    },
+    "ikawrakow/ik_llama.cpp": {
+      "pushed_at": "2026-10-10T06:32:03Z",
+      "person_id": "ikawrakow",
+      "url": "https://github.com/ikawrakow/ik_llama.cpp",
+      "sha": "89bba35c8841618502b2be8273fb5265b405aca1"
+    },
+    "ikawrakow/mnist": {
+      "pushed_at": "2025-01-12T15:14:44Z",
+      "person_id": "ikawrakow",
+      "url": "https://github.com/ikawrakow/mnist"
+    },
+    "ikawrakow/sphere12d": {
+      "pushed_at": "2025-01-09T17:06:38Z",
+      "person_id": "ikawrakow",
+      "url": "https://github.com/ikawrakow/sphere12d"
+    },
+    "ostris/ai-toolkit": {
+      "pushed_at": "2026-10-10T03:09:37Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ai-toolkit",
+      "sha": "f7a1fb9a77e5418269b1e9eda4ace6d7c1b7bb47"
+    },
+    "ostris/ai-toolkit-spark-wheels": {
+      "pushed_at": "2026-10-06T10:16:20Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ai-toolkit-spark-wheels",
+      "sha": "5b6478554d0184a6960e906fec666abed7b805de"
+    },
+    "ostris/ComfyUI-AIToolkit-MiniMaxH3": {
+      "pushed_at": "2026-08-20T19:58:00Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ComfyUI-AIToolkit-MiniMaxH3"
+    },
+    "ostris/ComfyUI-Krea2-Ostris-Edit": {
+      "pushed_at": "2026-07-17T14:55:52Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit"
+    },
+    "ostris/aitk_soar": {
+      "pushed_at": "2026-04-16T15:00:09Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/aitk_soar"
+    },
+    "ostris/ComfyUI-FlexTools": {
+      "pushed_at": "2025-08-05T19:40:11Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ComfyUI-FlexTools"
+    },
+    "ostris/ostris_nodes_comfyui": {
+      "pushed_at": "2025-04-16T17:03:53Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ostris_nodes_comfyui"
+    },
+    "ostris/ComfyUI-Advanced-Vision": {
+      "pushed_at": "2025-03-06T16:24:49Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ComfyUI-Advanced-Vision"
+    },
+    "ostris/aitk_knowledge_transfer_trainer_extension": {
+      "pushed_at": "2024-08-20T11:42:20Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/aitk_knowledge_transfer_trainer_extension"
+    },
+    "ostris/aitk_full_cycle_trainer": {
+      "pushed_at": "2024-08-20T10:27:50Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/aitk_full_cycle_trainer"
+    },
+    "ostris/ai-toolkit-mass_merge_models": {
+      "pushed_at": "2024-08-20T09:47:20Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/ai-toolkit-mass_merge_models"
+    },
+    "ostris/sd-webui-middleware": {
+      "pushed_at": "2024-08-20T06:04:58Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/sd-webui-middleware"
+    },
+    "ostris/batch-annotator": {
+      "pushed_at": "2024-08-20T06:01:26Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/batch-annotator"
+    },
+    "ostris/batch-depth-map": {
+      "pushed_at": "2024-08-20T05:02:27Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/batch-depth-map"
+    },
+    "ostris/wp-civitai": {
+      "pushed_at": "2024-08-18T10:15:30Z",
+      "person_id": "ostris",
+      "url": "https://github.com/ostris/wp-civitai"
+    },
+    "lllyasviel/VCC": {
+      "pushed_at": "2026-05-03T01:12:26Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/VCC"
+    },
+    "lllyasviel/VCC-experiments": {
+      "pushed_at": "2026-04-03T08:54:03Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/VCC-experiments"
+    },
+    "lllyasviel/lllyasviel": {
+      "pushed_at": "2026-03-31T12:44:27Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/lllyasviel"
+    },
+    "lllyasviel/YGOProUnity_V2": {
+      "pushed_at": "2026-03-16T03:15:31Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/YGOProUnity_V2"
+    },
+    "lllyasviel/Fooocus": {
+      "pushed_at": "2025-12-01T19:17:07Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/Fooocus"
+    },
+    "lllyasviel/FramePack": {
+      "pushed_at": "2025-10-16T01:28:50Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/FramePack"
+    },
+    "lllyasviel/Style2PaintsResearch": {
+      "pushed_at": "2025-08-16T01:34:33Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/Style2PaintsResearch"
+    },
+    "lllyasviel/Paints-UNDO": {
+      "pushed_at": "2025-08-13T22:11:05Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/Paints-UNDO"
+    },
+    "lllyasviel/stable-diffusion-webui-forge": {
+      "pushed_at": "2025-07-31T01:33:17Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/stable-diffusion-webui-forge"
+    },
+    "lllyasviel/LuminaBrush": {
+      "pushed_at": "2025-05-04T16:57:34Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/LuminaBrush"
+    },
+    "lllyasviel/IC-Light": {
+      "pushed_at": "2025-02-20T15:52:35Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/IC-Light"
+    },
+    "lllyasviel/huggingface_guess": {
+      "pushed_at": "2024-10-29T04:51:38Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/huggingface_guess"
+    },
+    "lllyasviel/Discussion": {
+      "pushed_at": "2024-10-05T06:28:22Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/Discussion"
+    },
+    "lllyasviel/sd-forge-layerdiffuse": {
+      "pushed_at": "2024-08-30T22:05:11Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/sd-forge-layerdiffuse"
+    },
+    "lllyasviel/ControlNet-v1-1-nightly": {
+      "pushed_at": "2024-08-08T09:01:10Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/ControlNet-v1-1-nightly"
+    },
+    "lllyasviel/forge-legacy-extensions": {
+      "pushed_at": "2024-07-26T21:26:53Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/forge-legacy-extensions"
+    },
+    "lllyasviel/Omost": {
+      "pushed_at": "2024-07-26T21:10:06Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/Omost"
+    },
+    "lllyasviel/pages": {
+      "pushed_at": "2024-07-09T16:37:26Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/pages"
+    },
+    "lllyasviel/LayerDiffuse_DiffusersCLI": {
+      "pushed_at": "2024-06-16T09:01:16Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/LayerDiffuse_DiffusersCLI"
+    },
+    "lllyasviel/LayerDiffuse": {
+      "pushed_at": "2024-06-16T08:05:00Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/LayerDiffuse"
+    },
+    "lllyasviel/ControlNet": {
+      "pushed_at": "2024-02-25T09:49:39Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/ControlNet"
+    },
+    "lllyasviel/SingleFileDB": {
+      "pushed_at": "2023-11-24T04:14:23Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/SingleFileDB"
+    },
+    "lllyasviel/DanbooRegion": {
+      "pushed_at": "2023-11-16T08:32:48Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/DanbooRegion"
+    },
+    "lllyasviel/ToonDecompose": {
+      "pushed_at": "2023-08-31T22:06:32Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/ToonDecompose"
+    },
+    "lllyasviel/misc_files": {
+      "pushed_at": "2023-08-11T18:46:24Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/misc_files"
+    },
+    "lllyasviel/style2paints": {
+      "pushed_at": "2023-08-01T02:02:00Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/style2paints"
+    },
+    "lllyasviel/lllyasviel.github.io": {
+      "pushed_at": "2022-12-23T18:53:23Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/lllyasviel.github.io"
+    },
+    "lllyasviel/GitPageToonDecompose": {
+      "pushed_at": "2022-12-08T00:10:58Z",
+      "person_id": "lvmin-zhang",
+      "url": "https://github.com/lllyasviel/GitPageToonDecompose"
+    },
+    "comfyanonymous/ComfyUI_bitsandbytes_NF4": {
+      "pushed_at": "2026-09-29T01:17:00Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/comfyanonymous/ComfyUI_bitsandbytes_NF4",
+      "sha": "6c523bf1ee37900757ee538e6683f1312b8f425c"
+    },
+    "comfyanonymous/ComfyUI_examples": {
+      "pushed_at": "2025-11-26T20:34:21Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/comfyanonymous/ComfyUI_examples"
+    },
+    "comfyanonymous/ComfyUI_TensorRT": {
+      "pushed_at": "2024-10-10T00:23:55Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/comfyanonymous/ComfyUI_TensorRT"
+    },
+    "comfyanonymous/ComfyUI_Blog": {
+      "pushed_at": "2024-06-18T16:22:54Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/comfyanonymous/ComfyUI_Blog"
+    },
+    "comfyanonymous/ComfyUI_experiments": {
+      "pushed_at": "2024-05-22T15:29:49Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/comfyanonymous/ComfyUI_experiments"
+    },
+    "comfyanonymous/ComfyUI_tutorial_vn": {
+      "pushed_at": "2023-11-03T15:02:25Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/comfyanonymous/ComfyUI_tutorial_vn"
+    },
+    "comfyanonymous/website": {
+      "pushed_at": "2023-10-23T08:33:52Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/comfyanonymous/website"
+    },
+    "Comfy-Org/ComfyUI": {
+      "pushed_at": "2026-10-10T17:07:11Z",
+      "person_id": "comfyanonymous",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "sha": "0df64eb242b7c5759c3e86afd5d1846d923b1033"
+    },
+    "ArbenApura/xianscan-rust": {
+      "pushed_at": "2026-10-07T00:26:31Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/xianscan-rust",
+      "sha": "075d36f359cdcad1d08ea88d2f4d927640789c26"
+    },
+    "ArbenApura/arbenger": {
+      "pushed_at": "2026-09-08T00:18:24Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/arbenger"
+    },
+    "ArbenApura/xianslate": {
+      "pushed_at": "2026-09-02T04:18:21Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/xianslate"
+    },
+    "ArbenApura/ArbenApura": {
+      "pushed_at": "2026-08-04T19:57:36Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/ArbenApura"
+    },
+    "ArbenApura/arbenger.com": {
+      "pushed_at": "2026-08-04T19:35:15Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/arbenger.com"
+    },
+    "ArbenApura/wiki-reader-ai": {
+      "pushed_at": "2026-08-04T14:59:34Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/wiki-reader-ai"
+    },
+    "ArbenApura/virtual-piano": {
+      "pushed_at": "2026-08-04T14:23:08Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/virtual-piano"
+    },
+    "ArbenApura/mythical-translation-bot": {
+      "pushed_at": "2022-09-05T05:40:43Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/mythical-translation-bot"
+    },
+    "ArbenApura/bulsu-knowledge-repo-beta": {
+      "pushed_at": "2021-10-30T09:08:38Z",
+      "person_id": "arben-apura",
+      "url": "https://github.com/ArbenApura/bulsu-knowledge-repo-beta"
+    },
+    "anteloc/ldraw-nova": {
+      "pushed_at": "2026-10-10T08:07:39Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/ldraw-nova",
+      "sha": "45f2fdbae48653d57b9087886eb4c9d0adb66d69"
+    },
+    "anteloc/ldraw-nova-docker": {
+      "pushed_at": "2026-10-08T12:35:01Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/ldraw-nova-docker",
+      "sha": "0bbd5862dab9f56825cf20cf690c5f8e340a1832"
+    },
+    "anteloc/mpd2glb": {
+      "pushed_at": "2026-10-03T18:37:44Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/mpd2glb",
+      "sha": "c3188be2f3675d2fdf6b73d08a9e0ac36bc32ef8"
+    },
+    "anteloc/anteloc.github.io": {
+      "pushed_at": "2026-10-02T22:49:01Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/anteloc.github.io",
+      "sha": "fe24c48751c5680d6af1505f10ace43ab50d89c1"
+    },
+    "anteloc/ldraw-lib": {
+      "pushed_at": "2026-09-26T01:28:56Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/ldraw-lib"
+    },
+    "anteloc/jev-rerank": {
+      "pushed_at": "2026-09-25T16:31:11Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/jev-rerank"
+    },
+    "anteloc/py4bricks": {
+      "pushed_at": "2026-06-16T23:30:51Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/py4bricks"
+    },
+    "anteloc/py2bricks": {
+      "pushed_at": "2026-04-10T19:50:35Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/py2bricks"
+    },
+    "anteloc/ldbuilder-ai": {
+      "pushed_at": "2026-04-06T23:14:42Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/ldbuilder-ai"
+    },
+    "anteloc/songslike-ai": {
+      "pushed_at": "2026-03-26T20:30:06Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/songslike-ai"
+    },
+    "anteloc/svgen-ai": {
+      "pushed_at": "2026-03-16T21:21:13Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/svgen-ai"
+    },
+    "anteloc/ttf2svg": {
+      "pushed_at": "2026-03-16T19:44:02Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/ttf2svg"
+    },
+    "anteloc/plog-ai": {
+      "pushed_at": "2026-03-08T20:48:09Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/plog-ai"
+    },
+    "anteloc/claude-ldraw-skill": {
+      "pushed_at": "2026-03-01T19:09:53Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/claude-ldraw-skill"
+    },
+    "anteloc/jira-kanban-blockers": {
+      "pushed_at": "2025-03-10T00:38:52Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/jira-kanban-blockers"
+    },
+    "anteloc/obsidian-grafika-plugin": {
+      "pushed_at": "2024-05-03T18:06:26Z",
+      "person_id": "carlos-antelo",
+      "url": "https://github.com/anteloc/obsidian-grafika-plugin"
+    },
+    "rasbt/mlxtend": {
+      "pushed_at": "2026-10-09T16:56:32Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/mlxtend",
+      "sha": "1aee767ef57b84a8191511a08955c583b65de382"
+    },
+    "rasbt/macos-pdf-splitter": {
+      "pushed_at": "2026-10-06T01:49:11Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/macos-pdf-splitter",
+      "sha": "efa5f6dda481e8c689b6f4f824b0d6b79789edec"
+    },
+    "rasbt/llm-architecture-gallery": {
+      "pushed_at": "2026-10-04T16:52:46Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/llm-architecture-gallery",
+      "sha": "589d213a12188abc4b554a0c32ca735ceda75616"
+    },
+    "rasbt/reasoning-from-scratch": {
+      "pushed_at": "2026-10-02T15:08:46Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/reasoning-from-scratch",
+      "sha": "a788466dc85cfe8617b6c0b809ed4ab9084485de"
+    },
+    "rasbt/LLMs-from-scratch": {
+      "pushed_at": "2026-10-02T14:55:52Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "sha": "cdbd33e6d57a71e20ea31434841095fac50cecd8"
+    },
+    "rasbt/deeplearning-models": {
+      "pushed_at": "2026-09-26T03:14:33Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/deeplearning-models"
+    },
+    "rasbt/ai-detector-from-scratch": {
+      "pushed_at": "2026-09-01T13:11:48Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/ai-detector-from-scratch"
+    },
+    "rasbt/python-machine-learning-book": {
+      "pushed_at": "2026-07-18T13:09:40Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/python-machine-learning-book"
+    },
+    "rasbt/local-coding-agent-evals": {
+      "pushed_at": "2026-06-26T19:52:16Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/local-coding-agent-evals"
+    },
+    "rasbt/machine-learning-book": {
+      "pushed_at": "2026-06-15T14:33:04Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/machine-learning-book"
+    },
+    "rasbt/workflow-understanding-LLM-architectures": {
+      "pushed_at": "2026-04-10T19:57:28Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/workflow-understanding-LLM-architectures"
+    },
+    "rasbt/mini-coding-agent": {
+      "pushed_at": "2026-04-07T22:07:26Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/mini-coding-agent"
+    },
+    "rasbt/watermark": {
+      "pushed_at": "2025-12-21T23:42:28Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/watermark"
+    },
+    "rasbt/math_full_minus_math500": {
+      "pushed_at": "2025-12-20T23:09:56Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/math_full_minus_math500"
+    },
+    "rasbt/MachineLearning-QandAI-book": {
+      "pushed_at": "2025-12-17T21:55:55Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/MachineLearning-QandAI-book"
+    },
+    "rasbt/bugreport": {
+      "pushed_at": "2025-09-14T17:22:27Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/bugreport"
+    },
+    "rasbt/rasbt": {
+      "pushed_at": "2025-01-21T15:36:37Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/rasbt"
+    },
+    "rasbt/RAGs": {
+      "pushed_at": "2025-01-20T02:32:49Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/RAGs"
+    },
+    "rasbt/LLM-workshop-2024": {
+      "pushed_at": "2025-01-13T01:12:23Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/LLM-workshop-2024"
+    },
+    "rasbt/stat451-machine-learning-fs20": {
+      "pushed_at": "2024-09-28T20:53:10Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/stat451-machine-learning-fs20"
+    },
+    "rasbt/test-github-image-rendering": {
+      "pushed_at": "2024-08-29T06:11:14Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/test-github-image-rendering"
+    },
+    "rasbt/pycon2024": {
+      "pushed_at": "2024-05-15T18:20:55Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/pycon2024"
+    },
+    "rasbt/py-args": {
+      "pushed_at": "2024-04-04T12:56:49Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/py-args"
+    },
+    "rasbt/machine-learning-notes": {
+      "pushed_at": "2024-03-21T14:24:57Z",
+      "person_id": "sebastian-raschka",
+      "url": "https://github.com/rasbt/machine-learning-notes"
+    },
+    "samwho/nvim": {
+      "pushed_at": "2026-10-10T15:28:23Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/nvim",
+      "sha": "c4547189b6826f6cfc10bf2340663ea31f606a38"
+    },
+    "samwho/pi": {
+      "pushed_at": "2026-10-10T15:22:19Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/pi",
+      "sha": "067df7591ed8279d5be838a0af5ca1c2b07ab614"
+    },
+    "samwho/helm-charts": {
+      "pushed_at": "2026-09-27T20:20:00Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/helm-charts",
+      "sha": "b76636aeec83be77944312b56bbe6efece99c890"
+    },
+    "samwho/tokedex": {
+      "pushed_at": "2026-09-24T17:20:47Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/tokedex"
+    },
+    "samwho/talon": {
+      "pushed_at": "2026-09-17T11:37:18Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/talon"
+    },
+    "samwho/symbol.wtf": {
+      "pushed_at": "2026-08-30T13:39:15Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/symbol.wtf"
+    },
+    "samwho/aerospace": {
+      "pushed_at": "2026-08-25T09:28:42Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/aerospace"
+    },
+    "samwho/ghostty": {
+      "pushed_at": "2026-08-10T08:20:39Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/ghostty"
+    },
+    "samwho/obsidian-wikidata-importer": {
+      "pushed_at": "2026-05-02T14:21:49Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/obsidian-wikidata-importer"
+    },
+    "samwho/e-mail.wtf": {
+      "pushed_at": "2026-05-02T13:17:18Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/e-mail.wtf"
+    },
+    "samwho/VibeWatch": {
+      "pushed_at": "2026-04-14T11:06:10Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/VibeWatch"
+    },
+    "samwho/llmwalk": {
+      "pushed_at": "2026-01-19T21:31:13Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/llmwalk"
+    },
+    "samwho/jsdate.wtf": {
+      "pushed_at": "2026-01-03T11:03:05Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/jsdate.wtf"
+    },
+    "samwho/owart": {
+      "pushed_at": "2025-12-23T13:05:24Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/owart"
+    },
+    "samwho/samwho": {
+      "pushed_at": "2025-09-04T08:55:20Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/samwho"
+    },
+    "samwho/spacer": {
+      "pushed_at": "2025-08-30T18:29:48Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/spacer"
+    },
+    "samwho/visualisations": {
+      "pushed_at": "2025-08-23T14:11:49Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/visualisations"
+    },
+    "samwho/code-review": {
+      "pushed_at": "2025-06-29T15:20:25Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/code-review"
+    },
+    "samwho/nock-beta-repro": {
+      "pushed_at": "2025-06-24T10:28:50Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/nock-beta-repro"
+    },
+    "samwho/nature-of-code": {
+      "pushed_at": "2025-01-05T12:07:16Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/nature-of-code"
+    },
+    "samwho/aoc2024": {
+      "pushed_at": "2024-12-13T12:11:24Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/aoc2024"
+    },
+    "samwho/everycron": {
+      "pushed_at": "2024-11-02T19:58:50Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/everycron"
+    },
+    "samwho/hmm": {
+      "pushed_at": "2024-09-03T21:34:11Z",
+      "person_id": "sam-rose",
+      "url": "https://github.com/samwho/hmm"
+    }
+  },
+  "feeds": {},
+  "seen_ids": [
+    "01206c271802892ac331089e",
+    "028832f9d84a4c41fc816b42",
+    "02ed54f37228e1448ae0fdf4",
+    "03a6820c6a317cb888d7c826",
+    "09504733ee8eb4b87ae03a5d",
+    "0e90f52a72aa354cffafeec1",
+    "0f24f622bca41dc3b74f4608",
+    "16aaa362d7ad9ce319972faa",
+    "1a5d437f4af8d42d37f1b930",
+    "1ac0180cb9070798e29ca260",
+    "1be134f569703b1dad2cdf50",
+    "1ccd5a3d3c5407cd7c03472f",
+    "1e9b73baf580e945b4c06090",
+    "1f3a7275c43e9a9c40453379",
+    "2085f44e8feac6a46cc5c63f",
+    "2119e01e1a8c587e32755219",
+    "2208a2a8cefae96f5068d0e2",
+    "2889b7302a21e843d3e55372",
+    "2a4ff2ba64ebfa997a8ee69f",
+    "2af356803d3bb6a8da00a915",
+    "2d44f18a574d99fa054ebb8a",
+    "2e433b7a99cd3e574bccb787",
+    "2f2a9b6684d5093e97324e9a",
+    "2f6cbb64442347962ceb2c62",
+    "30a603cc32f3276fdb7f888b",
+    "311c1c28d1419928a41bde75",
+    "34d01bf2605674fb3d1705f0",
+    "36c2bf3989e0b2ed812ec942",
+    "3f9011b39522e7e0f56ffafe",
+    "4038b515962e7cb69583c2e1",
+    "416b47d75b11629ce5d96e66",
+    "433f1140debeca44f9dac2e6",
+    "4513c5653f7a40889a95923e",
+    "45d34ff103704b44aa36b54c",
+    "4e11b4c66e25e4a0577c8790",
+    "4f3a26ec48085736866cbd3b",
+    "4fb9c521c857d625da794944",
+    "516eee2b9cc0ebc3a8a88bbd",
+    "52b6a5a1a83a2023440eda65",
+    "54d6f6d13c1cfc309d5e76a7",
+    "55025217db539d4511aaec9e",
+    "55f59025a0f6bf6523a46ee4",
+    "57404cb5fb5c43cbad1af807",
+    "5863dcee94b37960f73da722",
+    "58c99a57a09054a47c17fcac",
+    "591f781ee1dd261ff90c1be7",
+    "5a6032c8000e1771411304f9",
+    "5b94661ba3719cd055097aff",
+    "5bb233659fa41f809af706fc",
+    "5e645a1a3bc5cc130afe967c",
+    "60bae86d2d8b47101309bb1c",
+    "6596fd67f2432d73a68b54f5",
+    "69caad82a8e4ba7f214fe5b5",
+    "6c17a5265af8bc3f964318f2",
+    "6ca68ed1a8ec34dacda30ee1",
+    "6ed31193369338d1442f5b5c",
+    "7041a29e9b5a667bd52aa3ff",
+    "74c0c749a12871f56e07f48b",
+    "75aaf2723a7385d249be5891",
+    "78e197fe5b9e7464a9b072db",
+    "7e267cf186eda9c3854e805c",
+    "7ebd384d5059cc3528da0cdc",
+    "8022573a35e44aec5a3cc845",
+    "83a95af4384a0cc556524bd1",
+    "84885b32d10c1cf7088141e7",
+    "84deaa472e030d4b572b72d3",
+    "84f4d99d3716abad7b156cd2",
+    "870d85ce0b9cd183ee309892",
+    "895d7a29cadaf1dc655ac43f",
+    "89961aa687b667cd9aa1f68c",
+    "89b9e7b64836708c0c118456",
+    "902f0fa1569defff4df91e67",
+    "9311a88ac6f9bfee80a5f3b7",
+    "98e29353b8155159ee08e74a",
+    "99959fdd2d9086bc7ab74c2c",
+    "9bed23375ebce3d0a9ca729a",
+    "9e2ae9362ad6b696f1d7d387",
+    "9e72ca63c82d90c5ede6dd07",
+    "a2070a13548862b4524f2755",
+    "a3c8063f256dfe5a25c8e4f4",
+    "a84926de2ba8cfcd1aaed90e",
+    "a88150cc8ef30d291fef1b69",
+    "aa9c0fe58715063ce6b6b0a8",
+    "aaf0acd5e92a112f093dae19",
+    "ad04b22de7e1a17fb13d8cb0",
+    "b13693597130bb0a2a0c641a",
+    "b1898282d6041cc3c05c907d",
+    "b1c908ed0577de190d61f1ab",
+    "b8c2bc2e54e470bcbaae6284",
+    "bb517c646b4d04cf9b9d3660",
+    "bd689f718a707a7a1b42be21",
+    "c367fdc26231e2b0e4898cf5",
+    "c36bd5c8020b061432190a63",
+    "c43876c01f8c68fa81952259",
+    "c6859fb22bf787c733166e5b",
+    "cd625be02c7a69b879b50d50",
+    "cd6ffe99a59b356a76685ca1",
+    "cd7eb39e1fdba9da0c361bca",
+    "d2b69d602d600cc239bfc391",
+    "d47b8b320e5cf0309be179e2",
+    "df00edcc1414682f613268ca",
+    "e0ed139230108083254e658a",
+    "e119507e3180db4ad94ea76d",
+    "e30dffac6a747e034de264b6",
+    "e3bbf5c4212e7c6ba2e1756d",
+    "e4f08aae6dfa95962bfb3ef9",
+    "e75459044b7abb444daf555b",
+    "e8b98136f34eb6e9f9be91c5",
+    "e9d4b9c37964e39454c05421",
+    "ebe74c0a998663109e8a8a84",
+    "ee385ffcb7f74bd1ee9fef01",
+    "ee8258042b9aba7df4f8557b",
+    "f043ef9040baa2cb9950ee98",
+    "f0cc3efe7d1ba11d722ab864",
+    "f160014eb526c8d9fba8d5a9",
+    "f1b7ab5db1be1e9a45ae2bcd",
+    "f1ee3a7157390bd91ea08105",
+    "f3d5d615a107270e573fdfa8",
+    "f4f904c4d0b56848334e1fa3",
+    "f62d80c76f55f3138b3aca7c",
+    "f8280ff3cd8dffbc3ed2c896",
+    "f87e853752542b6e976da16b",
+    "f9a81ef6191918be4c5e001b",
+    "fbfab0d3b283c448ab8ad05a",
+    "fbfe11bed2ccbb8855dd3b85",
+    "fe2db979deb85ce567a45b8f"
+  ],
+  "pages": {
+    "https://cloudflexbroadcast.com/": {
+      "digest": "dd0e428080b4d4d3c357211943deb2daadde999a9ab044c9a1e58886c5447db3",
+      "checked_at": "2026-10-10T18:25:35.362123+00:00"
+    }
+  }
+}

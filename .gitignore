@@ -49,3 +49,7 @@ next-env.d.ts
 /content/guides/hermes-day-one/source/linux.html
 /content/guides/hermes-day-one/source/mac.html
 /content/guides/hermes-day-one/source/windows.html
+
+# Radar scanner Python cache
+__pycache__/
+*.pyc

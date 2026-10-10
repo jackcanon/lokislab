@@ -231,6 +231,12 @@ export default async function Home() {
       </div>
 
       {/* Results lead — headline + best picks strip */}
+      <div className="mx-auto max-w-[1440px] px-5 pt-6 md:px-10">
+        <Link href="/radar" className="flex flex-wrap items-center justify-between gap-3 border-b border-[#aaa194] pb-5 text-sm">
+          <span><strong className="text-[#b74627]">AI Radar</strong> · Follow the people behind the progress.</span>
+          <span className="text-[#b74627]">Explore people &amp; new signals ↗</span>
+        </Link>
+      </div>
       <section
         id="leaderboard"
         className="mx-auto max-w-[1440px] px-5 py-12 md:px-10 lg:py-18"
