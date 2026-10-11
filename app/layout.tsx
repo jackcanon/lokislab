@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteURL),
-  verification: { google: 'gS-gHfvFSLmSLDfZY9JHdc0Va_Z0pBB_TPqSudC_8Aw' },
+  verification: { google: 'gS-gHfvFSLmSLDfZY9JHdc0Va_Z0pBB_TPqSudC_8Aw', other: { 'msvalidate.01': 'F39C20EF3EF14E9AD2807DD13171B194' } },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
   title: "Loki's Lab — Local AI, tested",
   description:
