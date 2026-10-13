@@ -27,7 +27,7 @@ export default function Projects({projects, people, updates}: {projects: Project
         <div className="radar-project-links">{p.spaces.map(s=><a key={s.url} href={s.url} target="_blank" rel="noreferrer">{s.name} ↗</a>)}</div>
         <p className="radar-project-context">{p.context}</p>
         <h4>Recent project activity</h4>
-        {activity.length === 0 ? <p>{p.spaces.length ? 'No recent activity captured for this project. Source coverage is shown under “What gets scanned?” above.' : 'Public source not yet connected.'}</p> : <ul className="radar-project-activity">{activity.slice(0, expanded===p.id ? activity.length : 2).map(u=><li key={u.id}><span>{u.source} · {new Date(u.event_date || u.observed_at).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'America/Phoenix'})}</span><a href={u.url} target="_blank" rel="noreferrer">{u.title} ↗</a><p>{u.summary}</p></li>)}</ul>}
+        {activity.length === 0 ? <p>{p.spaces.length ? 'No recent activity captured for this project. Explore its public links for the latest work.' : 'Public source not yet connected.'}</p> : <ul className="radar-project-activity">{activity.slice(0, expanded===p.id ? activity.length : 2).map(u=><li key={u.id}><span>{u.source} · {new Date(u.event_date || u.observed_at).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'America/Phoenix'})}</span><a href={u.url} target="_blank" rel="noreferrer">{u.title} ↗</a><p>{u.summary}</p></li>)}</ul>}
         {activity.length > 2 && <button aria-expanded={expanded===p.id} onClick={()=>setExpanded(expanded===p.id?null:p.id)}>{expanded===p.id ? 'Show fewer updates' : `View all ${activity.length} updates`}</button>}
       </article>;
     })}</div>

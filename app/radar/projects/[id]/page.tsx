@@ -21,7 +21,7 @@ export default async function ProjectPage({params}:{params:Promise<{id:string}>}
     <div className="radar-project-links">{p.spaces.map(s=>publicURL(s.url)?<a key={s.url} href={s.url} rel="noreferrer" target="_blank">{s.name} ↗</a>:null)}</div>
     <p className="max-w-3xl my-6">{p.context}</p>
     <h2 className="font-serif text-3xl mt-10 mb-4">Recent project activity</h2>
-    <p>Last source scan: <time dateTime={feed.scanned_at}>{displayDate(feed.scanned_at)}</time>. <Link href="/radar">See scan coverage in Radar.</Link></p>
+    <p>Last source scan: <time dateTime={feed.scanned_at}>{displayDate(feed.scanned_at)}</time>. <Link href="/radar">Explore the latest signals in Radar.</Link></p>
     {updates.length ? <ul className="radar-project-activity max-w-3xl">{updates.map(u=><li key={u.id}><span>{u.source} · <time dateTime={u.event_date || u.observed_at}>{u.event_date?'':'First observed '}{displayDate(u.event_date || u.observed_at)}</time></span>{publicURL(u.url)&&<a href={u.url} target="_blank" rel="noreferrer">{u.title} ↗</a>}<p>{u.summary}</p></li>)}</ul> : <p className="my-6">No recent activity captured for this project. Check the public project links for its full history.</p>}
   </main>;
 }

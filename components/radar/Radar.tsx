@@ -278,34 +278,7 @@ export default function Radar({
             <span>Recent signals</span>
           </div>
         </div>
-        <div className="radar-scan">
-          {feed.scanned_at ? (
-            <>
-              Last scan: {date(feed.scanned_at)} · Daily scan at 8:00 a.m.
-              Arizona time
-            </>
-          ) : (
-            <>First scan pending</>
-          )}
-          <details>
-            <summary>What gets scanned?</summary>
-            <p>
-              Public GitHub repositories, selected creator feeds and watched
-              project websites. GitHub, Hacker News and Reddit supply discovery leads
-              when available. Repository activity is a signal to investigate,
-              not proof of a notable release or tested capability.
-            </p>
-            <p>
-              Personal bookmarks and notes stay in this browser. Imported leads
-              are not automatically monitored. Catalog additions require review.
-            </p>
-            {feed.sources.map((s) => (
-              <p key={s.name}>
-                <strong>{s.name}:</strong> {s.status} — {s.detail}
-              </p>
-            ))}
-          </details>
-        </div>
+
       </section>
       <nav className="radar-tabs" aria-label="Radar sections">
         {[
