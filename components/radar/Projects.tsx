@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { matchesProject } from "@/lib/radarProjectActivity";
+import VisualMark from "./VisualMark";
 export type Project = { id: string; name: string; person_id: string; summary: string; kind: string; spaces: {name: string; url: string}[]; context: string };
 type Update = {id: string; title: string; url: string; source: string; event_date: string | null; observed_at: string; summary: string};
 export default function Projects({projects, people, updates}: {projects: Project[]; people: {id: string; name: string}[]; updates: Update[]}) {
@@ -20,6 +21,7 @@ export default function Projects({projects, people, updates}: {projects: Project
     <div className="radar-grid">{filtered.map(p => {
       const activity = updates.filter(u => matchesProject(u.url, p.spaces)).sort((a,b)=>(b.event_date || b.observed_at).localeCompare(a.event_date || a.observed_at));
       return <article key={p.id} className="radar-card radar-project-card">
+        <div className="radar-project-identity"><VisualMark id={p.id} name={p.name} type="project" /><span className="radar-identity-caption">{p.kind}</span></div>
         <span className="radar-eyebrow">{p.kind} · {people.find(x=>x.id===p.person_id)?.name}</span>
         <h3><Link href={`/radar/projects/${p.id}`}>{p.name}</Link></h3><p>{p.summary}</p>
         <div className="radar-project-links">{p.spaces.map(s=><a key={s.url} href={s.url} target="_blank" rel="noreferrer">{s.name} ↗</a>)}</div>

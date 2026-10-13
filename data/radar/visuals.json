@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "people": {
+    "andrej-karpathy": {
+      "url": "https://avatars.githubusercontent.com/u/241138?v=4&s=160",
+      "source_url": "https://github.com/karpathy",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "arben-apura": {
+      "url": "https://avatars.githubusercontent.com/u/90498444?v=4&s=160",
+      "source_url": "https://github.com/ArbenApura",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "awni-hannun": {
+      "url": "https://avatars.githubusercontent.com/u/1542805?v=4&s=160",
+      "source_url": "https://github.com/awni",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "carlos-antelo": {
+      "url": "https://avatars.githubusercontent.com/u/6914284?v=4&s=160",
+      "source_url": "https://github.com/anteloc",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "chris-sabato": {
+      "url": "https://avatars.githubusercontent.com/u/4316140?v=4&s=160",
+      "source_url": "https://github.com/chrissabato",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "comfyanonymous": {
+      "url": "https://avatars.githubusercontent.com/u/121283862?v=4&s=160",
+      "source_url": "https://github.com/comfyanonymous",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "guy-cochran": {
+      "url": "https://avatars.githubusercontent.com/u/81593178?v=4&s=160",
+      "source_url": "https://github.com/guycochran",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "ikawrakow": {
+      "url": "https://avatars.githubusercontent.com/u/48489457?v=4&s=160",
+      "source_url": "https://github.com/ikawrakow",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "john-wallace": {
+      "url": "https://avatars.githubusercontent.com/u/264678744?v=4&s=160",
+      "source_url": "https://github.com/iamfatness",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "jonas-dautel": {
+      "url": "https://avatars.githubusercontent.com/u/16684499?v=4&s=160",
+      "source_url": "https://github.com/SNRSE",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "lvmin-zhang": {
+      "url": "https://avatars.githubusercontent.com/u/19834515?v=4&s=160",
+      "source_url": "https://github.com/lllyasviel",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "mario-zechner": {
+      "url": "https://avatars.githubusercontent.com/u/514052?v=4&s=160",
+      "source_url": "https://github.com/badlogic",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "ostris": {
+      "url": "https://avatars.githubusercontent.com/u/33983539?v=4&s=160",
+      "source_url": "https://github.com/ostris",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "sam-rose": {
+      "url": "https://avatars.githubusercontent.com/u/338027?v=4&s=160",
+      "source_url": "https://github.com/samwho",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "sebastian-raschka": {
+      "url": "https://avatars.githubusercontent.com/u/5618407?v=4&s=160",
+      "source_url": "https://github.com/rasbt",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "simon-willison": {
+      "url": "https://avatars.githubusercontent.com/u/9599?v=4&s=160",
+      "source_url": "https://github.com/simonw",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "craig-macfarlane": {
+      "url": "https://www.transitionaldata.com/uploads/2020/01/Craig_Macfarlane-414x433.jpg",
+      "source_url": "https://www.transitionaldata.com/team/craig-macfarlane/",
+      "checked_at": "2026-10-13",
+      "kind": "profile"
+    },
+    "ethan-mollick": {
+      "url": "https://substackcdn.com/image/fetch/$s_!hyZZ!,w_400,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fcd2ee4f7-3e71-42f0-92eb-4d3018127e08_1024x1024.png",
+      "source_url": "https://www.oneusefulthing.org/",
+      "checked_at": "2026-10-13",
+      "kind": "brand"
+    }
+  },
+  "projects": {
+    "comfyanonymous-0": {
+      "url": "https://avatars.githubusercontent.com/u/166579949?v=4&s=160",
+      "source_url": "https://github.com/Comfy-Org",
+      "checked_at": "2026-10-13",
+      "kind": "brand"
+    },
+    "jonas-dautel-0": {
+      "url": "https://avatars.githubusercontent.com/u/198860892?v=4&s=160",
+      "source_url": "https://github.com/CLOUDflex-broadcast",
+      "checked_at": "2026-10-13",
+      "kind": "brand"
+    },
+    "mario-zechner-0": {
+      "url": "https://avatars.githubusercontent.com/u/207902832?v=4&s=160",
+      "source_url": "https://github.com/earendil-works",
+      "checked_at": "2026-10-13",
+      "kind": "brand"
+    },
+    "ethan-mollick-0": {
+      "url": "https://substackcdn.com/image/fetch/$s_!hyZZ!,w_400,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fcd2ee4f7-3e71-42f0-92eb-4d3018127e08_1024x1024.png",
+      "source_url": "https://www.oneusefulthing.org/",
+      "checked_at": "2026-10-13",
+      "kind": "brand"
+    },
+    "stadium-sound": {
+      "url": "https://stadiumsound.chrissabato.com/logo.svg",
+      "source_url": "https://stadiumsound.chrissabato.com/",
+      "checked_at": "2026-10-13",
+      "kind": "brand"
+    }
+  }
+}

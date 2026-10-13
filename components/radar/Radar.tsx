@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import "./radar.css";
 import Projects, { type Project } from "./Projects";
+import VisualMark from "./VisualMark";
 
 type Person = {
   id: string;
@@ -384,13 +385,7 @@ export default function Radar({
                 className="radar-card"
               >
                 <div className="radar-card-top">
-                  <span className="radar-initials">
-                    {p.name
-                      .split(" ")
-                      .map((s) => s[0])
-                      .slice(0, 2)
-                      .join("")}
-                  </span>
+                  <VisualMark id={p.id} name={p.name} />
                   <button
                     disabled={!ready}
                     aria-label={`${watching(p) ? "Remove" : "Save"} ${p.name} bookmark`}
@@ -604,6 +599,7 @@ export default function Radar({
               Close ×
             </button>
             <p className="radar-eyebrow">{selected.capability_status}</p>
+            <VisualMark id={selected.id} name={selected.name} large />
             <h2 id="radar-profile-name">{selected.name}</h2>
             <p>{selected.why}</p>
             <h3>Explore the work</h3>
