@@ -1,0 +1,502 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "andrej-karpathy": {
+      "paragraphs": [
+        "Andrej Karpathy is a researcher and educator whose career connects neural-network research with large production systems. He was a founding member of OpenAI, later led artificial intelligence at Tesla, and developed Stanford’s deep-learning course during his doctorate. His public teaching makes the mechanics of these systems accessible well beyond a research lab.",
+        "Autoresearch brings that interest in fundamentals into a small, inspectable experiment loop. An agent changes a model-training program, runs a five-minute experiment, checks the result, and keeps or discards the change. The project makes the instructions governing the experiments a central part of the research process.",
+        "For a developer with suitable computing resources, it offers a way to explore automated training experiments and study which changes help under a fixed time budget. His video lessons provide a complementary starting point: understand how language models learn before deciding what an automated experiment should optimize.",
+        "Radar follows Karpathy because he connects clear explanations with working code. Autoresearch is especially interesting as an example of agents doing measurable work, with experiment logs that readers can inspect. Improvements within its training setup should be understood in that context rather than treated as proof of general intelligence."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/karpathy",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/karpathy/autoresearch",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://karpathy.ai/",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
+          "title": "Deep Dive into Large Language Models like ChatGPT",
+          "source_url": "https://karpathy.ai/",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    },
+    "arben-apura": {
+      "paragraphs": [
+        "Arben Apura’s public GitHub profile identifies him as a freelance full-stack developer in the Philippines, working on web and Android applications. His XianScan project applies that software-building background to a specific creative problem: translating comics while preserving the page as a readable visual composition.",
+        "XianScan combines speech-bubble detection, optical character recognition, language-model translation, image repair, and typesetting. Its local-first design puts several stages of a comic translation workflow in one studio, rather than asking the reader to move between unrelated tools.",
+        "A translator or comic enthusiast could use it to process a page, inspect extracted text, revise a translation, and rebuild the lettering. The project documentation explains its desktop setup and integrations. Local processing and cloud-backed translation options have different requirements, so the selected configuration determines where the work happens.",
+        "Apura is worth following for the way he assembles models into a usable end-to-end workflow. The most useful developments to watch are improvements in text placement, editing control, and language handling. A polished page still benefits from a human translator’s judgment about meaning, tone, and cultural context."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ArbenApura",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/ArbenApura/xianscan-rust",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "awni-hannun": {
+      "paragraphs": [
+        "Awni Hannun researches machine-learning algorithms and applications. His public biography lists his current role at Anthropic, earlier research at Apple, Zoom, Facebook AI Research, and Baidu, and a computer-science doctorate at Stanford. At Apple, he co-created MLX, a framework designed for machine learning on Apple silicon.",
+        "MLX gives developers array operations and model-building tools suited to the shared-memory architecture of modern Macs. Its open-source examples connect the framework to practical machine-learning tasks, helping researchers explore models without starting from a hardware abstraction of their own.",
+        "For someone experimenting on a Mac, MLX is a route into local model development and learning how computation moves between the processor and graphics hardware. The framework documentation and examples are the best starting point; memory requirements and model size still determine what fits on a particular machine.",
+        "Radar follows Hannun for the connection between research ideas and accessible computing tools. His software and technical writing help explain why a model behaves the way it does, while MLX provides a concrete place to explore those ideas. His earlier MLX work is distinct from his current employer’s products."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/awni",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://awnihannun.com/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/ml-explore/mlx",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "carlos-antelo": {
+      "paragraphs": [
+        "Carlos Antelo publishes software under the GitHub handle anteloc. His public work includes LDrawNova and jev-rerank, connecting agent-driven creation with semantic search. The projects provide a more concrete introduction to his interests than the brief biography on his profile.",
+        "LDrawNova turns a model idea into a digital LEGO-style design expressed in the LDraw format. An agent searches for suitable parts and examples, builds the model, and produces views and editable output. The repository also describes exports that can be opened in Blender.",
+        "A designer can use it to explore a concept, guide revisions, and inspect the resulting geometry from different angles. Running the application requires its documented setup; optional semantic reranking uses a separate service, with ordinary text search as a fallback. The generated model is a digital design that still needs review before a physical build.",
+        "Antelo is worth following because this work makes agent decisions visible in a creative process. The interesting question is how well searching, assembling, and revising parts can become a useful design assistant. The published demonstration offers a direct look at the workflow, alongside the code and sample models."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/anteloc",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/anteloc/ldraw-nova",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=YDjjxGqWpgU",
+          "title": "LDrawNova: agent-assisted digital model building",
+          "source_url": "https://github.com/anteloc/ldraw-nova",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    },
+    "chris-sabato": {
+      "paragraphs": [
+        "Chris Sabato combines athletics communications with hands-on engineering. His public biography describes his role as Director of Athletic Communications at Willamette University, where he works across video, photography, graphics, and the athletics brand. He has also built custom programs to make small production teams more effective.",
+        "Stadium Sound is his free, open-source soundboard for sports and live events. It organizes music and effects into named banks, supports playlists and keyboard triggers, and offers private monitoring so an operator can preview a cue before sending it to the venue.",
+        "An arena or school operator can prepare walk-on music, introductions, and timeout cues before an event, then trigger them without searching through ordinary media folders. Track trimming and loudness tools help prepare the material; a separate headphone output is useful when the operator needs to check the next cue discreetly.",
+        "Radar follows Sabato because his tools start with recognizable production problems. His broader public work also includes broadcast automation and custom dashboards. Stadium Sound is a practical production application, while his writing about building other tools with artificial intelligence adds context to how that work is evolving."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/chrissabato",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://stadiumsound.chrissabato.com/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://chrissabato.com/",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "comfyanonymous": {
+      "paragraphs": [
+        "comfyanonymous is the public handle associated with the creation of ComfyUI. The developer’s GitHub profile links to Comfy-Org, and the project’s open development provides the clearest view of the work. The handle is preserved here rather than assigning a personal identity that the public profile does not establish.",
+        "ComfyUI represents generative-media workflows as connected nodes. Models, prompts, images, sampling steps, and outputs become parts of a visible graph, allowing a creator to see and change how a result is produced. The repository documents installation and the range of supported workflows.",
+        "A creator might use it to construct an image-generation pipeline, repeat an established workflow, or explore newer video and editing models. Shared workflows offer a starting point, but the required models and extensions must match the setup. The graph is useful for understanding which stage is responsible for a result.",
+        "Radar follows comfyanonymous because workflow infrastructure influences what many other creators can build. Changes to ComfyUI can turn a research model into something people can connect, reuse, and extend. Model compatibility and extension requirements remain part of evaluating any particular workflow."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/comfyanonymous",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/Comfy-Org/ComfyUI",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "craig-macfarlane": {
+      "paragraphs": [
+        "Craig MacFarlane is the chief technology officer and co-founder of Transitional Data Services, established in 2002. His company biography describes a career spanning complex technology projects, interactive media, hosting, and networks. That background places his work at the intersection of software and organizational change.",
+        "The company identifies his role in developing TransitionManager, software for preparing, coordinating, and managing technology change. Its public product materials focus on understanding dependencies and orchestrating work across migrations, modernization, and recovery scenarios.",
+        "For an enterprise team, the practical use is coordination: knowing what depends on what, sequencing tasks, and making a shared plan visible to the people carrying it out. The company’s product documentation and demonstrations provide the appropriate entry point for assessing whether it fits a particular environment.",
+        "Radar follows MacFarlane for that operational perspective. As automation becomes more capable, the surrounding dependencies, responsibilities, and change process still matter. His public biography establishes the company and product connection; it does not by itself establish a particular artificial-intelligence feature or its performance."
+      ],
+      "sources": [
+        {
+          "url": "https://www.transitionaldata.com/team/craig-macfarlane/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "ethan-mollick": {
+      "paragraphs": [
+        "Ethan Mollick is a professor at the Wharton School of the University of Pennsylvania and the author of Co-Intelligence. He writes One Useful Thing, a publication about the implications of artificial intelligence for work, education, and daily life. His research-oriented approach connects changing capabilities to specific tasks and human decisions.",
+        "One Useful Thing is a publication rather than a software product. Its value comes from explanations, examples, and experiments that translate model developments into questions people can act on: what to delegate, how to evaluate a response, and where a person’s judgment remains essential.",
+        "A teacher, manager, or independent creator can use the essays as a starting point for designing a small experiment in their own work. The linked Wharton resources extend that reading into prompts and educational material. Results should be assessed against the actual task, especially when decisions affect other people.",
+        "Radar follows Mollick because adoption is as much about habits and institutions as it is about models. His work helps connect a new capability to the way people learn and collaborate. Following the publication offers context for interpreting tool announcements without treating a single demonstration as a universal result."
+      ],
+      "sources": [
+        {
+          "url": "https://www.oneusefulthing.org/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://www.oneusefulthing.org/about",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://gail.wharton.upenn.edu/",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://mgmt.wharton.upenn.edu/profile/emollick/",
+          "label": "Wharton faculty biography",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=_HG7NX2spyU",
+          "title": "ChatGPT for Work, Training and Education — Wharton panel (2023)",
+          "source_url": "https://mackinstitute.wharton.upenn.edu/2023/watch-chatgpt-for-work-training-and-education/",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    },
+    "guy-cochran": {
+      "paragraphs": [
+        "Guy Cochran’s public work brings together video-production practice, technical education, and automation. His GitHub profile identifies DVE Store, while Office Hours Global and his published interview place him in a community of filmmakers, broadcasters, and engineers who share practical production knowledge.",
+        "His Resolve automation project connects DaVinci Resolve to the Model Context Protocol, allowing compatible clients to inspect and operate parts of an editing workflow. A separate switcher project applies that approach to Blackmagic ATEM equipment, with documented commands for production control.",
+        "An editor can explore commands for timeline work, captions, and multi-track interviews; a live operator can investigate control of switching, macros, recording, and streaming. These tools connect to real production systems, so a rehearsal project or off-air setup is a useful place to understand the supported actions and current requirements.",
+        "Radar follows Cochran because his experiments connect natural-language interfaces to the equipment and software people already use. The repositories show the technical implementation, while his Office Hours interview explains the community surrounding the work. That combination makes both the ideas and their production context easier to follow."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/guycochran",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/guycochran/resolve-mcp-server",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/guycochran/atem-mcp-server",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://officehours.global/join-us/about",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://www.leagueoffilmmakers.com/how-office-hours-global-built-a-24-7-filmmaking-community/",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=dYofJZyJ84g",
+          "title": "Guy Cochran on the Office Hours Global community",
+          "source_url": "https://www.leagueoffilmmakers.com/how-office-hours-global-built-a-24-7-filmmaking-community/",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    },
+    "ikawrakow": {
+      "paragraphs": [
+        "ikawrakow is the public developer handle behind ik_llama.cpp. The repository is an active source of model-inference and quantization work, with technical notes and discussion that reveal the project’s priorities. This profile follows that published work without inferring a personal identity from the handle.",
+        "ik_llama.cpp is a fork of llama.cpp focused on additional quantization options and performance improvements, particularly for supported processor and NVIDIA configurations. Quantization reduces the precision used to store model values, which can change memory requirements, speed, and output quality.",
+        "A technically comfortable user can build the software, load a compatible model, and run its local server. It is particularly relevant when comparing how a model uses available memory and computing resources. The project documents backend limitations and model-format caveats that should guide configuration choices.",
+        "Radar follows ikawrakow because local inference often improves through detailed systems work that is easy to miss in model announcements. New kernels, model support, and measurements can make existing hardware more useful. Performance claims are most meaningful when compared on the same model, hardware, and workload."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ikawrakow",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/ikawrakow/ik_llama.cpp",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "john-wallace": {
+      "paragraphs": [
+        "John Wallace publishes under the GitHub handle iamfatness. His public repositories center on live video production, especially turning remote participants into sources an operator can control. CoreVideo and CoreVideo Pro offer a concrete view of that work without requiring a more extensive personal biography.",
+        "CoreVideo brings individual Zoom participant video and audio into Open Broadcaster Software (OBS) Studio. The documentation describes participant assignment, active-speaker handling, screen-share capture, and isolated recordings, giving an operator more control than capturing a meeting window as one image.",
+        "CoreVideo Pro explores a separate desktop production console, with layouts, graphics, captions, audio controls, and output paths. A remote interview or panel is a useful example of the intended workflow: arrange guests, manage the show, and record material for later editing. Current platform and release notes distinguish implemented paths from work that still needs live validation.",
+        "Radar follows Wallace for the effort to make remote production more direct and manageable. The public code, guides, and issue history let readers follow how the tools develop. Zoom account entitlements, platform support, and release maturity remain important when evaluating a production setup."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/iamfatness",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/iamfatness/CoreVideo",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/iamfatness/CoreVideoPro",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "jonas-dautel": {
+      "paragraphs": [
+        "Jonas Dautel publishes software as SNRSE, with a public GitHub profile linking to his personal site and identifying ByteHive. His work around CLOUDflex Broadcast addresses a practical problem for live production teams: using cloud infrastructure without making every operator an infrastructure specialist.",
+        "CLOUDflex Broadcast presents an operator-focused environment for cloud live production. Its public materials emphasize access to familiar tools such as vMix, Vector, and Carbonite, with managed access and options for self-hosted or fully managed deployment.",
+        "A producer could use that approach to give a distributed team access to a production environment and bring freelancers into a show without rebuilding the entire workflow around new software. The platform and pricing pages are useful starting points for understanding deployment choices, access, and the costs of the underlying setup.",
+        "Radar follows Dautel because the work concentrates on the operational layer around creative tools. Making an environment easier to reach and coordinate can matter as much as adding another feature inside an application. Cloud-production infrastructure and artificial-intelligence capabilities should be assessed as distinct parts of a workflow."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/SNRSE",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/CLOUDflex-broadcast",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://cloudflexbroadcast.com/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=zdilrsX69EI",
+          "title": "From Idea to On-Air: Deploying a Full Cloud Production with CLOUDflex",
+          "source_url": "https://www.linkedin.com/posts/jonasdautel_tuesday-focus-from-idea-to-on-air-deploying-activity-7442008692872343552-yw9O",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    },
+    "lvmin-zhang": {
+      "paragraphs": [
+        "Lvmin Zhang identifies himself on GitHub through the lllyasviel account. His published work includes FramePack, which pairs a research paper with an official implementation and desktop software. That combination makes the underlying approach available to both researchers and creators.",
+        "FramePack generates video progressively and compresses the context used for later frames. The project describes this as a way to keep the generation workload from growing with video length, bringing longer sequences within reach of more modest graphics hardware under supported conditions.",
+        "A creator can explore image-to-video generation using the official repository’s installation and model instructions. The project page provides sample results, while the code offers a way to inspect the implementation. Required memory, supported hardware, and generation settings determine the practical experience.",
+        "Radar follows Zhang because the work tackles a concrete obstacle in generative video: the cost of retaining useful history while producing more frames. The paper and examples provide context for watching improvements in continuity and efficiency. The repository also distinguishes its official software from unrelated hosted services using similar names."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/lllyasviel",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/lllyasviel/FramePack",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "mario-zechner": {
+      "paragraphs": [
+        "Mario Zechner publishes under the GitHub handle badlogic and links to his personal website. Radar follows his work on Pi, an extensible coding-agent toolkit whose public documentation emphasizes adapting an agent to the developer’s workflow.",
+        "Pi provides a compact agent harness with extensions, skills, prompt templates, and themes. It can be used interactively, automated through command-line modes, or embedded into other applications. Those options make it useful for exploring the machinery around a model, including tools and session behavior.",
+        "A developer might start with a coding session, then add an extension for a recurring task or connect Pi to an application of their own. The project’s documentation explains the customization paths and installation. Provider configuration and model selection shape the resulting behavior and cost.",
+        "Zechner is worth following for making the agent’s surrounding software something developers can inspect and change. A small harness can be easier to reason about when building a specialized workflow. Release notes are particularly useful here, because extensions and integrations depend on the interfaces remaining compatible."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/badlogic",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/earendil-works/pi",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": []
+    },
+    "ostris": {
+      "paragraphs": [
+        "Ostris is the public name used by the developer of AI Toolkit. The GitHub profile links to ostris.com, and the repository provides a detailed view of the project’s training workflows. This profile stays with that public name and published work.",
+        "AI Toolkit is an open-source training suite for diffusion models, with support for image and video model families. It can be operated through a graphical interface or command-line configuration, giving creators different ways to manage training jobs and inspect their settings.",
+        "A creator can use it to adapt a supported model to a carefully prepared collection of images or another documented training task. The repository explains local setup and hosted-compute options; its RunPod walkthrough is a useful starting point for that deployment path. Hardware needs vary with the model and training configuration.",
+        "Radar follows Ostris because model customization is a practical bridge between general-purpose generation and a creator’s particular material. Dataset preparation, settings, and comparisons between outputs all matter. The open toolkit and its instructions help readers follow that process rather than judging a training method from a single attractive sample."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/ostris",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://github.com/ostris/ai-toolkit",
+          "label": "Project documentation",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=HBNeS-F6Zz8",
+          "title": "Getting started with AI Toolkit on RunPod",
+          "source_url": "https://github.com/ostris/ai-toolkit",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    },
+    "sam-rose": {
+      "paragraphs": [
+        "Sam Rose writes as samwho and describes himself as a programmer and writer of visual, interactive software essays. His personal site also identifies his work as a developer educator at ngrok. The common thread is making a technical idea easier to understand by letting readers see it unfold.",
+        "His essays cover topics such as memory allocation, retries, and load balancing, alongside work on prompt caching and quantization. These are explanations and interactive learning materials, rather than a single model or application to install.",
+        "A developer can use the essays to build intuition before making implementation decisions. Prompt caching helps explain why repeated context may be handled differently from new input; quantization gives a visual route into the tradeoffs involved in storing model values with less precision.",
+        "Radar follows Rose because clear mental models are useful when evaluating new artificial-intelligence tools. His work helps readers ask better questions about performance, cost, and system behavior. The value is educational: a visual explanation supports understanding, while the details of a production system still come from its own documentation and measurements."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/samwho",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://samwho.dev/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=Y3t4a8WJsHc",
+          "title": "Making Things Less Scary Through Visualisation",
+          "source_url": "https://samwho.dev/",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    },
+    "sebastian-raschka": {
+      "paragraphs": [
+        "Sebastian Raschka is a large language model research engineer whose public biography spans academic and industry work. He has worked as a statistics professor at the University of Wisconsin–Madison and a senior engineer at Lightning AI, and is the author of Build a Large Language Model (From Scratch).",
+        "His work combines code-based explanations, research analysis, books, and Ahead of AI, his publication on machine learning and artificial intelligence. The emphasis is on unpacking how methods work, giving readers something more durable than a list of new model names.",
+        "A developer or student can start with the from-scratch materials to understand model components, then use his articles to connect those fundamentals with current research. The linked code and exercises make the material useful for active learning: change a component, inspect the result, and compare it with the explanation.",
+        "Radar follows Raschka for that combination of teaching and technical depth. His work helps distinguish a promising research idea from the practical steps needed to implement it. The publication, source code, and video channel provide complementary ways to keep up as methods change."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/rasbt",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://magazine.sebastianraschka.com/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://sebastianraschka.com/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://youtube.com/c/SebastianRaschka",
+          "title": "Sebastian Raschka’s video lessons and research walkthroughs",
+          "source_url": "https://sebastianraschka.com/",
+          "checked_at": "2026-10-13",
+          "kind": "channel"
+        }
+      ]
+    },
+    "simon-willison": {
+      "paragraphs": [
+        "Simon Willison is an independent open-source developer and creator of Datasette. His public biography connects that work with data journalism, co-creating Django, and co-founding Lanyrd. His long-running blog now also documents extensive experiments with language models and the tools built around them.",
+        "His public tools collection contains small, inspectable browser utilities, ranging from media helpers to developer experiments. The collection describes itself as an experiment in prompt-driven development and links to source code and development records, making the implementation part of the published artifact.",
+        "A reader can open a relevant utility, explore what it does, and inspect its source before adapting an idea. His blog provides context for the broader methods and model behavior. The collection’s deliberately small tasks are useful examples of turning a specific need into a working tool.",
+        "Radar follows Willison for the habit of pairing experiments with explanations and inspectable evidence. That makes it easier to learn from both a successful result and a limitation. These small utilities are best understood individually, with their own data handling and dependencies, rather than as one uniform product."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/simonw",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://tools.simonwillison.net/",
+          "label": "Public profile and published work",
+          "checked_at": "2026-10-13"
+        },
+        {
+          "url": "https://simonwillison.net/about/",
+          "label": "Background and further reading",
+          "checked_at": "2026-10-13"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=aC7UQcZN6y8",
+          "title": "Making Large Language Models Work for You",
+          "source_url": "https://simonwillison.net/2023/Aug/27/wordcamp-llms/",
+          "checked_at": "2026-10-13"
+        }
+      ]
+    }
+  }
+}

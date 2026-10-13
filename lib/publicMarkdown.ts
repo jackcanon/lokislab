@@ -1,3 +1,4 @@
+import {profileStories} from '@/components/radar/ProfileStory';
 import {catalog, projects, feed, personPath, projectPath, projectUpdates, publicURL} from '@/lib/radarContent';
 import {articleList} from '@/lib/articleList';
 import {readArticle} from '@/lib/articleContent';
@@ -22,7 +23,9 @@ export function publicMarkdown(path: string): string | undefined {
  }
  else if(path.startsWith('/radar/people/')) {
    const p=catalog.people.find(p=>personPath(p.id)===path);if(!p)return;
-   body=`# ${p.name}\n\n${p.category} · ${p.topic}\n\n${p.why}\n\n## Public profiles\n\n${sources(p.links.map(l=>({name:l.label,url:l.url})))}\n\n## Projects and published work\n\n${projects.filter(x=>x.person_id===p.id).map(x=>`- ${link(x.name,projectPath(x.id))}`).join('\n')}\n\n## Sources and context\n\n${p.evidence.map(e=>`- ${link(e.summary,e.url)} — checked ${e.checked_at}`).join('\n')}\n\n${p.caveat}`;
+   const story=profileStories[p.id];
+   const narrative=story ? story.paragraphs.join("\n\n") + (story.videos.length ? "\n\n## Watch and learn\n\n" + sources(story.videos.map(v=>({name:v.title,url:v.url}))) : "") + "\n\n## Further reading\n\n" + sources(story.sources.map(s=>({name:s.label,url:s.url}))) : p.why;
+   body=`# ${p.name}\n\n${p.category} · ${p.topic}\n\n${narrative}\n\n## Public profiles\n\n${sources(p.links.map(l=>({name:l.label,url:l.url})))}\n\n## Projects and published work\n\n${projects.filter(x=>x.person_id===p.id).map(x=>`- ${link(x.name,projectPath(x.id))}`).join('\n')}\n\n## Sources and context\n\n${p.evidence.map(e=>`- ${link(e.summary,e.url)} — checked ${e.checked_at}`).join('\n')}\n\n${p.caveat}`;
  }
  else if(path.startsWith('/articles/')) {
    const slug=path.slice('/articles/'.length);const a=articleList().find(a=>a.slug===slug.toLowerCase());const short=/^ll-\d+$/i.test(slug);

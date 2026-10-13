@@ -1,5 +1,7 @@
 "use client";
 
+import ProfileStory from '@/components/radar/ProfileStory';
+
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import "./radar.css";
@@ -574,7 +576,7 @@ export default function Radar({
             <p className="radar-eyebrow">{selected.capability_status}</p>
             <VisualMark id={selected.id} name={selected.name} large />
             <h2 id="radar-profile-name">{selected.name}</h2>
-            <p>{selected.why}</p>
+            <ProfileStory id={selected.id} fallback={selected.why} />
             <h3>Explore the work</h3>
             <ul>
               {[

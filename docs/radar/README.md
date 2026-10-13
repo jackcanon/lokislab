@@ -53,3 +53,7 @@ Rollback: revert the integration commit. Pause the heartbeat separately to stop
 scanning; reverting code alone does not change its schedule.
 
 Projects use `data/radar/projects.json`, with exact repository and website matching rather than creator-wide activity. Explicit project repositories are included in scheduled scans. People and creator filters are alphabetical with equal styling. LinkedIn remains a reading link. Verify boundaries with `node tests/radar/project-activity.mjs`.
+
+## Profile stories
+
+`data/radar/profiles.json` holds the reviewed background, tool explanations, practical uses, and follow rationale for every catalog person. Stories appear on permanent person pages and in the Radar profile dialog. The public Markdown representation includes the same paragraphs, source links, and video links for crawlers. Videos use verified publisher links; channel links are explicitly distinguished from individual videos. Update the checked date when rechecking a source. Scheduled scans do not rewrite this editorial file. Preserve public handles and avoid inferring personal identities or capabilities from repository activity.
