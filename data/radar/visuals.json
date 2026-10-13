@@ -38,10 +38,16 @@
       "kind": "profile"
     },
     "guy-cochran": {
-      "url": "https://avatars.githubusercontent.com/u/81593178?v=4&s=160",
-      "source_url": "https://github.com/guycochran",
+      "url": "https://officehours.global/wp-content/uploads/Office-Hours-Panelist.jpg",
+      "source_url": "https://officehours.global/join-us/about",
       "checked_at": "2026-10-13",
-      "kind": "profile"
+      "kind": "profile",
+      "crop": {
+        "scale": 10,
+        "left": -870,
+        "top": -455,
+        "ratio": "1500 / 844"
+      }
     },
     "ikawrakow": {
       "url": "https://avatars.githubusercontent.com/u/48489457?v=4&s=160",
