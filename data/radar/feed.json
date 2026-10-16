@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scanned_at": "2026-10-16T13:08:26.206866+00:00",
+  "scanned_at": "2026-10-16T15:04:06.587435+00:00",
   "sources": [
     {
       "name": "GitHub · catalog",
@@ -45,17 +45,17 @@
     {
       "name": "GitHub · discovery",
       "status": "ok",
-      "detail": "8 recent project leads checked; identity and significance require review."
+      "detail": "9 recent project leads checked; identity and significance require review."
     },
     {
       "name": "Hacker News",
       "status": "ok",
-      "detail": "25 matching creator discussions in the last seven days; up to 100 recent submissions checked."
+      "detail": "22 matching creator discussions in the last seven days; up to 100 recent submissions checked."
     },
     {
       "name": "Reddit · LocalLLaMA",
       "status": "ok",
-      "detail": "2 project leads from the latest 30 posts."
+      "detail": "1 project leads from the latest 30 posts."
     },
     {
       "name": "Reddit · LocalLLM",
@@ -64,6 +64,105 @@
     }
   ],
   "updates": [
+    {
+      "id": "4237a385080b46b693410fcf",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/usgs-scraper: repository changed",
+      "url": "https://github.com/simonw/usgs-scraper/compare/9eb5520107a542a89278ba8d80bca437324556a2...718eb1716d874f749d50a6270b025b8339405c88",
+      "source": "GitHub",
+      "event_date": "2026-10-16T15:00:42Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "e96136748e66e4573481fd99",
+      "person_id": "chris-sabato",
+      "name": "Chris Sabato",
+      "title": "chrissabato/soccer-sub-tracker: repository changed",
+      "url": "https://github.com/chrissabato/soccer-sub-tracker/compare/34ac6f6a46a4da4ce04a25ebdc2ed258d77286e9...521872697276adf35157f6bcc71f1b96958f267a",
+      "source": "GitHub",
+      "event_date": "2026-10-16T14:57:20Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "703b37082fc4d958133bedbb",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/pge-outages: repository changed",
+      "url": "https://github.com/simonw/pge-outages/compare/b97aa346e0b5285c9b3ceee09df42365e04c1bfa...9b77504d1cbd871e4d1d4eeb790cb6e1006c7ea2",
+      "source": "GitHub",
+      "event_date": "2026-10-16T14:55:13Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "ef1a32883bceab141590db7d",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/scrape-florida-outages: repository changed",
+      "url": "https://github.com/simonw/scrape-florida-outages/compare/bcea8651e164b9cc6297702564a125343da4b460...172e434cc5cd444a5bd4dacc8b5e6e550f9e70a9",
+      "source": "GitHub",
+      "event_date": "2026-10-16T14:47:10Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "bbdef0bc6065ae7aa9b309fd",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/scrape-fema-shelters: repository changed",
+      "url": "https://github.com/simonw/scrape-fema-shelters/compare/29bb4f737d07cd2b80e4899c74f46f69436cd9b0...24644584c874723bb40592e4e372fa238310869b",
+      "source": "GitHub",
+      "event_date": "2026-10-16T14:42:55Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "56aee7923e5733dfbd257333",
+      "person_id": "ostris",
+      "name": "Ostris",
+      "title": "ostris/ai-toolkit: repository changed",
+      "url": "https://github.com/ostris/ai-toolkit/compare/12395a103fd0ca499c631dc6f460a8778e11490d...e05a3a4f2cc9bbbdd93407ad295f19edb6f89876",
+      "source": "GitHub",
+      "event_date": "2026-10-16T14:09:45Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "0e44b2686da06e6d8f65f117",
+      "person_id": "ikawrakow",
+      "name": "ikawrakow",
+      "title": "ikawrakow/ik_llama.cpp: repository changed",
+      "url": "https://github.com/ikawrakow/ik_llama.cpp/compare/8d21687cc7358de10264d4180dba9b863024d5c4...f1e67dd218777667e351ef56c378d9fbf628f231",
+      "source": "GitHub",
+      "event_date": "2026-10-16T14:01:20Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "850de04ad5b3480c70b25756",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/package-stats: repository changed",
+      "url": "https://github.com/simonw/package-stats/compare/530af93b631f6893e56169b7521e886dfeb89151...f1e5d9b664ba64e1598986795c2176f87c42788d",
+      "source": "GitHub",
+      "event_date": "2026-10-16T13:45:42Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
+    {
+      "id": "cc018cba0b3b98042a226378",
+      "person_id": "simon-willison",
+      "name": "Simon Willison",
+      "title": "simonw/scrape-roads-dot-ca-gov: repository changed",
+      "url": "https://github.com/simonw/scrape-roads-dot-ca-gov/compare/70f8235d8dfb68a1ead757806deab96179aff5ab...115184131d1bd0fcbf3b4766c43ccb2ffa4ad1f0",
+      "source": "GitHub",
+      "event_date": "2026-10-16T13:16:18Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
+    },
     {
       "id": "243f4314d014ec514cd2ff9b",
       "person_id": "simon-willison",
@@ -1064,108 +1163,53 @@
       "event_date": "2026-10-14T09:04:18Z",
       "observed_at": "2026-10-16T13:08:26.206866+00:00",
       "summary": "Published release from the project owner. Release notes describe the changes; capabilities have not been independently tested."
-    },
-    {
-      "id": "a593126f2885bb68084cedc1",
-      "person_id": "simon-willison",
-      "name": "Simon Willison",
-      "title": "simonw/scrape-hacker-news-by-domain: repository changed",
-      "url": "https://github.com/simonw/scrape-hacker-news-by-domain/compare/986baef4922b1ff7ecabf0598c1ea4e368efba15...00bd4adaaaf7cac9ef2f153ae61b260a7848e65f",
-      "source": "GitHub",
-      "event_date": "2026-10-14T08:37:45Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
-    },
-    {
-      "id": "c5ec9f732e13602c18fa2fe7",
-      "person_id": "chris-sabato",
-      "name": "Chris Sabato",
-      "title": "chrissabato/portfolio: recent activity at first scan",
-      "url": "https://github.com/chrissabato/portfolio/commit/2166df7a68827265361205288ecef0bdc5d0b42f",
-      "source": "GitHub · baseline",
-      "event_date": "2026-10-14T07:46:31Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
-    },
-    {
-      "id": "cb5ed34724e037c2b1475630",
-      "person_id": "ikawrakow",
-      "name": "ikawrakow",
-      "title": "ikawrakow/ik_llama.cpp: repository changed",
-      "url": "https://github.com/ikawrakow/ik_llama.cpp/compare/38c333caef4cf45e1496889b4b54fd453ce8b6bd...d4fbf5930e704923ba6874ba81b6f1af5309d73e",
-      "source": "GitHub",
-      "event_date": "2026-10-14T07:25:58Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
-    },
-    {
-      "id": "04a974f87673b1cbdf853a0d",
-      "person_id": "simon-willison",
-      "name": "Simon Willison",
-      "title": "simonw/ollama-models-atom-feed: repository changed",
-      "url": "https://github.com/simonw/ollama-models-atom-feed/compare/8cd39fb9c3169140428f7c1ec9d57138d9d0a536...ab820f36111fd8668d92116e160216be66e5e013",
-      "source": "GitHub",
-      "event_date": "2026-10-14T06:48:25Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
-    },
-    {
-      "id": "3e18340c951e1aae2a58ee27",
-      "person_id": "simon-willison",
-      "name": "Simon Willison",
-      "title": "simonw/usgs-demo: repository changed",
-      "url": "https://github.com/simonw/usgs-demo/compare/68f0e324890817f069ca6fe5e1f07d6eca0ba3e6...21cae14864c20ca0b9c86e56dfe8ae0ca37d0c99",
-      "source": "GitHub",
-      "event_date": "2026-10-14T06:47:29Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
-    },
-    {
-      "id": "02a7e148c77996860a5347b0",
-      "person_id": "simon-willison",
-      "name": "Simon Willison",
-      "title": "simonw/scrape-faa-releasable-aircraft: repository changed",
-      "url": "https://github.com/simonw/scrape-faa-releasable-aircraft/compare/455cd6e32606130b9b2c9e9a05cf55c104ddb1e7...218b36a3426272970033c71f6b92226142f694eb",
-      "source": "GitHub",
-      "event_date": "2026-10-14T06:21:07Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
-    },
-    {
-      "id": "906fddb139f7571a42639fcf",
-      "person_id": "guy-cochran",
-      "name": "Guy Cochran",
-      "title": "guycochran/mxl-switcher: repository changed",
-      "url": "https://github.com/guycochran/mxl-switcher/compare/f2c45f6fe439eebecb59882ad8f7d7364634b0b8...30cd27f728805db318442fedc2cdcaf96e181213",
-      "source": "GitHub",
-      "event_date": "2026-10-14T03:31:55Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
-    },
-    {
-      "id": "5f1353a6c7a1d6942efe5512",
-      "person_id": "simon-willison",
-      "name": "Simon Willison",
-      "title": "simonw/tools: repository changed",
-      "url": "https://github.com/simonw/tools/compare/980c7418dd8dd79a84b667e60416afdd78d70913...efd0c9b34706219a30ecfd3ea8c0ad64cadf9bfa",
-      "source": "GitHub",
-      "event_date": "2026-10-14T03:25:22Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "New repository activity since the previous scan. Review the comparison to assess what changed."
-    },
-    {
-      "id": "e23e692f860b5296a95d7ef0",
-      "person_id": "simon-willison",
-      "name": "Simon Willison",
-      "title": "simonw/shot-scraper: recent activity at first scan",
-      "url": "https://github.com/simonw/shot-scraper/commit/63104b051124b9bad15339262cbef6e628e63917",
-      "source": "GitHub · baseline",
-      "event_date": "2026-10-14T03:21:49Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "Recent public commit observed while establishing the monitoring baseline. This is not a newly detected change."
     }
   ],
   "candidates": [
+    {
+      "id": "7ab991eaaf2a5fd261026e31",
+      "name": "stephenchung",
+      "title": "Show HN: rStation – Let's build our own AI swarm to solve Millennium Problems",
+      "url": "https://news.ycombinator.com/item?id=50118876",
+      "source": "Hacker News · discovery",
+      "event_date": "2026-10-16T14:35:43Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "Unreviewed creator discussion matching an artificial intelligence keyword. Verify the author, project and claims before adding a person. The launch discussion by stephenchung links rStation, whose public site presents problem forums and reviewed papers for artificial intelligence agents. The creator describes automated paper review and shared research, making this a lead for observing collaborative research workflows; automated review does not establish mathematical correctness or a solved prize problem. The public launch does not establish a personal identity behind the handle.",
+      "review_sources": [
+        {
+          "url": "https://news.ycombinator.com/item?id=50118876",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50118877",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://rstation.ai/",
+          "checked_at": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "id": "8bbf7b2a4b39d47bd257f01c",
+      "name": "y42",
+      "title": "Show HN: Cr34te.it – a website anyone can rewrite one turn at a time with AI",
+      "url": "https://news.ycombinator.com/item?id=50117588",
+      "source": "Hacker News · discovery",
+      "event_date": "2026-10-16T12:32:38Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "Unreviewed creator discussion matching an artificial intelligence keyword. Verify the author, project and claims before adding a person. The launch author y42 describes a shared website edited one queued turn at a time through artificial intelligence chats or coding agents. The public site documents moderated changes and version history, making it a lead for collaborative publishing and moderation design. On October 16, the site displayed an operator pause for review, so current participation is uncertain. The imprint names Nicky Reinert; it does not independently establish that name as the identity of the launch handle.",
+      "review_sources": [
+        {
+          "url": "https://news.ycombinator.com/item?id=50117588",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://cr34te.it/",
+          "checked_at": "2026-10-16"
+        }
+      ]
+    },
     {
       "id": "b6220fb198c622ff2cb40d78",
       "name": "fb-dev",
@@ -1235,6 +1279,26 @@
       "event_date": "2026-10-15T16:26:39Z",
       "observed_at": "2026-10-16T13:08:26.206866+00:00",
       "summary": "Unreviewed creator discussion matching an artificial intelligence keyword. Verify the author, project and claims before adding a person."
+    },
+    {
+      "id": "dfb83a65babcde77f61ba33e",
+      "name": "Vrajm12",
+      "title": "Vrajm12/astraforge",
+      "url": "https://github.com/Vrajm12/astraforge",
+      "source": "GitHub · discovery",
+      "event_date": "2026-10-15T15:27:45Z",
+      "observed_at": "2026-10-16T15:04:06.587435+00:00",
+      "summary": "Unreviewed new repository tagged artificial intelligence; 3 stars at scan. Open-source, model-agnostic AI skill toolkit for structured reasoning, reliable coding, research, and verified execution. Vrajm12 publishes AstraForge as a skill and protocol collection for Google Antigravity, with inspectable specialist workflows, evaluation scenarios and a structural validator. Its README distinguishes package validation from demonstrated model improvement and says the advertised package-install commands depend on publication. This is a lead for studying evidence-oriented agent workflows; host activation and behavioral gains remain unestablished by the repository description. The GitHub profile self-identifies as Veeraj Sanjog Matnale.",
+      "review_sources": [
+        {
+          "url": "https://github.com/Vrajm12",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://github.com/Vrajm12/astraforge",
+          "checked_at": "2026-10-16"
+        }
+      ]
     },
     {
       "id": "74d091d2378136c539a44cdf",
@@ -1563,46 +1627,6 @@
       "url": "https://news.ycombinator.com/item?id=50079791",
       "source": "Hacker News · discovery",
       "event_date": "2026-10-13T22:27:31Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "Unreviewed creator discussion matching an artificial intelligence keyword. Verify the author, project and claims before adding a person."
-    },
-    {
-      "id": "85ad27c59966a62c2466a17a",
-      "name": "enki_runtime",
-      "title": "Show HN: Enki LLM A pure rust (even kernels) with live GPU/CPU brain migration",
-      "url": "https://news.ycombinator.com/item?id=50079754",
-      "source": "Hacker News · discovery",
-      "event_date": "2026-10-13T22:23:07Z",
-      "observed_at": "2026-10-15T15:02:11.700532+00:00",
-      "summary": "Unreviewed creator discussion matching an artificial intelligence keyword. Verify the author, project and claims before adding a person."
-    },
-    {
-      "id": "ecf72a42e86d0ce502ff7a3b",
-      "name": "lasu",
-      "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
-      "url": "https://news.ycombinator.com/item?id=50077619",
-      "source": "Hacker News · discovery",
-      "event_date": "2026-10-13T19:50:31Z",
-      "observed_at": "2026-10-14T14:59:36.958089+00:00",
-      "summary": "Unreviewed creator discussion matching an artificial intelligence keyword. Verify the author, project and claims before adding a person. Parsimony’s public repository provides code and published measurements for counting the syntax elements added and removed by coding-agent patches. Poster lasu links the La5u/Parsimony repository in the creator submission. It offers an inspectable angle on code growth alongside task success, while smaller patches alone do not establish better readability or design. The public handles remain distinct from an inferred real-world identity.",
-      "review_sources": [
-        {
-          "url": "https://news.ycombinator.com/item?id=50077619",
-          "checked_at": "2026-10-14"
-        },
-        {
-          "url": "https://github.com/La5u/Parsimony",
-          "checked_at": "2026-10-14"
-        }
-      ]
-    },
-    {
-      "id": "0a4cef6155b64e40ff4fd088",
-      "name": "scarletkc",
-      "title": "Show HN: Hatoba, an open-source SSH client with an AI assistant and E2EE sync",
-      "url": "https://news.ycombinator.com/item?id=50076388",
-      "source": "Hacker News · discovery",
-      "event_date": "2026-10-13T18:31:33Z",
       "observed_at": "2026-10-14T14:59:36.958089+00:00",
       "summary": "Unreviewed creator discussion matching an artificial intelligence keyword. Verify the author, project and claims before adding a person."
     }
