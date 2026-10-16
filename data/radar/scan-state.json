@@ -104,16 +104,16 @@
       "url": "https://github.com/guycochran/dve"
     },
     "iamfatness/CoreVideoPro": {
-      "pushed_at": "2026-10-16T10:40:40Z",
+      "pushed_at": "2026-10-16T21:02:49Z",
       "person_id": "john-wallace",
       "url": "https://github.com/iamfatness/CoreVideoPro",
       "sha": "079e79caaa51e30a550be060def774e1fdc8d047"
     },
     "iamfatness/CoreVideo-Volt": {
-      "pushed_at": "2026-10-16T10:46:05Z",
+      "pushed_at": "2026-10-16T21:13:14Z",
       "person_id": "john-wallace",
       "url": "https://github.com/iamfatness/CoreVideo-Volt",
-      "sha": "409a193cdcdc8f6d6c0e9932d77d976afc11618c"
+      "sha": "b3554ff4ec6dea104bb17687ddf037aaa960184b"
     },
     "iamfatness/ZComms": {
       "pushed_at": "2026-10-08T20:59:05Z",
@@ -160,22 +160,22 @@
       "url": "https://github.com/iamfatness/UKG-Clock-In"
     },
     "simonw/usgs-scraper": {
-      "pushed_at": "2026-10-16T15:00:43Z",
+      "pushed_at": "2026-10-16T22:00:58Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/usgs-scraper",
-      "sha": "718eb1716d874f749d50a6270b025b8339405c88"
+      "sha": "a2bad3b8c3cd7a2d83ef7662a3ae9e33364b7357"
     },
     "simonw/scrape-florida-outages": {
-      "pushed_at": "2026-10-16T14:47:12Z",
+      "pushed_at": "2026-10-16T22:10:55Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-florida-outages",
-      "sha": "172e434cc5cd444a5bd4dacc8b5e6e550f9e70a9"
+      "sha": "67ad6bb7102fe18d0521f34f268f2001f40d8f76"
     },
     "simonw/scrape-fema-shelters": {
-      "pushed_at": "2026-10-16T14:42:56Z",
+      "pushed_at": "2026-10-16T21:37:43Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-fema-shelters",
-      "sha": "24644584c874723bb40592e4e372fa238310869b"
+      "sha": "35d15ed1d28a009d0e14d1f4bdf7d4880c8fe457"
     },
     "simonw/simonw": {
       "pushed_at": "2026-10-16T07:25:32Z",
@@ -184,22 +184,22 @@
       "sha": "54c1baa380a6829074be44e9b8fa89e57c94c34f"
     },
     "simonw/pge-outages": {
-      "pushed_at": "2026-10-16T14:55:17Z",
+      "pushed_at": "2026-10-16T22:11:00Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/pge-outages",
-      "sha": "9b77504d1cbd871e4d1d4eeb790cb6e1006c7ea2"
+      "sha": "b1232fe6ed18ba4a64996229a245742194d6d523"
     },
     "simonw/scrape-hacker-news-by-domain": {
-      "pushed_at": "2026-10-16T07:32:33Z",
+      "pushed_at": "2026-10-16T21:25:26Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-hacker-news-by-domain",
-      "sha": "0faea694b331edeadabde272bf606851af607099"
+      "sha": "340b81c77b0d76a5476b522c3be27ac321f64caf"
     },
     "simonw/package-stats": {
-      "pushed_at": "2026-10-16T13:45:43Z",
+      "pushed_at": "2026-10-16T19:43:38Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/package-stats",
-      "sha": "f1e5d9b664ba64e1598986795c2176f87c42788d"
+      "sha": "55d23fe9b6e6235476538c11b507de7c227acc0c"
     },
     "simonw/scrape-fediverse": {
       "pushed_at": "2026-10-16T09:21:58Z",
@@ -304,10 +304,10 @@
       "sha": "3fa9a1a03bdb7415009a627b09aa3668cc40af91"
     },
     "simonw/recent-california-brown-pelicans": {
-      "pushed_at": "2026-10-16T00:58:38Z",
+      "pushed_at": "2026-10-16T18:35:34Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/recent-california-brown-pelicans",
-      "sha": "44c96c821da56f30231dcbf981999b0154b0e008"
+      "sha": "01cc4cdcbed05e051b31db5747a1bdc5feb35301"
     },
     "simonw/llm-prices": {
       "pushed_at": "2026-10-13T16:17:22Z",
@@ -316,16 +316,16 @@
       "sha": "1029cc24e45065b4058522c2da129dee182099c0"
     },
     "simonw/free-threaded-wheels-results": {
-      "pushed_at": "2026-10-15T18:27:16Z",
+      "pushed_at": "2026-10-16T18:26:27Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/free-threaded-wheels-results",
-      "sha": "cec4c1f8e85ec324e16c27c41f5746f50297935f"
+      "sha": "3d2221570516de41fcf780aa2b727e561ca947ee"
     },
     "simonw/scrape-github-actions-package-versions": {
-      "pushed_at": "2026-10-15T17:16:24Z",
+      "pushed_at": "2026-10-16T17:15:39Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-github-actions-package-versions",
-      "sha": "1368e98ce93562f45b9585d1c3ecb3814eace2d7"
+      "sha": "07caa1fb8a16d8fbf609a6f3ffc8c32fb8938067"
     },
     "simonw/actions-latest": {
       "pushed_at": "2026-10-12T05:08:52Z",
@@ -436,10 +436,10 @@
       "url": "https://github.com/badlogic/rsync-win"
     },
     "earendil-works/pi": {
-      "pushed_at": "2026-10-16T13:18:23Z",
+      "pushed_at": "2026-10-16T20:53:03Z",
       "person_id": "mario-zechner",
       "url": "https://github.com/earendil-works/pi",
-      "sha": "4dd2b149d155d7369de16ea4dc77c84e9f5ffb24"
+      "sha": "8efd314fa3d3232ce197d8d7a6a5660530b9d83e"
     },
     "karpathy/nanochat": {
       "pushed_at": "2026-09-07T20:06:43Z",
@@ -697,10 +697,10 @@
       "url": "https://github.com/awni/editdistance"
     },
     "ikawrakow/ik_llama.cpp": {
-      "pushed_at": "2026-10-16T14:01:20Z",
+      "pushed_at": "2026-10-16T15:40:26Z",
       "person_id": "ikawrakow",
       "url": "https://github.com/ikawrakow/ik_llama.cpp",
-      "sha": "f1e67dd218777667e351ef56c378d9fbf628f231"
+      "sha": "cea2d61ffdac38ee2958ba88d120fa07cb67703a"
     },
     "ikawrakow/mnist": {
       "pushed_at": "2025-01-12T15:14:44Z",
@@ -713,10 +713,10 @@
       "url": "https://github.com/ikawrakow/sphere12d"
     },
     "ostris/ai-toolkit": {
-      "pushed_at": "2026-10-16T14:09:54Z",
+      "pushed_at": "2026-10-16T18:19:39Z",
       "person_id": "ostris",
       "url": "https://github.com/ostris/ai-toolkit",
-      "sha": "e05a3a4f2cc9bbbdd93407ad295f19edb6f89876"
+      "sha": "dcebc7442df70e5239c68167919fd2909c615769"
     },
     "ostris/ai-toolkit-spark-wheels": {
       "pushed_at": "2026-10-13T04:24:54Z",
@@ -966,10 +966,10 @@
       "url": "https://github.com/comfyanonymous/website"
     },
     "Comfy-Org/ComfyUI": {
-      "pushed_at": "2026-10-16T10:20:04Z",
+      "pushed_at": "2026-10-16T20:14:09Z",
       "person_id": "comfyanonymous",
       "url": "https://github.com/Comfy-Org/ComfyUI",
-      "sha": "bdc63e72f5ab29fde448c161db3057827148c0ef"
+      "sha": "fc04da91b2ab12f99e4716371a7e4f98ac982597"
     },
     "ArbenApura/xianscan-rust": {
       "pushed_at": "2026-10-10T19:54:55Z",
@@ -1405,10 +1405,10 @@
       "url": "https://github.com/chrissabato/tagmyphoto-express"
     },
     "chrissabato/portfolio": {
-      "pushed_at": "2026-10-14T15:43:16Z",
+      "pushed_at": "2026-10-16T20:04:20Z",
       "person_id": "chris-sabato",
       "url": "https://github.com/chrissabato/portfolio",
-      "sha": "d0a1aeca896b1f631f59611e1d42322715e51a99"
+      "sha": "1530295b8e394f4dd05dabcab2fd427ed59f7694"
     },
     "chrissabato/dinner-order": {
       "pushed_at": "2026-08-08T18:42:15Z",
@@ -1426,10 +1426,10 @@
       "url": "https://github.com/chrissabato/vmix-replay"
     },
     "chrissabato/chrissabato.com": {
-      "pushed_at": "2026-10-15T17:11:16Z",
+      "pushed_at": "2026-10-16T20:20:13Z",
       "person_id": "chris-sabato",
       "url": "https://github.com/chrissabato/chrissabato.com",
-      "sha": "48642c0f0d48f6cfaeea2dbb1793c1d98dc7d06a"
+      "sha": "447f6741a425aa4f2d14e3ebb614108bb8796fa8"
     },
     "chrissabato/puppeteer-proxy": {
       "pushed_at": "2026-06-27T15:32:19Z",
@@ -1497,7 +1497,7 @@
       "url": "https://github.com/chrissabato/Tennis-SRT-Scorebug-Gateway"
     },
     "guycochran/mxl-switcher-core": {
-      "pushed_at": "2026-10-16T05:53:06Z",
+      "pushed_at": "2026-10-16T21:55:52Z",
       "person_id": "guy-cochran",
       "url": "https://github.com/guycochran/mxl-switcher-core",
       "sha": "2bc921d47f6481c789a67592d18c08cbe0c61e45"
@@ -1617,7 +1617,7 @@
       "sha": "337e3f6c4795cdbffdb7249959c87ae1281bdef2"
     },
     "guycochran/mxl-switcher-extensions": {
-      "pushed_at": "2026-10-16T14:51:30Z",
+      "pushed_at": "2026-10-16T22:00:10Z",
       "person_id": "guy-cochran",
       "url": "https://github.com/guycochran/mxl-switcher-extensions",
       "sha": "33861e93297692c69b4f39ca5544b13f98b85e35"
@@ -1629,19 +1629,19 @@
       "sha": "b4473a28eaf296d9e4dcbbb667e57de94f167096"
     },
     "chrissabato/soccer-sub-tracker": {
-      "pushed_at": "2026-10-16T14:57:21Z",
+      "pushed_at": "2026-10-16T17:59:12Z",
       "person_id": "chris-sabato",
       "url": "https://github.com/chrissabato/soccer-sub-tracker",
-      "sha": "521872697276adf35157f6bcc71f1b96958f267a"
+      "sha": "65d447959ac86c4e2edd1a0ece24816a4482c2c5"
     },
     "sequico/server-noonien": {
-      "pushed_at": "2026-10-16T00:02:11Z",
+      "pushed_at": "2026-10-16T18:43:04Z",
       "person_id": "sequico",
       "url": "https://github.com/sequico/server-noonien",
-      "sha": "4d77cc170a28e7bb98a35dfd01320f88e9c38d78"
+      "sha": "7ae08a40535471edb92c1dbb45faaee316ab0cdd"
     },
     "sequico/gilbert": {
-      "pushed_at": "2026-10-15T23:42:13Z",
+      "pushed_at": "2026-10-16T19:53:20Z",
       "person_id": "sequico",
       "url": "https://github.com/sequico/gilbert",
       "sha": "f112444adbaf2ab13eef2293a257655da3fb4d6f"
@@ -1657,6 +1657,46 @@
       "person_id": "sequico",
       "url": "https://github.com/sequico/paseo-acp-goal",
       "sha": "ca9e892802445ca29b9a2ec081f78ac8264814d0"
+    },
+    "psyirius/psyirius": {
+      "pushed_at": "2026-06-01T13:33:49Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/psyirius"
+    },
+    "psyirius/lyrix.db": {
+      "pushed_at": "2026-02-18T04:58:59Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/lyrix.db"
+    },
+    "psyirius/vite-plugin-secure-now": {
+      "pushed_at": "2025-12-27T01:11:46Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/vite-plugin-secure-now"
+    },
+    "psyirius/vertexview-releases": {
+      "pushed_at": "2025-08-10T21:07:24Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/vertexview-releases"
+    },
+    "psyirius/Rockite": {
+      "pushed_at": "2025-06-12T10:05:31Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/Rockite"
+    },
+    "psyirius/reverseview": {
+      "pushed_at": "2025-02-15T17:27:48Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/reverseview"
+    },
+    "psyirius/adobe-air-runtime": {
+      "pushed_at": "2024-09-02T09:41:44Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/adobe-air-runtime"
+    },
+    "psyirius/adobe-air-sdk": {
+      "pushed_at": "2024-09-02T08:11:40Z",
+      "person_id": "psyirius",
+      "url": "https://github.com/psyirius/adobe-air-sdk"
     }
   },
   "feeds": {},
@@ -1726,6 +1766,7 @@
     "2505accaa899a05a1c97038a",
     "25637e88c55502f94052f9e2",
     "25a54c026c3197c9418283a4",
+    "25b2af55163dd5cffbf0040a",
     "25fd9e6a4f7ca0eda45a51cb",
     "26ff85cfb27d59983a18e412",
     "2712af18bfe342de4fd24474",
@@ -1754,6 +1795,7 @@
     "36ca02063275955b11a4dd6b",
     "37580025db0a5a28da27f192",
     "3795572f12261f0a99514324",
+    "3a027115bab2ae8a9e0f12c3",
     "3ab9d1bf999c8d281b6f2470",
     "3b5847e8054f0379c4ad9a71",
     "3c5a3a1111a20a9e89d81433",
@@ -1764,6 +1806,7 @@
     "3efe5f7a4beaca87f4d825d4",
     "3f9011b39522e7e0f56ffafe",
     "4038b515962e7cb69583c2e1",
+    "40ae24ad4655e00fbf9679f5",
     "416b47d75b11629ce5d96e66",
     "41c3ad626d9562818dfd1915",
     "4237a385080b46b693410fcf",
@@ -1781,10 +1824,12 @@
     "47f9657a396fcc5e7670528d",
     "48dc75ea5144dc54c3a07bc6",
     "4a1aa813b90ddd05882a73b1",
+    "4a46753fe8b96c3f8e66be16",
     "4a50d90aed864d8a489d0871",
     "4b137477c18f98323bd8117d",
     "4b96eccd892fabfd3802c6a4",
     "4c36ad73848f0e5a1cc465c2",
+    "4cba7c9153dd0adf19f1ee85",
     "4d326a560d93847048b28ff3",
     "4e11b4c66e25e4a0577c8790",
     "4e3bc6668681dce3e88ff5e6",
@@ -1793,9 +1838,11 @@
     "4f3a26ec48085736866cbd3b",
     "4f4f63438f8aa2f02eaffe39",
     "4fb9c521c857d625da794944",
+    "506427238b6c2ec7fef9e04c",
     "51558bab4c5406a3163ca67f",
     "516eee2b9cc0ebc3a8a88bbd",
     "51b31159c0859bfdaca73f74",
+    "528e40ad23de22f2d822f324",
     "52b6a5a1a83a2023440eda65",
     "53e177950aad2360106ee090",
     "54481ddaebbddf6f49ce4188",
@@ -1833,6 +1880,7 @@
     "61a9a6fdc515c410e46e6c55",
     "61b8e387a4ccad7c86efa49f",
     "63762747949bd5661a20bb35",
+    "63f126cd1a6fd474ac157bee",
     "6456c43a89e6e1b657ca3795",
     "64ddc0a723d63b4cde7d407d",
     "6596fd67f2432d73a68b54f5",
@@ -1856,18 +1904,21 @@
     "6c9ac4169670e2f7643472b5",
     "6ca68ed1a8ec34dacda30ee1",
     "6e0a9c4d2fffd2185afffcc1",
+    "6e76ead3d5b41a90ee8bc83d",
     "6e8428adeefbfede336bf598",
     "6ed31193369338d1442f5b5c",
     "6ef07548da07aa13b1b76ad6",
     "6f5991900d0ee9665d3ec616",
     "703b37082fc4d958133bedbb",
     "7041a29e9b5a667bd52aa3ff",
+    "70ea98ef6f9cf17795acd348",
     "70fdb1109a8c1e1710dd81e6",
     "7186a738f77d79e04ca9a2fc",
     "72138f0cc64675525bd264a4",
     "728813ce0a3f15cd58b1c297",
     "72cd843f05e9b3f610259042",
     "731a187751393386e39efe76",
+    "73d24aae0df651fcfcdfdd4b",
     "7404bf73aa5a0a07d68f9d9f",
     "74281563c6b849652c5cc04b",
     "74aa4e8ebab1968cb3bd893d",
@@ -1880,7 +1931,10 @@
     "76ce9a86f71a638a29e58713",
     "76d19fbb1b0c86bc2b879c3d",
     "774c4fe412b286d3a6e56913",
+    "78c536c2d2d861bdaf3f86c6",
     "78e197fe5b9e7464a9b072db",
+    "797eb9e215c9821141bdfbc0",
+    "7a0969f1681281a7408873c2",
     "7a16566e3c50a7594cb4cfc7",
     "7ab991eaaf2a5fd261026e31",
     "7ae74de1a6c8d559c9361d96",
@@ -1904,6 +1958,7 @@
     "8391dbf27226e04af772568c",
     "83a95af4384a0cc556524bd1",
     "842cf96c119bf395fbd8beb4",
+    "844eff1551a68f45ec3a6f59",
     "847923ddb4a4b2c4fc505c77",
     "84885b32d10c1cf7088141e7",
     "84deaa472e030d4b572b72d3",
@@ -1975,6 +2030,7 @@
     "af3813027e82c9b110d847d2",
     "af9a9393b9204456a42aa463",
     "b0785ed6a1763d6c46815dbe",
+    "b0c33b15449b5bb76634dc84",
     "b0ef60af0b570387ebc834fd",
     "b13693597130bb0a2a0c641a",
     "b158f702ad33b45ec60c7be8",
@@ -2002,6 +2058,8 @@
     "bd0ed359f10866bd6c4e4512",
     "bd689f718a707a7a1b42be21",
     "bf384e5316f81feda6416a54",
+    "bf8aaf7533b7a72e2317e782",
+    "c0de82172ab716fff07508c3",
     "c1c74ca846f5dfea6e692a6b",
     "c1ca016f9e87932fdaa29d7b",
     "c27c09e6455f586dd409ac8c",
@@ -2018,6 +2076,7 @@
     "c727323d76d57458b8a15d39",
     "c766121ae22d7a34d7ed4d3f",
     "c8606a20c48e1a3a1d4b34e3",
+    "cadec535663cb2f21a3b3920",
     "cb0e19d6e3076f0a6615f9cb",
     "cb2d02635d7f39b802d0c048",
     "cb5ed34724e037c2b1475630",
@@ -2047,6 +2106,8 @@
     "da8654e41847c14a8634ec8a",
     "daf0cd60d55697a119bc866a",
     "db4c64905d55a35e38029737",
+    "dc15dc0ee81e74dd4571d21b",
+    "dcac811f707525800f5041fa",
     "df00edcc1414682f613268ca",
     "df15b3fa1e9f81b3248ab06a",
     "df475ce7add5ff40f684eaee",
@@ -2059,6 +2120,7 @@
     "e23e692f860b5296a95d7ef0",
     "e28baab4f8fa503d04adadc6",
     "e30dffac6a747e034de264b6",
+    "e3bacb28483b2127ea57d4c6",
     "e3bbf5c4212e7c6ba2e1756d",
     "e3bf1474d1278d2204256c4a",
     "e3d0d909d03063180aced1f3",
@@ -2073,11 +2135,13 @@
     "e919eab60d74f050cda7dcb0",
     "e96136748e66e4573481fd99",
     "e9d4b9c37964e39454c05421",
+    "ea950f23e8f92e2b6888d20d",
     "eadf5cd17506ddce88559b46",
     "eaea9b1b5fa6c54f9a72c604",
     "eaf32b9f4a1f6c7d0b439f4c",
     "eb57f65a7ba3b83e45081f5f",
     "ebe74c0a998663109e8a8a84",
+    "ec42443de4490a41f13e6bb6",
     "ecc771c16c2b5cc3be19612b",
     "ecf72a42e86d0ce502ff7a3b",
     "ed2ca1b705aab761ea9dea32",
@@ -2115,8 +2179,10 @@
     "f9a81ef6191918be4c5e001b",
     "fa25bf51e650a4effb222724",
     "fabd78c0e39ad74460db73d5",
+    "fbe015b46349c833338fd330",
     "fbfab0d3b283c448ab8ad05a",
     "fbfe11bed2ccbb8855dd3b85",
+    "fd04049f48cb8a74915a046b",
     "fd57bb1536f4d9fe76ac0d5a",
     "fd76c69c293e87044fd73d04",
     "fdac7da6d2687ca5f82b7fe4",
@@ -2126,15 +2192,15 @@
   "pages": {
     "https://cloudflexbroadcast.com/": {
       "digest": "dd0e428080b4d4d3c357211943deb2daadde999a9ab044c9a1e58886c5447db3",
-      "checked_at": "2026-10-16T15:04:06.587435+00:00"
+      "checked_at": "2026-10-16T22:14:26.593909+00:00"
     },
     "https://stadiumsound.chrissabato.com/": {
       "digest": "a47adcacfa1fa39a7479c144ddc4d57caafdd2e71958c9b5a00dbe5d1f860447",
-      "checked_at": "2026-10-16T15:04:06.587435+00:00"
+      "checked_at": "2026-10-16T22:14:26.593909+00:00"
     },
     "https://www.transitionaldata.com/team/craig-macfarlane/": {
       "digest": "6fbaa412c0ea2932c733fa32284580270695151b43abc1c4d1d9934326df56f2",
-      "checked_at": "2026-10-16T15:04:06.587435+00:00"
+      "checked_at": "2026-10-16T22:14:26.593909+00:00"
     }
   }
 }

@@ -41,3 +41,20 @@ These Secure Hash Algorithm 256-bit (SHA-256) digests identify the reviewed edit
 - Locked Next.js 15.5.25 production build passed; lint matches the existing 50-error baseline with no new errors.
 - Four new routes returned every authored paragraph through content negotiation for Markdown; the sitemap contains all four routes and the AxiomCode profile identifies an Organization in structured data.
 - Desktop browser review covered AxiomCode’s team story, both project pages, loaded project logos, creator search, and keyboard activation of the sequico dialog. No screen-reader or mobile acceptance is claimed.
+
+
+## Psyirius creator addition — October 16, 2026
+
+Scope: owner-approved public creator profile for Psyirius, verified through reciprocal links between https://psyirius.dev/ and https://github.com/psyirius. Four story paragraphs, source evidence and the public GitHub avatar are added. No new curated project is added: a public uMix source has not yet been located. Rockite is described with its documented WebSocket King attribution, feature limits and roadmap distinction. No real identity, artificial-intelligence capability, security certification or independent tool validation is inferred.
+
+The complete twelve-area matrix above remains applicable with the following scoped evidence. Public users, roles, sharing, authentication, dependencies, privacy storage and deployment configuration are unchanged, so their baseline assessment is reused. The creator is included in existing public GitHub monitoring. Prior catalog entries, profile stories and images were compared against the pre-change commit and remain unchanged. No private notes, article content or generated benchmark data is modified. Jack remains operational and release owner; the existing Git history and owner-controlled revert remain the recovery path. No new cost or support obligation is introduced.
+
+Affected checks: seven scanner tests pass; exact-project activity boundaries pass; locked Next.js 15.5.25 production build passes. Lint remains at the same 50 unique normalized error diagnostics (64 raw lines) as the pre-change baseline, with no new diagnostics. Data validation verifies unique creator IDs, alphabetical order and preserved prior records. Public content and exact production deployment verification are recorded in the Library note after publication. The profile's public Markdown response, sitemap entry and avatar availability must be checked live before reporting completion.
+
+Status: scoped content/build checks verified; production verification pending until recorded against the exact pushed commit in the Library note. Full mobile, screen-reader, sustained operation and exercised rollback remain partial/not run as recorded in the baseline; this additive profile does not close those gates. Public reading adds no new sign-in requirement and retains the existing public-surface identity assessment.
+
+Candidate editorial Secure Hash Algorithm 256-bit (SHA-256) fingerprints:
+
+- `catalog.json`: `c9e42ef3105b94c3cab03a18b20f45283719d0f0fb0f841af5e6f9c161b3d3cb`
+- `profiles.json`: `ba6c60a83b02e32561ccaa53a9f63e0ed4398e477eb4ee1464d71598a0b0148f`
+- `visuals.json`: `7c32d005d4a71846681a1ad07413632f72d92789dd559fc0b1c72405cb25fc51`

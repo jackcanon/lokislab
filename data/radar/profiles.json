@@ -564,6 +564,32 @@
         }
       ],
       "videos": []
+    },
+    "psyirius": {
+      "paragraphs": [
+        "Psyirius is an independent security researcher and developer publishing under the same handle on a personal website and GitHub. The portfolio describes work in reverse engineering, application security, code audits, and tamper protection. The GitHub biography also points to hands-on interests in display panels and embedded hardware, giving the public work a broader systems focus.",
+        "One published tool is Rockite, a client for developing and debugging WebSocket connections. Its documentation credits the earlier WebSocket King project and describes organizing connections, payloads, and message history, with local storage and no account required. Receiving text and binary messages is documented; sending binary messages remains listed as work in progress.",
+        "A developer can use that kind of client to inspect a real-time connection while building a dashboard, control surface, or service integration. Rockite documents a practical distinction between its browser version and its desktop or extension builds: access to unsecured local connections depends on the build. Its roadmap should be read separately from the features already described as available.",
+        "Radar follows Psyirius for the connection between inspecting software internals and making useful developer tools. That perspective is relevant when evaluating the surrounding systems used by creative software and coding agents: data movement, integration behavior, and application boundaries all matter. The published work provides a systems and security viewpoint; it does not by itself establish new model capabilities or independently verified security outcomes."
+      ],
+      "sources": [
+        {
+          "url": "https://psyirius.dev/",
+          "label": "Public biography and creator links",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://github.com/psyirius",
+          "label": "Public profile and repositories",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://github.com/psyirius/Rockite",
+          "label": "Rockite documentation and upstream attribution",
+          "checked_at": "2026-10-16"
+        }
+      ],
+      "videos": []
     }
   }
 }

@@ -563,6 +563,45 @@
       "capability_status": "Published work"
     },
     {
+      "id": "psyirius",
+      "name": "Psyirius",
+      "category": "Builders",
+      "topic": "Security & developer tools",
+      "projects": [],
+      "why": "Publishes security research and practical developer tools, bringing an inspectable systems perspective to software used around creative and agent workflows.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://psyirius.dev/"
+        },
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/psyirius"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://psyirius.dev/",
+          "summary": "The public portfolio describes independent reverse-engineering and application-security work and links to the psyirius GitHub account.",
+          "event_date": null,
+          "checked_at": "2026-10-16",
+          "kind": "primary_source_review"
+        },
+        {
+          "url": "https://github.com/psyirius/Rockite",
+          "summary": "Rockite documents a WebSocket development client, its derivation from WebSocket King, supported features and current limitations.",
+          "event_date": null,
+          "checked_at": "2026-10-16",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Publishes under a public handle. The portfolio describes security services; this does not establish an artificial-intelligence product or independently validated security results.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "public_handle",
+      "capability_status": "Published work"
+    },
+    {
       "id": "sam-rose",
       "name": "Sam Rose",
       "category": "Research & perspectives",
