@@ -114,6 +114,18 @@
       "source_url": "https://www.oneusefulthing.org/",
       "checked_at": "2026-10-13",
       "kind": "brand"
+    },
+    "sequico": {
+      "url": "https://avatars.githubusercontent.com/u/31021809?v=4&s=160",
+      "source_url": "https://github.com/sequico",
+      "checked_at": "2026-10-16",
+      "kind": "profile"
+    },
+    "axiomcode": {
+      "url": "https://avatars.githubusercontent.com/u/319179604?v=4&s=160",
+      "source_url": "https://github.com/AxiomCodeAI",
+      "checked_at": "2026-10-16",
+      "kind": "brand"
     }
   },
   "projects": {
@@ -145,6 +157,18 @@
       "url": "https://stadiumsound.chrissabato.com/logo.svg",
       "source_url": "https://stadiumsound.chrissabato.com/",
       "checked_at": "2026-10-13",
+      "kind": "brand"
+    },
+    "server-noonien": {
+      "url": "https://raw.githubusercontent.com/sequico/server-noonien/main/assets/icon.png",
+      "source_url": "https://github.com/sequico/server-noonien",
+      "checked_at": "2026-10-16",
+      "kind": "brand"
+    },
+    "axiomcode-graph": {
+      "url": "https://raw.githubusercontent.com/AxiomCodeAI/axiomcodegraph/main/docs/images/axiomcode-logo.png",
+      "source_url": "https://github.com/AxiomCodeAI/axiomcodegraph",
+      "checked_at": "2026-10-16",
       "kind": "brand"
     }
   }

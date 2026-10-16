@@ -274,6 +274,11 @@ def scan():
         except (OSError, ValueError, ET.ParseError) as error:
             sources.append({'name': f'Reddit · {subreddit}', 'status': 'unavailable', 'detail': error_text(error)})
 
+    # Reviewed projects and their approved discovery discussions stay out of the queue.
+    approved = set(catalog.get('approved_discovery_urls', []))
+    approved.update(project['url'] for person in catalog['people'] for project in person['projects'])
+    candidates = {key: item for key, item in candidates.items() if item['url'] not in approved}
+
     new_updates = len(set(updates) - {x['id'] for x in old_feed['updates']})
     new_candidates = len(set(candidates) - {x['id'] for x in old_feed['candidates']})
     # Do not resurrect pruned entries, or repeatedly notify about the same discovery.

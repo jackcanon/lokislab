@@ -44,6 +44,25 @@
       "context": "Results depend on hardware and evaluation setup."
     },
     {
+      "id": "axiomcode-graph",
+      "name": "AxiomCode Graph",
+      "person_id": "axiomcode",
+      "kind": "Tool",
+      "summary": "A rule-based map of code relationships for tracing callers, exploring change impact, and selecting relevant tests.",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/AxiomCodeAI/axiomcodegraph"
+        }
+      ],
+      "description": [
+        "AxiomCode Graph builds a structured map of a repository and exposes ways to explore the relationships between functions, files, and tests. Its public implementation combines language analysis with rules so a developer or coding agent can ask how a change connects to the surrounding code.",
+        "A practical starting point is a refactor: identify a function, trace its callers, inspect related files, and consider which tests exercise the changed path. The team’s website demonstrates context queries and call paths. The public repository supplies the setup instructions and language-maturity details.",
+        "A graph can still contain unresolved calls or incomplete language coverage. The team publishes evaluation methods and reported measurements, but a selected test set can be a lower bound when relationships remain unresolved. Use it to support code review and testing decisions while retaining the broader checks appropriate to the change."
+      ],
+      "context": "Java, TypeScript, and Python are documented as supported; JavaScript and C# are marked beta. Source is available under the Functional Source License 1.1 with an Apache 2.0 future license; current use terms differ from an unrestricted open-source license."
+    },
+    {
       "id": "jonas-dautel-0",
       "name": "CLOUDflex Broadcast",
       "person_id": "jonas-dautel",
@@ -196,6 +215,25 @@
         }
       ],
       "context": "Published automation tools. Compatibility and performance require testing in the intended production setup."
+    },
+    {
+      "id": "server-noonien",
+      "name": "server-noonien",
+      "person_id": "sequico",
+      "kind": "Tool",
+      "summary": "A local-first knowledge-graph memory server for agents, with per-machine operation logs and optional peer-to-peer replication.",
+      "spaces": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/sequico/server-noonien"
+        }
+      ],
+      "description": [
+        "server-noonien stores entities, observations, and relations so compatible agents can retain structured context. Each machine writes its own operation log; replicas combine those logs into a shared graph. The project includes the memory server, maintenance commands, and an optional replication daemon.",
+        "A developer working between a laptop and workstation could use it to carry project facts across machines. The documented choices include shared storage or direct replication over a private network. Local replicas can keep working while disconnected and reconcile when exchange resumes.",
+        "The creator’s design requires one writer per node identity and treats synchronization as eventual. Network exposure, authentication, storage access, and backups need deliberate configuration. Its documentation and tests are useful starting points for evaluating those boundaries against a particular workflow."
+      ],
+      "context": "Requires Node.js 22 or later. Source is published under the Mozilla Public License 2.0. Replication and compatibility claims depend on configuration; the security guidance belongs alongside the setup instructions."
     },
     {
       "id": "stadium-sound",

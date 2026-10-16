@@ -8,7 +8,7 @@ import feed from "@/data/radar/feed.json";
 const pageInfo = {
   title: "AI Radar — Loki's Lab",
   description:
-    "Follow the people building with artificial intelligence. Source-linked updates, practical experiments and new people to investigate.",
+    "Follow people and teams building with artificial intelligence. Source-linked updates, practical experiments and new people to investigate.",
 };
 export const metadata = pageMetadata('/radar', pageInfo.title, pageInfo.description);
 

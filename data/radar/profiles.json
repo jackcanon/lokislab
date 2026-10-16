@@ -497,6 +497,73 @@
           "checked_at": "2026-10-13"
         }
       ]
+    },
+    "sequico": {
+      "paragraphs": [
+        "sequico publishes as sequicompany on GitHub and the DEV Community, where the profile describes a developer based in Ancona, Italy. The public writing focuses on a familiar problem for people using coding agents across several machines: useful context often stays on the computer where it was created.",
+        "That problem led to server-noonien, a knowledge-graph memory server for the Model Context Protocol. It records facts and relationships in per-machine operation logs, allowing replicas to combine changes rather than compete to overwrite one shared memory file.",
+        "For a developer moving between a laptop, workstation, and small server, the appeal is continuity. The creator explains how shared storage and direct replication offer different ways to exchange those logs, while local copies remain useful when a machine is offline.",
+        "Radar follows sequico for turning an everyday coordination problem into inspectable software and a detailed explanation of its tradeoffs. The work makes synchronization and storage choices visible. Eventual consistency, unique node identities, and the network’s trust boundaries remain part of evaluating the design."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/sequico",
+          "label": "Creator profile",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://dev.to/sequico",
+          "label": "Public biography",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://dev.to/sequico/sharing-agent-memory-across-machines-without-a-server-or-merge-conflicts-18gn",
+          "label": "Creator’s design explanation",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://github.com/sequico/server-noonien",
+          "label": "Project documentation",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://github.com/sequico/server-noonien/blob/main/SECURITY.md",
+          "label": "Security guidance",
+          "checked_at": "2026-10-16"
+        }
+      ],
+      "videos": []
+    },
+    "axiomcode": {
+      "paragraphs": [
+        "AxiomCode is the team publishing AxiomCode Graph through the AxiomCodeAI GitHub organization. Its public work centers on helping engineers and coding agents understand the structure of software before making changes. The team’s website connects that code-context work with a broader interest in formal verification.",
+        "AxiomCode Graph maps relationships in a codebase so callers, dependencies, and affected tests can be explored explicitly. The project’s documentation explains its analysis approach and distinguishes language support and maturity, making the implementation more useful to inspect than a general promise of better coding.",
+        "A developer could use the graph to investigate an unfamiliar module, plan a cross-file refactor, or review which tests a change may reach. The published demonstrations show context queries and paths through real code. The deeper AxiomEngine offering is a separate layer rather than another name for the Graph repository.",
+        "Radar follows AxiomCode for making code understanding a concrete part of agent workflows. The useful evidence includes source, examples, and evaluation methods. Reported benchmark results remain specific to their tested languages and workloads; unresolved calls and incomplete coverage can leave relevant relationships outside a selected path."
+      ],
+      "sources": [
+        {
+          "url": "https://github.com/AxiomCodeAI",
+          "label": "Publisher organization",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://axiomcode.ai/",
+          "label": "Official product explanation",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://github.com/AxiomCodeAI/axiomcodegraph",
+          "label": "Source and evaluation methods",
+          "checked_at": "2026-10-16"
+        },
+        {
+          "url": "https://github.com/AxiomCodeAI/axiomcodegraph/blob/main/LICENSE.md",
+          "label": "Current license terms",
+          "checked_at": "2026-10-16"
+        }
+      ],
+      "videos": []
     }
   }
 }

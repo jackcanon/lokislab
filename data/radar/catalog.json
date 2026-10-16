@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "Loki’s Lab — AI Radar",
-  "researched_at": "2026-10-10",
+  "researched_at": "2026-10-16",
   "people": [
     {
       "id": "andrej-karpathy",
@@ -100,6 +100,51 @@
       "priority": false,
       "default_watch": false,
       "identity_status": "identified",
+      "capability_status": "Published work"
+    },
+    {
+      "id": "axiomcode",
+      "name": "AxiomCode",
+      "entity_type": "Organization",
+      "category": "Builders",
+      "topic": "Code graphs & coding agents",
+      "projects": [
+        {
+          "name": "AxiomCode Graph",
+          "url": "https://github.com/AxiomCodeAI/axiomcodegraph"
+        }
+      ],
+      "why": "Builds inspectable code graphs that help developers and coding agents trace dependencies, assess changes, and identify relevant tests.",
+      "links": [
+        {
+          "label": "GitHub organization",
+          "url": "https://github.com/AxiomCodeAI"
+        },
+        {
+          "label": "Team website",
+          "url": "https://axiomcode.ai/"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/AxiomCodeAI/axiomcodegraph",
+          "summary": "The team publishes source code, language-maturity notes, examples, and reported evaluation methods for AxiomCode Graph.",
+          "event_date": null,
+          "checked_at": "2026-10-16",
+          "kind": "primary_source_review"
+        },
+        {
+          "url": "https://axiomcode.ai/",
+          "summary": "The official website links the Graph repository and distinguishes structured code context from the deeper AxiomEngine offering.",
+          "event_date": null,
+          "checked_at": "2026-10-16",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Published by the AxiomCode team. Language coverage and analysis completeness vary; published benchmark results do not guarantee every call or affected test is found.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "organization",
       "capability_status": "Published work"
     },
     {
@@ -584,6 +629,51 @@
       "capability_status": "Published work"
     },
     {
+      "id": "sequico",
+      "name": "sequico",
+      "entity_type": "Person",
+      "category": "Builders",
+      "topic": "Shared agent memory",
+      "projects": [
+        {
+          "name": "server-noonien",
+          "url": "https://github.com/sequico/server-noonien"
+        }
+      ],
+      "why": "Builds local-first memory tools for agents working across several computers, with inspectable storage and synchronization designs.",
+      "links": [
+        {
+          "label": "GitHub profile",
+          "url": "https://github.com/sequico"
+        },
+        {
+          "label": "Creator writing",
+          "url": "https://dev.to/sequico"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://dev.to/sequico/sharing-agent-memory-across-machines-without-a-server-or-merge-conflicts-18gn",
+          "summary": "The creator explains the multi-machine memory problem, operation logs, synchronization choices, and eventual consistency.",
+          "event_date": "2026-10-10",
+          "checked_at": "2026-10-16",
+          "kind": "primary_source_review"
+        },
+        {
+          "url": "https://github.com/sequico/server-noonien",
+          "summary": "The public repository publishes the memory server, maintenance commands, replication daemon, tests, and security guidance.",
+          "event_date": null,
+          "checked_at": "2026-10-16",
+          "kind": "primary_source_review"
+        }
+      ],
+      "caveat": "Published under the handle sequico. Replication requires the documented network and trust setup; writes converge after exchange rather than appearing everywhere instantly.",
+      "priority": false,
+      "default_watch": false,
+      "identity_status": "public_handle",
+      "capability_status": "Published work"
+    },
+    {
       "id": "simon-willison",
       "name": "Simon Willison",
       "category": "Research & perspectives",
@@ -643,5 +733,9 @@
       "url": "https://huggingface.co/blog",
       "focus": "Model releases, research explanations and community experiments."
     }
+  ],
+  "approved_discovery_urls": [
+    "https://news.ycombinator.com/item?id=50102258",
+    "https://news.ycombinator.com/item?id=50090514"
   ]
 }

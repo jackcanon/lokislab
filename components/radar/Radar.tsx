@@ -21,6 +21,7 @@ type Person = {
   priority: boolean;
   default_watch: boolean;
   capability_status: string;
+  entity_type?: string;
 };
 type Catalog = {
   researched_at: string;
@@ -269,7 +270,7 @@ export default function Radar({
         <div className="radar-stats">
           <div>
             <strong>{catalog.people.length}</strong>
-            <span>People to follow</span>
+            <span>Creators to follow</span>
           </div>
           <div>
             <strong>{projects.length}</strong>
@@ -284,7 +285,7 @@ export default function Radar({
       </section>
       <nav className="radar-tabs" aria-label="Radar sections">
         {[
-          ["people", "People"],
+          ["people", "People & teams"],
           ["projects", "Projects"],
           ["updates", "Latest signals"],
           ["discoveries", "Discovery queue"],
@@ -303,7 +304,7 @@ export default function Radar({
         <>
           <div className="radar-toolbar">
             <label className="radar-search">
-              <span>Search people & projects</span>
+              <span>Search creators & projects</span>
               <input
                 type="search"
                 value={query}
@@ -332,7 +333,7 @@ export default function Radar({
           </div>
           <div className="radar-results">
             <p>
-              {filtered.length} of {people.length} people
+              {filtered.length} of {people.length} creators
             </p>
             <div>
               <button onClick={exportData}>Export notes</button>

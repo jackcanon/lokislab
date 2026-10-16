@@ -46,6 +46,20 @@ class ScannerTests(unittest.TestCase):
         self.assertIn('person/tool', repos)
         self.assertEqual(failures, 0)
 
+    def test_approved_discovery_does_not_return_to_queue(self):
+        approved = 'https://news.ycombinator.com/item?id=123'
+        scan.write('catalog.json', {'people': [self.person], 'approved_discovery_urls': [approved]})
+        scan.write('feed.json', {'updates': [], 'candidates': [{'id': 'old', 'url': approved}]})
+        def fetched(url, xml=False):
+            if 'hn.algolia.com' in url:
+                return {'hits': [
+                    {'objectID': '123', 'author': 'maker', 'title': 'Show HN: AI tool', 'created_at': scan.STAMP},
+                    {'objectID': '456', 'author': 'other', 'title': 'Show HN: AI other', 'created_at': scan.STAMP},
+                ]}
+            return self.fetch(url, xml)
+        feed, _ = self.run_scan(fetched)
+        self.assertEqual([x['url'] for x in feed['candidates']], ['https://news.ycombinator.com/item?id=456'])
+
     def test_baseline_is_labeled_and_repeat_deduplicates(self):
         feed, _ = self.run_scan()
         self.assertEqual(feed['updates'][0]['source'], 'GitHub · baseline')

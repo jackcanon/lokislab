@@ -57,3 +57,7 @@ Projects use `data/radar/projects.json`, with exact repository and website match
 ## Profile stories
 
 `data/radar/profiles.json` holds the reviewed background, tool explanations, practical uses, and follow rationale for every catalog person. Stories appear on permanent person pages and in the Radar profile dialog. The public Markdown representation includes the same paragraphs, source links, and video links for crawlers. Videos use verified publisher links; channel links are explicitly distinguished from individual videos. Update the checked date when rechecking a source. Scheduled scans do not rewrite this editorial file. Preserve public handles and avoid inferring personal identities or capabilities from repository activity.
+
+Approved discoveries are recorded in `catalog.json` under `approved_discovery_urls` so their discussion links do not return to the pending queue. Direct links to already-curated projects are also removed from discovery results. Creator entries may identify an `Organization`; public pages use the matching structured-data type and label teams explicitly. Optional project `description` paragraphs appear on permanent project pages and their public Markdown responses.
+
+The scoped Craigslist lifecycle matrix is maintained in `docs/radar/CRAIGSLIST.md`. Preserve the distinction between a verified catalog publication and independent validation of the external tools being followed.
