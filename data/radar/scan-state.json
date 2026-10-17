@@ -104,16 +104,16 @@
       "url": "https://github.com/guycochran/dve"
     },
     "iamfatness/CoreVideoPro": {
-      "pushed_at": "2026-10-16T21:02:49Z",
+      "pushed_at": "2026-10-17T14:13:18Z",
       "person_id": "john-wallace",
       "url": "https://github.com/iamfatness/CoreVideoPro",
-      "sha": "079e79caaa51e30a550be060def774e1fdc8d047"
+      "sha": "1b4bcfdfc7c3076f47b3a2b2cd20ba524fac8f6c"
     },
     "iamfatness/CoreVideo-Volt": {
-      "pushed_at": "2026-10-16T21:13:14Z",
+      "pushed_at": "2026-10-17T03:57:52Z",
       "person_id": "john-wallace",
       "url": "https://github.com/iamfatness/CoreVideo-Volt",
-      "sha": "b3554ff4ec6dea104bb17687ddf037aaa960184b"
+      "sha": "df07bc3c2aa3e46a95aa03c72bb3e2c9f894e153"
     },
     "iamfatness/ZComms": {
       "pushed_at": "2026-10-08T20:59:05Z",
@@ -134,10 +134,10 @@
       "sha": "d69db28a78b152978cf72f9d3d888dc4b28a4d94"
     },
     "iamfatness/CoreVideo": {
-      "pushed_at": "2026-10-15T22:18:04Z",
+      "pushed_at": "2026-10-17T12:56:51Z",
       "person_id": "john-wallace",
       "url": "https://github.com/iamfatness/CoreVideo",
-      "sha": "e6645cb653c7b045f7465bc70796a88570b9b7f8"
+      "sha": "574556d641a8101d89ace4d11b6f1153bb9fa18f"
     },
     "iamfatness/PalPanel": {
       "pushed_at": "2026-07-28T02:21:56Z",
@@ -160,76 +160,76 @@
       "url": "https://github.com/iamfatness/UKG-Clock-In"
     },
     "simonw/usgs-scraper": {
-      "pushed_at": "2026-10-16T22:00:58Z",
+      "pushed_at": "2026-10-17T14:00:41Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/usgs-scraper",
-      "sha": "a2bad3b8c3cd7a2d83ef7662a3ae9e33364b7357"
+      "sha": "489c9d1a90d10d244b11681c70940734f2902b2d"
     },
     "simonw/scrape-florida-outages": {
-      "pushed_at": "2026-10-16T22:10:55Z",
+      "pushed_at": "2026-10-17T14:42:55Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-florida-outages",
-      "sha": "67ad6bb7102fe18d0521f34f268f2001f40d8f76"
+      "sha": "4b65c8888bc026b9beec710b5457a27d334b0c6e"
     },
     "simonw/scrape-fema-shelters": {
-      "pushed_at": "2026-10-16T21:37:43Z",
+      "pushed_at": "2026-10-17T14:37:11Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-fema-shelters",
-      "sha": "35d15ed1d28a009d0e14d1f4bdf7d4880c8fe457"
+      "sha": "de84ca4137a6c7faf938605fbac4df341c0dc567"
     },
     "simonw/simonw": {
-      "pushed_at": "2026-10-16T07:25:32Z",
+      "pushed_at": "2026-10-17T14:19:22Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/simonw",
-      "sha": "54c1baa380a6829074be44e9b8fa89e57c94c34f"
+      "sha": "60506b275d0f61435c3f32d0cab0190ca943ce99"
     },
     "simonw/pge-outages": {
-      "pushed_at": "2026-10-16T22:11:00Z",
+      "pushed_at": "2026-10-17T06:43:24Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/pge-outages",
-      "sha": "b1232fe6ed18ba4a64996229a245742194d6d523"
+      "sha": "773257bf9d888e317c629966ae6bb0aa3d12b9ab"
     },
     "simonw/scrape-hacker-news-by-domain": {
-      "pushed_at": "2026-10-16T21:25:26Z",
+      "pushed_at": "2026-10-17T14:25:55Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-hacker-news-by-domain",
-      "sha": "340b81c77b0d76a5476b522c3be27ac321f64caf"
+      "sha": "cdb0796e994e5e34a9c9deb1b27fb4538d5ae4f2"
     },
     "simonw/package-stats": {
-      "pushed_at": "2026-10-16T19:43:38Z",
+      "pushed_at": "2026-10-17T13:41:32Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/package-stats",
-      "sha": "55d23fe9b6e6235476538c11b507de7c227acc0c"
+      "sha": "d05f663c7bb87a5e2568fe946f360902d2591096"
     },
     "simonw/scrape-fediverse": {
-      "pushed_at": "2026-10-16T09:21:58Z",
+      "pushed_at": "2026-10-17T09:18:37Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-fediverse",
-      "sha": "a26845dd4512ff1938b95872fa9f35a40c1dca0d"
+      "sha": "c0c409fa3e281a930143378341d48d54a459b91e"
     },
     "simonw/ollama-models-atom-feed": {
-      "pushed_at": "2026-10-16T06:48:57Z",
+      "pushed_at": "2026-10-17T06:43:53Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/ollama-models-atom-feed",
-      "sha": "14ecb2116970a00ff31f251e7b0795e221d30f0f"
+      "sha": "37ed2b0eedc9f03fb9d8c6355199e1ce2f95da4d"
     },
     "simonw/usgs-demo": {
-      "pushed_at": "2026-10-16T06:47:51Z",
+      "pushed_at": "2026-10-17T06:43:00Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/usgs-demo",
-      "sha": "f8f0b9979cdc511da5741c02f78c807cd61cccf0"
+      "sha": "96e5033ffbd5e78d9903158655e5981d6adc197f"
     },
     "simonw/scrape-faa-releasable-aircraft": {
-      "pushed_at": "2026-10-16T06:20:59Z",
+      "pushed_at": "2026-10-17T06:18:09Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-faa-releasable-aircraft",
-      "sha": "f1fd75582479433bf6891ea968c4405af60ecd67"
+      "sha": "b9ae5efdc86f6fea9b1063681dafcf65bc1c38bb"
     },
     "simonw/scrape-roads-dot-ca-gov": {
-      "pushed_at": "2026-10-16T13:16:19Z",
+      "pushed_at": "2026-10-17T08:46:51Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-roads-dot-ca-gov",
-      "sha": "115184131d1bd0fcbf3b4766c43ccb2ffa4ad1f0"
+      "sha": "cd80a6852f338ef8b74cb64fe342273886ac02ec"
     },
     "simonw/uv-init-demos": {
       "pushed_at": "2026-10-15T03:58:50Z",
@@ -244,10 +244,10 @@
       "sha": "7792844ca6c5ae2aa36792e3b79028f8f3f25644"
     },
     "simonw/simonwillisonblog-backup": {
-      "pushed_at": "2026-10-15T20:33:03Z",
+      "pushed_at": "2026-10-16T22:32:49Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/simonwillisonblog-backup",
-      "sha": "f80c1282da765f162f3f0f9088af717a4844b9bb"
+      "sha": "6b3c0309ec0b6d03ee5668a06ff065c6fc558718"
     },
     "simonw/simonwillisonblog": {
       "pushed_at": "2026-10-14T17:42:16Z",
@@ -304,10 +304,10 @@
       "sha": "3fa9a1a03bdb7415009a627b09aa3668cc40af91"
     },
     "simonw/recent-california-brown-pelicans": {
-      "pushed_at": "2026-10-16T18:35:34Z",
+      "pushed_at": "2026-10-17T00:59:59Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/recent-california-brown-pelicans",
-      "sha": "01cc4cdcbed05e051b31db5747a1bdc5feb35301"
+      "sha": "054928b6851a85c8d33ffb04401f1e5c5cc0271d"
     },
     "simonw/llm-prices": {
       "pushed_at": "2026-10-13T16:17:22Z",
@@ -436,7 +436,7 @@
       "url": "https://github.com/badlogic/rsync-win"
     },
     "earendil-works/pi": {
-      "pushed_at": "2026-10-16T20:53:03Z",
+      "pushed_at": "2026-10-17T13:19:14Z",
       "person_id": "mario-zechner",
       "url": "https://github.com/earendil-works/pi",
       "sha": "8efd314fa3d3232ce197d8d7a6a5660530b9d83e"
@@ -966,10 +966,10 @@
       "url": "https://github.com/comfyanonymous/website"
     },
     "Comfy-Org/ComfyUI": {
-      "pushed_at": "2026-10-16T20:14:09Z",
+      "pushed_at": "2026-10-17T06:35:00Z",
       "person_id": "comfyanonymous",
       "url": "https://github.com/Comfy-Org/ComfyUI",
-      "sha": "fc04da91b2ab12f99e4716371a7e4f98ac982597"
+      "sha": "5cc4b870094c89090db54bd8d12649dcaf89f2ba"
     },
     "ArbenApura/xianscan-rust": {
       "pushed_at": "2026-10-10T19:54:55Z",
@@ -1497,10 +1497,10 @@
       "url": "https://github.com/chrissabato/Tennis-SRT-Scorebug-Gateway"
     },
     "guycochran/mxl-switcher-core": {
-      "pushed_at": "2026-10-16T21:55:52Z",
+      "pushed_at": "2026-10-16T22:29:27Z",
       "person_id": "guy-cochran",
       "url": "https://github.com/guycochran/mxl-switcher-core",
-      "sha": "2bc921d47f6481c789a67592d18c08cbe0c61e45"
+      "sha": "bc38a9718c7b46fbcf2d641531ee76a00237c1ff"
     },
     "chrissabato/pa-script": {
       "pushed_at": "2026-10-14T23:59:19Z",
@@ -1521,10 +1521,10 @@
       "sha": "eb30c05b8ebae8dc5e99e5f8e2edc6be4b45e102"
     },
     "simonw/web-edit": {
-      "pushed_at": "2026-10-13T01:40:04Z",
+      "pushed_at": "2026-10-17T13:16:49Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/web-edit",
-      "sha": "8e2534a9f30c962e08ca0abe182a7cf8f0c7e94c"
+      "sha": "0a24583937e16a8ed8391a7dfa36640b55c5729b"
     },
     "simonw/datasette-plugin-template-demo": {
       "pushed_at": "2026-10-12T14:41:45Z",
@@ -1617,10 +1617,10 @@
       "sha": "337e3f6c4795cdbffdb7249959c87ae1281bdef2"
     },
     "guycochran/mxl-switcher-extensions": {
-      "pushed_at": "2026-10-16T22:00:10Z",
+      "pushed_at": "2026-10-17T06:44:31Z",
       "person_id": "guy-cochran",
       "url": "https://github.com/guycochran/mxl-switcher-extensions",
-      "sha": "33861e93297692c69b4f39ca5544b13f98b85e35"
+      "sha": "9a319b91acf5dc20d6e5754cd9f8a92abf1479d6"
     },
     "AxiomCodeAI/axiomcodegraph": {
       "pushed_at": "2026-10-15T18:54:04Z",
@@ -1737,8 +1737,10 @@
     "122c8b93ab65e29b2388cbdf",
     "1325fdc3307f98a456e3eb4a",
     "139a90d081f6cdc0e230aecd",
+    "148b2131e8a85ac951f171f0",
     "14fd6e5abbb39c5504d5c40b",
     "1532ee52cb21aa5170f8596a",
+    "159f86954b7875a92246ef39",
     "16040c2a9a2120a25dc7ed30",
     "161bfe5bf6220d3c0746200f",
     "162571be5ae86e9f35cf8860",
@@ -1785,11 +1787,13 @@
     "2f6cbb64442347962ceb2c62",
     "30a603cc32f3276fdb7f888b",
     "311c1c28d1419928a41bde75",
+    "33a83637f70a875ac1e4b6e8",
     "33dae9e483306db23dbef7dc",
     "34c7186cb1e789dabb3f1bca",
     "34d01bf2605674fb3d1705f0",
     "35251543d9a0a3d5c3da404e",
     "357eb799c5d769838ed28e98",
+    "35ad861158aa108e084507cb",
     "35bbac395253fcc2ec196a84",
     "36c2bf3989e0b2ed812ec942",
     "36ca02063275955b11a4dd6b",
@@ -1821,6 +1825,7 @@
     "46d2acc07685a396e029f549",
     "476ef262de8b3affab1cf036",
     "4774e87bafa464f72cf3ced3",
+    "47c76fd05d23378db4135d58",
     "47f9657a396fcc5e7670528d",
     "48dc75ea5144dc54c3a07bc6",
     "4a1aa813b90ddd05882a73b1",
@@ -1843,8 +1848,10 @@
     "516eee2b9cc0ebc3a8a88bbd",
     "51b31159c0859bfdaca73f74",
     "528e40ad23de22f2d822f324",
+    "5298b7d9243c37f1ee7f2d26",
     "52b6a5a1a83a2023440eda65",
     "53e177950aad2360106ee090",
+    "54374d4b247f9a3acbb0f85b",
     "54481ddaebbddf6f49ce4188",
     "54a176edbff565cbe6ef5455",
     "54d6f6d13c1cfc309d5e76a7",
@@ -1872,6 +1879,7 @@
     "5c0999070a19d6d7e9094a37",
     "5c5f2e8669a6f08602b976ba",
     "5d19e58e728f85625beac50c",
+    "5d2dd7e0339dd1516dd11a19",
     "5d7787b38277028564df5abb",
     "5e645a1a3bc5cc130afe967c",
     "5f1353a6c7a1d6942efe5512",
@@ -1880,6 +1888,7 @@
     "61a9a6fdc515c410e46e6c55",
     "61b8e387a4ccad7c86efa49f",
     "63762747949bd5661a20bb35",
+    "63dbedfede5833bcc039cd26",
     "63f126cd1a6fd474ac157bee",
     "6456c43a89e6e1b657ca3795",
     "64ddc0a723d63b4cde7d407d",
@@ -1906,6 +1915,7 @@
     "6e0a9c4d2fffd2185afffcc1",
     "6e76ead3d5b41a90ee8bc83d",
     "6e8428adeefbfede336bf598",
+    "6e90653ee2ce24496855dafe",
     "6ed31193369338d1442f5b5c",
     "6ef07548da07aa13b1b76ad6",
     "6f5991900d0ee9665d3ec616",
@@ -1915,7 +1925,9 @@
     "70fdb1109a8c1e1710dd81e6",
     "7186a738f77d79e04ca9a2fc",
     "72138f0cc64675525bd264a4",
+    "7249141ffdb2443a1dc28101",
     "728813ce0a3f15cd58b1c297",
+    "72b09f3129efda6835e65789",
     "72cd843f05e9b3f610259042",
     "731a187751393386e39efe76",
     "73d24aae0df651fcfcdfdd4b",
@@ -1931,12 +1943,14 @@
     "76ce9a86f71a638a29e58713",
     "76d19fbb1b0c86bc2b879c3d",
     "774c4fe412b286d3a6e56913",
+    "78bf8f0d08449d882545dda6",
     "78c536c2d2d861bdaf3f86c6",
     "78e197fe5b9e7464a9b072db",
     "797eb9e215c9821141bdfbc0",
     "7a0969f1681281a7408873c2",
     "7a16566e3c50a7594cb4cfc7",
     "7ab991eaaf2a5fd261026e31",
+    "7ac9fb32f2a0049512579ab5",
     "7ae74de1a6c8d559c9361d96",
     "7b14fed0b8e38bcee1ad269e",
     "7b2041c6842ed567890880f9",
@@ -1953,6 +1967,7 @@
     "8022573a35e44aec5a3cc845",
     "803f0a75055e5dad794df5df",
     "80a9cd2d137655bd323f8aab",
+    "8196684b11bc9085fd713b97",
     "821eabf073dedbe6d7976886",
     "82cf6d33945e19fad7f58eb6",
     "8391dbf27226e04af772568c",
@@ -1969,6 +1984,7 @@
     "85d5b208a5d4312e06d9f610",
     "863019477831acb774901040",
     "8696abd40e1ce1d2ad2bbfa4",
+    "86c246d3b99909794bf40378",
     "870d85ce0b9cd183ee309892",
     "877a036358e7f2a127c9cc95",
     "87f631e7210763abe66c4f6d",
@@ -1984,10 +2000,12 @@
     "906fddb139f7571a42639fcf",
     "91304fbaecf5188a3563018d",
     "92ea934d44d94d9479143dde",
+    "92fff38818ba19a6473ab094",
     "9311a88ac6f9bfee80a5f3b7",
     "9488089552b68a65ba8bdb1e",
     "94a20758ba5c99221a431a9d",
     "94cbc0f8fed3ddcc99607103",
+    "96592b2a82880aa1e6dbfa95",
     "96d7fbfcfce2f252a0f01103",
     "970b6032d8011f65cdf94ad9",
     "972756bd14f93a1e8c8ebefe",
@@ -2003,6 +2021,7 @@
     "9e4b1b99d08856ed6122682d",
     "9e67fe6342d60fefb1d2dcf0",
     "9e72ca63c82d90c5ede6dd07",
+    "9eb273b2ea05d2ae009eb0d8",
     "a08b311e749da3f18f946b44",
     "a0d651e60f06a8e04864173d",
     "a13ebb2b66867fea762029e5",
@@ -2028,6 +2047,7 @@
     "ad04b22de7e1a17fb13d8cb0",
     "ae2b01cb570f5304155eb22b",
     "af3813027e82c9b110d847d2",
+    "af70340814699ff5481938a3",
     "af9a9393b9204456a42aa463",
     "b0785ed6a1763d6c46815dbe",
     "b0c33b15449b5bb76634dc84",
@@ -2060,6 +2080,7 @@
     "bf384e5316f81feda6416a54",
     "bf8aaf7533b7a72e2317e782",
     "c0de82172ab716fff07508c3",
+    "c155fdf902a69cb35e108487",
     "c1c74ca846f5dfea6e692a6b",
     "c1ca016f9e87932fdaa29d7b",
     "c27c09e6455f586dd409ac8c",
@@ -2088,6 +2109,8 @@
     "cd6ffe99a59b356a76685ca1",
     "cd7eb39e1fdba9da0c361bca",
     "cde46d6e5369302567494f87",
+    "ce33bce743db2e0b038ec7bc",
+    "ced5c82b7a623ad0d50b58f1",
     "cf4186dd9dca22c5e64f77e7",
     "cf45c4ca7ab74a3f28f86a81",
     "cfb4cd23b8a7f71006ffe698",
@@ -2111,6 +2134,7 @@
     "df00edcc1414682f613268ca",
     "df15b3fa1e9f81b3248ab06a",
     "df475ce7add5ff40f684eaee",
+    "df9c99072decd62a51e0ab45",
     "dfb83a65babcde77f61ba33e",
     "e09c2f3b9267b3c43ee0ddaf",
     "e0ed139230108083254e658a",
@@ -2120,6 +2144,7 @@
     "e23e692f860b5296a95d7ef0",
     "e28baab4f8fa503d04adadc6",
     "e30dffac6a747e034de264b6",
+    "e39d7d787cb419c8b0857e49",
     "e3bacb28483b2127ea57d4c6",
     "e3bbf5c4212e7c6ba2e1756d",
     "e3bf1474d1278d2204256c4a",
@@ -2169,6 +2194,7 @@
     "f4f904c4d0b56848334e1fa3",
     "f4fcb7201885361a693fdb85",
     "f582cd24e37ed9b73ce7e65a",
+    "f59a20b36a6bf0f45d2be7cf",
     "f5ba9c25f2a7a4959dbe18e5",
     "f62d80c76f55f3138b3aca7c",
     "f683005bf1b4d2871bda9869",
@@ -2182,7 +2208,9 @@
     "fbe015b46349c833338fd330",
     "fbfab0d3b283c448ab8ad05a",
     "fbfe11bed2ccbb8855dd3b85",
+    "fc92c6d842a480edfcbbbfc2",
     "fd04049f48cb8a74915a046b",
+    "fd3b6a74055d4c5dbf78fec9",
     "fd57bb1536f4d9fe76ac0d5a",
     "fd76c69c293e87044fd73d04",
     "fdac7da6d2687ca5f82b7fe4",
@@ -2192,15 +2220,15 @@
   "pages": {
     "https://cloudflexbroadcast.com/": {
       "digest": "dd0e428080b4d4d3c357211943deb2daadde999a9ab044c9a1e58886c5447db3",
-      "checked_at": "2026-10-16T22:14:26.593909+00:00"
+      "checked_at": "2026-10-17T14:59:08.995125+00:00"
     },
     "https://stadiumsound.chrissabato.com/": {
       "digest": "a47adcacfa1fa39a7479c144ddc4d57caafdd2e71958c9b5a00dbe5d1f860447",
-      "checked_at": "2026-10-16T22:14:26.593909+00:00"
+      "checked_at": "2026-10-17T14:59:08.995125+00:00"
     },
     "https://www.transitionaldata.com/team/craig-macfarlane/": {
       "digest": "6fbaa412c0ea2932c733fa32284580270695151b43abc1c4d1d9934326df56f2",
-      "checked_at": "2026-10-16T22:14:26.593909+00:00"
+      "checked_at": "2026-10-17T14:59:08.995125+00:00"
     }
   }
 }
