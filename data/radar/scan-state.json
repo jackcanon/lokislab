@@ -110,7 +110,7 @@
       "sha": "f96993518773b81813c19eef6f228a1b9619ee75"
     },
     "iamfatness/CoreVideo-Volt": {
-      "pushed_at": "2026-10-21T02:56:47Z",
+      "pushed_at": "2026-10-29T02:24:30Z",
       "person_id": "john-wallace",
       "url": "https://github.com/iamfatness/CoreVideo-Volt",
       "sha": "302c794fd9dd7a07ff004d0c8fcb00d4ed60ebf7"
@@ -160,76 +160,76 @@
       "url": "https://github.com/iamfatness/UKG-Clock-In"
     },
     "simonw/usgs-scraper": {
-      "pushed_at": "2026-10-28T14:00:31Z",
+      "pushed_at": "2026-10-29T15:00:50Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/usgs-scraper",
-      "sha": "590c5a43ec596bab198115a20dbd63b35e386005"
+      "sha": "ab56124a2ddd7b2c62babea26c80b9c9e1dd2dfd"
     },
     "simonw/scrape-florida-outages": {
-      "pushed_at": "2026-10-28T14:42:56Z",
+      "pushed_at": "2026-10-29T14:43:13Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-florida-outages",
-      "sha": "5e7236502ede6161ead35d8435015e3ef37ee032"
+      "sha": "f28c2c4de630806b10b96fea39a1c30856147fd2"
     },
     "simonw/scrape-fema-shelters": {
-      "pushed_at": "2026-10-28T14:36:50Z",
+      "pushed_at": "2026-10-29T14:36:27Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-fema-shelters",
-      "sha": "e010df406d38071c7b4f5dfc2e7794a6c1892a86"
+      "sha": "3120369537637a425ff40068fd8b43ffec03ef6d"
     },
     "simonw/simonw": {
-      "pushed_at": "2026-10-28T14:18:10Z",
+      "pushed_at": "2026-10-28T16:19:37Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/simonw",
-      "sha": "bc087211f15f1031152e9dcf4ac0ac8f282eac75"
+      "sha": "53987e7b4b34931c885d3cfecc508627af24b69c"
     },
     "simonw/pge-outages": {
-      "pushed_at": "2026-10-28T03:45:30Z",
+      "pushed_at": "2026-10-29T08:39:29Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/pge-outages",
-      "sha": "e30ed8d46f952eda997759bb41d4707b0e39f175"
+      "sha": "e3ce2471b4c3e1baf40238e1711af8ff643c0a33"
     },
     "simonw/scrape-hacker-news-by-domain": {
-      "pushed_at": "2026-10-28T14:24:47Z",
+      "pushed_at": "2026-10-29T13:24:31Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-hacker-news-by-domain",
-      "sha": "b39340dc49d387898b544f0212f2876d1b2e5ac2"
+      "sha": "7d48a7d0fc5a8b61f2e142005c0541c8fade518e"
     },
     "simonw/package-stats": {
-      "pushed_at": "2026-10-28T13:41:38Z",
+      "pushed_at": "2026-10-29T13:41:28Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/package-stats",
-      "sha": "fa492bb8b642ea084b4aabd08d44101c63dda093"
+      "sha": "829bf9cf51a67e492048a97546987498bab9a643"
     },
     "simonw/scrape-fediverse": {
-      "pushed_at": "2026-10-28T12:22:01Z",
+      "pushed_at": "2026-10-29T12:22:28Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-fediverse",
-      "sha": "8590d054d989909cc1105bf1a9943f6563805647"
+      "sha": "1912c1adf61f2a630ae15068d0e9b175a6811a7a"
     },
     "simonw/ollama-models-atom-feed": {
-      "pushed_at": "2026-10-28T06:37:54Z",
+      "pushed_at": "2026-10-29T06:37:51Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/ollama-models-atom-feed",
-      "sha": "bfe734b9e50dfa98e3aab7b328112e634fef4ac0"
+      "sha": "cc9ef94f7a4f15577af8c5b81318b2199fb1c630"
     },
     "simonw/usgs-demo": {
-      "pushed_at": "2026-10-28T06:36:56Z",
+      "pushed_at": "2026-10-29T06:37:10Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/usgs-demo",
-      "sha": "e6aa85531e2e9673b043ef26981655b75ee2e2fc"
+      "sha": "e36a0ad262b4968de1025b9e262af42c507b8ee3"
     },
     "simonw/scrape-faa-releasable-aircraft": {
-      "pushed_at": "2026-10-28T06:15:32Z",
+      "pushed_at": "2026-10-29T06:16:03Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-faa-releasable-aircraft",
-      "sha": "52c5aff59ee4661c2c6a6dac566382f0160fff35"
+      "sha": "060b26fcfe412faae476dd06f9768470db00f754"
     },
     "simonw/scrape-roads-dot-ca-gov": {
-      "pushed_at": "2026-10-28T04:43:57Z",
+      "pushed_at": "2026-10-28T21:23:48Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-roads-dot-ca-gov",
-      "sha": "b9035b34281733fb84e7c5d47e56cb3f830c8956"
+      "sha": "238ffb9059664c4166a22000f4204615b4dae5b9"
     },
     "simonw/uv-init-demos": {
       "pushed_at": "2026-10-27T03:59:39Z",
@@ -244,10 +244,10 @@
       "sha": "5fc8e8bba888405dd1a447859b231ede37822ae9"
     },
     "simonw/simonwillisonblog-backup": {
-      "pushed_at": "2026-10-28T14:29:36Z",
+      "pushed_at": "2026-10-29T14:30:47Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/simonwillisonblog-backup",
-      "sha": "e2d2c20005523c82c3c0a9467c43bbc10fb5416b"
+      "sha": "7f678ecf0f5d287277c6175a9231f7bf824da9bb"
     },
     "simonw/simonwillisonblog": {
       "pushed_at": "2026-10-26T13:03:57Z",
@@ -322,10 +322,10 @@
       "sha": "5e418e22c61c1b433133bd3abc2db9455ed95f71"
     },
     "simonw/scrape-github-actions-package-versions": {
-      "pushed_at": "2026-10-27T17:12:59Z",
+      "pushed_at": "2026-10-28T17:13:00Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/scrape-github-actions-package-versions",
-      "sha": "b296da10ce956e87c70f5bc5a71fef1a19885b48"
+      "sha": "314dae471d3490940a74aa26a8a0262469b7ef2d"
     },
     "simonw/actions-latest": {
       "pushed_at": "2026-10-12T05:08:52Z",
@@ -437,10 +437,10 @@
       "url": "https://github.com/badlogic/rsync-win"
     },
     "earendil-works/pi": {
-      "pushed_at": "2026-10-28T14:55:47Z",
+      "pushed_at": "2026-10-29T14:39:52Z",
       "person_id": "mario-zechner",
       "url": "https://github.com/earendil-works/pi",
-      "sha": "7f3cfb060d3fcbf0ec72874d813dce89ddb5d468"
+      "sha": "0d23d53457a6b9a660c4cbbae061ba277e0fad11"
     },
     "karpathy/nanochat": {
       "pushed_at": "2026-09-07T20:06:43Z",
@@ -698,10 +698,10 @@
       "url": "https://github.com/awni/editdistance"
     },
     "ikawrakow/ik_llama.cpp": {
-      "pushed_at": "2026-10-28T14:01:55Z",
+      "pushed_at": "2026-10-29T12:31:59Z",
       "person_id": "ikawrakow",
       "url": "https://github.com/ikawrakow/ik_llama.cpp",
-      "sha": "527903db904f0b53a6c27d16d0b0a707bb356006"
+      "sha": "d4c1f75533ec897f54944f2734ea0d0e89e4fe01"
     },
     "ikawrakow/mnist": {
       "pushed_at": "2025-01-12T15:14:44Z",
@@ -967,10 +967,10 @@
       "url": "https://github.com/comfyanonymous/website"
     },
     "Comfy-Org/ComfyUI": {
-      "pushed_at": "2026-10-28T14:35:00Z",
+      "pushed_at": "2026-10-29T13:03:57Z",
       "person_id": "comfyanonymous",
       "url": "https://github.com/Comfy-Org/ComfyUI",
-      "sha": "4845e7a3ffc48a6961f15824239e9042cc7d4ad1"
+      "sha": "fd7639f477050e5c25b68fc38a9c2a6b6d988211"
     },
     "ArbenApura/xianscan-rust": {
       "pushed_at": "2026-10-18T11:07:18Z",
@@ -1019,7 +1019,7 @@
       "url": "https://github.com/ArbenApura/bulsu-knowledge-repo-beta"
     },
     "anteloc/ldraw-nova": {
-      "pushed_at": "2026-10-27T23:16:38Z",
+      "pushed_at": "2026-10-28T18:26:52Z",
       "person_id": "carlos-antelo",
       "url": "https://github.com/anteloc/ldraw-nova",
       "sha": "00f23f69be73598a1b2bc711607f3d3361b98da0"
@@ -1371,9 +1371,10 @@
       "url": "https://github.com/chrissabato/bookmarks"
     },
     "chrissabato/dakbot": {
-      "pushed_at": "2026-09-17T17:04:31Z",
+      "pushed_at": "2026-10-28T21:39:40Z",
       "person_id": "chris-sabato",
-      "url": "https://github.com/chrissabato/dakbot"
+      "url": "https://github.com/chrissabato/dakbot",
+      "sha": "e0f449e6f0abb1501d3e8c599bc13ad54f0e6ae2"
     },
     "chrissabato/response-time-test": {
       "pushed_at": "2026-09-09T23:23:06Z",
@@ -1624,10 +1625,10 @@
       "sha": "79c06f3677f41267e8b4874ffeb45bf7a33abaec"
     },
     "AxiomCodeAI/axiomcodegraph": {
-      "pushed_at": "2026-10-27T17:14:43Z",
+      "pushed_at": "2026-10-29T08:59:50Z",
       "person_id": "axiomcode",
       "url": "https://github.com/AxiomCodeAI/axiomcodegraph",
-      "sha": "1e1972cf408995a61938932a430ef301e58e887e"
+      "sha": "82d205c42da0ea7fe5f1c0a2d4f8a7409e150de1"
     },
     "chrissabato/soccer-sub-tracker": {
       "pushed_at": "2026-10-25T23:23:00Z",
@@ -1636,16 +1637,16 @@
       "sha": "84abc9ad49cb93433b1d6d2ac6f7a1f1433aa6e5"
     },
     "sequico/server-noonien": {
-      "pushed_at": "2026-10-26T16:12:28Z",
+      "pushed_at": "2026-10-29T07:17:42Z",
       "person_id": "sequico",
       "url": "https://github.com/sequico/server-noonien",
-      "sha": "5787e466e93a1123f7fa8c4145ed19257fadf22a"
+      "sha": "22279393c59e9606e525b65c463b14bb04f76efd"
     },
     "sequico/gilbert": {
-      "pushed_at": "2026-10-28T10:26:28Z",
+      "pushed_at": "2026-10-29T02:38:59Z",
       "person_id": "sequico",
       "url": "https://github.com/sequico/gilbert",
-      "sha": "2dba82400bb12ddfb3051a44771df9f56dd7c813"
+      "sha": "8efd15f8775b74e59694f2ccad1182288ad0269b"
     },
     "sequico/stalwart-rclonesync": {
       "pushed_at": "2026-10-14T23:03:48Z",
@@ -1724,10 +1725,10 @@
       "sha": "98935b002a16f64eccb6a060d726e16567913ff5"
     },
     "simonw/docs-for-llms": {
-      "pushed_at": "2026-10-23T03:56:09Z",
+      "pushed_at": "2026-10-29T03:53:42Z",
       "person_id": "simon-willison",
       "url": "https://github.com/simonw/docs-for-llms",
-      "sha": "39881fd5af445bcd572b93fcde34aed6b58e9c8b"
+      "sha": "f14526419ad4c532b15884d7bd8262b6db60181f"
     },
     "simonw/battledrones": {
       "pushed_at": "2026-10-25T15:21:25Z",
@@ -1764,12 +1765,19 @@
       "person_id": "john-wallace",
       "url": "https://github.com/iamfatness/FalconSales",
       "sha": "83b0484ac1691d311a1c3f59cebc2bd8ddbc06e0"
+    },
+    "chrissabato/panasonic-rcp-electron": {
+      "pushed_at": "2026-10-29T00:12:09Z",
+      "person_id": "chris-sabato",
+      "url": "https://github.com/chrissabato/panasonic-rcp-electron",
+      "sha": "675910ca79ba133b3411d68f3a8e44336bf71f09"
     }
   },
   "feeds": {},
   "seen_ids": [
     "003fdd555d703289616373f6",
     "00b700c5755e8289d51f5a91",
+    "0102a2f76096be91c5fd1d24",
     "01206c271802892ac331089e",
     "012ba8d6630d61661afd6e13",
     "0155e269f0bdf8391d3cfbd0",
@@ -1799,6 +1807,7 @@
     "08bd4a66eae980892fc19765",
     "09504733ee8eb4b87ae03a5d",
     "0a4cef6155b64e40ff4fd088",
+    "0a6069a8c88f043ce5725962",
     "0a7b8aed51713a6b669a1aba",
     "0a8c399a084e445d1b651313",
     "0a93cf0fe3b0f726aa4b2090",
@@ -1818,6 +1827,8 @@
     "0e1d4ec62481d979340c8ca3",
     "0e44b2686da06e6d8f65f117",
     "0e90f52a72aa354cffafeec1",
+    "0ee4546e00e2813f303a9cfb",
+    "0efe4c8a62b6c49f0106730b",
     "0f0aab30ad215caed2587687",
     "0f24f622bca41dc3b74f4608",
     "0f4d31e6d65d0c5d2c08ecab",
@@ -1828,6 +1839,7 @@
     "10aeb976328d3098d4b643a9",
     "10c73a163c5afc397e4356b4",
     "1108525c68af9058e30c6248",
+    "115f439a660370a01b5b2d99",
     "1173759cfb297d3f7fbbf853",
     "11e07dd638a52e020ffcc03c",
     "122c8b93ab65e29b2388cbdf",
@@ -1837,6 +1849,7 @@
     "13bd564a3a4cd91fe29a347e",
     "148b2131e8a85ac951f171f0",
     "14d2c467b0905ecd4d31b4b6",
+    "14e671576b8fcf7319d9f271",
     "14fd6e5abbb39c5504d5c40b",
     "1532ee52cb21aa5170f8596a",
     "159f86954b7875a92246ef39",
@@ -1860,8 +1873,10 @@
     "1b4e1fd1d98969702d6f541a",
     "1b83bb38288945b1aecaf017",
     "1b93394e891ce76c86d8cd72",
+    "1bc38aa0bdbed08aa5693bff",
     "1be134f569703b1dad2cdf50",
     "1c751cd8ce7b544a33cda7b5",
+    "1c9bb9078b4468e561d4d8a3",
     "1ccd5a3d3c5407cd7c03472f",
     "1d087f45ed9479a2199904c2",
     "1d7d0cc0f1754ce3359379d1",
@@ -1876,6 +1891,7 @@
     "2068613701bf293d5ca296b2",
     "2085f44e8feac6a46cc5c63f",
     "208a7fca582f2b8e1b3639b6",
+    "2093b67f5078cd3fb3bd75da",
     "20aa7021529cff6a9ff304d0",
     "20c10327f2b3062016a2c5d4",
     "20f351a9908d4a455abb0667",
@@ -1902,6 +1918,7 @@
     "276ef067bf5613b39d23ecf1",
     "27742bc011cf42869724e19c",
     "27cc9bba078e671c92cdd06b",
+    "2821065513d67c54a1917ffe",
     "2889b7302a21e843d3e55372",
     "28fbaa2c1cb4f71633f7b672",
     "293bd68beb3a08adaafbec97",
@@ -1931,6 +1948,7 @@
     "2fbb69354191b480602975ba",
     "2fd5ecb9e94db425fbf785cd",
     "30a603cc32f3276fdb7f888b",
+    "30ffc926a6627088b419b987",
     "311c1c28d1419928a41bde75",
     "31738c468bcf04e332f3500d",
     "32406b3313a5ba6b08e31a9e",
@@ -2024,6 +2042,7 @@
     "4b137477c18f98323bd8117d",
     "4b94fd31cb0fd5174528c54e",
     "4b96eccd892fabfd3802c6a4",
+    "4bc8e088f9e2467c7b0ca328",
     "4bce3745bb5785a23adb4311",
     "4c0d6fcaae5f800f4c9de5d2",
     "4c36ad73848f0e5a1cc465c2",
@@ -2038,6 +2057,7 @@
     "4f28dfff1834e1ae50629577",
     "4f3a26ec48085736866cbd3b",
     "4f4f63438f8aa2f02eaffe39",
+    "4fb7fb969826dcf41f116101",
     "4fb9c521c857d625da794944",
     "506427238b6c2ec7fef9e04c",
     "50bb53f32f2df26bd8cc735c",
@@ -2045,6 +2065,7 @@
     "51558bab4c5406a3163ca67f",
     "516eee2b9cc0ebc3a8a88bbd",
     "51b31159c0859bfdaca73f74",
+    "51d30655e03ff14a8f6f04b8",
     "523abb3f50f0eab9447d9063",
     "5273cc7c359c1db494971d89",
     "528e40ad23de22f2d822f324",
@@ -2071,6 +2092,7 @@
     "5789e759124c92e34b9e5fd2",
     "57cfb6eb6d71dfeda8037e5c",
     "5863dcee94b37960f73da722",
+    "5873860d33450ffe6ff21ae5",
     "58a486f513e5b5b59a23fe07",
     "58c99a57a09054a47c17fcac",
     "591f781ee1dd261ff90c1be7",
@@ -2080,6 +2102,7 @@
     "59fe2eabf194f825b7f2b42c",
     "5a4f50f238f47a17105952c1",
     "5a5934feb30d733ba2a308d7",
+    "5a5a68de873d09fce0557bbe",
     "5a6032c8000e1771411304f9",
     "5abd5479dc84cd2e4b9073ed",
     "5ad703c2f909c40db12d0980",
@@ -2136,6 +2159,7 @@
     "69b7b84153bb5f48579c63a3",
     "69caad82a8e4ba7f214fe5b5",
     "6a3106df8f2d238d636b4627",
+    "6a4b9f65d8db9211de917308",
     "6aeb1ae082dda824907c9109",
     "6aeba97ede8adacea9ebf04b",
     "6b44a57e80bdb4597b9ef908",
@@ -2242,16 +2266,19 @@
     "7fc5f570c13e77fca5054b6e",
     "8022573a35e44aec5a3cc845",
     "803f0a75055e5dad794df5df",
+    "80438aa67a7eb7a7f35d174a",
     "8063f9cc8f24a0e23e89a982",
     "80a9cd2d137655bd323f8aab",
     "8196684b11bc9085fd713b97",
     "81ef0af7a42231f2f2ec4c22",
     "8212dff51da390768d74eb9a",
     "821eabf073dedbe6d7976886",
+    "826ada816150e041b8b2c5e1",
     "82cf6d33945e19fad7f58eb6",
     "8391dbf27226e04af772568c",
     "83928f3f8967cf893c1ca0ce",
     "83a95af4384a0cc556524bd1",
+    "842a7b0f253fab3c54704861",
     "842cf96c119bf395fbd8beb4",
     "844eff1551a68f45ec3a6f59",
     "8474bfaabe8981a02c933947",
@@ -2279,6 +2306,7 @@
     "876d11ea29965e4bd1b4701e",
     "877a036358e7f2a127c9cc95",
     "87f631e7210763abe66c4f6d",
+    "8814e6546a844b50fd1ecfa6",
     "88bb7ef27b0105ed45862153",
     "8901d6dea30e42ed0a4c2203",
     "895d7a29cadaf1dc655ac43f",
@@ -2318,6 +2346,7 @@
     "9311a88ac6f9bfee80a5f3b7",
     "9373fd423249b30f7df867f6",
     "93f70f94a8dd1db173c5bbc6",
+    "9444a07776486e336e6cba9c",
     "9488089552b68a65ba8bdb1e",
     "94a20758ba5c99221a431a9d",
     "94cbc0f8fed3ddcc99607103",
@@ -2336,10 +2365,12 @@
     "98e29353b8155159ee08e74a",
     "98ecb8d30db984edce52f350",
     "99959fdd2d9086bc7ab74c2c",
+    "9a2b55b50b6caa161ec01fbc",
     "9a39af5f8cf29549d316c297",
     "9a45a450f51027367368d042",
     "9a94dff14a445968f7be3e40",
     "9bed23375ebce3d0a9ca729a",
+    "9c0ce92c31927de3bc224ce7",
     "9c2d20092d5d928c333ef8d3",
     "9c352ee67d1af3d58561d07a",
     "9c4caaebb60c42c975e1ce4a",
@@ -2363,6 +2394,7 @@
     "a19fb4d986d3597861b1110c",
     "a1d34285da102833f9e862a5",
     "a1dac97120ce008190140c8a",
+    "a20113e211277285c9dfaf56",
     "a2070a13548862b4524f2755",
     "a26e22218305f804d3920b61",
     "a2a9dfd9f5ebe40143f67bf1",
@@ -2384,6 +2416,7 @@
     "a84926de2ba8cfcd1aaed90e",
     "a88150cc8ef30d291fef1b69",
     "a8be0383f78924bb5ffc8717",
+    "a8d0cfb2a20fb29b196e59fc",
     "a9b47b88b64ef4511266ff3f",
     "aa0be14522b93f6f664113d3",
     "aa0bfcb102f6763050e392f2",
@@ -2391,6 +2424,7 @@
     "aa9c0fe58715063ce6b6b0a8",
     "aaf0acd5e92a112f093dae19",
     "ab5a9fe2cd818cb33e8430af",
+    "ab62175f82aa990f525862af",
     "ab774b603172f5c32aaa1df9",
     "abdc02b045e3e2d53c1874d7",
     "ac6814b25d7b20b43a73bf4d",
@@ -2411,11 +2445,13 @@
     "b158f702ad33b45ec60c7be8",
     "b1898282d6041cc3c05c907d",
     "b1c908ed0577de190d61f1ab",
+    "b2525acd09689a79c3654c65",
     "b27cf6dcdaefa150c7912cd4",
     "b29bd894267cf202cff5424d",
     "b2d0d7d0e72edcf6b390d65b",
     "b30b7608b63d47037b6ecabf",
     "b34758e0b4958a1f5c4ac421",
+    "b378622e5e679ad5063608c6",
     "b3b4de19013da3912665f623",
     "b3cc0dc1739f6122c8a4856f",
     "b416afd7b7f7c7a893e06443",
@@ -2457,6 +2493,7 @@
     "be836fdd01a68224c3e20b7e",
     "bf384e5316f81feda6416a54",
     "bf8aaf7533b7a72e2317e782",
+    "c032c941e201725df8d325ad",
     "c0905080972d58d2b0abe020",
     "c0bcfce25cdef43045b35075",
     "c0de82172ab716fff07508c3",
@@ -2488,10 +2525,12 @@
     "c6e64e337932f8563bb9583b",
     "c727323d76d57458b8a15d39",
     "c766121ae22d7a34d7ed4d3f",
+    "c803a2b33e469e34a511610e",
     "c817438757ba242bb6d8e3bd",
     "c83bb501e91df4e5ade7fedf",
     "c83ce724843dd267c4f6754c",
     "c8606a20c48e1a3a1d4b34e3",
+    "c9da943826b23caec1f118ab",
     "ca6bf32aadcbc170d03f5b2b",
     "ca731a04429397cdc097af10",
     "ca7c1079a3fdb213a276566e",
@@ -2519,8 +2558,10 @@
     "cfb4cd23b8a7f71006ffe698",
     "cfc122f3d72d3ea5f979dc23",
     "d0265a820f4735e682f5138d",
+    "d03bc01292cd1c31f3ef2101",
     "d06ccf002f3026461cabd5d5",
     "d0829bf7a8db488342d19166",
+    "d0e14dc48472c6e0c9a2ec28",
     "d129067c9e4e86248eda5b49",
     "d165ad9bfe2dc07da720051f",
     "d18bb7d6e7dcb6cbf23ac63e",
@@ -2577,6 +2618,7 @@
     "df851fa09b56bd9ef022de47",
     "df9c99072decd62a51e0ab45",
     "dfb83a65babcde77f61ba33e",
+    "e00ab19ea89237badc184c31",
     "e09c2f3b9267b3c43ee0ddaf",
     "e0ed139230108083254e658a",
     "e0edb6af214e29b9a568da6c",
@@ -2591,6 +2633,7 @@
     "e3060f889bd8a6f8eb3775e7",
     "e30dffac6a747e034de264b6",
     "e35ded361f5152a243bb93ad",
+    "e3669204178defee6a6c5e9a",
     "e39d7d787cb419c8b0857e49",
     "e3bacb28483b2127ea57d4c6",
     "e3bbf5c4212e7c6ba2e1756d",
@@ -2610,8 +2653,10 @@
     "e6512089ea72052f90d8d7cd",
     "e6646971cc7947f579fac7a3",
     "e6bb50ec2e2c4a70abb68fd0",
+    "e6e8b637047cf14d351e39cb",
     "e75459044b7abb444daf555b",
     "e776561fb3d0557c9c1a586a",
+    "e83a82a637ae368a2fec1e3f",
     "e89f6cd7eade809653f666b3",
     "e8b98136f34eb6e9f9be91c5",
     "e903770b39064ee2d63999d9",
@@ -2620,6 +2665,7 @@
     "e96136748e66e4573481fd99",
     "e98594bcb7493d51bf7e7085",
     "e996710ad084d5d74c472d7c",
+    "e9af29d9a9729c1ac41488c2",
     "e9d4b9c37964e39454c05421",
     "ea08b1800c58bcc821315562",
     "ea7dbeee2f0d1ff11268207a",
@@ -2707,6 +2753,7 @@
     "f9a81ef6191918be4c5e001b",
     "f9c377973e2385d6d7a738a5",
     "fa18e860b9b72dd6bd00c0b4",
+    "fa2388aea89f3e7cccfb9405",
     "fa25bf51e650a4effb222724",
     "fabd78c0e39ad74460db73d5",
     "fb2ac83ebaeb24480b55dc93",
@@ -2728,20 +2775,21 @@
     "fe2db979deb85ce567a45b8f",
     "feb0e6962ac22b752e0fc44a",
     "ff1f83228f0d21c65a7f7b07",
-    "ffccd0aea600997624571b9a"
+    "ffccd0aea600997624571b9a",
+    "fffffb1594ca27336dc9b041"
   ],
   "pages": {
     "https://cloudflexbroadcast.com/": {
       "digest": "92d25389badc370a8ad614d996878088b508a67473813c7373b456d2eefacf49",
-      "checked_at": "2026-10-28T14:56:38.104955+00:00"
+      "checked_at": "2026-10-29T15:04:44.706264+00:00"
     },
     "https://stadiumsound.chrissabato.com/": {
       "digest": "40a74c06154c5766b3a84b9cdb75801ae7abee177ae63647c7299db2c6620cde",
-      "checked_at": "2026-10-28T14:56:38.104955+00:00"
+      "checked_at": "2026-10-29T15:04:44.706264+00:00"
     },
     "https://www.transitionaldata.com/team/craig-macfarlane/": {
       "digest": "6fbaa412c0ea2932c733fa32284580270695151b43abc1c4d1d9934326df56f2",
-      "checked_at": "2026-10-28T14:56:38.104955+00:00"
+      "checked_at": "2026-10-29T15:04:44.706264+00:00"
     }
   }
 }
